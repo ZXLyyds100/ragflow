@@ -1,0 +1,29 @@
+### Result
+{"checks":[{"provider":"SoMark","reference":"id","variant":"before","passed":true},{"provider":"SoMark","reference":"id","variant":"after","passed":true},{"provider":"SoMark","reference":"composite","variant":"before","passed":true},{"provider":"SoMark","reference":"composite","variant":"after","passed":true},{"provider":"OpenDataLoader","reference":"id","variant":"before","passed":true},{"provider":"OpenDataLoader","reference":"id","variant":"after","passed":true},{"provider":"OpenDataLoader","reference":"composite","variant":"before","passed":true},{"provider":"OpenDataLoader","reference":"composite","variant":"after","passed":true}],"viewport":{"width":1440,"height":1040},"fixtureClearlyLabeled":true}
+### Ran Playwright code
+```js
+await (async (page) => {
+  const checks=[];
+  for(const provider of ['SoMark','OpenDataLoader']) {
+    await page.locator('#provider').selectOption(provider);
+    for(const reference of ['id','composite']) {
+      await page.locator('#reference').selectOption(reference);
+      for(const variant of ['before','after']) {
+        await page.getByRole('button',{name: variant==='before'?'Original source':'Fixed source',exact:true}).click();
+        await page.getByRole('status').filter({hasText:'Loaded '+variant+' / '+provider+' / '+reference}).waitFor();
+        const data=await page.request.get('http://127.0.0.1:51847/captures/'+variant+'-'+provider.toLowerCase()+'-'+reference+'.json').then(r=>r.json());
+        if(variant==='before') {
+          if(data.requests.length || !(await page.locator('#error').innerText()).includes('pdf vision')) throw Error('Original behavior mismatch');
+        } else {
+          if(!data.requests.length || data.requests.some(r=>r.instance!=='B'||!r.fixture_credential_matched)) throw Error('Selected instance mismatch');
+          if(!(await page.locator('#output').innerText()).includes('instance B.')) throw Error('Actual Parser text not visible');
+        }
+        await page.waitForTimeout(1500);
+        await page.screenshot({path:"/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/outputs/RAGFlow-21027"+'/'+variant+'-'+provider.toLowerCase()+'-'+reference+'.png'});
+        checks.push({provider,reference,variant,passed:true});
+      }
+    }
+  }
+  return {checks,viewport:page.viewportSize(),fixtureClearlyLabeled:await page.getByText('TEST EVIDENCE PAGE — NOT THE RAGFLOW PRODUCT UI.',{exact:true}).isVisible()};
+})(page);
+```

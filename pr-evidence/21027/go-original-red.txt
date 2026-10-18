@@ -1,0 +1,73 @@
+Checkout: /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21027
+HEAD: 543e16738b4883fcb7e70520e0b5849e7e18c9b7
+Worktree:
+?? internal/ingestion/component/pdf_parser_model_test.go
+
+=== RAGFlow Go Server Build Script ===
+
+>>> Checking go dependencies
+✓ Required tools are available
+
+>>> Checking ONNX Runtime version consistency
+✓ ONNX Runtime native version consistent: 1.29.0
+
+>>> Running Go tests
+check if the cl100k_base BPE table exists at /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21027/ragflow_deps/cl100k_base.tiktoken
+  cl100k_base.tiktoken → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21027/ragflow_deps/cl100k_base.tiktoken (already present)
+
+>>> Checking office_oxide native library
+check if dep office_oxide exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide or /opt/ragflow-native-libs/office_oxide
+  office_oxide → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide (user cache)
+✓ office_oxide v0.1.12 native library found at /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide
+check if dep pdfium-static exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static or /opt/ragflow-native-libs/pdfium-static
+  pdfium-static → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static (user cache)
+  pdfium (static) → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static
+check if dep pdf_oxide exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide or /opt/ragflow-native-libs/pdf_oxide
+  pdf_oxide → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide (user cache)
+  pdf_oxide (static) → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide
+check if dep onnxruntime exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime or /opt/ragflow-native-libs/onnxruntime
+  onnxruntime → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime (user cache)
+  (no local onnxruntime-v1.29.0-osx-arm64.zip; skipping sha256 check — CI seed assumed authoritative)
+✓ onnxruntime v1.29.0 static lib verified under /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+  onnxruntime (static) → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+CGO_CFLAGS:   -I/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/include/office_oxide_c
+CGO_LDFLAGS:  /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide/lib/darwin_arm64/v0.3.73/libpdf_oxide.a -Wl,-export_dynamic -Wl,-force_load,/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib/v1.29.0-b1da7e98dc26fc49/libonnxruntime.a -lc++                 -framework CoreGraphics -framework CoreFoundation                 -framework Security -framework SystemConfiguration                 -liconv -lresolv -lc++
+# ragflow/internal/ingestion/component.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+=== RUN   TestTenantPDFParserModelSelection
+=== RUN   TestTenantPDFParserModelSelection/SoMark/parse_method/id
+    pdf_parser_model_test.go:144: selected parser was not used: handled=true err=parser: pdf vision render: unexpected generic VLM path result=<nil>
+=== RUN   TestTenantPDFParserModelSelection/SoMark/parse_method/composite
+    pdf_parser_model_test.go:144: selected parser was not used: handled=true err=parser: pdf vision render: unexpected generic VLM path result=<nil>
+=== RUN   TestTenantPDFParserModelSelection/SoMark/layout_recognizer/id
+    pdf_parser_model_test.go:144: selected parser was not used: handled=true err=parser: pdf vision render: unexpected generic VLM path result=<nil>
+=== RUN   TestTenantPDFParserModelSelection/SoMark/layout_recognizer/composite
+    pdf_parser_model_test.go:144: selected parser was not used: handled=true err=parser: pdf vision render: unexpected generic VLM path result=<nil>
+=== RUN   TestTenantPDFParserModelSelection/OpenDataLoader/parse_method/id
+    pdf_parser_model_test.go:144: selected parser was not used: handled=true err=parser: pdf vision render: unexpected generic VLM path result=<nil>
+=== RUN   TestTenantPDFParserModelSelection/OpenDataLoader/parse_method/composite
+    pdf_parser_model_test.go:144: selected parser was not used: handled=true err=parser: pdf vision render: unexpected generic VLM path result=<nil>
+=== RUN   TestTenantPDFParserModelSelection/OpenDataLoader/layout_recognizer/id
+    pdf_parser_model_test.go:144: selected parser was not used: handled=true err=parser: pdf vision render: unexpected generic VLM path result=<nil>
+=== RUN   TestTenantPDFParserModelSelection/OpenDataLoader/layout_recognizer/composite
+    pdf_parser_model_test.go:144: selected parser was not used: handled=true err=parser: pdf vision render: unexpected generic VLM path result=<nil>
+--- FAIL: TestTenantPDFParserModelSelection (0.03s)
+    --- FAIL: TestTenantPDFParserModelSelection/SoMark/parse_method/id (0.02s)
+    --- FAIL: TestTenantPDFParserModelSelection/SoMark/parse_method/composite (0.00s)
+    --- FAIL: TestTenantPDFParserModelSelection/SoMark/layout_recognizer/id (0.00s)
+    --- FAIL: TestTenantPDFParserModelSelection/SoMark/layout_recognizer/composite (0.00s)
+    --- FAIL: TestTenantPDFParserModelSelection/OpenDataLoader/parse_method/id (0.00s)
+    --- FAIL: TestTenantPDFParserModelSelection/OpenDataLoader/parse_method/composite (0.00s)
+    --- FAIL: TestTenantPDFParserModelSelection/OpenDataLoader/layout_recognizer/id (0.00s)
+    --- FAIL: TestTenantPDFParserModelSelection/OpenDataLoader/layout_recognizer/composite (0.00s)
+FAIL
+FAIL	ragflow/internal/ingestion/component	1.038s
+FAIL

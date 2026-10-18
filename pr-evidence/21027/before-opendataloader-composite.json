@@ -1,0 +1,15 @@
+{
+  "error": "parser: pdf vision model \"OpenDataLoader-model@B@OpenDataLoader\": model provider config not found: OpenDataLoader",
+  "output": null,
+  "provider": "OpenDataLoader",
+  "referenceForm": "composite",
+  "requests": [],
+  "savedConfigurationUnchanged": true,
+  "savedParams": {
+    "pdf": {
+      "output_format": "json",
+      "parse_method": "OpenDataLoader-model@B@OpenDataLoader"
+    }
+  },
+  "scope": "Actual Go Parser/template cleaning/SQL lookup; local in-memory DB and OCR protocol fixtures. No production OCR/LLM."
+}

@@ -1,0 +1,308 @@
+{
+  "capturedAt": "2026-10-18T05:32:57.836Z",
+  "baseSha": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+  "source": {
+    "sha": "691a50a5ddfac05e9c5fd66ca422a09d9c3092c9",
+    "tree": "2572621322152a3f2850c3fd85da120d313072dc",
+    "files": [
+      "docs/guides/agent/ingestion_pipeline/configure_parser_component.md",
+      "internal/ingestion/component/pdf_parser_model.go",
+      "internal/ingestion/component/pdf_parser_model_test.go",
+      "internal/ingestion/component/pdf_vision_dispatch.go",
+      "internal/ingestion/pipeline/parser_tenant_reference_test.go",
+      "internal/parser/parser/pdf_parser_common.go",
+      "internal/parser/parser/pdf_parser_opendataloader.go",
+      "internal/parser/parser/pdf_parser_somark.go",
+      "internal/parser/parser/pdf_parser_tenant_config_test.go"
+    ],
+    "preCommitHooksPassed": true,
+    "validatedContentUnchangedByHooks": true,
+    "capturedAt": "2026-10-18T04:44:53.999Z"
+  },
+  "passRuns": [
+    {
+      "label": "go-final-focused",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21027",
+      "head": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+      "dirty": " M docs/guides/agent/ingestion_pipeline/configure_parser_component.md\n M internal/ingestion/component/pdf_vision_dispatch.go\n M internal/parser/parser/pdf_parser_common.go\n M internal/parser/parser/pdf_parser_opendataloader.go\n M internal/parser/parser/pdf_parser_somark.go\n?? internal/ingestion/component/pdf_parser_model.go\n?? internal/ingestion/component/pdf_parser_model_test.go\n?? internal/ingestion/pipeline/parser_tenant_reference_test.go\n?? internal/parser/parser/pdf_parser_tenant_config_test.go\n",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21027/tmp/go-final-focused-native-link-overlay.json",
+        "-count=1",
+        "-timeout=10m",
+        "-run",
+        "^Test(TenantPDFParser|PDFParserTenant)",
+        "-v",
+        "./internal/ingestion/component",
+        "./internal/ingestion/pipeline",
+        "./internal/parser/parser"
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 13.566,
+      "capturedAt": "2026-10-18T04:10:57.007Z"
+    },
+    {
+      "label": "go-final-related",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21027",
+      "head": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+      "dirty": " M docs/guides/agent/ingestion_pipeline/configure_parser_component.md\n M internal/ingestion/component/pdf_vision_dispatch.go\n M internal/parser/parser/pdf_parser_common.go\n M internal/parser/parser/pdf_parser_opendataloader.go\n M internal/parser/parser/pdf_parser_somark.go\n?? internal/ingestion/component/pdf_parser_model.go\n?? internal/ingestion/component/pdf_parser_model_test.go\n?? internal/ingestion/pipeline/parser_tenant_reference_test.go\n?? internal/parser/parser/pdf_parser_tenant_config_test.go\n",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21027/tmp/go-final-related-native-link-overlay.json",
+        "-count=1",
+        "-timeout=10m",
+        "./internal/ingestion/...",
+        "./internal/parser/...",
+        "./internal/dao/...",
+        "./internal/common/...",
+        "./internal/utility/..."
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 30.804,
+      "capturedAt": "2026-10-18T04:11:54.921Z"
+    },
+    {
+      "label": "go-final-race",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21027",
+      "head": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+      "dirty": " M docs/guides/agent/ingestion_pipeline/configure_parser_component.md\n M internal/ingestion/component/pdf_vision_dispatch.go\n M internal/parser/parser/pdf_parser_common.go\n M internal/parser/parser/pdf_parser_opendataloader.go\n M internal/parser/parser/pdf_parser_somark.go\n?? internal/ingestion/component/pdf_parser_model.go\n?? internal/ingestion/component/pdf_parser_model_test.go\n?? internal/ingestion/pipeline/parser_tenant_reference_test.go\n?? internal/parser/parser/pdf_parser_tenant_config_test.go\n",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21027/tmp/go-final-race-native-link-overlay.json",
+        "-count=1",
+        "-race",
+        "-timeout=10m",
+        "-run",
+        "^Test(TenantPDFParser|PDFParserTenant)",
+        "./internal/ingestion/component",
+        "./internal/ingestion/pipeline",
+        "./internal/parser/parser"
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 14.432,
+      "capturedAt": "2026-10-18T04:12:58.177Z"
+    },
+    {
+      "label": "evidence-before",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029-before",
+      "head": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+      "dirty": "",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21027/tmp/evidence-before-native-link-overlay.json",
+        "-c",
+        "-o",
+        "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21027/tmp/before.test",
+        "./.cache/tenant-parser-evidence"
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 19.534,
+      "capturedAt": "2026-10-18T04:05:04.132Z"
+    },
+    {
+      "label": "evidence-after",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21027",
+      "head": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+      "dirty": " M docs/guides/agent/ingestion_pipeline/configure_parser_component.md\n M internal/ingestion/component/pdf_vision_dispatch.go\n M internal/parser/parser/pdf_parser_common.go\n M internal/parser/parser/pdf_parser_opendataloader.go\n M internal/parser/parser/pdf_parser_somark.go\n?? internal/ingestion/component/pdf_parser_model.go\n?? internal/ingestion/component/pdf_parser_model_test.go\n?? internal/ingestion/pipeline/parser_tenant_reference_test.go\n?? internal/parser/parser/pdf_parser_tenant_config_test.go\n",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21027/tmp/evidence-after-native-link-overlay.json",
+        "-c",
+        "-o",
+        "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21027/tmp/after.test",
+        "./.cache/tenant-parser-evidence"
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 22.862,
+      "capturedAt": "2026-10-18T04:09:09.821Z"
+    }
+  ],
+  "originalRegression": {
+    "label": "go-original",
+    "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21027",
+    "head": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+    "dirty": "?? internal/ingestion/component/pdf_parser_model_test.go\n",
+    "command": [
+      "bash",
+      "build.sh",
+      "--test",
+      "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21027/tmp/go-original-native-link-overlay.json",
+      "-count=1",
+      "-timeout=10m",
+      "-run",
+      "^TestTenantPDFParserModelSelection$",
+      "-v",
+      "./internal/ingestion/component"
+    ],
+    "exit": 1,
+    "signal": null,
+    "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+    "seconds": 12.165,
+    "capturedAt": "2026-10-18T03:39:48.021Z"
+  },
+  "relatedPackagePasses": [
+    "ragflow/internal/ingestion/chunkcache",
+    "ragflow/internal/ingestion/compilation/extractor",
+    "ragflow/internal/ingestion/component",
+    "ragflow/internal/ingestion/component/chunker",
+    "ragflow/internal/ingestion/component/globals",
+    "ragflow/internal/ingestion/component/knowledge_compiler",
+    "ragflow/internal/ingestion/component/knowledge_compiler/common",
+    "ragflow/internal/ingestion/component/knowledge_compiler/golden",
+    "ragflow/internal/ingestion/component/knowledge_compiler/mindmap",
+    "ragflow/internal/ingestion/component/knowledge_compiler/structure",
+    "ragflow/internal/ingestion/component/knowledge_compiler/tree",
+    "ragflow/internal/ingestion/component/knowledge_compiler/wiki",
+    "ragflow/internal/ingestion/component/progress",
+    "ragflow/internal/ingestion/component/schema",
+    "ragflow/internal/ingestion/knowledge_compile",
+    "ragflow/internal/ingestion/pipeline",
+    "ragflow/internal/ingestion/registry",
+    "ragflow/internal/ingestion/service",
+    "ragflow/internal/ingestion/task",
+    "ragflow/internal/ingestion/task/indexdoc",
+    "ragflow/internal/ingestion/task/tool",
+    "ragflow/internal/parser/chunk",
+    "ragflow/internal/parser/parser",
+    "ragflow/internal/parser/tableutil",
+    "ragflow/internal/dao",
+    "ragflow/internal/dao/transaction",
+    "ragflow/internal/common",
+    "ragflow/internal/utility",
+    "ragflow/internal/deepdoc/native",
+    "ragflow/internal/deepdoc/native/croptest"
+  ],
+  "focusedTopLevelPasses": [
+    "TestTenantPDFParserModelSelection",
+    "TestTenantPDFParserRejectsInvalidSelection",
+    "TestTenantPDFParserEnvironmentIsolation",
+    "TestTenantPDFParserKeepsSSRFGuard",
+    "TestTenantPDFParserConfigRoundTripAndRotation",
+    "TestTenantPDFParserBareEnginesAndOtherModels",
+    "TestTenantPDFParserSelectorPrecedence",
+    "TestTenantPDFParserExplicitOptions",
+    "TestTenantPDFParserFailureDoesNotFallback",
+    "TestTenantPDFParserReferenceCleaning",
+    "TestPDFParserTenantConfigurationPolicy"
+  ],
+  "actualBeforeAfterCases": [
+    {
+      "variant": "before",
+      "provider": "SoMark",
+      "reference": "id",
+      "error": "parser: pdf vision model \"fixture-model-B\": model \"fixture-model-B\" cannot be used as image2text model",
+      "requestCount": 0,
+      "selectedInstanceOnly": false,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "before",
+      "provider": "SoMark",
+      "reference": "composite",
+      "error": "parser: pdf vision model \"SoMark-model@B@SoMark\": model provider config not found: SoMark",
+      "requestCount": 0,
+      "selectedInstanceOnly": false,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "before",
+      "provider": "OpenDataLoader",
+      "reference": "id",
+      "error": "parser: pdf vision model \"fixture-model-B\": model \"fixture-model-B\" cannot be used as image2text model",
+      "requestCount": 0,
+      "selectedInstanceOnly": false,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "before",
+      "provider": "OpenDataLoader",
+      "reference": "composite",
+      "error": "parser: pdf vision model \"OpenDataLoader-model@B@OpenDataLoader\": model provider config not found: OpenDataLoader",
+      "requestCount": 0,
+      "selectedInstanceOnly": false,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "after",
+      "provider": "SoMark",
+      "reference": "id",
+      "error": "",
+      "requestCount": 2,
+      "selectedInstanceOnly": true,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "after",
+      "provider": "SoMark",
+      "reference": "composite",
+      "error": "",
+      "requestCount": 2,
+      "selectedInstanceOnly": true,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "after",
+      "provider": "OpenDataLoader",
+      "reference": "id",
+      "error": "",
+      "requestCount": 1,
+      "selectedInstanceOnly": true,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "after",
+      "provider": "OpenDataLoader",
+      "reference": "composite",
+      "error": "",
+      "requestCount": 1,
+      "selectedInstanceOnly": true,
+      "savedConfigurationUnchanged": true
+    }
+  ],
+  "browserCases": 8,
+  "media": {
+    "duration": 18,
+    "width": 1440,
+    "height": 1040,
+    "codec": "vp8",
+    "framesPerSecond": 12,
+    "framesDecoded": 216,
+    "decoder": "PyAV",
+    "sampledFramesSeconds": [
+      3,
+      15
+    ],
+    "sampledFramesVisuallyReviewed": true,
+    "videoDecodedAndSeeked": true,
+    "browserMetadataRead": true,
+    "browserSeekFramesUsedForAcceptance": false,
+    "scope": "Browser recording of an explicitly labeled viewer of actual original/fixed runtime captures; all video frames independently decoded."
+  },
+  "frontendCodeChanged": false,
+  "scope": "No real OCR/LLM, production DB/MinIO, unmodified macOS static-link, full ingestion E2E or hosted Linux CI validation claimed.",
+  "limits": [
+    "Existing SoMark async polling/cancellation remains unchanged; fixture replies SUCCESS immediately, adjacent PR #21076 owns polling.",
+    "Unchanged build.sh uses a disclosed PCRE2 path-only overlay and genuine ORT1.29.0/PDF0.3.73 shared libraries; no Go logic is overlaid.",
+    "Viewer is a test evidence page, not product UI; source OCR responses and tenant records are local fixtures."
+  ]
+}

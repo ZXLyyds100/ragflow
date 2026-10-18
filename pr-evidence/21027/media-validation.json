@@ -1,0 +1,15 @@
+{
+  "duration": 18,
+  "width": 1440,
+  "height": 1040,
+  "codec": "vp8",
+  "framesPerSecond": 12,
+  "framesDecoded": 216,
+  "decoder": "PyAV",
+  "sampledFramesSeconds": [3, 15],
+  "sampledFramesVisuallyReviewed": true,
+  "videoDecodedAndSeeked": true,
+  "browserMetadataRead": true,
+  "browserSeekFramesUsedForAcceptance": false,
+  "scope": "Browser recording of an explicitly labeled viewer of actual original/fixed runtime captures; all video frames independently decoded."
+}

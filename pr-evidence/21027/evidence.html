@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAGFlow #21027 — runtime evidence</title>
+<style>
+:root{--ink:#1c282c;--quiet:#59676c;--paper:#f7f6f2;--line:#d9dedb;--accent:#17624d;--error:#943b32}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 "Avenir Next",sans-serif}main{max-width:1280px;margin:auto;padding:36px 44px}header{display:flex;justify-content:space-between;align-items:start;border-bottom:2px solid var(--ink);padding-bottom:22px}h1{font:34px/1.2 Georgia,serif;margin:8px 0 12px;letter-spacing:-.6px}h2{font:23px Georgia,serif;margin:0 0 16px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.issue{font:48px Georgia,serif;color:var(--quiet)}.scope{font-size:13px;border:1px solid var(--line);padding:12px 16px;margin:20px 0;color:var(--quiet);background:white}.controls{display:flex;gap:20px;align-items:end;flex-wrap:wrap;margin:22px 0}label{display:grid;gap:6px;font-size:13px;color:var(--quiet)}select,button{font:inherit;border:1px solid #879793;border-radius:4px;background:white;color:var(--ink);padding:9px 14px;min-height:43px}button{cursor:pointer;background:var(--ink);color:white}button.secondary{background:white;color:var(--ink)}button[aria-pressed=true]{box-shadow:inset 0 -3px var(--accent)}.grid{display:grid;grid-template-columns:1fr 1.16fr;gap:22px}.panel{border-top:3px solid var(--line);padding:20px;background:white;min-width:0}.panel.wide{grid-column:1/-1;min-height:140px}.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1px;padding:6px 10px;margin-bottom:16px;background:#e7eee9;color:var(--accent)}.tag.before{background:#f4e8e5;color:var(--error)}pre{font:14px/1.65 Menlo,monospace;white-space:pre-wrap;word-break:break-word;margin:12px 0;color:var(--ink)}.quiet{color:var(--quiet);font-size:13px}.status{padding:12px 14px;background:#edf4ef;border-left:3px solid var(--accent);font-size:14px}.status.error{background:#f9eeeb;border-color:var(--error)}.request{font:14px/1.8 Menlo,monospace;border-bottom:1px solid var(--line);padding:8px 0}footer{margin-top:22px;font-size:12px;color:var(--quiet)}.badge{font-size:12px;color:var(--accent)}@media(max-width:700px){main{padding:20px}.grid{grid-template-columns:1fr}.panel.wide{grid-column:auto}h1{font-size:27px}.issue{font-size:30px}}
+</style>
+<main>
+<header><div><div class="eyebrow">RAGFlow · parser model selection</div><h1>The selected instance must be the one that runs.</h1><div class="quiet">Issue #21027 · original / fixed Go runtime comparison</div></div><div class="issue">21027</div></header>
+<p class="scope"><strong>TEST EVIDENCE PAGE — NOT THE RAGFLOW PRODUCT UI.</strong><br>Real exported Go Parser, builtin-template cleaning and SQL lookups. Valid PDF + in-memory SQLite + local OCR protocol servers are fixtures. No real OCR/LLM, production database or full ingestion deployment.</p>
+<section class="controls" aria-label="Evidence controls">
+<label>Parser provider<select id="provider"><option>SoMark</option><option>OpenDataLoader</option></select></label>
+<label>Saved reference<select id="reference"><option value="id">Tenant model ID</option><option value="composite">Model@instance@provider</option></select></label>
+<button id="before" class="secondary" type="button">Original source</button><button id="after" type="button">Fixed source</button><span id="load" class="badge" role="status"></span>
+</section>
+<section class="grid">
+<article class="panel"><span id="variant" class="tag"></span><h2>Persisted parser configuration</h2><pre id="config"></pre><p class="quiet">Instance A is an intentional decoy. Instance B is selected.<br>Endpoints and credentials remain in tenant-instance records.</p><div id="immutable" class="status"></div></article>
+<article class="panel"><h2>Actual requests to the OCR fixtures</h2><div id="requests"></div><p class="quiet">Credential values are not displayed. Each row records whether the synthetic fixture credential matched instance B.</p></article>
+<article class="panel wide"><h2>Actual Parser result</h2><div id="error"></div><pre id="output"></pre></article>
+</section>
+<footer>Data is read from the actual original/fixed runtime capture JSON. This page does not simulate dispatch or author an expected result. Source revision and test limitations are documented alongside the captures.</footer>
+</main>
+<script>
+let variant='before';
+const byId=id=>document.getElementById(id);
+async function render(){
+  byId('load').textContent='Loading captured run…';
+  const provider=byId('provider').value, reference=byId('reference').value;
+  const data=await fetch(`/captures/${variant}-${provider.toLowerCase()}-${reference}.json`).then(r=>r.json());
+  byId('variant').textContent=variant==='before'?'ORIGINAL SOURCE':'FIXED SOURCE';
+  byId('variant').className=`tag ${variant}`;
+  byId('config').textContent=JSON.stringify(data.savedParams,null,2);
+  byId('immutable').textContent=data.savedConfigurationUnchanged?'✓ Saved configuration unchanged; no resolved secrets copied in.':'Configuration changed';
+  byId('requests').replaceChildren();
+  if(!data.requests.length){const p=document.createElement('p');p.className='status error';p.textContent='No request reached either selected OCR backend.';byId('requests').append(p);}
+  for(const req of data.requests){const p=document.createElement('div');p.className='request';p.textContent=`Instance ${req.instance} · ${req.method} ${req.path}\nFixture credential matched: ${req.fixture_credential_matched}`;byId('requests').append(p);}
+  byId('error').className=`status ${data.error?'error':''}`;
+  byId('error').textContent=data.error||'✓ Selected parser completed; source text is preserved in the structured output.';
+  const text=data.output?.json?.map(item=>item.text).filter(Boolean).join('\n')??'No structured output returned.';
+  byId('output').textContent=text;
+  byId('before').setAttribute('aria-pressed',String(variant==='before'));
+  byId('after').setAttribute('aria-pressed',String(variant==='after'));
+  byId('load').textContent=`Loaded ${variant} / ${provider} / ${reference}`;
+}
+function showBefore(){variant='before';render();}
+function showAfter(){variant='after';render();}
+byId('before').addEventListener('click',showBefore);byId('after').addEventListener('click',showAfter);
+byId('provider').addEventListener('change',render);byId('reference').addEventListener('change',render);render();
+</script>
+</html>

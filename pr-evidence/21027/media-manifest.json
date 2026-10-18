@@ -1,0 +1,72 @@
+{
+  "sourceHead": "691a50a5ddfac05e9c5fd66ca422a09d9c3092c9",
+  "sourceTree": "2572621322152a3f2850c3fd85da120d313072dc",
+  "codeFileCount": 9,
+  "media": [
+    {
+      "name": "before-somark-id.png",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "f2a95a83b666552fc4c4e89d7c482e88d21a93e2c01907a80ecf8b8437969101"
+    },
+    {
+      "name": "before-somark-composite.png",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "b64dd86c8c0ea6dc024cc0f067767675aa9d014b452790c4c22db6401f57753c"
+    },
+    {
+      "name": "before-opendataloader-id.png",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "89e56d45f432dd6caba21506b6d35825ac15b11cf058ca70d250e2b1efd262c9"
+    },
+    {
+      "name": "before-opendataloader-composite.png",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "e2d1f90cc9dbcfb48a2fba2e7a91f2f0ae2a01b124e12bacf7a1841c9dd4c952"
+    },
+    {
+      "name": "after-somark-id.png",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "44721b0aeb59f88eb2112b54c160518f3984d9ad7435a78696cb1e9a380c3b46"
+    },
+    {
+      "name": "after-somark-composite.png",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "644c14938ab189f839d44668898129ea2c5523de1fff7ab701d107cd6a1cbc5c"
+    },
+    {
+      "name": "after-opendataloader-id.png",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "9576f5c164e4bdca3f142871fe87fe29803c22fecbe507e477357359a59d9deb"
+    },
+    {
+      "name": "after-opendataloader-composite.png",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "a6ab74def194320110acf27f2e0e5310fcd33acf61f4e6b84a44b1656ddfd1bf"
+    },
+    {
+      "name": "tenant-parser-verified.webm",
+      "durationSeconds": 18,
+      "frames": 216,
+      "fps": 12,
+      "width": 1440,
+      "height": 1040,
+      "codec": "vp8",
+      "decoder": "PyAV",
+      "sampledFramesSeconds": [
+        3,
+        15
+      ],
+      "sha256": "25772377536185417f10f78e550031f996c64acb3cd68c9eb9efd8bf065f6746"
+    }
+  ],
+  "capturedAt": "2026-10-18T05:35:46.247Z",
+  "scope": "Actual exported Parser runtime captures with real SQL DAOs and explicitly labeled local OCR fixtures; viewer is not product UI."
+}

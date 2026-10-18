@@ -1,0 +1,40 @@
+[fix/pdf-tenant-parser-models 691a50a] fix(parser): resolve selected tenant PDF parser instances
+ 9 files changed, 877 insertions(+), 19 deletions(-)
+ create mode 100644 internal/ingestion/component/pdf_parser_model.go
+ create mode 100644 internal/ingestion/component/pdf_parser_model_test.go
+ create mode 100644 internal/ingestion/pipeline/parser_tenant_reference_test.go
+ create mode 100644 internal/parser/parser/pdf_parser_tenant_config_test.go
+╭──────────────────────────────────────╮
+│ lefthook  v2.2.2   hook:  pre-commit │
+╰──────────────────────────────────────╯
+│  ruff-format (skip) no files for inspection
+│  ruff (skip) no files for inspection
+┃  gofmt ❯
+
+┃  trailing-whitespace ❯
+
+┃  check-merge-conflict ❯
+
+┃  end-of-file-fixer ❯
+
+┃  check-case-conflict ❯
+
+┃  check-json ❯
+
+┃  check-yaml ❯
+
+┃  mixed-line-ending ❯
+
+┃  check-symlinks ❯
+
+  ────────────────────────────────────
+summary: (done in 1.11 seconds)
+✓ gofmt (0.04 seconds)
+✓ trailing-whitespace (1.03 seconds)
+✓ check-merge-conflict (1.05 seconds)
+✓ check-case-conflict (1.05 seconds)
+✓ end-of-file-fixer (1.05 seconds)
+✓ check-json (1.05 seconds)
+✓ check-yaml (1.06 seconds)
+✓ mixed-line-ending (1.08 seconds)
+✓ check-symlinks (1.11 seconds)

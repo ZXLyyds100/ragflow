@@ -1,0 +1,15 @@
+{
+  "error": "parser: pdf vision model \"fixture-model-B\": model \"fixture-model-B\" cannot be used as image2text model",
+  "output": null,
+  "provider": "SoMark",
+  "referenceForm": "id",
+  "requests": [],
+  "savedConfigurationUnchanged": true,
+  "savedParams": {
+    "pdf": {
+      "output_format": "json",
+      "parse_method": "fixture-model-B"
+    }
+  },
+  "scope": "Actual Go Parser/template cleaning/SQL lookup; local in-memory DB and OCR protocol fixtures. No production OCR/LLM."
+}

@@ -1,0 +1,15 @@
+{
+  "error": "parser: pdf vision model \"SoMark-model@B@SoMark\": model provider config not found: SoMark",
+  "output": null,
+  "provider": "SoMark",
+  "referenceForm": "composite",
+  "requests": [],
+  "savedConfigurationUnchanged": true,
+  "savedParams": {
+    "pdf": {
+      "output_format": "json",
+      "parse_method": "SoMark-model@B@SoMark"
+    }
+  },
+  "scope": "Actual Go Parser/template cleaning/SQL lookup; local in-memory DB and OCR protocol fixtures. No production OCR/LLM."
+}

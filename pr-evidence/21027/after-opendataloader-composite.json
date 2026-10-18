@@ -1,0 +1,39 @@
+{
+  "error": "",
+  "output": {
+    "file": {
+      "name": "reference-fixture.pdf",
+      "outline": [],
+      "page_count": 1,
+      "parse_method": "OpenDataLoader-model@B@OpenDataLoader"
+    },
+    "file_type": "pdf",
+    "json": [
+      {
+        "doc_type_kwd": "text",
+        "layout": "text",
+        "text": "Parsed by selected OpenDataLoader instance B."
+      }
+    ],
+    "name": "reference-fixture.pdf",
+    "output_format": "json"
+  },
+  "provider": "OpenDataLoader",
+  "referenceForm": "composite",
+  "requests": [
+    {
+      "fixture_credential_matched": true,
+      "instance": "B",
+      "method": "POST",
+      "path": "/file_parse"
+    }
+  ],
+  "savedConfigurationUnchanged": true,
+  "savedParams": {
+    "pdf": {
+      "output_format": "json",
+      "parse_method": "OpenDataLoader-model@B@OpenDataLoader"
+    }
+  },
+  "scope": "Actual Go Parser/template cleaning/SQL lookup; local in-memory DB and OCR protocol fixtures. No production OCR/LLM."
+}

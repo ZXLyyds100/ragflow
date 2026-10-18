@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "capturedAt": "2026-10-18T04:10:52.442Z",
+  "source": "Identical standalone test compiled against original/fixed exported Parser, actual builtin config cleaning and SQLite DAOs",
+  "fixture": "Valid local one-page PDF; local protocol servers A/B, no real OCR/LLM or production database",
+  "rows": [
+    {
+      "variant": "before",
+      "provider": "SoMark",
+      "reference": "id",
+      "error": "parser: pdf vision model \"fixture-model-B\": model \"fixture-model-B\" cannot be used as image2text model",
+      "requestCount": 0,
+      "selectedInstanceOnly": false,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "before",
+      "provider": "SoMark",
+      "reference": "composite",
+      "error": "parser: pdf vision model \"SoMark-model@B@SoMark\": model provider config not found: SoMark",
+      "requestCount": 0,
+      "selectedInstanceOnly": false,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "before",
+      "provider": "OpenDataLoader",
+      "reference": "id",
+      "error": "parser: pdf vision model \"fixture-model-B\": model \"fixture-model-B\" cannot be used as image2text model",
+      "requestCount": 0,
+      "selectedInstanceOnly": false,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "before",
+      "provider": "OpenDataLoader",
+      "reference": "composite",
+      "error": "parser: pdf vision model \"OpenDataLoader-model@B@OpenDataLoader\": model provider config not found: OpenDataLoader",
+      "requestCount": 0,
+      "selectedInstanceOnly": false,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "after",
+      "provider": "SoMark",
+      "reference": "id",
+      "error": "",
+      "requestCount": 2,
+      "selectedInstanceOnly": true,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "after",
+      "provider": "SoMark",
+      "reference": "composite",
+      "error": "",
+      "requestCount": 2,
+      "selectedInstanceOnly": true,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "after",
+      "provider": "OpenDataLoader",
+      "reference": "id",
+      "error": "",
+      "requestCount": 1,
+      "selectedInstanceOnly": true,
+      "savedConfigurationUnchanged": true
+    },
+    {
+      "variant": "after",
+      "provider": "OpenDataLoader",
+      "reference": "composite",
+      "error": "",
+      "requestCount": 1,
+      "selectedInstanceOnly": true,
+      "savedConfigurationUnchanged": true
+    }
+  ]
+}

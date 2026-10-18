@@ -1,0 +1,254 @@
+Checkout: /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21027
+HEAD: 543e16738b4883fcb7e70520e0b5849e7e18c9b7
+Worktree:
+ M docs/guides/agent/ingestion_pipeline/configure_parser_component.md
+ M internal/ingestion/component/pdf_vision_dispatch.go
+ M internal/parser/parser/pdf_parser_common.go
+ M internal/parser/parser/pdf_parser_opendataloader.go
+ M internal/parser/parser/pdf_parser_somark.go
+?? internal/ingestion/component/pdf_parser_model.go
+?? internal/ingestion/component/pdf_parser_model_test.go
+?? internal/ingestion/pipeline/parser_tenant_reference_test.go
+?? internal/parser/parser/pdf_parser_tenant_config_test.go
+
+=== RAGFlow Go Server Build Script ===
+
+>>> Checking go dependencies
+✓ Required tools are available
+
+>>> Checking ONNX Runtime version consistency
+✓ ONNX Runtime native version consistent: 1.29.0
+
+>>> Running Go tests
+check if the cl100k_base BPE table exists at /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21027/ragflow_deps/cl100k_base.tiktoken
+  cl100k_base.tiktoken → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21027/ragflow_deps/cl100k_base.tiktoken (already present)
+
+>>> Checking office_oxide native library
+check if dep office_oxide exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide or /opt/ragflow-native-libs/office_oxide
+  office_oxide → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide (user cache)
+✓ office_oxide v0.1.12 native library found at /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide
+check if dep pdfium-static exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static or /opt/ragflow-native-libs/pdfium-static
+  pdfium-static → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static (user cache)
+  pdfium (static) → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static
+check if dep pdf_oxide exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide or /opt/ragflow-native-libs/pdf_oxide
+  pdf_oxide → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide (user cache)
+  pdf_oxide (static) → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide
+check if dep onnxruntime exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime or /opt/ragflow-native-libs/onnxruntime
+  onnxruntime → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime (user cache)
+  (no local onnxruntime-v1.29.0-osx-arm64.zip; skipping sha256 check — CI seed assumed authoritative)
+✓ onnxruntime v1.29.0 static lib verified under /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+  onnxruntime (static) → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+CGO_CFLAGS:   -I/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/include/office_oxide_c
+CGO_LDFLAGS:  /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide/lib/darwin_arm64/v0.3.73/libpdf_oxide.a -Wl,-export_dynamic -Wl,-force_load,/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib/v1.29.0-b1da7e98dc26fc49/libonnxruntime.a -lc++                 -framework CoreGraphics -framework CoreFoundation                 -framework Security -framework SystemConfiguration                 -liconv -lresolv -lc++
+# ragflow/internal/parser/parser.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/pipeline.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+=== RUN   TestTenantPDFParserModelSelection
+=== RUN   TestTenantPDFParserModelSelection/SoMark/parse_method/id
+=== RUN   TestTenantPDFParserModelSelection/SoMark/parse_method/composite
+=== RUN   TestTenantPDFParserModelSelection/SoMark/layout_recognizer/id
+=== RUN   TestTenantPDFParserModelSelection/SoMark/layout_recognizer/composite
+=== RUN   TestTenantPDFParserModelSelection/OpenDataLoader/parse_method/id
+=== RUN   TestTenantPDFParserModelSelection/OpenDataLoader/parse_method/composite
+=== RUN   TestTenantPDFParserModelSelection/OpenDataLoader/layout_recognizer/id
+=== RUN   TestTenantPDFParserModelSelection/OpenDataLoader/layout_recognizer/composite
+--- PASS: TestTenantPDFParserModelSelection (0.02s)
+    --- PASS: TestTenantPDFParserModelSelection/SoMark/parse_method/id (0.00s)
+    --- PASS: TestTenantPDFParserModelSelection/SoMark/parse_method/composite (0.00s)
+    --- PASS: TestTenantPDFParserModelSelection/SoMark/layout_recognizer/id (0.00s)
+    --- PASS: TestTenantPDFParserModelSelection/SoMark/layout_recognizer/composite (0.00s)
+    --- PASS: TestTenantPDFParserModelSelection/OpenDataLoader/parse_method/id (0.00s)
+    --- PASS: TestTenantPDFParserModelSelection/OpenDataLoader/parse_method/composite (0.00s)
+    --- PASS: TestTenantPDFParserModelSelection/OpenDataLoader/layout_recognizer/id (0.00s)
+    --- PASS: TestTenantPDFParserModelSelection/OpenDataLoader/layout_recognizer/composite (0.00s)
+=== RUN   TestTenantPDFParserRejectsInvalidSelection
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-tenant/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-tenant/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/missing-tenant/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/missing-tenant/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/disabled-model/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/disabled-model/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-type/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-type/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/disabled-instance/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/disabled-instance/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/missing-instance/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/missing-instance/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-provider/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-provider/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/missing-endpoint/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/missing-endpoint/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/malformed-instance/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/malformed-instance/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/malformed-key/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/malformed-key/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-key-type/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-key-type/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/malformed-model-options/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/malformed-model-options/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/invalid-option-type/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/SoMark/invalid-option-type/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-tenant/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-tenant/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/missing-tenant/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/missing-tenant/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/disabled-model/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/disabled-model/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-type/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-type/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/disabled-instance/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/disabled-instance/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/missing-instance/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/missing-instance/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-provider/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-provider/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/missing-endpoint/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/missing-endpoint/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/malformed-instance/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/malformed-instance/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/malformed-key/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/malformed-key/composite
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-key-type/id
+=== RUN   TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-key-type/composite
+--- PASS: TestTenantPDFParserRejectsInvalidSelection (0.04s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-tenant/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-tenant/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/missing-tenant/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/missing-tenant/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/disabled-model/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/disabled-model/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-type/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-type/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/disabled-instance/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/disabled-instance/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/missing-instance/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/missing-instance/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-provider/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-provider/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/missing-endpoint/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/missing-endpoint/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/malformed-instance/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/malformed-instance/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/malformed-key/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/malformed-key/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-key-type/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/wrong-key-type/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/malformed-model-options/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/malformed-model-options/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/invalid-option-type/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/SoMark/invalid-option-type/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-tenant/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-tenant/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/missing-tenant/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/missing-tenant/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/disabled-model/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/disabled-model/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-type/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-type/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/disabled-instance/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/disabled-instance/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/missing-instance/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/missing-instance/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-provider/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-provider/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/missing-endpoint/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/missing-endpoint/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/malformed-instance/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/malformed-instance/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/malformed-key/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/malformed-key/composite (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-key-type/id (0.00s)
+    --- PASS: TestTenantPDFParserRejectsInvalidSelection/OpenDataLoader/wrong-key-type/composite (0.00s)
+=== RUN   TestTenantPDFParserEnvironmentIsolation
+=== RUN   TestTenantPDFParserEnvironmentIsolation/SoMark
+=== RUN   TestTenantPDFParserEnvironmentIsolation/OpenDataLoader
+--- PASS: TestTenantPDFParserEnvironmentIsolation (0.00s)
+    --- PASS: TestTenantPDFParserEnvironmentIsolation/SoMark (0.00s)
+    --- PASS: TestTenantPDFParserEnvironmentIsolation/OpenDataLoader (0.00s)
+=== RUN   TestTenantPDFParserKeepsSSRFGuard
+--- PASS: TestTenantPDFParserKeepsSSRFGuard (0.00s)
+=== RUN   TestTenantPDFParserConfigRoundTripAndRotation
+=== RUN   TestTenantPDFParserConfigRoundTripAndRotation/SoMark
+=== RUN   TestTenantPDFParserConfigRoundTripAndRotation/OpenDataLoader
+--- PASS: TestTenantPDFParserConfigRoundTripAndRotation (0.00s)
+    --- PASS: TestTenantPDFParserConfigRoundTripAndRotation/SoMark (0.00s)
+    --- PASS: TestTenantPDFParserConfigRoundTripAndRotation/OpenDataLoader (0.00s)
+=== RUN   TestTenantPDFParserBareEnginesAndOtherModels
+--- PASS: TestTenantPDFParserBareEnginesAndOtherModels (0.00s)
+=== RUN   TestTenantPDFParserSelectorPrecedence
+--- PASS: TestTenantPDFParserSelectorPrecedence (0.00s)
+=== RUN   TestTenantPDFParserExplicitOptions
+--- PASS: TestTenantPDFParserExplicitOptions (0.00s)
+=== RUN   TestTenantPDFParserFailureDoesNotFallback
+=== RUN   TestTenantPDFParserFailureDoesNotFallback/SoMark
+=== RUN   TestTenantPDFParserFailureDoesNotFallback/OpenDataLoader
+--- PASS: TestTenantPDFParserFailureDoesNotFallback (0.00s)
+    --- PASS: TestTenantPDFParserFailureDoesNotFallback/SoMark (0.00s)
+    --- PASS: TestTenantPDFParserFailureDoesNotFallback/OpenDataLoader (0.00s)
+PASS
+ok  	ragflow/internal/ingestion/component	0.970s
+=== RUN   TestTenantPDFParserReferenceCleaning
+=== RUN   TestTenantPDFParserReferenceCleaning/model-b/parse_method
+=== RUN   TestTenantPDFParserReferenceCleaning/model-b/layout_recognizer
+=== RUN   TestTenantPDFParserReferenceCleaning/SoMark-model@b@SoMark/parse_method
+=== RUN   TestTenantPDFParserReferenceCleaning/SoMark-model@b@SoMark/layout_recognizer
+=== RUN   TestTenantPDFParserReferenceCleaning/OpenDataLoader-model@b@OpenDataLoader/parse_method
+=== RUN   TestTenantPDFParserReferenceCleaning/OpenDataLoader-model@b@OpenDataLoader/layout_recognizer
+--- PASS: TestTenantPDFParserReferenceCleaning (0.00s)
+    --- PASS: TestTenantPDFParserReferenceCleaning/model-b/parse_method (0.00s)
+    --- PASS: TestTenantPDFParserReferenceCleaning/model-b/layout_recognizer (0.00s)
+    --- PASS: TestTenantPDFParserReferenceCleaning/SoMark-model@b@SoMark/parse_method (0.00s)
+    --- PASS: TestTenantPDFParserReferenceCleaning/SoMark-model@b@SoMark/layout_recognizer (0.00s)
+    --- PASS: TestTenantPDFParserReferenceCleaning/OpenDataLoader-model@b@OpenDataLoader/parse_method (0.00s)
+    --- PASS: TestTenantPDFParserReferenceCleaning/OpenDataLoader-model@b@OpenDataLoader/layout_recognizer (0.00s)
+PASS
+ok  	ragflow/internal/ingestion/pipeline	2.086s
+=== RUN   TestPDFParserTenantConfigurationPolicy
+=== RUN   TestPDFParserTenantConfigurationPolicy/somark/named
+=== RUN   TestPDFParserTenantConfigurationPolicy/somark/selected
+=== RUN   TestPDFParserTenantConfigurationPolicy/opendataloader/named
+=== RUN   TestPDFParserTenantConfigurationPolicy/opendataloader/selected
+--- PASS: TestPDFParserTenantConfigurationPolicy (0.00s)
+    --- PASS: TestPDFParserTenantConfigurationPolicy/somark/named (0.00s)
+    --- PASS: TestPDFParserTenantConfigurationPolicy/somark/selected (0.00s)
+    --- PASS: TestPDFParserTenantConfigurationPolicy/opendataloader/named (0.00s)
+    --- PASS: TestPDFParserTenantConfigurationPolicy/opendataloader/selected (0.00s)
+PASS
+ok  	ragflow/internal/parser/parser	1.101s
+
+>>> Running native unit tests
+# ragflow/internal/deepdoc/native/croptest.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/deepdoc/native.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/deepdoc/native	0.399s
+ok  	ragflow/internal/deepdoc/native/croptest	0.535s

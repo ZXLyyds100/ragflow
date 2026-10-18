@@ -1,0 +1,278 @@
+
+> type-check
+> tsc --noEmit
+
+src/components/document-preview/pdf-preview.tsx(131,17): error TS6133: 'viewportToScaled' is declared but its value is never read.
+src/components/document-preview/pdf-preview.tsx(132,17): error TS6133: 'screenshot' is declared but its value is never read.
+src/components/dynamic-form.tsx(307,11): error TS2740: Type '{}' is missing the following properties from type 'ZodType<any, ZodTypeDef, any>': _type, _output, _input, _def, and 34 more.
+src/components/dynamic-form.tsx(309,9): error TS2322: Type 'ZodType<any, ZodTypeDef, any>' is not assignable to type 'Record<string, ZodType<any, ZodTypeDef, any>>'.
+  Index signature for type 'string' is missing in type 'ZodType<any, ZodTypeDef, any>'.
+src/components/dynamic-form.tsx(403,52): error TS2345: Argument of type '{}' is not assignable to parameter of type 'ControllerRenderProps'.
+  Type '{}' is missing the following properties from type 'ControllerRenderProps': onChange, onBlur, value, name, ref
+src/components/dynamic-form.tsx(761,15): error TS2862: Type 'FieldErrors<T> | { [x: string]: never; }' is generic and can only be indexed for reading.
+src/components/dynamic-form.tsx(787,30): error TS6133: 'values' is declared but its value is never read.
+src/components/dynamic-form.tsx(1033,18): error TS2339: Property 'displayName' does not exist on type '<T extends FieldValues>(props: DynamicFormProps<T> & { ref?: Ref<DynamicFormRef> | undefined; }) => ReactElement<any, string | JSXElementConstructor<any>>'.
+src/components/edit-tag/index.tsx(92,31): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/components/file-upload.tsx(260,18): error TS2540: Cannot assign to 'current' because it is a read-only property.
+src/components/file-upload.tsx(361,23): error TS2345: Argument of type 'Set<() => void> | null' is not assignable to parameter of type 'Set<() => void>'.
+  Type 'null' is not assignable to type 'Set<() => void>'.
+src/components/file-upload.tsx(399,26): error TS18047: 'files' is possibly 'null'.
+src/components/file-upload.tsx(400,27): error TS18047: 'urlCache' is possibly 'null'.
+src/components/file-upload.tsx(549,13): error TS2322: Type '((file: File, progress: number) => void) | null' is not assignable to type '(file: File, progress: number) => void'.
+  Type 'null' is not assignable to type '(file: File, progress: number) => void'.
+src/components/file-upload.tsx(599,7): error TS2322: Type 'WeakMap<File, string> | null' is not assignable to type 'WeakMap<File, string>'.
+  Type 'null' is not assignable to type 'WeakMap<File, string>'.
+src/components/jsonjoy-builder/components/features/json-validator.tsx(63,5): error TS2322: Type 'Timeout' is not assignable to type 'number'.
+src/components/jsonjoy-builder/components/features/json-validator.tsx(181,22): error TS18048: 'validationResult.errors' is possibly 'undefined'.
+src/components/jsonjoy-builder/components/features/json-validator.tsx(182,25): error TS18048: 'validationResult.errors' is possibly 'undefined'.
+src/components/jsonjoy-builder/components/features/json-validator.tsx(186,34): error TS18048: 'validationResult.errors' is possibly 'undefined'.
+src/components/jsonjoy-builder/components/schema-editor/json-schema-editor.tsx(30,5): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+src/components/jsonjoy-builder/components/schema-editor/schema-property-editor.tsx(205,10): error TS18048: 'validationNode.cumulativeChildrenErrors' is possibly 'undefined'.
+src/components/jsonjoy-builder/components/schema-editor/schema-property-editor.tsx(210,14): error TS18048: 'validationNode' is possibly 'undefined'.
+src/components/jsonjoy-builder/components/schema-editor/types/array-editor.tsx(112,13): error TS2322: Type 'false | "text-destructive"' is not assignable to type 'string | undefined'.
+  Type 'boolean' is not assignable to type 'string'.
+src/components/jsonjoy-builder/components/schema-editor/types/array-editor.tsx(135,13): error TS2322: Type 'false | "text-destructive"' is not assignable to type 'string | undefined'.
+  Type 'boolean' is not assignable to type 'string'.
+src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(234,13): error TS2322: Type 'false | "text-destructive"' is not assignable to type 'string | undefined'.
+  Type 'boolean' is not assignable to type 'string'.
+src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(264,13): error TS2322: Type 'false | "text-destructive"' is not assignable to type 'string | undefined'.
+  Type 'boolean' is not assignable to type 'string'.
+src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(296,13): error TS2322: Type 'false | "text-destructive"' is not assignable to type 'string | undefined'.
+  Type 'boolean' is not assignable to type 'string'.
+src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(326,13): error TS2322: Type 'false | "text-destructive"' is not assignable to type 'string | undefined'.
+  Type 'boolean' is not assignable to type 'string'.
+src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(357,11): error TS2322: Type 'false | "text-destructive"' is not assignable to type 'string | undefined'.
+  Type 'boolean' is not assignable to type 'string'.
+src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx(382,16): error TS2322: Type 'false | "text-destructive"' is not assignable to type 'string | undefined'.
+  Type 'boolean' is not assignable to type 'string'.
+src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx(143,13): error TS2322: Type 'false | "text-destructive"' is not assignable to type 'string | undefined'.
+  Type 'boolean' is not assignable to type 'string'.
+src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx(169,13): error TS2322: Type 'false | "text-destructive"' is not assignable to type 'string | undefined'.
+  Type 'boolean' is not assignable to type 'string'.
+src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx(203,11): error TS2322: Type 'false | "text-destructive"' is not assignable to type 'string | undefined'.
+  Type 'boolean' is not assignable to type 'string'.
+src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx(223,11): error TS2322: Type 'false | "text-destructive"' is not assignable to type 'string | undefined'.
+  Type 'boolean' is not assignable to type 'string'.
+src/components/jsonjoy-builder/hooks/use-monaco-theme.ts(168,48): error TS2694: Namespace 'languages' has no exported member 'json'.
+src/components/jsonjoy-builder/hooks/use-monaco-theme.ts(197,27): error TS2339: Property 'jsonDefaults' does not exist on type '{ deprecated: true; }'.
+src/components/jsonjoy-builder/lib/schema-editor.ts(48,12): error TS2537: Type 'Record<string, JSONSchema> | undefined' has no matching index signature for type 'string'.
+src/components/jsonjoy-builder/lib/schema-editor.ts(112,22): error TS2345: Argument of type '({ title?: string | undefined; pattern?: string | undefined; description?: string | undefined; type?: "string" | "number" | "boolean" | "object" | "array" | "integer" | "null" | ("string" | ... 5 more ... | "null")[] | undefined; ... 33 more ...; enum?: unknown[] | undefined; } & { ...; }) | undefined' is not assignable to parameter of type 'JSONSchema'.
+  Type 'undefined' is not assignable to type 'JSONSchema'.
+src/components/jsonjoy-builder/lib/schema-editor.ts(119,3): error TS2322: Type 'undefined' is not assignable to type 'JSONSchema'.
+src/components/jsonjoy-builder/lib/schema-inference.ts(129,42): error TS2345: Argument of type 'JSONSchema | undefined' is not assignable to parameter of type 'JSONSchema'.
+  Type 'undefined' is not assignable to type 'JSONSchema'.
+src/components/jsonjoy-builder/types/validation.ts(14,43): error TS18048: 'max' is possibly 'undefined'.
+src/components/jsonjoy-builder/types/validation.ts(14,49): error TS18048: 'min' is possibly 'undefined'.
+src/components/jsonjoy-builder/types/validation.ts(17,45): error TS18048: 'max' is possibly 'undefined'.
+src/components/jsonjoy-builder/types/validation.ts(17,51): error TS18048: 'min' is possibly 'undefined'.
+src/components/jsonjoy-builder/types/validation.ts(203,14): error TS2694: Namespace '"<workspace>/work/repos/ragflow/web/node_modules/zod/v3/external"' has no exported member 'core'.
+src/components/jsonjoy-builder/types/validation.ts(258,33): error TS2694: Namespace '"<workspace>/work/repos/ragflow/web/node_modules/zod/v3/external"' has no exported member 'core'.
+src/components/jsonjoy-builder/types/validation.ts(278,51): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/components/jsonjoy-builder/types/validation.ts(372,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/components/markdown-content/__tests__/index.test.tsx(2,1): error TS6133: 'React' is declared but its value is never read.
+src/components/next-message-item/group-button.tsx(71,3): error TS6133: 'isShare' is declared but its value is never read.
+src/components/originui/password-input.tsx(13,11): error TS6133: 'toggleVisibility' is declared but its value is never read.
+src/components/originui/timeline.tsx(272,10): error TS6133: 'r' is declared but its value is never read.
+src/components/originui/timeline.tsx(272,13): error TS6133: 'g' is declared but its value is never read.
+src/components/originui/timeline.tsx(272,16): error TS6133: 'b' is declared but its value is never read.
+src/components/ui/audio-button.tsx(12,1): error TS6192: All imports in import declaration are unused.
+src/components/ui/audio-button.tsx(170,7): error TS6133: 'VoiceInputBox' is declared but its value is never read.
+src/components/ui/audio-button.tsx(227,10): error TS6133: 'recordingTime' is declared but its value is never read.
+src/components/ui/audio-button.tsx(228,10): error TS6133: 'transcript' is declared but its value is never read.
+src/components/ui/audio-button.tsx(229,10): error TS6133: 'popoverOpen' is declared but its value is never read.
+src/components/ui/sidebar.tsx(283,17): error TS7006: Parameter 'event' implicitly has an 'any' type.
+src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(17,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(61,22): error TS2540: Cannot assign to 'current' because it is a read-only property.
+src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(70,27): error TS2322: Type 'string' is not assignable to type 'never'.
+src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(82,22): error TS2540: Cannot assign to 'current' because it is a read-only property.
+src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx(102,27): error TS2322: Type 'string' is not assignable to type 'never'.
+src/hooks/__tests__/parser-config-utils.test.ts(33,5): error TS2304: Cannot find name 'mockIsGoBackend'.
+src/hooks/logic-hooks.ts(801,27): error TS2551: Property 'message' does not exist on type 'IClientConversation'. Did you mean 'messages'?
+src/hooks/logic-hooks.ts(801,47): error TS7006: Parameter 'x' implicitly has an 'any' type.
+src/hooks/logic-hooks.ts(803,34): error TS2551: Property 'message' does not exist on type 'IClientConversation'. Did you mean 'messages'?
+src/hooks/logic-hooks/use-row-selection.ts(57,18): error TS6133: 'x' is declared but its value is never read.
+src/hooks/use-chunk-request.ts(234,5): error TS2322: Type 'Pagination' is not assignable to type 'PaginationProps'.
+  Types of property 'onChange' are incompatible.
+    Type '((page: number, pageSize: number) => void) | undefined' is not assignable to type '((page: number, pageSize?: number | undefined) => void) | undefined'.
+      Type '(page: number, pageSize: number) => void' is not assignable to type '(page: number, pageSize?: number | undefined) => void'.
+        Types of parameters 'pageSize' and 'pageSize' are incompatible.
+          Type 'number | undefined' is not assignable to type 'number'.
+            Type 'undefined' is not assignable to type 'number'.
+src/lib/editor/plugins/floating-selection-toolbar.tsx(97,9): error TS6133: 'toggleLink' is declared but its value is never read.
+src/pages/admin/utils.tsx(46,28): error TS6133: 'columnId' is declared but its value is never read.
+src/pages/agent/canvas/context-menu/index.tsx(34,7): error TS2322: Type 'Record<string, unknown> | undefined' is not assignable to type 'Record<string, unknown>'.
+  Type 'undefined' is not assignable to type 'Record<string, unknown>'.
+src/pages/agent/canvas/context-menu/index.tsx(79,13): error TS6133: 'pane' is declared but its value is never read.
+src/pages/agent/chat/use-send-agent-message.ts(396,33): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string | MessageOptions'.
+  Type 'undefined' is not assignable to type 'string | MessageOptions'.
+src/pages/agent/explore/components/session-list.tsx(56,64): error TS2339: Property 'is_new' does not exist on type 'IAgentLogResponse'.
+src/pages/agent/explore/hooks/use-select-derived-session-list.ts(31,7): error TS2740: Type '{}' is missing the following properties from type 'IReference[]': length, pop, push, concat, and 29 more.
+src/pages/agent/form-hooks.ts(16,13): error TS7053: Element implicitly has an 'any' type because expression of type 'Operator' can't be used to index type '{ Begin: Operator[]; Categorize: Operator[]; Retrieval: Operator[]; Message: Operator[]; RewriteQuestion: Operator[]; DuckDuckGo: Operator[]; ... 51 more ...; Browser: Operator[]; }'.
+  Property '[Operator.ManualChunker]' does not exist on type '{ Begin: Operator[]; Categorize: Operator[]; Retrieval: Operator[]; Message: Operator[]; RewriteQuestion: Operator[]; DuckDuckGo: Operator[]; ... 51 more ...; Browser: Operator[]; }'.
+src/pages/agent/form-sheet/next.tsx(57,40): error TS2551: Property 'TableChunker' does not exist on type '{ Begin: { component: MemoExoticComponent<({ node }: INextOperatorForm) => Element>; }; Retrieval: { component: MemoExoticComponent<({ node }: INextOperatorForm) => Element>; }; ... 57 more ...; ExcelProcessor: { ...; }; }'. Did you mean 'TitleChunker'?
+src/pages/agent/form-sheet/single-debug-sheet/utils.test.ts(7,50): error TS2339: Property 'Http' does not exist on type 'typeof Operator'.
+src/pages/agent/form/agent-form/tool-popover/tool-command.tsx(112,29): error TS6198: All destructured elements are unused.
+src/pages/agent/form/begin-form/use-edit-query.ts(19,27): error TS6133: 'item' is declared but its value is never read.
+src/pages/agent/form/begin-form/use-edit-query.ts(27,29): error TS2550: Property 'toSpliced' does not exist on type 'BeginQuery[]'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2023' or later.
+src/pages/agent/form/begin-form/use-edit-query.ts(49,10): error TS6133: 'item' is declared but its value is never read.
+src/pages/agent/form/categorize-form/use-form-schema.ts(10,5): error TS2783: 'parameter' is specified more than once, so this usage will be overwritten.
+src/pages/agent/form/code-form/next-variable.tsx(86,25): error TS2322: Type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to type 'SelectWithSearchFlagOptionType[]'.
+  Property 'label' is missing in type '{ options: ({ value?: string; } & Record<string, any>)[]; }' but required in type 'SelectWithSearchFlagOptionType'.
+src/pages/agent/form/components/query-variable-list.tsx(25,37): error TS2345: Argument of type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to parameter of type 'DefaultOptionType[]'.
+  Type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }' is missing the following properties from type 'DefaultOptionType': label, value
+src/pages/agent/form/components/query-variable.tsx(65,9): error TS2322: Type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to type 'Group[]'.
+  Property 'label' is missing in type '{ options: ({ value?: string; } & Record<string, any>)[]; }' but required in type 'Group'.
+src/pages/agent/form/components/query-variable.tsx(72,9): error TS2322: Type 'QueryVariableType[]' is not assignable to type 'JsonSchemaDataType[]'.
+  Type 'QueryVariableType' is not assignable to type 'JsonSchemaDataType'.
+    Type 'VariableType.String' is not assignable to type 'JsonSchemaDataType'.
+src/pages/agent/form/invoke-form/index.tsx(204,25): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/pages/agent/form/invoke-form/use-edit-variable.ts(22,30): error TS6133: 'item' is declared but its value is never read.
+src/pages/agent/form/invoke-form/use-edit-variable.ts(31,23): error TS2550: Property 'toSpliced' does not exist on type '{ ref: string; key: string; value: string; }[]'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2023' or later.
+src/pages/agent/form/invoke-form/use-edit-variable.ts(53,47): error TS6133: 'item' is declared but its value is never read.
+src/pages/agent/form/rewrite-question-form/index.tsx(17,32): error TS2339: Property 'form' does not exist on type 'INextOperatorForm'.
+src/pages/agent/form/searxng-form/index.tsx(35,9): error TS6133: 't' is declared but its value is never read.
+src/pages/agent/form/switch-form/index.tsx(109,11): error TS2322: Type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to type 'Group[]'.
+  Property 'label' is missing in type '{ options: ({ value?: string; } & Record<string, any>)[]; }' but required in type 'Group'.
+src/pages/agent/gobal-variable-sheet/component/add-variable-modal.tsx(112,9): error TS2322: Type '{ children: Element; ref: RefObject<DynamicFormRef>; fields: FormFieldConfig[]; onSubmit: (data: FieldValues) => void; defaultValues: FieldValues | undefined; onFieldUpdate: (fieldName: string, updatedField: Partial<...>) => void; }' is not assignable to type 'IntrinsicAttributes & DynamicFormProps<FieldValues> & { ref?: Ref<DynamicFormRef> | undefined; }'.
+  Property 'onFieldUpdate' does not exist on type 'IntrinsicAttributes & DynamicFormProps<FieldValues> & { ref?: Ref<DynamicFormRef> | undefined; }'.
+src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx(26,11): error TS2322: Type 'boolean' is not assignable to type 'SegmentedValue | undefined'.
+src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx(187,30): error TS7006: Parameter 'value' implicitly has an 'any' type.
+src/pages/agent/gobal-variable-sheet/index.tsx(14,1): error TS6133: 't' is declared but its value is never read.
+src/pages/agent/gobal-variable-sheet/index.tsx(145,37): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/pages/agent/hooks/use-agent-tool-initial-values.ts(12,50): error TS2551: Property 'TableChunker' does not exist on type '{ Begin: { mode: AgentDialogueMode; prologue: string; }; Retrieval: { cross_languages: never[]; retrieval_from: RetrievalFrom; outputs: { formalized_content: { ...; }; json: { ...; }; }; ... 7 more ...; rerank_id: string; }; ... 57 more ...; ExcelProcessor: {}; }'. Did you mean 'TitleChunker'?
+src/pages/agent/hooks/use-before-delete.test.tsx(56,41): error TS2339: Property 'Generate' does not exist on type 'typeof Operator'.
+src/pages/agent/hooks/use-before-delete.test.tsx(77,22): error TS2339: Property 'nodes' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(77,33): error TS7006: Parameter 'node' implicitly has an 'any' type.
+src/pages/agent/hooks/use-before-delete.test.tsx(80,22): error TS2339: Property 'edges' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(80,33): error TS7006: Parameter 'edge' implicitly has an 'any' type.
+src/pages/agent/hooks/use-before-delete.test.tsx(118,27): error TS2339: Property 'nodes' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(119,27): error TS2339: Property 'nodes' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(149,22): error TS2339: Property 'nodes' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(150,22): error TS2339: Property 'edges' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(150,33): error TS7006: Parameter 'edge' implicitly has an 'any' type.
+src/pages/agent/hooks/use-before-delete.test.tsx(172,22): error TS2339: Property 'nodes' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(173,22): error TS2339: Property 'edges' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(195,22): error TS2339: Property 'nodes' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(195,33): error TS7006: Parameter 'node' implicitly has an 'any' type.
+src/pages/agent/hooks/use-before-delete.test.tsx(196,22): error TS2339: Property 'edges' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(196,33): error TS7006: Parameter 'edge' implicitly has an 'any' type.
+src/pages/agent/hooks/use-before-delete.test.tsx(226,22): error TS2339: Property 'nodes' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(226,33): error TS7006: Parameter 'node' implicitly has an 'any' type.
+src/pages/agent/hooks/use-before-delete.test.tsx(229,22): error TS2339: Property 'edges' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(229,33): error TS7006: Parameter 'edge' implicitly has an 'any' type.
+src/pages/agent/hooks/use-before-delete.test.tsx(244,41): error TS2339: Property 'Generate' does not exist on type 'typeof Operator'.
+src/pages/agent/hooks/use-before-delete.test.tsx(269,22): error TS2339: Property 'nodes' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(269,33): error TS7006: Parameter 'node' implicitly has an 'any' type.
+src/pages/agent/hooks/use-before-delete.test.tsx(278,22): error TS2339: Property 'edges' does not exist on type 'never'.
+src/pages/agent/hooks/use-before-delete.test.tsx(278,33): error TS7006: Parameter 'edge' implicitly has an 'any' type.
+src/pages/agent/hooks/use-build-options.tsx(16,7): error TS2353: Object literal may only specify known properties, and 'Icon' does not exist in type '{ nodes: BaseNode[]; edges: Edge[]; nodeId?: string | undefined; }'.
+src/pages/agent/hooks/use-build-options.tsx(16,16): error TS7031: Binding element 'name' implicitly has an 'any' type.
+src/pages/agent/hooks/use-get-begin-query.tsx(465,28): error TS2339: Property 'options' does not exist on type 'DefaultOptionType'.
+src/pages/agent/hooks/use-get-begin-query.tsx(484,24): error TS2345: Argument of type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }[]' is not assignable to parameter of type 'DefaultOptionType[]'.
+  Type '{ options: ({ value?: string | undefined; } & Record<string, any>)[]; }' is missing the following properties from type 'DefaultOptionType': label, value
+src/pages/agent/hooks/use-get-begin-query.tsx(520,19): error TS2339: Property 'parentLabel' does not exist on type 'DefaultOptionType'.
+src/pages/agent/hooks/use-get-begin-query.tsx(532,23): error TS2339: Property 'type' does not exist on type 'DefaultOptionType'.
+src/pages/agent/options.ts(2166,9): error TS6133: 'x' is declared but its value is never read.
+src/pages/agent/setting-dialog/index.tsx(25,34): error TS2345: Argument of type '{ title: string; permission: string; description?: string | null | undefined; avatar?: string | null | undefined; }' is not assignable to parameter of type '{ id?: string | undefined; title?: string | undefined; dsl?: Record<string, any> | undefined; avatar?: string | undefined; canvas_category?: string | undefined; release?: string | undefined; description?: string | ... 1 more ... | undefined; permission?: string | undefined; }'.
+  Types of property 'avatar' are incompatible.
+    Type 'string | null | undefined' is not assignable to type 'string | undefined'.
+      Type 'null' is not assignable to type 'string | undefined'.
+src/pages/agent/store.test.ts(56,9): error TS2353: Object literal may only specify known properties, and 'parentId' does not exist in type 'Partial<{ id: string; type: string; position: { x: number; y: number; }; data: { label: Operator; name: string; form: {}; }; }>'.
+src/pages/agent/store.test.ts(59,51): error TS2353: Object literal may only specify known properties, and 'parentId' does not exist in type 'Partial<{ id: string; type: string; position: { x: number; y: number; }; data: { label: Operator; name: string; form: {}; }; }>'.
+src/pages/agent/store.test.ts(60,51): error TS2353: Object literal may only specify known properties, and 'parentId' does not exist in type 'Partial<{ id: string; type: string; position: { x: number; y: number; }; data: { label: Operator; name: string; form: {}; }; }>'.
+src/pages/agent/store.test.ts(61,41): error TS2339: Property 'Generate' does not exist on type 'typeof Operator'.
+src/pages/agent/store.test.ts(95,9): error TS2353: Object literal may only specify known properties, and 'parentId' does not exist in type 'Partial<{ id: string; type: string; position: { x: number; y: number; }; data: { label: Operator; name: string; form: {}; }; }>'.
+src/pages/agent/store.test.ts(98,51): error TS2353: Object literal may only specify known properties, and 'parentId' does not exist in type 'Partial<{ id: string; type: string; position: { x: number; y: number; }; data: { label: Operator; name: string; form: {}; }; }>'.
+src/pages/agent/store.test.ts(100,41): error TS2339: Property 'Generate' does not exist on type 'typeof Operator'.
+src/pages/agent/store.test.ts(131,9): error TS2353: Object literal may only specify known properties, and 'parentId' does not exist in type 'Partial<{ id: string; type: string; position: { x: number; y: number; }; data: { label: Operator; name: string; form: {}; }; }>'.
+src/pages/agent/store.test.ts(134,47): error TS2353: Object literal may only specify known properties, and 'parentId' does not exist in type 'Partial<{ id: string; type: string; position: { x: number; y: number; }; data: { label: Operator; name: string; form: {}; }; }>'.
+src/pages/agent/store.test.ts(138,41): error TS2339: Property 'Generate' does not exist on type 'typeof Operator'.
+src/pages/agent/store.ts(265,26): error TS6133: 'event' is declared but its value is never read.
+src/pages/agent/store.ts(272,26): error TS6133: 'event' is declared but its value is never read.
+src/pages/agent/use-agent-history-manager.ts(11,11): error TS6133: 'lastSavedState' is declared but its value is never read.
+src/pages/agent/utils.test.ts(143,19): error TS2339: Property 'image' does not exist on type '{ vlm: { llm_id?: string | undefined; system_prompt?: string | undefined; } & { llm_id: string; system_prompt: string; }; enable_vision_enhancement: boolean; }'.
+src/pages/agent/utils.test.ts(144,19): error TS2339: Property 'image' does not exist on type '{ vlm: { llm_id?: string | undefined; system_prompt?: string | undefined; } & { llm_id: string; system_prompt: string; }; enable_vision_enhancement: boolean; }'.
+src/pages/agent/utils.test.ts(145,19): error TS2339: Property 'image' does not exist on type '{ vlm: { llm_id?: string | undefined; system_prompt?: string | undefined; } & { llm_id: string; system_prompt: string; }; enable_vision_enhancement: boolean; }'.
+src/pages/agent/utils.test.ts(146,19): error TS2339: Property 'image' does not exist on type '{ vlm: { llm_id?: string | undefined; system_prompt?: string | undefined; } & { llm_id: string; system_prompt: string; }; enable_vision_enhancement: boolean; }'.
+src/pages/agents/agent-log-page.tsx(374,31): error TS2345: Argument of type 'string | number | IReference[] | IAgentLogMessage[]' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+src/pages/agents/agent-templates.tsx(69,7): error TS2322: Type 'Record<string, any> | DSL | undefined' is not assignable to type 'DSL | undefined'.
+  Type 'Record<string, any>' is missing the following properties from type 'DSL': components, history, globals, variables, retrieval
+src/pages/agents/builtin-pipeline-list.test.ts(87,31): error TS2345: Argument of type '{ operator: string; values: AgentCategory[]; }' is not assignable to parameter of type 'string | string[] | Record<string, string[]> | undefined'.
+  Types of property 'operator' are incompatible.
+    Type 'string' is not assignable to type 'string[]'.
+src/pages/agents/builtin-pipeline-section.test.tsx(108,9): error TS2322: Type '{ operator: string; values: AgentCategory.DataflowCanvas[]; }' is not assignable to type 'string | string[] | Record<string, string[]> | undefined'.
+  Types of property 'operator' are incompatible.
+    Type 'string' is not assignable to type 'string[]'.
+src/pages/agents/builtin-pipeline-section.test.tsx(148,7): error TS2554: Expected 1 arguments, but got 2.
+src/pages/dataflow-result/components/parse-editer/index.tsx(36,11): error TS2322: Type '{ key: "html" | "text" | "json" | "chunks"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }' is not assignable to type '{ key: "json" | "chunks"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }'.
+  Types of property 'key' are incompatible.
+    Type '"html" | "text" | "json" | "chunks"' is not assignable to type '"json" | "chunks"'.
+      Type '"html"' is not assignable to type '"json" | "chunks"'.
+src/pages/dataflow-result/components/parse-editer/index.tsx(53,11): error TS2322: Type '{ key: "html" | "text" | "json" | "chunks"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }' is not assignable to type '{ key: string; type: string; value: string; params: ComponentParams; }'.
+  Types of property 'value' are incompatible.
+    Type '{ [key: string]: string; }[]' is not assignable to type 'string'.
+src/pages/dataflow-result/components/parse-editer/json-parser.tsx(43,6): error TS6133: 'e' is declared but its value is never read.
+src/pages/dataflow-result/components/time-line/index.tsx(22,29): error TS6133: 'step' is declared but its value is never read.
+src/pages/dataflow-result/hooks.ts(2,1): error TS6133: 'message' is declared but its value is never read.
+src/pages/dataflow-result/hooks.ts(7,8): error TS6133: 'kbService' is declared but its value is never read.
+src/pages/dataflow-result/hooks.ts(10,10): error TS6133: 'useMutation' is declared but its value is never read.
+src/pages/dataflow-result/parser.tsx(117,15): error TS2322: Type '{ key: "html" | "text" | "json" | "chunks"; type: string; value: never[]; params?: undefined; } | { key: "html" | "text" | "json" | "chunks"; type: any; value: any; params: ComponentParams; }' is not assignable to type '{ key: "html" | "text" | "json" | "chunks"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }'.
+  Type '{ key: "text" | "html" | "json" | "chunks"; type: string; value: never[]; params?: undefined; }' is not assignable to type '{ key: "html" | "text" | "json" | "chunks"; type: string; value: { [key: string]: string; }[]; params: ComponentParams; }'.
+    Types of property 'params' are incompatible.
+      Type 'undefined' is not assignable to type 'ComponentParams'.
+src/pages/dataset/compilation/skills-view.tsx(60,9): error TS2322: Type '{ type: ViewMode.Skills; disabled: boolean; data: ITraceInfo | undefined; }' is not assignable to type 'IntrinsicAttributes & ICompilationEmptyStateProps'.
+  Property 'disabled' does not exist on type 'IntrinsicAttributes & ICompilationEmptyStateProps'.
+src/pages/dataset/dataset-overview/dataset-filter.tsx(30,8): error TS6133: 'rest' is declared but its value is never read.
+src/pages/dataset/dataset-overview/dataset-filter.tsx(36,18): error TS2365: Operator '+' cannot be applied to types 'number' and 'number | string[]'.
+src/pages/dataset/dataset/dataset-table.tsx(194,11): error TS2322: Type '{ record: IDocumentInfo; visible: true; onOk: (parserConfigInfo: IChangeParserRequestBody) => Promise<void>; hideModal: () => void; loading: boolean; }' is not assignable to type 'IntrinsicAttributes & ChangeParserDialogProps'.
+  Property 'visible' does not exist on type 'IntrinsicAttributes & ChangeParserDialogProps'.
+src/pages/dataset/dataset/parsing-status-cell.tsx(275,11): error TS2322: Type '{ forceDelete: true; handleOperationIconClick: (option?: { delete: boolean; apply_kb: boolean; } | undefined) => void; visible: true; hideModal: () => void; }' is not assignable to type 'IntrinsicAttributes & DialogProps & { handleOperationIconClick: (options?: { delete: boolean; apply_kb: boolean; } | undefined) => void; visible: boolean; hideModal: () => void; }'.
+  Property 'forceDelete' does not exist on type 'IntrinsicAttributes & DialogProps & { handleOperationIconClick: (options?: { delete: boolean; apply_kb: boolean; } | undefined) => void; visible: boolean; hideModal: () => void; }'.
+src/pages/dataset/knowledge-graph/util.ts(11,13): error TS6133: 'x' is declared but its value is never read.
+src/pages/files/use-upload-file.ts(19,48): error TS2322: Type '(File | { path: string; file: File; })[]' is not assignable to type 'File[]'.
+  Type 'File | { path: string; file: File; }' is not assignable to type 'File'.
+    Type '{ path: string; file: File; }' is missing the following properties from type 'File': lastModified, name, webkitRelativePath, size, and 6 more.
+src/pages/home/chat-list.tsx(36,8): error TS18048: 'data' is possibly 'undefined'.
+src/pages/home/datasets.tsx(44,14): error TS18048: 'kbs.length' is possibly 'undefined'.
+src/pages/login-next/index.tsx(346,11): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/pages/memories/hooks.ts(192,21): error TS2339: Property 'getMemoryDetailShare' does not exist on type 'Record<"createMemory" | "getMemoryList" | "deleteMemory" | "getMemoryConfig" | "deleteMemoryMessage" | "getMessageContent" | "updateMessageState" | "getMemoryFilters", (config?: string | ... 4 more ... | undefined, useAxiosNativeConfig?: boolean | undefined) => Promise<...>>'.
+src/pages/memories/hooks.ts(193,21): error TS2339: Property 'getMemoryDetail' does not exist on type 'Record<"createMemory" | "getMemoryList" | "deleteMemory" | "getMemoryConfig" | "deleteMemoryMessage" | "getMessageContent" | "updateMessageState" | "getMemoryFilters", (config?: string | ... 4 more ... | undefined, useAxiosNativeConfig?: boolean | undefined) => Promise<...>>'.
+src/pages/memories/hooks.ts(269,17): error TS6133: 'data' is declared but its value is never read.
+src/pages/memory/memory-message/index.tsx(16,5): error TS6133: 'loading' is declared but its value is never read.
+src/pages/memory/memory-setting/hook.ts(11,11): error TS6133: 'res' is declared but its value is never read.
+src/pages/next-chats/chat/chat-box/single-chat-box.test.tsx(2,1): error TS6133: 'React' is declared but its value is never read.
+src/pages/next-chats/hooks/use-send-single-message.ts(125,9): error TS2322: Type 'Record<string, any>[]' is not assignable to type '(File | UploadResponseDataType)[]'.
+  Type 'Record<string, any>' is not assignable to type 'File | UploadResponseDataType'.
+    Type 'Record<string, any>' is missing the following properties from type 'File': lastModified, name, webkitRelativePath, size, and 6 more.
+src/pages/next-chats/hooks/use-send-single-message.ts(140,13): error TS2322: Type 'Record<string, any>[]' is not assignable to type '(File | UploadResponseDataType)[]'.
+  Type 'Record<string, any>' is not assignable to type 'File | UploadResponseDataType'.
+    Type 'Record<string, any>' is missing the following properties from type 'File': lastModified, name, webkitRelativePath, size, and 6 more.
+src/pages/next-chats/index.tsx(117,20): error TS18048: 'data' is possibly 'undefined'.
+src/pages/next-chats/index.tsx(124,11): error TS18048: 'data' is possibly 'undefined'.
+src/pages/next-chats/index.tsx(146,12): error TS18048: 'data' is possibly 'undefined'.
+src/pages/next-chats/index.tsx(149,18): error TS18048: 'data' is possibly 'undefined'.
+src/pages/next-searches/hooks.ts(325,17): error TS6133: 'data' is declared but its value is never read.
+src/pages/skills/types.ts(156,10): error TS1205: Re-exporting a type when 'isolatedModules' is enabled requires using 'export type'.
+src/pages/skills/types.ts(178,12): error TS2304: Cannot find name 'SkillSearchConfig'.
+src/pages/skills/types.ts(179,20): error TS2304: Cannot find name 'SkillSearchConfig'.
+src/pages/user-setting/data-source/log-summary.tsx(57,48): error TS2367: This comparison appears to be unintentional because the types 'RunningStatus.UNSTART | RunningStatus.RUNNING | RunningStatus.CANCEL | RunningStatus.DONE | RunningStatus.FAIL | RunningStatus.QUEUED' and '"5"' have no overlap.
+src/pages/user-setting/data-source/log-summary.tsx(61,47): error TS2367: This comparison appears to be unintentional because the types 'RunningStatus.UNSTART | RunningStatus.CANCEL | RunningStatus.DONE | RunningStatus.FAIL | RunningStatus.QUEUED' and '"1"' have no overlap.
+src/pages/user-setting/data-source/log-summary.tsx(65,44): error TS2367: This comparison appears to be unintentional because the types 'RunningStatus.UNSTART | RunningStatus.CANCEL | RunningStatus.DONE | RunningStatus.QUEUED' and '"4"' have no overlap.
+src/pages/user-setting/data-source/log-summary.tsx(69,46): error TS2367: This comparison appears to be unintentional because the types 'RunningStatus.UNSTART | RunningStatus.DONE | RunningStatus.QUEUED' and '"2"' have no overlap.
+src/pages/user-setting/setting-model/instance-card/components/draft-mode-card.tsx(23,1): error TS6133: 'VerifyButton' is declared but its value is never read.
+src/pages/user-setting/setting-model/instance-card/components/draft-mode-card.tsx(40,3): error TS6133: 'handleVerify' is declared but its value is never read.
+src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx(26,1): error TS6133: 'LLMFactory' is declared but its value is never read.
+src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx(39,1): error TS6133: 'VerifyButton' is declared but its value is never read.
+src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx(57,3): error TS6133: 'handleVerify' is declared but its value is never read.
+src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx(100,9): error TS6133: 'startRename' is declared but its value is never read.
+src/services/admin-service.ts(214,45): error TS2345: Argument of type 'GoServiceStatus[] | ListServicesItem[]' is not assignable to parameter of type 'GoServiceStatus[]'.
+  Type 'ListServicesItem[]' is not assignable to type 'GoServiceStatus[]'.
+    Type 'ListServicesItem' is missing the following properties from type 'GoServiceStatus': type, elapsed, message
+src/services/admin-service.ts(220,47): error TS2345: Argument of type 'GoServiceStatus | ServiceDetail' is not assignable to parameter of type 'GoServiceStatus'.
+  Type '{ service_name: string; status: string; message: string | Record<string, any> | Record<string, any>[]; }' is missing the following properties from type 'GoServiceStatus': type, name, host, port, elapsed
+src/services/knowledge-service.ts(41,3): error TS2339: Property 'getMetaKeys' does not exist on type '{ login: string; logout: string; register: string; setting: string; userInfo: string; tenantInfo: string; loginChannels: string; loginChannel: (channel: string) => string; addTenantUser: (tenantId: string) => string; ... 254 more ...; skillReindex: string; }'.
+src/utils/__tests__/pipeline-operator.test.ts(123,5): error TS2304: Cannot find name 'mockIsGoBackend'.

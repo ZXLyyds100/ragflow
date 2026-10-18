@@ -1,0 +1,39 @@
+╭──────────────────────────────────────╮
+│ lefthook  v2.2.2   hook:  pre-commit │
+╰──────────────────────────────────────╯
+│  ruff-format (skip) no files for inspection
+│  ruff (skip) no files for inspection
+┃  gofmt ❯
+
+┃  end-of-file-fixer ❯
+
+┃  check-yaml ❯
+
+┃  check-merge-conflict ❯
+
+┃  check-symlinks ❯
+
+┃  mixed-line-ending ❯
+
+┃  check-json ❯
+
+┃  trailing-whitespace ❯
+
+┃  check-case-conflict ❯
+
+  ────────────────────────────────────
+summary: (done in 0.50 seconds)
+✓ gofmt (0.05 seconds)
+✓ check-yaml (0.47 seconds)
+✓ end-of-file-fixer (0.47 seconds)
+✓ check-merge-conflict (0.47 seconds)
+✓ check-symlinks (0.47 seconds)
+✓ mixed-line-ending (0.48 seconds)
+✓ check-json (0.48 seconds)
+✓ trailing-whitespace (0.49 seconds)
+✓ check-case-conflict (0.49 seconds)
+[fix/mineru-extraction-controls bcfa94f] feat(parser): honor MinerU formula and table controls
+ 16 files changed, 725 insertions(+), 49 deletions(-)
+ create mode 100644 internal/ingestion/component/mineru_options_test.go
+ create mode 100644 internal/ingestion/pipeline/mineru_config_test.go
+ create mode 100644 web/src/components/layout-recognize-form-field.test.tsx

@@ -1,0 +1,52 @@
+{
+  "capturedAt": "2026-10-18T00:45:56.889Z",
+  "baselineSha": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+  "sourceSha": "bcfa94f6e227342a0fe8cd2af1cbe1ec564bc904",
+  "go": {
+    "relatedPackages": [
+      "./internal/ingestion/...",
+      "./internal/entity/models/...",
+      "./internal/parser/..."
+    ],
+    "result": "passed",
+    "nativeUnitTests": "passed",
+    "race": "passed on final committed tests",
+    "requestCases": 63,
+    "malformedOptionCases": 10,
+    "v1RejectedCases": 5,
+    "v1EnabledCases": 4,
+    "serializedConfigCases": 18,
+    "adaptation": "macOS PCRE2 path overlay; real ORT 1.29.0 and PDF 0.3.73 shared libraries via local compiler adapter; unmodified repository static-link configuration fails on this host",
+    "staticLinkValidation": "not passed: original repository macOS static configuration fails before tests"
+  },
+  "frontend": {
+    "relatedSuites": 9,
+    "relatedTests": 108,
+    "result": "passed",
+    "productionBuild": "passed",
+    "format": "passed",
+    "lint": "passed",
+    "fullSuite": "baseline and fixed both fail in the same six suites, then abort with Request is not defined",
+    "failingSuites": [
+      "src/pages/agent/utils/pipeline-connection.test.ts",
+      "src/pages/dataset/components/metedata/hooks/__tests__/use-manage-values-modal.test.ts",
+      "src/pages/user-setting/setting-model/instance-card/models-section/hooks.test.tsx",
+      "src/utils/__tests__/chat.test.ts",
+      "src/utils/__tests__/file-util.test.ts",
+      "src/utils/__tests__/llm-util.test.ts"
+    ],
+    "typeCheck": {
+      "result": "failed on unchanged baseline errors",
+      "diagnostics": 206,
+      "newErrorsAfterNormalizingLocations": 0
+    }
+  },
+  "browser": {
+    "source": "real PdfFormFields, FormSchema and save/load transforms",
+    "modelListAndPersistence": "explicit local fixtures, no real credentials",
+    "bothDisabledSaveReload": "passed",
+    "independentChoicesSaveReload": "passed",
+    "liveOCRInference": "not run"
+  },
+  "review": "two self-review passes; repository contribution instructions and merged PRs #20474/#20839 inspected"
+}

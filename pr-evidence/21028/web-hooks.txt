@@ -1,0 +1,16 @@
+╭──────────────────────────────────────╮
+│ lefthook  v2.2.2   hook:  web-checks │
+╰──────────────────────────────────────╯
+┃  web-oxfmt ❯
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 7ms on 11 files using 10 threads.
+
+┃  web-oxlint ❯
+
+│  web-no-tests-dir (skip) no files for inspection
+  ────────────────────────────────────
+summary: (done in 0.88 seconds)
+✓ web-oxfmt (0.68 seconds)
+✓ web-oxlint (0.20 seconds)

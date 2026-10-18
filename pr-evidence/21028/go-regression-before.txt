@@ -1,0 +1,265 @@
+=== RAGFlow Go Server Build Script ===
+
+>>> Checking go dependencies
+✓ Required tools are available
+
+>>> Checking ONNX Runtime version consistency
+✓ ONNX Runtime native version consistent: 1.29.0
+
+>>> Running Go tests
+check if the cl100k_base BPE table exists at <workspace>/work/repos/ragflow/ragflow_deps/cl100k_base.tiktoken
+  cl100k_base.tiktoken → <workspace>/work/repos/ragflow/ragflow_deps/cl100k_base.tiktoken (already present)
+
+>>> Checking office_oxide native library
+check if dep office_oxide exists in <workspace>/work/ragflow-21028/home/ragflow-native-libs/office_oxide or /opt/ragflow-native-libs/office_oxide
+  office_oxide → <workspace>/work/ragflow-21028/home/ragflow-native-libs/office_oxide (user cache)
+✓ office_oxide v0.1.12 native library found at <workspace>/work/ragflow-21028/home/ragflow-native-libs/office_oxide
+check if dep pdfium-static exists in <workspace>/work/ragflow-21028/home/ragflow-native-libs/pdfium-static or /opt/ragflow-native-libs/pdfium-static
+  pdfium-static → <workspace>/work/ragflow-21028/home/ragflow-native-libs/pdfium-static (user cache)
+  pdfium (static) → <workspace>/work/ragflow-21028/home/ragflow-native-libs/pdfium-static
+check if dep pdf_oxide exists in <workspace>/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide or /opt/ragflow-native-libs/pdf_oxide
+  pdf_oxide → <workspace>/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide (user cache)
+  pdf_oxide (static) → <workspace>/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide
+check if dep onnxruntime exists in <workspace>/work/ragflow-21028/home/ragflow-native-libs/onnxruntime or /opt/ragflow-native-libs/onnxruntime
+  onnxruntime → <workspace>/work/ragflow-21028/home/ragflow-native-libs/onnxruntime (user cache)
+  ✓ onnxruntime-v1.29.0-osx-arm64.zip sha256 matches pinned digest
+✓ onnxruntime v1.29.0 static lib verified under <workspace>/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+  onnxruntime (static) → <workspace>/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+CGO_CFLAGS:   -I<workspace>/work/ragflow-21028/home/ragflow-native-libs/office_oxide/include/office_oxide_c
+CGO_LDFLAGS:  <workspace>/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a <workspace>/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a <workspace>/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide/lib/darwin_arm64/v0.3.73/libpdf_oxide.a -Wl,-export_dynamic -Wl,-force_load,<workspace>/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib/v1.29.0-b1da7e98dc26fc49/libonnxruntime.a -lc++                 -framework CoreGraphics -framework CoreFoundation                 -framework Security -framework SystemConfiguration                 -liconv -lresolv -lc++
+# ragflow/internal/ingestion/component.test
+ld: warning: duplicate -rpath '<workspace>/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '<workspace>/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '<workspace>/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '<workspace>/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '<workspace>/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '<workspace>/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '<workspace>/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '<workspace>/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '<workspace>/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '<workspace>/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+=== RUN   TestMinerUExtractionSwitches
+=== RUN   TestMinerUExtractionSwitches/pipeline/omitted/omitted
+=== RUN   TestMinerUExtractionSwitches/pipeline/omitted/enabled
+=== RUN   TestMinerUExtractionSwitches/pipeline/omitted/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/pipeline/enabled/omitted
+=== RUN   TestMinerUExtractionSwitches/pipeline/enabled/enabled
+=== RUN   TestMinerUExtractionSwitches/pipeline/enabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/pipeline/disabled/omitted
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/pipeline/disabled/enabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/pipeline/disabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false false]
+=== RUN   TestMinerUExtractionSwitches/vlm-engine/omitted/omitted
+=== RUN   TestMinerUExtractionSwitches/vlm-engine/omitted/enabled
+=== RUN   TestMinerUExtractionSwitches/vlm-engine/omitted/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/vlm-engine/enabled/omitted
+=== RUN   TestMinerUExtractionSwitches/vlm-engine/enabled/enabled
+=== RUN   TestMinerUExtractionSwitches/vlm-engine/enabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/vlm-engine/disabled/omitted
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/vlm-engine/disabled/enabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/vlm-engine/disabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false false]
+=== RUN   TestMinerUExtractionSwitches/vlm-auto-engine/omitted/omitted
+=== RUN   TestMinerUExtractionSwitches/vlm-auto-engine/omitted/enabled
+=== RUN   TestMinerUExtractionSwitches/vlm-auto-engine/omitted/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/vlm-auto-engine/enabled/omitted
+=== RUN   TestMinerUExtractionSwitches/vlm-auto-engine/enabled/enabled
+=== RUN   TestMinerUExtractionSwitches/vlm-auto-engine/enabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/vlm-auto-engine/disabled/omitted
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/vlm-auto-engine/disabled/enabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/vlm-auto-engine/disabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false false]
+=== RUN   TestMinerUExtractionSwitches/vlm-http-client/omitted/omitted
+=== RUN   TestMinerUExtractionSwitches/vlm-http-client/omitted/enabled
+=== RUN   TestMinerUExtractionSwitches/vlm-http-client/omitted/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/vlm-http-client/enabled/omitted
+=== RUN   TestMinerUExtractionSwitches/vlm-http-client/enabled/enabled
+=== RUN   TestMinerUExtractionSwitches/vlm-http-client/enabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/vlm-http-client/disabled/omitted
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/vlm-http-client/disabled/enabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/vlm-http-client/disabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false false]
+=== RUN   TestMinerUExtractionSwitches/hybrid-engine/omitted/omitted
+=== RUN   TestMinerUExtractionSwitches/hybrid-engine/omitted/enabled
+=== RUN   TestMinerUExtractionSwitches/hybrid-engine/omitted/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/hybrid-engine/enabled/omitted
+=== RUN   TestMinerUExtractionSwitches/hybrid-engine/enabled/enabled
+=== RUN   TestMinerUExtractionSwitches/hybrid-engine/enabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/hybrid-engine/disabled/omitted
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/hybrid-engine/disabled/enabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/hybrid-engine/disabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false false]
+=== RUN   TestMinerUExtractionSwitches/hybrid-auto-engine/omitted/omitted
+=== RUN   TestMinerUExtractionSwitches/hybrid-auto-engine/omitted/enabled
+=== RUN   TestMinerUExtractionSwitches/hybrid-auto-engine/omitted/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/hybrid-auto-engine/enabled/omitted
+=== RUN   TestMinerUExtractionSwitches/hybrid-auto-engine/enabled/enabled
+=== RUN   TestMinerUExtractionSwitches/hybrid-auto-engine/enabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/hybrid-auto-engine/disabled/omitted
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/hybrid-auto-engine/disabled/enabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/hybrid-auto-engine/disabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false false]
+=== RUN   TestMinerUExtractionSwitches/hybrid-http-client/omitted/omitted
+=== RUN   TestMinerUExtractionSwitches/hybrid-http-client/omitted/enabled
+=== RUN   TestMinerUExtractionSwitches/hybrid-http-client/omitted/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/hybrid-http-client/enabled/omitted
+=== RUN   TestMinerUExtractionSwitches/hybrid-http-client/enabled/enabled
+=== RUN   TestMinerUExtractionSwitches/hybrid-http-client/enabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [true false]
+=== RUN   TestMinerUExtractionSwitches/hybrid-http-client/disabled/omitted
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/hybrid-http-client/disabled/enabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false true]
+=== RUN   TestMinerUExtractionSwitches/hybrid-http-client/disabled/disabled
+    mineru_options_test.go:84: formula_enable/table_enable = [true true], want [false false]
+--- FAIL: TestMinerUExtractionSwitches (0.11s)
+    --- PASS: TestMinerUExtractionSwitches/pipeline/omitted/omitted (0.02s)
+    --- PASS: TestMinerUExtractionSwitches/pipeline/omitted/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/pipeline/omitted/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/pipeline/enabled/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/pipeline/enabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/pipeline/enabled/disabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/pipeline/disabled/omitted (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/pipeline/disabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/pipeline/disabled/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-engine/omitted/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-engine/omitted/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-engine/omitted/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-engine/enabled/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-engine/enabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-engine/enabled/disabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-engine/disabled/omitted (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-engine/disabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-engine/disabled/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-auto-engine/omitted/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-auto-engine/omitted/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-auto-engine/omitted/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-auto-engine/enabled/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-auto-engine/enabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-auto-engine/enabled/disabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-auto-engine/disabled/omitted (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-auto-engine/disabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-auto-engine/disabled/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-http-client/omitted/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-http-client/omitted/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-http-client/omitted/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-http-client/enabled/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-http-client/enabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-http-client/enabled/disabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-http-client/disabled/omitted (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-http-client/disabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/vlm-http-client/disabled/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/hybrid-engine/omitted/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/hybrid-engine/omitted/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-engine/omitted/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/hybrid-engine/enabled/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/hybrid-engine/enabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-engine/enabled/disabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-engine/disabled/omitted (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-engine/disabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-engine/disabled/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/hybrid-auto-engine/omitted/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/hybrid-auto-engine/omitted/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-auto-engine/omitted/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/hybrid-auto-engine/enabled/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/hybrid-auto-engine/enabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-auto-engine/enabled/disabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-auto-engine/disabled/omitted (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-auto-engine/disabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-auto-engine/disabled/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/hybrid-http-client/omitted/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/hybrid-http-client/omitted/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-http-client/omitted/disabled (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/hybrid-http-client/enabled/omitted (0.00s)
+    --- PASS: TestMinerUExtractionSwitches/hybrid-http-client/enabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-http-client/enabled/disabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-http-client/disabled/omitted (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-http-client/disabled/enabled (0.00s)
+    --- FAIL: TestMinerUExtractionSwitches/hybrid-http-client/disabled/disabled (0.00s)
+=== RUN   TestMinerUExtractionSwitchTypes
+=== RUN   TestMinerUExtractionSwitchTypes/mineru_formula_enable/<nil>
+    mineru_options_test.go:105: invalid switch <nil>: error = <nil>
+=== RUN   TestMinerUExtractionSwitchTypes/mineru_formula_enable/string
+    mineru_options_test.go:105: invalid switch false: error = <nil>
+=== RUN   TestMinerUExtractionSwitchTypes/mineru_formula_enable/int
+    mineru_options_test.go:105: invalid switch 0: error = <nil>
+=== RUN   TestMinerUExtractionSwitchTypes/mineru_formula_enable/[]interface_{}
+    mineru_options_test.go:105: invalid switch []: error = <nil>
+=== RUN   TestMinerUExtractionSwitchTypes/mineru_formula_enable/map[string]interface_{}
+    mineru_options_test.go:105: invalid switch map[]: error = <nil>
+=== RUN   TestMinerUExtractionSwitchTypes/mineru_table_enable/<nil>
+    mineru_options_test.go:105: invalid switch <nil>: error = <nil>
+=== RUN   TestMinerUExtractionSwitchTypes/mineru_table_enable/string
+    mineru_options_test.go:105: invalid switch false: error = <nil>
+=== RUN   TestMinerUExtractionSwitchTypes/mineru_table_enable/int
+    mineru_options_test.go:105: invalid switch 0: error = <nil>
+=== RUN   TestMinerUExtractionSwitchTypes/mineru_table_enable/[]interface_{}
+    mineru_options_test.go:105: invalid switch []: error = <nil>
+=== RUN   TestMinerUExtractionSwitchTypes/mineru_table_enable/map[string]interface_{}
+    mineru_options_test.go:105: invalid switch map[]: error = <nil>
+--- FAIL: TestMinerUExtractionSwitchTypes (0.00s)
+    --- FAIL: TestMinerUExtractionSwitchTypes/mineru_formula_enable/<nil> (0.00s)
+    --- FAIL: TestMinerUExtractionSwitchTypes/mineru_formula_enable/string (0.00s)
+    --- FAIL: TestMinerUExtractionSwitchTypes/mineru_formula_enable/int (0.00s)
+    --- FAIL: TestMinerUExtractionSwitchTypes/mineru_formula_enable/[]interface_{} (0.00s)
+    --- FAIL: TestMinerUExtractionSwitchTypes/mineru_formula_enable/map[string]interface_{} (0.00s)
+    --- FAIL: TestMinerUExtractionSwitchTypes/mineru_table_enable/<nil> (0.00s)
+    --- FAIL: TestMinerUExtractionSwitchTypes/mineru_table_enable/string (0.00s)
+    --- FAIL: TestMinerUExtractionSwitchTypes/mineru_table_enable/int (0.00s)
+    --- FAIL: TestMinerUExtractionSwitchTypes/mineru_table_enable/[]interface_{} (0.00s)
+    --- FAIL: TestMinerUExtractionSwitchTypes/mineru_table_enable/map[string]interface_{} (0.00s)
+=== RUN   TestMinerUV1RejectsDisabledExtraction
+=== RUN   TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:false]
+    mineru_options_test.go:145: unsupported V1 preference: error = parser: MinerU V1: create upload: MinerU V1 POST http://127.0.0.1:51860/v1/uploads: HTTP 400: must reject before upload or job creation
+    mineru_options_test.go:148: created 1 requests after V1 probe; want no upload or job
+=== RUN   TestMinerUV1RejectsDisabledExtraction/map[mineru_table_enable:false]
+    mineru_options_test.go:145: unsupported V1 preference: error = parser: MinerU V1: create upload: MinerU V1 POST http://127.0.0.1:51862/v1/uploads: HTTP 400: must reject before upload or job creation
+    mineru_options_test.go:148: created 1 requests after V1 probe; want no upload or job
+=== RUN   TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:false_mineru_table_enable:false]
+    mineru_options_test.go:145: unsupported V1 preference: error = parser: MinerU V1: create upload: MinerU V1 POST http://127.0.0.1:51864/v1/uploads: HTTP 400: must reject before upload or job creation
+    mineru_options_test.go:148: created 1 requests after V1 probe; want no upload or job
+=== RUN   TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:false_mineru_table_enable:true]
+    mineru_options_test.go:145: unsupported V1 preference: error = parser: MinerU V1: create upload: MinerU V1 POST http://127.0.0.1:51866/v1/uploads: HTTP 400: must reject before upload or job creation
+    mineru_options_test.go:148: created 1 requests after V1 probe; want no upload or job
+=== RUN   TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:true_mineru_table_enable:false]
+    mineru_options_test.go:145: unsupported V1 preference: error = parser: MinerU V1: create upload: MinerU V1 POST http://127.0.0.1:51868/v1/uploads: HTTP 400: must reject before upload or job creation
+    mineru_options_test.go:148: created 1 requests after V1 probe; want no upload or job
+--- FAIL: TestMinerUV1RejectsDisabledExtraction (0.01s)
+    --- FAIL: TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:false] (0.00s)
+    --- FAIL: TestMinerUV1RejectsDisabledExtraction/map[mineru_table_enable:false] (0.00s)
+    --- FAIL: TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:false_mineru_table_enable:false] (0.00s)
+    --- FAIL: TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:false_mineru_table_enable:true] (0.00s)
+    --- FAIL: TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:true_mineru_table_enable:false] (0.00s)
+=== RUN   TestMinerUV1EnabledExtractionPreservesJob
+=== RUN   TestMinerUV1EnabledExtractionPreservesJob/explicit=false
+=== RUN   TestMinerUV1EnabledExtractionPreservesJob/explicit=true
+--- PASS: TestMinerUV1EnabledExtractionPreservesJob (0.00s)
+    --- PASS: TestMinerUV1EnabledExtractionPreservesJob/explicit=false (0.00s)
+    --- PASS: TestMinerUV1EnabledExtractionPreservesJob/explicit=true (0.00s)
+FAIL
+FAIL	ragflow/internal/ingestion/component	0.929s
+FAIL

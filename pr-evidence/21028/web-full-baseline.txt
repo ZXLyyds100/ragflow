@@ -1,0 +1,817 @@
+
+> test
+> jest --no-cache --coverage --runInBand
+
+PASS src/pages/agent/utils/__tests__/canvas-checklist.test.ts
+PASS src/pages/dataset/dataset/utils.test.ts
+PASS src/pages/agent/utils/__tests__/dsl-bridge.test.ts
+FAIL src/pages/user-setting/setting-model/instance-card/models-section/hooks.test.tsx
+  ● Test suite failed to run
+
+    TypeError: Cannot read properties of undefined (reading 'Text')
+
+      30 |       label: 'instanceName',
+      31 |       type: FormFieldType.Text,
+    > 32 |       required: true,
+         |                      ^
+      33 |       placeholder: 'instanceNameMessage',
+      34 |       tooltip: 'instanceNameTip',
+      35 |       autoComplete: 'new-password',
+
+      at Object.<anonymous> (src/pages/user-setting/setting-model/provider-schema/field-config/generic-api-key-config.ts:32:47)
+      at Object.<anonymous> (src/pages/user-setting/setting-model/provider-schema/field-config/get-provider-config.ts:23:37)
+      at Object.<anonymous> (src/pages/user-setting/setting-model/provider-schema/field-config/index.ts:23:34)
+      at Object.<anonymous> (src/pages/user-setting/setting-model/instance-card/hooks.tsx:34:27)
+      at Object.<anonymous> (src/pages/user-setting/setting-model/instance-card/models-section/hooks.test.tsx:22:1)
+
+FAIL src/pages/dataset/components/metedata/hooks/__tests__/use-manage-values-modal.test.ts
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    SyntaxError: <workspace>/work/ragflow-21028/baseline-source/web/src/pages/dataset/components/metedata/hooks/__tests__/use-manage-values-modal.test.ts: Cannot transform the imported binding "IManageValuesProps" since it's also used in a type annotation. Please strip type annotations using @babel/preset-typescript or @babel/preset-flow.
+       9 |
+      10 | function makeProps(
+    > 11 |   overrides: Partial<IManageValuesProps> = {},
+         |                      ^^^^^^^^^^^^^^^^^^
+      12 | ): IManageValuesProps {
+      13 |   const data: IMetaDataTableData = {
+      14 |     field: '',
+
+      21 |       process(content, filename, config, opts) {
+      22 |         if (content.indexOf('ock(') >= 0) {
+    > 23 |           return esbuildJestTransformer.process(content, filename, config, opts);
+         |                                         ^
+      24 |         }
+      25 |         const ext = path.extname(filename).slice(1);
+      26 |         const loader = ext === 'ts' ? 'tsx' : supportedLoaders.includes(ext) ? ext : 'text';
+
+      at File.buildError [as buildCodeFrameError] (../../../repos/ragflow/web/node_modules/@babel/core/src/transformation/file/file.ts:251:12)
+      at NodePath.buildCodeFrameError (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/index.ts:159:21)
+      at Object.apply (../../../repos/ragflow/web/node_modules/@babel/helper-module-transforms/src/rewrite-live-references.ts:283:20)
+      at Object.call (../../../repos/ragflow/web/node_modules/@babel/traverse/src/visitors.ts:345:17)
+      at NodePath.call [as _call] (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:36:20)
+      at NodePath.call (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:21:18)
+      at NodePath.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:97:31)
+      at TraversalContext.visitQueue (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:151:16)
+      at TraversalContext.visitSingle (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:109:19)
+      at TraversalContext.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:184:19)
+      at traverseNode (../../../repos/ragflow/web/node_modules/@babel/traverse/src/traverse-node.ts:208:17)
+      at NodePath.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:104:33)
+      at TraversalContext.visitQueue (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:151:16)
+      at TraversalContext.visitMultiple (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:99:17)
+      at TraversalContext.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:182:19)
+      at traverseNode (../../../repos/ragflow/web/node_modules/@babel/traverse/src/traverse-node.ts:208:17)
+      at NodePath.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:104:33)
+      at TraversalContext.visitQueue (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:151:16)
+      at TraversalContext.visitSingle (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:109:19)
+      at TraversalContext.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:184:19)
+      at traverseNode (../../../repos/ragflow/web/node_modules/@babel/traverse/src/traverse-node.ts:208:17)
+      at NodePath.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:104:33)
+      at TraversalContext.visitQueue (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:151:16)
+      at TraversalContext.visitSingle (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:109:19)
+      at TraversalContext.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:184:19)
+      at traverseNode (../../../repos/ragflow/web/node_modules/@babel/traverse/src/traverse-node.ts:208:17)
+      at NodePath.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:104:33)
+      at TraversalContext.visitQueue (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:151:16)
+      at TraversalContext.visitSingle (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:109:19)
+      at TraversalContext.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:184:19)
+      at traverseNode (../../../repos/ragflow/web/node_modules/@babel/traverse/src/traverse-node.ts:208:17)
+      at NodePath.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:104:33)
+      at TraversalContext.visitQueue (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:151:16)
+      at TraversalContext.visitSingle (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:109:19)
+      at TraversalContext.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:184:19)
+      at traverseNode (../../../repos/ragflow/web/node_modules/@babel/traverse/src/traverse-node.ts:208:17)
+      at NodePath.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:104:33)
+      at TraversalContext.visitQueue (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:151:16)
+      at TraversalContext.visitMultiple (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:99:17)
+      at TraversalContext.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:182:19)
+      at traverseNode (../../../repos/ragflow/web/node_modules/@babel/traverse/src/traverse-node.ts:208:17)
+      at NodePath.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:104:33)
+      at TraversalContext.visitQueue (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:151:16)
+      at TraversalContext.visitMultiple (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:99:17)
+      at TraversalContext.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:182:19)
+      at traverseNode (../../../repos/ragflow/web/node_modules/@babel/traverse/src/traverse-node.ts:208:17)
+      at traverse (../../../repos/ragflow/web/node_modules/@babel/traverse/src/index.ts:84:15)
+      at NodePath.traverse (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/index.ts:165:13)
+      at rewriteLiveReferences (../../../repos/ragflow/web/node_modules/@babel/helper-module-transforms/src/rewrite-live-references.ts:137:15)
+      at rewriteModuleStatementsAndPrepareHeader (../../../repos/ragflow/web/node_modules/@babel/helper-module-transforms/src/index.ts:106:24)
+      at PluginPass.call (../../../repos/ragflow/web/node_modules/@babel/plugin-transform-modules-commonjs/src/index.ts:221:76)
+      at call (../../../repos/ragflow/web/node_modules/@babel/traverse/src/visitors.ts:299:14)
+      at NodePath.call [as _call] (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:36:20)
+      at NodePath.call (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:21:18)
+      at NodePath.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/path/context.ts:115:8)
+      at TraversalContext.visitQueue (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:151:16)
+      at TraversalContext.visitSingle (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:109:19)
+      at TraversalContext.visit (../../../repos/ragflow/web/node_modules/@babel/traverse/src/context.ts:184:19)
+      at traverseNode (../../../repos/ragflow/web/node_modules/@babel/traverse/src/traverse-node.ts:208:17)
+      at traverse (../../../repos/ragflow/web/node_modules/@babel/traverse/src/index.ts:84:15)
+      at transformFile (../../../repos/ragflow/web/node_modules/@babel/core/src/transformation/index.ts:120:15)
+          at transformFile.next (<anonymous>)
+      at run (../../../repos/ragflow/web/node_modules/@babel/core/src/transformation/index.ts:50:12)
+          at run.next (<anonymous>)
+      at transform (../../../repos/ragflow/web/node_modules/@babel/core/src/transform.ts:29:20)
+          at transform.next (<anonymous>)
+      at evaluateSync (../../../repos/ragflow/web/node_modules/gensync/index.js:251:28)
+      at fn (../../../repos/ragflow/web/node_modules/gensync/index.js:89:14)
+      at stopHiding - secret - don't use this - v1 (../../../repos/ragflow/web/node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+      at transformSync (../../../repos/ragflow/web/node_modules/@babel/core/src/transform.ts:66:52)
+      at Object.babelTransform (../../../repos/ragflow/web/node_modules/esbuild-jest/transformer.js:24:25)
+      at Object.process (../../../repos/ragflow/web/node_modules/esbuild-jest/esbuild-jest.js:46:57)
+      at Object.process (jest-esbuild-transformer.cjs:23:41)
+      at ScriptTransformer.transformSource (../../../repos/ragflow/web/node_modules/@jest/transform/build/ScriptTransformer.js:545:31)
+      at ScriptTransformer._transformAndBuildScript (../../../repos/ragflow/web/node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (../../../repos/ragflow/web/node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+
+PASS src/utils/__tests__/pipeline-operator.test.ts
+PASS src/pages/agent/utils.test.ts
+PASS src/pages/next-chats/chat/web-search-api-key.test.ts
+PASS src/pages/user-setting/setting-model/instance-card/bedrock-instance-card.test.tsx
+PASS src/pages/agent/form/parser-form/utils.test.ts
+PASS src/pages/user-setting/data-source/constant/index.test.tsx
+PASS src/pages/dataset/dataset/hooks.test.ts
+PASS src/hooks/__tests__/use-document-request-cancel-chain.test.tsx
+PASS src/pages/agent/store.test.ts
+PASS src/pages/agent/utils/__tests__/extractor-transform.test.ts
+PASS src/pages/agent/hooks/use-before-delete.test.tsx
+PASS src/pages/agent/canvas/node/card.test.tsx
+  ● Console
+
+    console.warn
+      react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+
+      65 |         <Button>Deploy</Button>
+      66 |       </CardFooter>
+    > 67 |     </Card>
+         |            ^
+      68 |   );
+      69 | }
+      70 |
+
+      at warn (../../../repos/ragflow/web/node_modules/react-i18next/dist/commonjs/utils.js:15:13)
+      at warnOnce (../../../repos/ragflow/web/node_modules/react-i18next/dist/commonjs/utils.js:25:3)
+      at useTranslation (../../../repos/ragflow/web/node_modules/react-i18next/dist/commonjs/useTranslation.js:31:25)
+      at LLMLabelCard (src/pages/agent/canvas/node/card.tsx:67:56)
+      at renderWithHooks (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+      at mountIndeterminateComponent (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+      at beginWork (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+      at beginWork$1 (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+      at performUnitOfWork (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at performConcurrentWorkOnRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+      at flushActQueue (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2582:11)
+      at ../../../repos/ragflow/web/node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderCard (src/pages/agent/canvas/node/card.test.tsx:58:10)
+      at Object.<anonymous> (src/pages/agent/canvas/node/card.test.tsx:80:27)
+
+PASS src/pages/agent/hooks/use-add-node.test.tsx
+PASS src/pages/agents/template-retrieval-binding.test.ts
+PASS src/pages/agents/index.test.tsx
+PASS src/pages/agents/builtin-pipeline-list.test.ts
+PASS src/pages/dataset/compilation/utils/nav-tree.test.ts
+PASS src/pages/dataset/dataset/use-upload-document.test.ts
+PASS src/pages/agent/utils/clear-sensitive-fields.test.ts
+PASS src/hooks/use-parser-options.test.ts
+PASS src/pages/agent/chat/use-send-agent-message.test.tsx
+PASS src/pages/dataset/dataset/change-parser-dialog.test.tsx
+  ● Console
+
+    console.warn
+      Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+
+      135 | it('saves the built-in parser', async () => {
+      136 |   render(<Harness builtin />);
+    > 137 |   fireEvent.click(screen.getByRole('button', { name: 'Open' }));
+          |             ^
+      138 |   fireEvent.click(screen.getByRole('button', { name: 'common.save' }));
+      139 |   await waitFor(() => expect(mockSave).toHaveBeenCalledTimes(1));
+      140 |   expect(mockSave.mock.calls[0][0]).toEqual(
+
+      at ../../../repos/ragflow/web/node_modules/@radix-ui/react-dialog/src/Dialog.tsx:540:36
+      at commitHookEffectListMount (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at commitRootImpl (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26974:5)
+      at commitRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+      at performSyncWorkOnRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26156:3)
+      at flushSyncCallbacks (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+      at flushActQueue (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2582:11)
+      at ../../../repos/ragflow/web/node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at Object.eventWrapper (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:107:28)
+      at fireEvent (../../../repos/ragflow/web/node_modules/@testing-library/dom/dist/events.js:12:35)
+      at fireEvent.<computed> [as click] (../../../repos/ragflow/web/node_modules/@testing-library/dom/dist/events.js:110:36)
+      at fireEvent.click (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/fire-event.js:15:52)
+      at Object.<anonymous> (src/pages/dataset/dataset/change-parser-dialog.test.tsx:137:13)
+
+    console.error
+      Warning: validateDOMNesting(...): <form> cannot appear as a descendant of <form>.
+          at form
+          at FormWrapper (<workspace>/work/ragflow-21028/baseline-source/web/src/pages/agent/form/components/form-wrapper.tsx:23:24)
+          at default (<workspace>/work/ragflow-21028/baseline-source/web/src/pages/dataset/dataset/change-parser-dialog.test.tsx:77:17)
+          at div
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-primitive/src/primitive.tsx:40:13
+          at Presence (<workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-presence/src/presence.tsx:12:11)
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-tabs/src/tabs.tsx:230:13
+          at <workspace>/work/ragflow-21028/baseline-source/web/src/components/ui/tabs.tsx:69:41
+          at div
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-primitive/src/primitive.tsx:40:13
+          at Provider (<workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-context/src/create-context.tsx:59:15)
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-tabs/src/tabs.tsx:67:7
+          at PipelineOperatorTabs (<workspace>/work/ragflow-21028/baseline-source/web/src/components/pipeline-operator-tabs/index.tsx:38:3)
+          at form
+          at Object.<anonymous>.exports.FormProvider (<workspace>/work/repos/ragflow/web/node_modules/react-hook-form/src/formStateSubscribe.tsx:27:40)
+          at div
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-dismissable-layer/node_modules/@radix-ui/react-primitive/src/Primitive.tsx:38:13
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-dismissable-layer/src/DismissableLayer.tsx:64:7
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-focus-scope/node_modules/@radix-ui/react-slot/src/Slot.tsx:61:11
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-focus-scope/node_modules/@radix-ui/react-slot/src/Slot.tsx:13:11
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-focus-scope/node_modules/@radix-ui/react-primitive/src/Primitive.tsx:38:13
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-focus-scope/src/FocusScope.tsx:50:5
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-dialog/src/Dialog.tsx:383:13
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-dialog/src/Dialog.tsx:258:58
+          at Presence (<workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-dialog/node_modules/@radix-ui/react-presence/src/Presence.tsx:12:11)
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-dialog/src/Dialog.tsx:233:64
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-portal/node_modules/@radix-ui/react-slot/src/Slot.tsx:61:11
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-portal/node_modules/@radix-ui/react-slot/src/Slot.tsx:13:11
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-portal/node_modules/@radix-ui/react-primitive/src/Primitive.tsx:38:13
+          at <workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-portal/src/Portal.tsx:22:22
+          at Presence (<workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-dialog/node_modules/@radix-ui/react-presence/src/Presence.tsx:12:11)
+          at Provider (<workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-dialog/node_modules/@radix-ui/react-context/src/createContext.tsx:59:15)
+          at DialogPortal (<workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-dialog/src/Dialog.tsx:145:11)
+          at <workspace>/work/ragflow-21028/baseline-source/web/src/components/ui/dialog.tsx:63:43
+          at Provider (<workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-dialog/node_modules/@radix-ui/react-context/src/createContext.tsx:59:15)
+          at Dialog (<workspace>/work/repos/ragflow/web/node_modules/@radix-ui/react-dialog/src/Dialog.tsx:52:5)
+          at DocumentPipelineDialog (<workspace>/work/ragflow-21028/baseline-source/web/src/components/document-pipeline-dialog/index.tsx:47:3)
+          at ChangeParserDialog (<workspace>/work/ragflow-21028/baseline-source/web/src/pages/dataset/dataset/change-parser-dialog.tsx:25:3)
+          at Harness (<workspace>/work/ragflow-21028/baseline-source/web/src/pages/dataset/dataset/change-parser-dialog.test.tsx:96:20)
+
+      135 | it('saves the built-in parser', async () => {
+      136 |   render(<Harness builtin />);
+    > 137 |   fireEvent.click(screen.getByRole('button', { name: 'Open' }));
+          |             ^
+      138 |   fireEvent.click(screen.getByRole('button', { name: 'common.save' }));
+      139 |   await waitFor(() => expect(mockSave).toHaveBeenCalledTimes(1));
+      140 |   expect(mockSave.mock.calls[0][0]).toEqual(
+
+      at printWarning (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at validateDOMNesting (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:10849:7)
+      at createInstance (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:10930:5)
+      at completeWork (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:22226:28)
+      at completeUnitOfWork (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26632:16)
+      at performUnitOfWork (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26607:5)
+      at workLoopSync (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at performSyncWorkOnRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26124:20)
+      at flushSyncCallbacks (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+      at commitRootImpl (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26998:3)
+      at commitRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+      at finishConcurrentRender (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26020:9)
+      at performConcurrentWorkOnRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:25848:7)
+      at flushActQueue (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2582:11)
+      at ../../../repos/ragflow/web/node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at Object.eventWrapper (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:107:28)
+      at fireEvent (../../../repos/ragflow/web/node_modules/@testing-library/dom/dist/events.js:12:35)
+      at fireEvent.<computed> [as click] (../../../repos/ragflow/web/node_modules/@testing-library/dom/dist/events.js:110:36)
+      at fireEvent.click (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/fire-event.js:15:52)
+      at Object.<anonymous> (src/pages/dataset/dataset/change-parser-dialog.test.tsx:137:13)
+
+    console.warn
+      Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+
+      149 | it('saves after switching from a built-in parser to a pipeline', async () => {
+      150 |   render(<Harness builtin />);
+    > 151 |   fireEvent.click(screen.getByRole('button', { name: 'Open' }));
+          |             ^
+      152 |   fireEvent.click(screen.getByRole('button', { name: 'Choose pipeline' }));
+      153 |   fireEvent.click(screen.getByRole('button', { name: 'common.save' }));
+      154 |   await waitFor(() => expect(mockSave).toHaveBeenCalledTimes(1));
+
+      at ../../../repos/ragflow/web/node_modules/@radix-ui/react-dialog/src/Dialog.tsx:540:36
+      at commitHookEffectListMount (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at commitRootImpl (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26974:5)
+      at commitRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+      at performSyncWorkOnRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26156:3)
+      at flushSyncCallbacks (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+      at flushActQueue (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2582:11)
+      at ../../../repos/ragflow/web/node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at Object.eventWrapper (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:107:28)
+      at fireEvent (../../../repos/ragflow/web/node_modules/@testing-library/dom/dist/events.js:12:35)
+      at fireEvent.<computed> [as click] (../../../repos/ragflow/web/node_modules/@testing-library/dom/dist/events.js:110:36)
+      at fireEvent.click (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/fire-event.js:15:52)
+      at Object.<anonymous> (src/pages/dataset/dataset/change-parser-dialog.test.tsx:151:13)
+
+    console.warn
+      Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+
+      166 |     require('../../../../../internal/agent/templates/advanced_ingestion_pipeline.json').dsl;
+      167 |   render(<Harness builtin />);
+    > 168 |   fireEvent.click(screen.getByRole('button', { name: 'Open' }));
+          |             ^
+      169 |   fireEvent.click(screen.getByRole('button', { name: 'Choose pipeline' }));
+      170 |   fireEvent.click(screen.getByRole('button', { name: 'common.save' }));
+      171 |   await waitFor(() => expect(mockSave).toHaveBeenCalledTimes(1));
+
+      at ../../../repos/ragflow/web/node_modules/@radix-ui/react-dialog/src/Dialog.tsx:540:36
+      at commitHookEffectListMount (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at commitRootImpl (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26974:5)
+      at commitRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+      at performSyncWorkOnRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26156:3)
+      at flushSyncCallbacks (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+      at flushActQueue (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2582:11)
+      at ../../../repos/ragflow/web/node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at Object.eventWrapper (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:107:28)
+      at fireEvent (../../../repos/ragflow/web/node_modules/@testing-library/dom/dist/events.js:12:35)
+      at fireEvent.<computed> [as click] (../../../repos/ragflow/web/node_modules/@testing-library/dom/dist/events.js:110:36)
+      at fireEvent.click (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/fire-event.js:15:52)
+      at Object.<anonymous> (src/pages/dataset/dataset/change-parser-dialog.test.tsx:168:13)
+
+    console.warn
+      Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+
+      175 | it('saves after switching from a pipeline back to a built-in parser', async () => {
+      176 |   render(<Harness />);
+    > 177 |   fireEvent.click(screen.getByRole('button', { name: 'Open' }));
+          |             ^
+      178 |   fireEvent.click(screen.getByRole('button', { name: 'Choose builtin' }));
+      179 |   fireEvent.click(screen.getByRole('button', { name: 'common.save' }));
+      180 |   await waitFor(() => expect(mockSave).toHaveBeenCalledTimes(1));
+
+      at ../../../repos/ragflow/web/node_modules/@radix-ui/react-dialog/src/Dialog.tsx:540:36
+      at commitHookEffectListMount (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at commitRootImpl (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26974:5)
+      at commitRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+      at performSyncWorkOnRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26156:3)
+      at flushSyncCallbacks (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+      at flushActQueue (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2582:11)
+      at ../../../repos/ragflow/web/node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at Object.eventWrapper (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:107:28)
+      at fireEvent (../../../repos/ragflow/web/node_modules/@testing-library/dom/dist/events.js:12:35)
+      at fireEvent.<computed> [as click] (../../../repos/ragflow/web/node_modules/@testing-library/dom/dist/events.js:110:36)
+      at fireEvent.click (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/fire-event.js:15:52)
+      at Object.<anonymous> (src/pages/dataset/dataset/change-parser-dialog.test.tsx:177:13)
+
+    console.warn
+      Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+
+      190 | it('still rejects a pipeline selection without a pipeline ID', async () => {
+      191 |   render(<Harness builtin />);
+    > 192 |   fireEvent.click(screen.getByRole('button', { name: 'Open' }));
+          |             ^
+      193 |   fireEvent.click(screen.getByRole('button', { name: 'Choose pipeline' }));
+      194 |   fireEvent.click(screen.getByRole('button', { name: 'Clear parser' }));
+      195 |   fireEvent.click(screen.getByRole('button', { name: 'common.save' }));
+
+      at ../../../repos/ragflow/web/node_modules/@radix-ui/react-dialog/src/Dialog.tsx:540:36
+      at commitHookEffectListMount (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at commitRootImpl (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26974:5)
+      at commitRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26721:5)
+      at performSyncWorkOnRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26156:3)
+      at flushSyncCallbacks (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+      at flushActQueue (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2582:11)
+      at ../../../repos/ragflow/web/node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at Object.eventWrapper (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:107:28)
+      at fireEvent (../../../repos/ragflow/web/node_modules/@testing-library/dom/dist/events.js:12:35)
+      at fireEvent.<computed> [as click] (../../../repos/ragflow/web/node_modules/@testing-library/dom/dist/events.js:110:36)
+      at fireEvent.click (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/fire-event.js:15:52)
+      at Object.<anonymous> (src/pages/dataset/dataset/change-parser-dialog.test.tsx:192:13)
+
+PASS src/components/next-markdown-content/__tests__/index.test.tsx
+PASS src/hooks/use-unavailable-value-validation.test.tsx
+  ● Console
+
+    console.warn
+      react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+
+      53 |       }
+      54 |     });
+    > 55 |   }, [schema, validIds, isFetched, fieldName, message]);
+         |                                                        ^
+      56 |
+      57 |   return { formSchema };
+      58 | }
+
+      at warn (../../../repos/ragflow/web/node_modules/react-i18next/dist/commonjs/utils.js:15:13)
+      at warnOnce (../../../repos/ragflow/web/node_modules/react-i18next/dist/commonjs/utils.js:25:3)
+      at useTranslation (../../../repos/ragflow/web/node_modules/react-i18next/dist/commonjs/useTranslation.js:31:25)
+      at useUnavailableModelFormSchema (src/hooks/use-unavailable-value-validation.ts:55:56)
+      at src/hooks/use-unavailable-value-validation.test.tsx:93:41
+      at TestComponent (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:309:27)
+      at renderWithHooks (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+      at mountIndeterminateComponent (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+      at beginWork (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+      at beginWork$1 (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+      at performUnitOfWork (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at performConcurrentWorkOnRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+      at flushActQueue (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2582:11)
+      at ../../../repos/ragflow/web/node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:271:10)
+      at renderHook (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:318:7)
+      at Object.<anonymous> (src/hooks/use-unavailable-value-validation.test.tsx:93:24)
+
+PASS src/pages/dataset/dataset/parsing-status-cell.test.tsx
+PASS src/components/__tests__/knowledge-base-item.test.tsx
+PASS src/pages/chunk/representation/hooks/use-graph-entity-search.test.ts
+FAIL src/utils/__tests__/chat.test.ts
+  ● preprocessLaTeX › converts block \[ \] to $$ $$
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "$$x + y$$"
+    Received: "$$ x + y $$"
+
+      58 | describe('preprocessLaTeX', () => {
+      59 |   it('converts block \\[ \\] to $$ $$', () => {
+    > 60 |     expect(preprocessLaTeX('\\[ x + y \\]')).toBe('$$x + y$$');
+         |                                              ^
+      61 |   });
+      62 |
+      63 |   it('converts inline \\( \\) to $ $', () => {
+
+      at Object.<anonymous> (src/utils/__tests__/chat.test.ts:60:46)
+
+  ● preprocessLaTeX › converts inline \( \) to $ $
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "$a$"
+    Received: "$ a $"
+
+      62 |
+      63 |   it('converts inline \\( \\) to $ $', () => {
+    > 64 |     expect(preprocessLaTeX('\\( a \\)')).toBe('$a$');
+         |                                          ^
+      65 |   });
+      66 |
+      67 |   it('does not cut block math at \\right] (Closes #13134)', () => {
+
+      at Object.<anonymous> (src/utils/__tests__/chat.test.ts:64:42)
+
+  ● preprocessLaTeX › handles multiple block equations
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "First $$a$$ then $$ b \\right] c $$"
+    Received: "First $$ a $$ then $$ b \\right] c $$"
+
+      86 |     const content = 'First \\[ a \\] then \\[ b \\right] c \\]';
+      87 |     const result = preprocessLaTeX(content);
+    > 88 |     expect(result).toBe('First $$a$$ then $$ b \\right] c $$');
+         |                    ^
+      89 |   });
+      90 |
+      91 |   it('handles double-escaped inline LaTeX', () => {
+
+      at Object.<anonymous> (src/utils/__tests__/chat.test.ts:88:20)
+
+  ● preprocessLaTeX › handles double-escaped inline LaTeX
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "$\\Delta = b^2$"
+    Received: "$\\\\Delta = b^2$"
+
+      90 |
+      91 |   it('handles double-escaped inline LaTeX', () => {
+    > 92 |     expect(preprocessLaTeX('\\\\(\\\\Delta = b^2\\\\)')).toBe(
+         |                                                          ^
+      93 |       '$\\Delta = b^2$',
+      94 |     );
+      95 |   });
+
+      at Object.<anonymous> (src/utils/__tests__/chat.test.ts:92:58)
+
+  ● preprocessLaTeX › handles mixed double-escaped delimiters with HTML entities
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "$x < y$"
+    Received: "\\(x < y\\)"
+
+      104 |
+      105 |   it('handles mixed double-escaped delimiters with HTML entities', () => {
+    > 106 |     expect(preprocessLaTeX('\\\\(x &lt; y\\\\)')).toBe('$x < y$');
+          |                                                   ^
+      107 |   });
+      108 |
+      109 |   it('passes through already correct single-escaped delimiters unchanged', () => {
+
+      at Object.<anonymous> (src/utils/__tests__/chat.test.ts:106:51)
+
+FAIL src/utils/__tests__/llm-util.test.ts
+  ● addTenantParams — clearing model selections › clears a stale tenant rerank model id when rerank is explicitly cleared
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "rerank_id": "",
+    -   "tenant_rerank_id": null,
+    +   "tenant_rerank_id": "stale-tenant-model-id",
+      }
+
+      173 |         '/api/v1/chats/chat-id',
+      174 |       ),
+    > 175 |     ).toEqual({
+          |       ^
+      176 |       rerank_id: '',
+      177 |       tenant_rerank_id: null,
+      178 |     });
+
+      at Object.<anonymous> (src/utils/__tests__/llm-util.test.ts:175:7)
+
+PASS src/pages/agent/form/querit-form/utils.test.ts
+PASS src/components/ui/__tests__/multi-select.test.tsx
+PASS src/hooks/__tests__/cancel-stop-loss.test.ts
+PASS src/pages/agents/builtin-pipeline-section.test.tsx
+  ● Console
+
+    console.warn
+      react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+
+      30 |   // its own CardContainer grid lays the cards out in multiple columns.
+      31 |   return (
+    > 32 |     <section
+         |             ^
+      33 |       className="mt-6 col-span-full"
+      34 |       data-testid="builtin-pipeline-section"
+      35 |     >
+
+      at warn (../../../repos/ragflow/web/node_modules/react-i18next/dist/commonjs/utils.js:15:13)
+      at warnOnce (../../../repos/ragflow/web/node_modules/react-i18next/dist/commonjs/utils.js:25:3)
+      at useTranslation (../../../repos/ragflow/web/node_modules/react-i18next/dist/commonjs/useTranslation.js:31:25)
+      at BuiltinPipelineSection (src/pages/agents/builtin-pipeline-section.tsx:32:56)
+      at renderWithHooks (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+      at mountIndeterminateComponent (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+      at beginWork (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+      at beginWork$1 (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:27465:14)
+      at performUnitOfWork (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26599:12)
+      at workLoopSync (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26505:5)
+      at renderRootSync (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:26473:7)
+      at performConcurrentWorkOnRoot (../../../repos/ragflow/web/node_modules/react-dom/cjs/react-dom.development.js:25777:74)
+      at flushActQueue (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2667:24)
+      at act (../../../repos/ragflow/web/node_modules/react/cjs/react.development.js:2582:11)
+      at ../../../repos/ragflow/web/node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:180:26)
+      at render (../../../repos/ragflow/web/node_modules/@testing-library/react/dist/pure.js:271:10)
+      at Object.<anonymous> (src/pages/agents/builtin-pipeline-section.test.tsx:59:27)
+
+FAIL src/pages/agent/utils/pipeline-connection.test.ts
+  ● isSingleInstanceOperator › leaves multi-instance operators unchecked
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+       99 |
+      100 |   it('leaves multi-instance operators unchecked', () => {
+    > 101 |     expect(isSingleInstanceOperator(Operator.Extractor)).toBe(false);
+          |                                                          ^
+      102 |     expect(isSingleInstanceOperator(Operator.Agent)).toBe(false);
+      103 |   });
+      104 | });
+
+      at Object.<anonymous> (src/pages/agent/utils/pipeline-connection.test.ts:101:58)
+
+  ● buildPipelineNextOperators › always offers Extractor, which is multi-instance
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: "Extractor"
+    Received array: ["Parser", "Tokenizer", "Compiler"]
+
+      112 |     expect(
+      113 |       buildPipelineNextOperators(undefined, hasExtractor).operators,
+    > 114 |     ).toContain(Operator.Extractor);
+          |       ^
+      115 |   });
+      116 |
+      117 |   it('offers Compiler only when none is on the canvas', () => {
+
+      at Object.<anonymous> (src/pages/agent/utils/pipeline-connection.test.ts:114:7)
+
+PASS src/pages/agent/canvas/node/handle-readd-group-node.test.tsx
+PASS src/pages/agent/form/begin-form/webhook/__tests__/request-schema.test.tsx
+PASS src/pages/agent/form/parser-form/vision-form-fields.test.tsx
+PASS src/components/next-message-item/uploaded-message-files.test.tsx
+PASS src/pages/agent/form/parser-form/spreadsheet-form-fields.test.tsx
+FAIL src/utils/__tests__/file-util.test.ts
+  ● decodeBlobText › decodes UTF-8 with BOM and strips the leading U+FEFF
+
+    TypeError: (intermediate value).arrayBuffer is not a function
+
+      89 | // 2. Strict UTF-8 decode (`fatal: true`) — throws on any byte sequence that
+      90 | //    is not valid UTF-8, which GB2312/GBK Chinese text almost always is.
+    > 91 | // 3. GBK fallback — covers GB2312/GBK/GB18030 single- and double-byte text.
+         |                                         ^
+      92 | //    Browsers map the 'gb2312' label to the same decoder as 'gbk'.
+      93 | export const decodeBlobText = async (data: BlobPart): Promise<string> => {
+      94 |   const buffer = await new Blob([data]).arrayBuffer();
+
+      at decodeBlobText (src/utils/file-util.ts:91:41)
+      at Object.<anonymous> (src/utils/__tests__/file-util.test.ts:39:23)
+
+  ● decodeBlobText › decodes UTF-16LE with BOM (0xff 0xfe)
+
+    TypeError: (intermediate value).arrayBuffer is not a function
+
+      89 | // 2. Strict UTF-8 decode (`fatal: true`) — throws on any byte sequence that
+      90 | //    is not valid UTF-8, which GB2312/GBK Chinese text almost always is.
+    > 91 | // 3. GBK fallback — covers GB2312/GBK/GB18030 single- and double-byte text.
+         |                                         ^
+      92 | //    Browsers map the 'gb2312' label to the same decoder as 'gbk'.
+      93 | export const decodeBlobText = async (data: BlobPart): Promise<string> => {
+      94 |   const buffer = await new Blob([data]).arrayBuffer();
+
+      at decodeBlobText (src/utils/file-util.ts:91:41)
+      at Object.<anonymous> (src/utils/__tests__/file-util.test.ts:47:23)
+
+  ● decodeBlobText › decodes UTF-16BE with BOM (0xfe 0xff)
+
+    TypeError: (intermediate value).arrayBuffer is not a function
+
+      89 | // 2. Strict UTF-8 decode (`fatal: true`) — throws on any byte sequence that
+      90 | //    is not valid UTF-8, which GB2312/GBK Chinese text almost always is.
+    > 91 | // 3. GBK fallback — covers GB2312/GBK/GB18030 single- and double-byte text.
+         |                                         ^
+      92 | //    Browsers map the 'gb2312' label to the same decoder as 'gbk'.
+      93 | export const decodeBlobText = async (data: BlobPart): Promise<string> => {
+      94 |   const buffer = await new Blob([data]).arrayBuffer();
+
+      at decodeBlobText (src/utils/file-util.ts:91:41)
+      at Object.<anonymous> (src/utils/__tests__/file-util.test.ts:54:23)
+
+  ● decodeBlobText › decodes plain UTF-8 without a BOM
+
+    TypeError: (intermediate value).arrayBuffer is not a function
+
+      89 | // 2. Strict UTF-8 decode (`fatal: true`) — throws on any byte sequence that
+      90 | //    is not valid UTF-8, which GB2312/GBK Chinese text almost always is.
+    > 91 | // 3. GBK fallback — covers GB2312/GBK/GB18030 single- and double-byte text.
+         |                                         ^
+      92 | //    Browsers map the 'gb2312' label to the same decoder as 'gbk'.
+      93 | export const decodeBlobText = async (data: BlobPart): Promise<string> => {
+      94 |   const buffer = await new Blob([data]).arrayBuffer();
+
+      at decodeBlobText (src/utils/file-util.ts:91:41)
+      at Object.<anonymous> (src/utils/__tests__/file-util.test.ts:60:23)
+
+  ● decodeBlobText › falls back to GBK when strict UTF-8 throws (GB2312 Chinese text)
+
+    TypeError: (intermediate value).arrayBuffer is not a function
+
+      89 | // 2. Strict UTF-8 decode (`fatal: true`) — throws on any byte sequence that
+      90 | //    is not valid UTF-8, which GB2312/GBK Chinese text almost always is.
+    > 91 | // 3. GBK fallback — covers GB2312/GBK/GB18030 single- and double-byte text.
+         |                                         ^
+      92 | //    Browsers map the 'gb2312' label to the same decoder as 'gbk'.
+      93 | export const decodeBlobText = async (data: BlobPart): Promise<string> => {
+      94 |   const buffer = await new Blob([data]).arrayBuffer();
+
+      at decodeBlobText (src/utils/file-util.ts:91:41)
+      at Object.<anonymous> (src/utils/__tests__/file-util.test.ts:68:23)
+
+  ● decodeBlobText › returns an empty string for an empty buffer
+
+    TypeError: (intermediate value).arrayBuffer is not a function
+
+      89 | // 2. Strict UTF-8 decode (`fatal: true`) — throws on any byte sequence that
+      90 | //    is not valid UTF-8, which GB2312/GBK Chinese text almost always is.
+    > 91 | // 3. GBK fallback — covers GB2312/GBK/GB18030 single- and double-byte text.
+         |                                         ^
+      92 | //    Browsers map the 'gb2312' label to the same decoder as 'gbk'.
+      93 | export const decodeBlobText = async (data: BlobPart): Promise<string> => {
+      94 |   const buffer = await new Blob([data]).arrayBuffer();
+
+      at decodeBlobText (src/utils/file-util.ts:91:41)
+      at Object.<anonymous> (src/utils/__tests__/file-util.test.ts:73:23)
+
+  ● decodeBlobText › decodes a 1-byte buffer without a false BOM match
+
+    TypeError: (intermediate value).arrayBuffer is not a function
+
+      89 | // 2. Strict UTF-8 decode (`fatal: true`) — throws on any byte sequence that
+      90 | //    is not valid UTF-8, which GB2312/GBK Chinese text almost always is.
+    > 91 | // 3. GBK fallback — covers GB2312/GBK/GB18030 single- and double-byte text.
+         |                                         ^
+      92 | //    Browsers map the 'gb2312' label to the same decoder as 'gbk'.
+      93 | export const decodeBlobText = async (data: BlobPart): Promise<string> => {
+      94 |   const buffer = await new Blob([data]).arrayBuffer();
+
+      at decodeBlobText (src/utils/file-util.ts:91:41)
+      at Object.<anonymous> (src/utils/__tests__/file-util.test.ts:81:23)
+
+  ● decodeBlobText › falls through to GBK on a truncated UTF-8 BOM prefix
+
+    TypeError: (intermediate value).arrayBuffer is not a function
+
+      89 | // 2. Strict UTF-8 decode (`fatal: true`) — throws on any byte sequence that
+      90 | //    is not valid UTF-8, which GB2312/GBK Chinese text almost always is.
+    > 91 | // 3. GBK fallback — covers GB2312/GBK/GB18030 single- and double-byte text.
+         |                                         ^
+      92 | //    Browsers map the 'gb2312' label to the same decoder as 'gbk'.
+      93 | export const decodeBlobText = async (data: BlobPart): Promise<string> => {
+      94 |   const buffer = await new Blob([data]).arrayBuffer();
+
+      at decodeBlobText (src/utils/file-util.ts:91:41)
+      at Object.<anonymous> (src/utils/__tests__/file-util.test.ts:93:23)
+
+PASS src/pages/dataset/compilation/nav-tree-left-panel.test.tsx
+PASS src/components/image/__tests__/image-cache.test.tsx
+PASS src/components/parser-select/index.test.tsx
+PASS src/pages/agents/builtin-pipeline-card.test.tsx
+<workspace>/work/repos/ragflow/web/node_modules/react-router/dist/development/chunk-SZQUWNVJ.js:4938
+  return new Request(url, init);
+  ^
+ReferenceError: Request is not defined
+    at createClientSideRequest (<workspace>/work/repos/ragflow/web/node_modules/react-router/dist/development/chunk-SZQUWNVJ.js:4938:3)
+    at startNavigation (<workspace>/work/repos/ragflow/web/node_modules/react-router/dist/development/chunk-SZQUWNVJ.js:1831:19)
+    at Object.initialize (<workspace>/work/repos/ragflow/web/node_modules/react-router/dist/development/chunk-SZQUWNVJ.js:1523:7)
+    at createBrowserRouter (<workspace>/work/repos/ragflow/web/node_modules/react-router/dist/development/chunk-2JY4UAJA.js:206:6)
+    at Object.<anonymous> (<workspace>/work/ragflow-21028/baseline-source/web/src/routes.tsx:5682:72)
+    at Runtime._execModule (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:882:12)
+    at Runtime.requireModuleOrMock (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:1048:21)
+    at Object.<anonymous> (<workspace>/work/ragflow-21028/baseline-source/web/src/hooks/route-hook.ts:2289:28)
+    at Runtime._execModule (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:882:12)
+    at Runtime.require [as requireModuleOrMock] (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:1048:21)
+    at Object.<anonymous> (<workspace>/work/ragflow-21028/baseline-source/web/src/hooks/logic-hooks.ts:63:25)
+    at Runtime._execModule (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:882:12)
+    at Runtime.require [as requireModuleOrMock] (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:1048:21)
+    at Object.<anonymous> (<workspace>/work/ragflow-21028/baseline-source/web/src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx:4:1)
+    at Runtime._execModule (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (<workspace>/work/repos/ragflow/web/node_modules/jest-runtime/build/index.js:882:12)
+    at jestAdapter (<workspace>/work/repos/ragflow/web/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+    at async runTestInternal (<workspace>/work/repos/ragflow/web/node_modules/jest-runner/build/runTest.js:367:16)
+    at async runTest (<workspace>/work/repos/ragflow/web/node_modules/jest-runner/build/runTest.js:444:34)

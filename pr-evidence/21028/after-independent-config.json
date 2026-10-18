@@ -1,0 +1,22 @@
+{
+  "vlm": {
+    "llm_id": "",
+    "system_prompt": ""
+  },
+  "enable_vision_enhancement": false,
+  "pdf": {
+    "output_format": "json",
+    "suffix": [
+      "pdf"
+    ],
+    "parse_method": "00000000-0000-4000-8000-000000000028",
+    "mineru_parse_method": "ocr",
+    "mineru_lang": "Japanese",
+    "mineru_formula_enable": true,
+    "mineru_table_enable": false,
+    "lang": "English",
+    "remove_header_footer": false,
+    "pages": [],
+    "order_index": 0
+  }
+}

@@ -1,0 +1,182 @@
+FAIL src/pages/agent/utils.test.ts
+  ● transformParserParams MinerU settings › preserves independent formula/table choices and engine settings: undefined
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 2
+    + Received  + 0
+
+      Object {
+    -   "mineru_lang": "Japanese",
+    -   "mineru_parse_method": "ocr",
+        "parse_method": "mineru-model-id",
+      }
+
+      35 |         } as any);
+      36 |         const saved = JSON.parse(JSON.stringify(result)).pdf;
+    > 37 |         expect(saved).toMatchObject({
+         |                       ^
+      38 |           parse_method: 'mineru-model-id',
+      39 |           mineru_parse_method: 'ocr',
+      40 |           mineru_lang: 'Japanese',
+
+      at src/pages/agent/utils.test.ts:37:23
+
+  ● transformParserParams MinerU settings › preserves independent formula/table choices and engine settings: true
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 2
+    + Received  + 0
+
+      Object {
+    -   "mineru_lang": "Japanese",
+    -   "mineru_parse_method": "ocr",
+        "parse_method": "mineru-model-id",
+      }
+
+      35 |         } as any);
+      36 |         const saved = JSON.parse(JSON.stringify(result)).pdf;
+    > 37 |         expect(saved).toMatchObject({
+         |                       ^
+      38 |           parse_method: 'mineru-model-id',
+      39 |           mineru_parse_method: 'ocr',
+      40 |           mineru_lang: 'Japanese',
+
+      at src/pages/agent/utils.test.ts:37:23
+
+  ● transformParserParams MinerU settings › preserves independent formula/table choices and engine settings: false
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 2
+    + Received  + 0
+
+      Object {
+    -   "mineru_lang": "Japanese",
+    -   "mineru_parse_method": "ocr",
+        "parse_method": "mineru-model-id",
+      }
+
+      35 |         } as any);
+      36 |         const saved = JSON.parse(JSON.stringify(result)).pdf;
+    > 37 |         expect(saved).toMatchObject({
+         |                       ^
+      38 |           parse_method: 'mineru-model-id',
+      39 |           mineru_parse_method: 'ocr',
+      40 |           mineru_lang: 'Japanese',
+
+      at src/pages/agent/utils.test.ts:37:23
+
+FAIL src/pages/agent/form/parser-form/schema.test.ts
+  ● parser FormSchema › retains MinerU extraction switches set to undefined
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "mineru_lang": "Japanese",
+    -   "mineru_parse_method": "ocr",
+    +   "fileFormat": "pdf",
+    +   "parse_method": "mineru-model-id",
+      }
+
+      23 |         ],
+      24 |       });
+    > 25 |       expect(result.setups[0]).toMatchObject({
+         |                                ^
+      26 |         mineru_parse_method: 'ocr',
+      27 |         mineru_lang: 'Japanese',
+      28 |       });
+
+      at src/pages/agent/form/parser-form/schema.test.ts:25:32
+
+  ● parser FormSchema › retains MinerU extraction switches set to true
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "mineru_lang": "Japanese",
+    -   "mineru_parse_method": "ocr",
+    +   "fileFormat": "pdf",
+    +   "parse_method": "mineru-model-id",
+      }
+
+      23 |         ],
+      24 |       });
+    > 25 |       expect(result.setups[0]).toMatchObject({
+         |                                ^
+      26 |         mineru_parse_method: 'ocr',
+      27 |         mineru_lang: 'Japanese',
+      28 |       });
+
+      at src/pages/agent/form/parser-form/schema.test.ts:25:32
+
+  ● parser FormSchema › retains MinerU extraction switches set to false
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "mineru_lang": "Japanese",
+    -   "mineru_parse_method": "ocr",
+    +   "fileFormat": "pdf",
+    +   "parse_method": "mineru-model-id",
+      }
+
+      23 |         ],
+      24 |       });
+    > 25 |       expect(result.setups[0]).toMatchObject({
+         |                                ^
+      26 |         mineru_parse_method: 'ocr',
+      27 |         mineru_lang: 'Japanese',
+      28 |       });
+
+      at src/pages/agent/form/parser-form/schema.test.ts:25:32
+
+  ● parser FormSchema › rejects non-boolean mineru_formula_enable
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      43 |           setups: [{ fileFormat: FileType.PDF, [key]: value }],
+      44 |         });
+    > 45 |         expect(result.success).toBe(false);
+         |                                ^
+      46 |       }
+      47 |     },
+      48 |   );
+
+      at src/pages/agent/form/parser-form/schema.test.ts:45:32
+
+  ● parser FormSchema › rejects non-boolean mineru_table_enable
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      43 |           setups: [{ fileFormat: FileType.PDF, [key]: value }],
+      44 |         });
+    > 45 |         expect(result.success).toBe(false);
+         |                                ^
+      46 |       }
+      47 |     },
+      48 |   );
+
+      at src/pages/agent/form/parser-form/schema.test.ts:45:32
+
+Test Suites: 2 failed, 2 total
+Tests:       8 failed, 35 passed, 43 total
+Snapshots:   0 total
+Time:        1.202 s
+Ran all test suites matching /src\/pages\/agent\/form\/parser-form\/schema.test.ts|src\/pages\/agent\/utils.test.ts/i.

@@ -1,0 +1,36 @@
+[fix/pdf-tenant-parser-models b1b16e0] docs(parser): clarify tenant configuration boundaries
+ 3 files changed, 13 insertions(+)
+╭──────────────────────────────────────╮
+│ lefthook  v2.2.2   hook:  pre-commit │
+╰──────────────────────────────────────╯
+│  ruff-format (skip) no files for inspection
+│  ruff (skip) no files for inspection
+┃  gofmt ❯
+
+┃  trailing-whitespace ❯
+
+┃  check-symlinks ❯
+
+┃  end-of-file-fixer ❯
+
+┃  check-json ❯
+
+┃  check-case-conflict ❯
+
+┃  check-merge-conflict ❯
+
+┃  mixed-line-ending ❯
+
+┃  check-yaml ❯
+
+  ────────────────────────────────────
+summary: (done in 1.04 seconds)
+✓ gofmt (0.02 seconds)
+✓ trailing-whitespace (0.93 seconds)
+✓ check-symlinks (0.95 seconds)
+✓ end-of-file-fixer (0.95 seconds)
+✓ check-json (0.95 seconds)
+✓ check-case-conflict (0.97 seconds)
+✓ check-merge-conflict (0.99 seconds)
+✓ mixed-line-ending (0.99 seconds)
+✓ check-yaml (1.03 seconds)

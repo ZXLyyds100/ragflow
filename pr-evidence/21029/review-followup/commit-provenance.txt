@@ -1,0 +1,36 @@
+[fix/title-media-context cb507a0] fix(chunker): scope finalized crop IDs to title media
+ 5 files changed, 80 insertions(+), 4 deletions(-)
+╭──────────────────────────────────────╮
+│ lefthook  v2.2.2   hook:  pre-commit │
+╰──────────────────────────────────────╯
+│  ruff (skip) no files for inspection
+│  ruff-format (skip) no files for inspection
+┃  gofmt ❯
+
+┃  check-yaml ❯
+
+┃  check-json ❯
+
+┃  check-merge-conflict ❯
+
+┃  end-of-file-fixer ❯
+
+┃  mixed-line-ending ❯
+
+┃  check-symlinks ❯
+
+┃  check-case-conflict ❯
+
+┃  trailing-whitespace ❯
+
+  ────────────────────────────────────
+summary: (done in 0.33 seconds)
+✓ gofmt (0.04 seconds)
+✓ check-yaml (0.29 seconds)
+✓ check-json (0.30 seconds)
+✓ check-merge-conflict (0.30 seconds)
+✓ end-of-file-fixer (0.30 seconds)
+✓ mixed-line-ending (0.30 seconds)
+✓ check-symlinks (0.30 seconds)
+✓ check-case-conflict (0.31 seconds)
+✓ trailing-whitespace (0.32 seconds)

@@ -3,7 +3,7 @@
 This fork-only branch holds evidence, not changes for the upstream code PR.
 
 - Original source: `543e16738b4883fcb7e70520e0b5849e7e18c9b7`.
-- Final implementation: `77d5b74e9dd5e293d07fe30e73333fc270ce6e1f`.
+- Final implementation: `cb507a06181567327ff62776def202f4e53132d6`.
 - Code: branch `ZXLyyds100/ragflow:fix/title-media-context`, based directly on
   upstream main, independent of the MinerU PR.
 
@@ -42,8 +42,17 @@ independent table-off/image-on settings, manual and paper save/reload. The narro
   identities and preservation of stamped IDs by the crop path.
 - All related ingestion/parser Go packages and native unit tier pass; focused
   regressions pass with the race detector.
+- Publication review exposed overly broad trust of upstream IDs in the shared
+  crop helper at `77d5b74`. The new failing regression is under
+  `review-followup/`. Final code restricts reuse to transient Title provenance,
+  strips that marker from output and recomputes other callers' IDs. The real
+  crop/upload path, helper cases, full related suites and race regressions were
+  re-run with `-count=1`; all 140 related frontend tests were also re-run.
+  The final standalone capture was rebuilt and original-output comparisons
+  repeated. Existing source-form screenshots/recording are unchanged because
+  this correction affects crop identity, not the demonstrated UI or text.
 - Six related frontend suites, 140 tests, production build, scoped lint/format,
-  actual web hooks and both commits' pre-commit hooks pass.
+  actual web hooks and all implementation commits' pre-commit hooks pass.
 - Full frontend is **not green**: original and fixed runs fail in the same six
   suites and then abort on `Request is not defined`. Both have the same 206
   type diagnostics after normalizing line/column shifts. See `validation.json`.

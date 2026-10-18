@@ -1,0 +1,14 @@
+{
+  "sha": "cb507a06181567327ff62776def202f4e53132d6",
+  "tree": "0668ca49dd7ab25209d655fd6de1945bcaaec49a",
+  "files": [
+    "internal/ingestion/component/chunker/common.go",
+    "internal/ingestion/component/chunker/crop_title_test.go",
+    "internal/ingestion/component/chunker/title_media_context.go",
+    "internal/ingestion/component/chunker/title_media_context_test.go",
+    "internal/ingestion/component/chunker/token.go"
+  ],
+  "preCommitHooksPassed": true,
+  "validatedContentUnchangedByHooks": true,
+  "capturedAt": "2026-10-18T03:20:07.129Z"
+}

@@ -1,0 +1,240 @@
+Checkout: /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029
+HEAD: 77d5b74e9dd5e293d07fe30e73333fc270ce6e1f
+Worktree:
+ M internal/ingestion/component/chunker/common.go
+ M internal/ingestion/component/chunker/crop_title_test.go
+ M internal/ingestion/component/chunker/title_media_context.go
+ M internal/ingestion/component/chunker/title_media_context_test.go
+ M internal/ingestion/component/chunker/token.go
+
+=== RAGFlow Go Server Build Script ===
+
+>>> Checking go dependencies
+✓ Required tools are available
+
+>>> Checking ONNX Runtime version consistency
+✓ ONNX Runtime native version consistent: 1.29.0
+
+>>> Running Go tests
+check if the cl100k_base BPE table exists at /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029/ragflow_deps/cl100k_base.tiktoken
+  cl100k_base.tiktoken → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029/ragflow_deps/cl100k_base.tiktoken (already present)
+
+>>> Checking office_oxide native library
+check if dep office_oxide exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide or /opt/ragflow-native-libs/office_oxide
+  office_oxide → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide (user cache)
+✓ office_oxide v0.1.12 native library found at /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide
+check if dep pdfium-static exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static or /opt/ragflow-native-libs/pdfium-static
+  pdfium-static → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static (user cache)
+  pdfium (static) → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static
+check if dep pdf_oxide exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide or /opt/ragflow-native-libs/pdf_oxide
+  pdf_oxide → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide (user cache)
+  pdf_oxide (static) → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide
+check if dep onnxruntime exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime or /opt/ragflow-native-libs/onnxruntime
+  onnxruntime → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime (user cache)
+  (no local onnxruntime-v1.29.0-osx-arm64.zip; skipping sha256 check — CI seed assumed authoritative)
+✓ onnxruntime v1.29.0 static lib verified under /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+  onnxruntime (static) → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+CGO_CFLAGS:   -I/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/include/office_oxide_c
+CGO_LDFLAGS:  /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide/lib/darwin_arm64/v0.3.73/libpdf_oxide.a -Wl,-export_dynamic -Wl,-force_load,/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib/v1.29.0-b1da7e98dc26fc49/libonnxruntime.a -lc++                 -framework CoreGraphics -framework CoreFoundation                 -framework Security -framework SystemConfiguration                 -liconv -lresolv -lc++
+# ragflow/internal/ingestion/component/globals.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/chunkcache.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/knowledge_compiler/common.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/ingestion/chunkcache	0.651s
+ok  	ragflow/internal/ingestion/compilation/extractor	0.565s
+# ragflow/internal/ingestion/component/knowledge_compiler/golden.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/knowledge_compiler/mindmap.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/knowledge_compiler/structure.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/chunker.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/knowledge_compiler/tree.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/progress.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/knowledge_compiler/wiki.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/knowledge_compiler.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/schema.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/knowledge_compile.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/registry.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/pipeline.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/task.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/service.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/task/indexdoc.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/parser/chunk.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/parser/parser.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/task/tool.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/parser/tableutil.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/ingestion/component	16.865s
+ok  	ragflow/internal/ingestion/component/chunker	2.150s
+ok  	ragflow/internal/ingestion/component/globals	1.959s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler	2.163s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler/common	2.060s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler/golden	1.922s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler/mindmap	2.262s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler/structure	2.821s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler/tree	9.637s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler/wiki	2.788s
+ok  	ragflow/internal/ingestion/component/progress	2.546s
+ok  	ragflow/internal/ingestion/component/schema	2.490s
+ok  	ragflow/internal/ingestion/knowledge_compile	2.746s
+ok  	ragflow/internal/ingestion/pipeline	0.959s
+ok  	ragflow/internal/ingestion/registry	1.708s
+ok  	ragflow/internal/ingestion/service	4.918s
+ok  	ragflow/internal/ingestion/task	7.501s
+ok  	ragflow/internal/ingestion/task/indexdoc	2.392s
+ok  	ragflow/internal/ingestion/task/tool	1.527s
+?   	ragflow/internal/ingestion/testutil	[no test files]
+?   	ragflow/internal/ingestion/wire	[no test files]
+ok  	ragflow/internal/parser/chunk	1.516s
+ok  	ragflow/internal/parser/parser	4.319s
+ok  	ragflow/internal/parser/tableutil	1.511s
+
+>>> Running native unit tests
+# ragflow/internal/deepdoc/native.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/deepdoc/native/croptest.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/deepdoc/native	0.186s
+ok  	ragflow/internal/deepdoc/native/croptest	0.331s

@@ -1,0 +1,25 @@
+{
+  "label": "go-provenance-race",
+  "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+  "head": "77d5b74e9dd5e293d07fe30e73333fc270ce6e1f",
+  "dirty": " M internal/ingestion/component/chunker/common.go\n M internal/ingestion/component/chunker/crop_title_test.go\n M internal/ingestion/component/chunker/title_media_context.go\n M internal/ingestion/component/chunker/title_media_context_test.go\n M internal/ingestion/component/chunker/token.go\n",
+  "command": [
+    "bash",
+    "build.sh",
+    "--test",
+    "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21029/tmp/go-provenance-race-native-link-overlay.json",
+    "-count=1",
+    "-race",
+    "-timeout=10m",
+    "-run",
+    "^Test(TitleMediaContext|BuiltinTitleMediaContext|TitleContextParameters|CropTitleChunks)",
+    "./internal/ingestion/component/chunker",
+    "./internal/ingestion/component/schema",
+    "./internal/ingestion/pipeline"
+  ],
+  "exit": 0,
+  "signal": null,
+  "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+  "seconds": 14.353,
+  "capturedAt": "2026-10-18T03:18:58.273Z"
+}

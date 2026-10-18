@@ -1,0 +1,21 @@
+{
+  "label": "evidence-build-provenance",
+  "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+  "head": "cb507a06181567327ff62776def202f4e53132d6",
+  "dirty": "",
+  "command": [
+    "bash",
+    "build.sh",
+    "--test",
+    "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21029/tmp/evidence-build-provenance-native-link-overlay.json",
+    "-c",
+    "-o",
+    "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21029/tmp/after.test",
+    "./.cache/title-context-evidence"
+  ],
+  "exit": 0,
+  "signal": null,
+  "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+  "seconds": 18.302,
+  "capturedAt": "2026-10-18T03:20:38.476Z"
+}

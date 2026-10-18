@@ -1,8 +1,27 @@
 {
-  "capturedAt": "2026-10-18T02:44:29.106Z",
+  "capturedAt": "2026-10-18T03:20:20.129Z",
   "issue": "https://github.com/infiniflow/ragflow/issues/21029",
   "baseSha": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
   "originalRegression": "Actual original-source runtime regressions failed before implementation",
+  "reviewFollowup": {
+    "regressionHead": "77d5b74e9dd5e293d07fe30e73333fc270ce6e1f",
+    "red": true,
+    "correction": "Transient title-only crop provenance; arbitrary upstream IDs are recomputed; marker stripped from output",
+    "commit": {
+      "sha": "cb507a06181567327ff62776def202f4e53132d6",
+      "tree": "0668ca49dd7ab25209d655fd6de1945bcaaec49a",
+      "files": [
+        "internal/ingestion/component/chunker/common.go",
+        "internal/ingestion/component/chunker/crop_title_test.go",
+        "internal/ingestion/component/chunker/title_media_context.go",
+        "internal/ingestion/component/chunker/title_media_context_test.go",
+        "internal/ingestion/component/chunker/token.go"
+      ],
+      "preCommitHooksPassed": true,
+      "validatedContentUnchangedByHooks": true,
+      "capturedAt": "2026-10-18T03:20:07.129Z"
+    }
+  },
   "passRuns": [
     {
       "label": "go-id-review",
@@ -141,6 +160,97 @@
       "signal": null,
       "seconds": 0.519,
       "capturedAt": "2026-10-18T02:09:58.572Z"
+    },
+    {
+      "label": "go-provenance-focused",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+      "head": "77d5b74e9dd5e293d07fe30e73333fc270ce6e1f",
+      "dirty": " M internal/ingestion/component/chunker/common.go\n M internal/ingestion/component/chunker/crop_title_test.go\n M internal/ingestion/component/chunker/title_media_context.go\n M internal/ingestion/component/chunker/title_media_context_test.go\n M internal/ingestion/component/chunker/token.go\n",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21029/tmp/go-provenance-focused-native-link-overlay.json",
+        "-count=1",
+        "-timeout=10m",
+        "-run",
+        "^Test(TitleMediaContext|BuiltinTitleMediaContext|TitleContextParameters|CropTitleChunks)",
+        "-v",
+        "./internal/ingestion/component/chunker",
+        "./internal/ingestion/component/schema",
+        "./internal/ingestion/pipeline"
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 11.213,
+      "capturedAt": "2026-10-18T03:17:12.053Z"
+    },
+    {
+      "label": "go-provenance-related",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+      "head": "77d5b74e9dd5e293d07fe30e73333fc270ce6e1f",
+      "dirty": " M internal/ingestion/component/chunker/common.go\n M internal/ingestion/component/chunker/crop_title_test.go\n M internal/ingestion/component/chunker/title_media_context.go\n M internal/ingestion/component/chunker/title_media_context_test.go\n M internal/ingestion/component/chunker/token.go\n",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21029/tmp/go-provenance-related-native-link-overlay.json",
+        "-count=1",
+        "-timeout=10m",
+        "./internal/ingestion/...",
+        "./internal/parser/..."
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 28.314,
+      "capturedAt": "2026-10-18T03:18:17.576Z"
+    },
+    {
+      "label": "go-provenance-race",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+      "head": "77d5b74e9dd5e293d07fe30e73333fc270ce6e1f",
+      "dirty": " M internal/ingestion/component/chunker/common.go\n M internal/ingestion/component/chunker/crop_title_test.go\n M internal/ingestion/component/chunker/title_media_context.go\n M internal/ingestion/component/chunker/title_media_context_test.go\n M internal/ingestion/component/chunker/token.go\n",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21029/tmp/go-provenance-race-native-link-overlay.json",
+        "-count=1",
+        "-race",
+        "-timeout=10m",
+        "-run",
+        "^Test(TitleMediaContext|BuiltinTitleMediaContext|TitleContextParameters|CropTitleChunks)",
+        "./internal/ingestion/component/chunker",
+        "./internal/ingestion/component/schema",
+        "./internal/ingestion/pipeline"
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 14.353,
+      "capturedAt": "2026-10-18T03:18:58.273Z"
+    },
+    {
+      "label": "web-provenance-related",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+      "command": [
+        "npx",
+        "--no-install",
+        "jest",
+        "--runInBand",
+        "src/pages/agent/form/title-chunker-form",
+        "src/pages/agent/utils.test.ts",
+        "src/utils/__tests__/pipeline-operator.test.ts",
+        "src/pages/agent/hooks/use-add-node.test.tsx",
+        "src/pages/agent/utils/__tests__/dsl-bridge.test.ts",
+        "src/pages/agent/utils/__tests__/canvas-checklist.test.ts"
+      ],
+      "exit": 0,
+      "signal": null,
+      "seconds": 4.932,
+      "capturedAt": "2026-10-18T03:18:07.136Z"
     }
   ],
   "focusedFrontend": {

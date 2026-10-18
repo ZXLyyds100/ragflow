@@ -1,0 +1,28 @@
+### Result
+{"duration":10.467,"width":1440,"height":1040,"samples":[2.61675,9.467],"decodedAndSeeked":true}
+### Ran Playwright code
+```js
+await (async (page) => {
+  await page.locator('#verified-video').evaluateAll(elements=>elements.forEach(element=>element.remove()));
+  await page.unroute('**/fixture/verified-video');
+  await page.route('**/fixture/verified-video', route => route.fulfill({path:"$WORKSPACE/outputs/RAGFlow-21030/image-ocr-verified.webm",contentType:'video/webm'}));
+  await page.evaluate(async()=>{
+    const video=document.createElement('video');
+    video.id='verified-video';video.src='/fixture/verified-video';video.muted=true;
+    video.style.cssText='position:fixed;inset:0;width:100vw;height:100vh;z-index:99999;background:white';
+    document.body.append(video);
+    await new Promise((resolve,reject)=>{video.onloadedmetadata=resolve;video.onerror=()=>reject(Error('Video failed to decode'));});
+  });
+  const v=page.locator('#verified-video');
+  const metadata=await v.evaluate(video=>({duration:video.duration,width:video.videoWidth,height:video.videoHeight}));
+  if(!Number.isFinite(metadata.duration)||metadata.duration<4||metadata.width!==1440)throw Error(JSON.stringify(metadata));
+  const samples=[Math.min(3,metadata.duration/4),metadata.duration-1];
+  for(let i=0;i<samples.length;i++){
+    await v.evaluate((video,t)=>new Promise(resolve=>{video.onseeked=resolve;video.currentTime=t;}),samples[i]);
+    await v.screenshot({path:"$WORKSPACE/work/ragflow-21030/tmp"+'/video-sample-'+i+'.png'});
+  }
+  await v.evaluate(video=>video.remove());
+  await page.unroute('**/fixture/verified-video');
+  return {...metadata,samples,decodedAndSeeked:true};
+})(page);
+```

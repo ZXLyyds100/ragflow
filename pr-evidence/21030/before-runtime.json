@@ -1,0 +1,58 @@
+{
+  "finalChunks": [
+    {
+      "chunk_order_int": 0,
+      "ck_type": "image",
+      "doc_type_kwd": "image",
+      "id": "765137eac4a903d8",
+      "img_id": "fixture-kb-765137eac4a903d8",
+      "q_2_vec": [
+        0.2,
+        0.8
+      ],
+      "text": "LOCAL OCR fixture: selected model was ignored."
+    }
+  ],
+  "imagePreserved": true,
+  "imageUploadedUnchanged": true,
+  "localOCRCalls": 1,
+  "parserItems": [
+    {
+      "doc_type_kwd": "image",
+      "text": "LOCAL OCR fixture: selected model was ignored."
+    }
+  ],
+  "requests": [],
+  "savedParams": {
+    "enable_vision_enhancement": false,
+    "image": {
+      "ocr_enabled": true,
+      "ocr_model_id": "fixture-model-B",
+      "output_format": "json"
+    },
+    "video": {
+      "output_format": "text",
+      "preprocess": [
+        "main_content"
+      ],
+      "suffix": [
+        "3gp",
+        "3gpp",
+        "avi",
+        "flv",
+        "mkv",
+        "mov",
+        "mp4",
+        "mpeg",
+        "mpg",
+        "webm",
+        "wmv"
+      ]
+    },
+    "vlm": {
+      "llm_id": ""
+    }
+  },
+  "scope": "Same PNG, saved model ID B, tenant and switch settings. Real Parser/DAO/driver/OneChunker/Tokenizer. Inference, embedding and image storage are local fixtures, not live models.",
+  "warnings": null
+}

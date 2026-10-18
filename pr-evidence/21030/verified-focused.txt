@@ -1,0 +1,163 @@
+Checkout: $WORKSPACE/work/repos/ragflow-21030
+HEAD: 543e16738b4883fcb7e70520e0b5849e7e18c9b7
+Worktree:
+ M docs/guides/agent/ingestion_pipeline/configure_parser_component.md
+ M internal/entity/models/paddleocr.go
+ M internal/entity/models/paddleocr_test.go
+ M internal/ingestion/component/media_dispatch.go
+ M internal/ingestion/component/parser.go
+ M web/src/locales/en.ts
+ M web/src/locales/zh.ts
+ M web/src/pages/agent/form/parser-form/image-form-fields.test.tsx
+ M web/src/pages/agent/form/parser-form/image-form-fields.tsx
+ M web/src/pages/agent/form/parser-form/schema.test.ts
+ M web/src/pages/agent/form/parser-form/schema.ts
+ M web/src/pages/agent/utils.test.ts
+ M web/src/pages/agent/utils.ts
+?? internal/ingestion/component/image_ocr.go
+?? internal/ingestion/component/image_ocr_test.go
+?? internal/ingestion/pipeline/image_ocr_test.go
+
+=== RAGFlow Go Server Build Script ===
+
+>>> Checking go dependencies
+✓ Required tools are available
+
+>>> Checking ONNX Runtime version consistency
+✓ ONNX Runtime native version consistent: 1.29.0
+
+>>> Running Go tests
+check if the cl100k_base BPE table exists at $WORKSPACE/work/repos/ragflow-21030/ragflow_deps/cl100k_base.tiktoken
+  cl100k_base.tiktoken → $WORKSPACE/work/repos/ragflow-21030/ragflow_deps/cl100k_base.tiktoken (already present)
+
+>>> Checking office_oxide native library
+check if dep office_oxide exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide or /opt/ragflow-native-libs/office_oxide
+  office_oxide → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide (user cache)
+✓ office_oxide v0.1.12 native library found at $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide
+check if dep pdfium-static exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static or /opt/ragflow-native-libs/pdfium-static
+  pdfium-static → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static (user cache)
+  pdfium (static) → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static
+check if dep pdf_oxide exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide or /opt/ragflow-native-libs/pdf_oxide
+  pdf_oxide → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide (user cache)
+  pdf_oxide (static) → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide
+check if dep onnxruntime exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime or /opt/ragflow-native-libs/onnxruntime
+  onnxruntime → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime (user cache)
+  (no local onnxruntime-v1.29.0-osx-arm64.zip; skipping sha256 check — CI seed assumed authoritative)
+✓ onnxruntime v1.29.0 static lib verified under $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+  onnxruntime (static) → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+CGO_CFLAGS:   -I$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/include/office_oxide_c
+CGO_LDFLAGS:  $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide/lib/darwin_arm64/v0.3.73/libpdf_oxide.a -Wl,-export_dynamic -Wl,-force_load,$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib/v1.29.0-b1da7e98dc26fc49/libonnxruntime.a -lc++                 -framework CoreGraphics -framework CoreFoundation                 -framework Security -framework SystemConfiguration                 -liconv -lresolv -lc++
+# ragflow/internal/entity/models.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+=== RUN   TestImageOCRSelectedTenantModel
+=== RUN   TestImageOCRSelectedTenantModel/PaddleOCR.local
+=== RUN   TestImageOCRSelectedTenantModel/PaddleOCR
+--- PASS: TestImageOCRSelectedTenantModel (0.17s)
+    --- PASS: TestImageOCRSelectedTenantModel/PaddleOCR.local (0.14s)
+    --- PASS: TestImageOCRSelectedTenantModel/PaddleOCR (0.03s)
+=== RUN   TestImageOCRFailureRetainsAttachment
+=== RUN   TestImageOCRFailureRetainsAttachment/PaddleOCR.local
+=== RUN   TestImageOCRFailureRetainsAttachment/PaddleOCR
+--- PASS: TestImageOCRFailureRetainsAttachment (0.05s)
+    --- PASS: TestImageOCRFailureRetainsAttachment/PaddleOCR.local (0.03s)
+    --- PASS: TestImageOCRFailureRetainsAttachment/PaddleOCR (0.02s)
+=== RUN   TestImageOCRInvalidSelectionNeverFallsBack
+=== RUN   TestImageOCRInvalidSelectionNeverFallsBack/missing_tenant
+=== RUN   TestImageOCRInvalidSelectionNeverFallsBack/foreign_tenant
+=== RUN   TestImageOCRInvalidSelectionNeverFallsBack/missing_model
+=== RUN   TestImageOCRInvalidSelectionNeverFallsBack/disabled_model
+=== RUN   TestImageOCRInvalidSelectionNeverFallsBack/wrong_type
+=== RUN   TestImageOCRInvalidSelectionNeverFallsBack/disabled_instance
+=== RUN   TestImageOCRInvalidSelectionNeverFallsBack/mismatched_instance_provider
+--- PASS: TestImageOCRInvalidSelectionNeverFallsBack (0.18s)
+    --- PASS: TestImageOCRInvalidSelectionNeverFallsBack/missing_tenant (0.02s)
+    --- PASS: TestImageOCRInvalidSelectionNeverFallsBack/foreign_tenant (0.03s)
+    --- PASS: TestImageOCRInvalidSelectionNeverFallsBack/missing_model (0.02s)
+    --- PASS: TestImageOCRInvalidSelectionNeverFallsBack/disabled_model (0.02s)
+    --- PASS: TestImageOCRInvalidSelectionNeverFallsBack/wrong_type (0.02s)
+    --- PASS: TestImageOCRInvalidSelectionNeverFallsBack/disabled_instance (0.03s)
+    --- PASS: TestImageOCRInvalidSelectionNeverFallsBack/mismatched_instance_provider (0.04s)
+=== RUN   TestImageOCRSelectionRespectsSwitchAndSVG
+=== RUN   TestImageOCRSelectionRespectsSwitchAndSVG/off
+=== RUN   TestImageOCRSelectionRespectsSwitchAndSVG/svg
+--- PASS: TestImageOCRSelectionRespectsSwitchAndSVG (0.03s)
+    --- PASS: TestImageOCRSelectionRespectsSwitchAndSVG/off (0.00s)
+    --- PASS: TestImageOCRSelectionRespectsSwitchAndSVG/svg (0.00s)
+=== RUN   TestImageOCRModelConfigValidation
+--- PASS: TestImageOCRModelConfigValidation (0.00s)
+=== RUN   TestImageOCRDoesNotUseGlobalEndpoint
+--- PASS: TestImageOCRDoesNotUseGlobalEndpoint (0.03s)
+=== RUN   TestImageOCRKeepsCloudSSRFGuard
+--- PASS: TestImageOCRKeepsCloudSSRFGuard (0.02s)
+=== RUN   TestImageOCRRejectsOtherOCRDrivers
+--- PASS: TestImageOCRRejectsOtherOCRDrivers (0.02s)
+=== RUN   TestImageOCRReadsInstanceJSONAndRotatedCredentials
+--- PASS: TestImageOCRReadsInstanceJSONAndRotatedCredentials (0.03s)
+=== RUN   TestImageOCRAndVisionRemainIndependent
+=== RUN   TestImageOCRAndVisionRemainIndependent/true
+=== RUN   TestImageOCRAndVisionRemainIndependent/false
+--- PASS: TestImageOCRAndVisionRemainIndependent (0.05s)
+    --- PASS: TestImageOCRAndVisionRemainIndependent/true (0.02s)
+    --- PASS: TestImageOCRAndVisionRemainIndependent/false (0.03s)
+=== RUN   TestImageOCRFailureReachesProgressMessages
+--- PASS: TestImageOCRFailureReachesProgressMessages (0.02s)
+PASS
+ok  	ragflow/internal/ingestion/component	2.856s
+# ragflow/internal/ingestion/pipeline.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+=== RUN   TestImageOCRSavedConfigToSearchableChunk
+--- PASS: TestImageOCRSavedConfigToSearchableChunk (0.37s)
+PASS
+ok  	ragflow/internal/ingestion/pipeline	3.361s
+=== RUN   TestPaddleOCRUploadFilename
+=== RUN   TestPaddleOCRUploadFilename/pdf
+=== RUN   TestPaddleOCRUploadFilename/png
+=== RUN   TestPaddleOCRUploadFilename/jpeg
+=== RUN   TestPaddleOCRUploadFilename/gif
+=== RUN   TestPaddleOCRUploadFilename/webp
+=== RUN   TestPaddleOCRUploadFilename/bmp
+=== RUN   TestPaddleOCRUploadFilename/little_endian_tiff
+=== RUN   TestPaddleOCRUploadFilename/big_endian_tiff
+=== RUN   TestPaddleOCRUploadFilename/unrecognized
+--- PASS: TestPaddleOCRUploadFilename (0.00s)
+    --- PASS: TestPaddleOCRUploadFilename/pdf (0.00s)
+    --- PASS: TestPaddleOCRUploadFilename/png (0.00s)
+    --- PASS: TestPaddleOCRUploadFilename/jpeg (0.00s)
+    --- PASS: TestPaddleOCRUploadFilename/gif (0.00s)
+    --- PASS: TestPaddleOCRUploadFilename/webp (0.00s)
+    --- PASS: TestPaddleOCRUploadFilename/bmp (0.00s)
+    --- PASS: TestPaddleOCRUploadFilename/little_endian_tiff (0.00s)
+    --- PASS: TestPaddleOCRUploadFilename/big_endian_tiff (0.00s)
+    --- PASS: TestPaddleOCRUploadFilename/unrecognized (0.00s)
+PASS
+ok  	ragflow/internal/entity/models	1.752s
+
+>>> Running native unit tests
+# ragflow/internal/deepdoc/native/croptest.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/deepdoc/native.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/deepdoc/native	0.194s
+ok  	ragflow/internal/deepdoc/native/croptest	0.343s

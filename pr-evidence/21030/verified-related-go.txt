@@ -1,0 +1,305 @@
+Checkout: $WORKSPACE/work/repos/ragflow-21030
+HEAD: 543e16738b4883fcb7e70520e0b5849e7e18c9b7
+Worktree:
+ M docs/guides/agent/ingestion_pipeline/configure_parser_component.md
+ M internal/entity/models/paddleocr.go
+ M internal/entity/models/paddleocr_test.go
+ M internal/ingestion/component/media_dispatch.go
+ M internal/ingestion/component/parser.go
+ M web/src/locales/en.ts
+ M web/src/locales/zh.ts
+ M web/src/pages/agent/form/parser-form/image-form-fields.test.tsx
+ M web/src/pages/agent/form/parser-form/image-form-fields.tsx
+ M web/src/pages/agent/form/parser-form/schema.test.ts
+ M web/src/pages/agent/form/parser-form/schema.ts
+ M web/src/pages/agent/utils.test.ts
+ M web/src/pages/agent/utils.ts
+?? internal/ingestion/component/image_ocr.go
+?? internal/ingestion/component/image_ocr_test.go
+?? internal/ingestion/pipeline/image_ocr_test.go
+
+=== RAGFlow Go Server Build Script ===
+
+>>> Checking go dependencies
+✓ Required tools are available
+
+>>> Checking ONNX Runtime version consistency
+✓ ONNX Runtime native version consistent: 1.29.0
+
+>>> Running Go tests
+check if the cl100k_base BPE table exists at $WORKSPACE/work/repos/ragflow-21030/ragflow_deps/cl100k_base.tiktoken
+  cl100k_base.tiktoken → $WORKSPACE/work/repos/ragflow-21030/ragflow_deps/cl100k_base.tiktoken (already present)
+
+>>> Checking office_oxide native library
+check if dep office_oxide exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide or /opt/ragflow-native-libs/office_oxide
+  office_oxide → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide (user cache)
+✓ office_oxide v0.1.12 native library found at $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide
+check if dep pdfium-static exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static or /opt/ragflow-native-libs/pdfium-static
+  pdfium-static → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static (user cache)
+  pdfium (static) → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static
+check if dep pdf_oxide exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide or /opt/ragflow-native-libs/pdf_oxide
+  pdf_oxide → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide (user cache)
+  pdf_oxide (static) → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide
+check if dep onnxruntime exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime or /opt/ragflow-native-libs/onnxruntime
+  onnxruntime → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime (user cache)
+  (no local onnxruntime-v1.29.0-osx-arm64.zip; skipping sha256 check — CI seed assumed authoritative)
+✓ onnxruntime v1.29.0 static lib verified under $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+  onnxruntime (static) → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+CGO_CFLAGS:   -I$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/include/office_oxide_c
+CGO_LDFLAGS:  $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide/lib/darwin_arm64/v0.3.73/libpdf_oxide.a -Wl,-export_dynamic -Wl,-force_load,$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib/v1.29.0-b1da7e98dc26fc49/libonnxruntime.a -lc++                 -framework CoreGraphics -framework CoreFoundation                 -framework Security -framework SystemConfiguration                 -liconv -lresolv -lc++
+# ragflow/internal/ingestion/component/knowledge_compiler/common.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/globals.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/knowledge_compiler/mindmap.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/chunkcache.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/ingestion/chunkcache	0.696s
+ok  	ragflow/internal/ingestion/compilation/extractor	1.080s
+# ragflow/internal/ingestion/component/knowledge_compiler/structure.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/knowledge_compiler/tree.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/knowledge_compiler/golden.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/knowledge_compiler/wiki.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/progress.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/schema.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/chunker.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/component/knowledge_compiler.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/knowledge_compile.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/task/indexdoc.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/registry.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/pipeline.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/parser/chunk.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/ingestion/component	16.864s
+ok  	ragflow/internal/ingestion/component/chunker	2.388s
+ok  	ragflow/internal/ingestion/component/globals	1.744s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler	1.608s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler/common	1.928s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler/golden	2.392s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler/mindmap	2.398s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler/structure	2.935s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler/tree	9.553s
+ok  	ragflow/internal/ingestion/component/knowledge_compiler/wiki	2.742s
+ok  	ragflow/internal/ingestion/component/progress	2.558s
+ok  	ragflow/internal/ingestion/component/schema	3.584s
+ok  	ragflow/internal/ingestion/knowledge_compile	3.846s
+ok  	ragflow/internal/ingestion/pipeline	1.177s
+ok  	ragflow/internal/ingestion/registry	2.080s
+# ragflow/internal/ingestion/task.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/service.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/ingestion/task/tool.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/parser/tableutil.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/parser/parser.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/entity/models.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/ingestion/service	5.063s
+# ragflow/internal/dao/transaction.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/ingestion/task	8.225s
+ok  	ragflow/internal/ingestion/task/indexdoc	1.765s
+ok  	ragflow/internal/ingestion/task/tool	3.795s
+?   	ragflow/internal/ingestion/testutil	[no test files]
+?   	ragflow/internal/ingestion/wire	[no test files]
+# ragflow/internal/service/dataset.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/service/document.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/dao.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/entity/models	15.099s
+ok  	ragflow/internal/parser/chunk	3.028s
+ok  	ragflow/internal/parser/parser	7.692s
+ok  	ragflow/internal/parser/tableutil	2.113s
+ok  	ragflow/internal/dao	3.028s
+ok  	ragflow/internal/dao/transaction	0.454s
+# ragflow/cmd.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-ldl', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/service/dataset	5.131s
+ok  	ragflow/internal/service/document	3.537s
+ok  	ragflow/cmd	1.671s
+
+>>> Running native unit tests
+# ragflow/internal/deepdoc/native/croptest.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/deepdoc/native.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/deepdoc/native	0.748s
+ok  	ragflow/internal/deepdoc/native/croptest	0.387s

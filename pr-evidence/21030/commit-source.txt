@@ -1,0 +1,39 @@
+[feat/image-paddleocr-selection 5f3806e] feat(parser): allow tenant PaddleOCR selection for images
+ 16 files changed, 1038 insertions(+), 25 deletions(-)
+ create mode 100644 internal/ingestion/component/image_ocr.go
+ create mode 100644 internal/ingestion/component/image_ocr_test.go
+ create mode 100644 internal/ingestion/pipeline/image_ocr_test.go
+╭──────────────────────────────────────╮
+│ lefthook  v2.2.2   hook:  pre-commit │
+╰──────────────────────────────────────╯
+│  ruff-format (skip) no files for inspection
+│  ruff (skip) no files for inspection
+┃  gofmt ❯
+
+┃  check-symlinks ❯
+
+┃  end-of-file-fixer ❯
+
+┃  check-json ❯
+
+┃  mixed-line-ending ❯
+
+┃  check-yaml ❯
+
+┃  check-case-conflict ❯
+
+┃  check-merge-conflict ❯
+
+┃  trailing-whitespace ❯
+
+  ────────────────────────────────────
+summary: (done in 1.22 seconds)
+✓ gofmt (0.03 seconds)
+✓ check-symlinks (1.17 seconds)
+✓ end-of-file-fixer (1.17 seconds)
+✓ check-json (1.17 seconds)
+✓ mixed-line-ending (1.17 seconds)
+✓ check-yaml (1.19 seconds)
+✓ check-case-conflict (1.19 seconds)
+✓ check-merge-conflict (1.19 seconds)
+✓ trailing-whitespace (1.21 seconds)

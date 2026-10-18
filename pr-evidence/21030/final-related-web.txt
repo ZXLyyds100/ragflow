@@ -1,0 +1,16 @@
+PASS src/pages/agent/utils.test.ts
+PASS src/utils/__tests__/pipeline-operator.test.ts
+PASS src/pages/agent/form/parser-form/utils.test.ts
+PASS src/pages/agent/form/parser-form/image-form-fields.test.tsx
+PASS src/pages/agent/form/parser-form/vision-form-fields.test.tsx
+PASS src/pages/agent/form/parser-form/spreadsheet-form-fields.test.tsx
+PASS src/hooks/parser-config-utils.test.ts
+PASS src/hooks/__tests__/parser-config-utils.test.ts
+PASS src/pages/agent/form/parser-form/schema.test.ts
+PASS src/components/pipeline-operator-tabs/parser-config-validation.test.ts
+
+Test Suites: 10 passed, 10 total
+Tests:       105 passed, 105 total
+Snapshots:   0 total
+Time:        4.732 s
+Ran all test suites matching /src\/pages\/agent\/form\/parser-form|src\/pages\/agent\/utils.test.ts|src\/utils\/__tests__\/pipeline-operator.test.ts|src\/hooks\/parser-config-utils.test.ts|src\/hooks\/__tests__\/parser-config-utils.test.ts|src\/components\/pipeline-operator-tabs\/parser-config-validation.test.ts/i.

@@ -1,0 +1,264 @@
+{
+  "capturedAt": "2026-10-18T08:07:09.156Z",
+  "source": {
+    "sha": "5f3806e97db14bab721ffba4dde9b8e4f6c3fe8a",
+    "tree": "98994b4335ca0bc2cbe86eca90f58f1f350612a9",
+    "base": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+    "files": [
+      "docs/guides/agent/ingestion_pipeline/configure_parser_component.md",
+      "internal/entity/models/paddleocr.go",
+      "internal/entity/models/paddleocr_test.go",
+      "internal/ingestion/component/image_ocr.go",
+      "internal/ingestion/component/image_ocr_test.go",
+      "internal/ingestion/component/media_dispatch.go",
+      "internal/ingestion/component/parser.go",
+      "internal/ingestion/pipeline/image_ocr_test.go",
+      "web/src/locales/en.ts",
+      "web/src/locales/zh.ts",
+      "web/src/pages/agent/form/parser-form/image-form-fields.test.tsx",
+      "web/src/pages/agent/form/parser-form/image-form-fields.tsx",
+      "web/src/pages/agent/form/parser-form/schema.test.ts",
+      "web/src/pages/agent/form/parser-form/schema.ts",
+      "web/src/pages/agent/utils.test.ts",
+      "web/src/pages/agent/utils.ts"
+    ]
+  },
+  "passedRuns": [
+    {
+      "label": "verified-related-go",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21030",
+      "head": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+      "dirty": " M docs/guides/agent/ingestion_pipeline/configure_parser_component.md\n M internal/entity/models/paddleocr.go\n M internal/entity/models/paddleocr_test.go\n M internal/ingestion/component/media_dispatch.go\n M internal/ingestion/component/parser.go\n M web/src/locales/en.ts\n M web/src/locales/zh.ts\n M web/src/pages/agent/form/parser-form/image-form-fields.test.tsx\n M web/src/pages/agent/form/parser-form/image-form-fields.tsx\n M web/src/pages/agent/form/parser-form/schema.test.ts\n M web/src/pages/agent/form/parser-form/schema.ts\n M web/src/pages/agent/utils.test.ts\n M web/src/pages/agent/utils.ts\n?? internal/ingestion/component/image_ocr.go\n?? internal/ingestion/component/image_ocr_test.go\n?? internal/ingestion/pipeline/image_ocr_test.go\n",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21030/tmp/verified-related-go-native-link-overlay.json",
+        "./internal/ingestion/...",
+        "./internal/entity/models/...",
+        "./internal/parser/...",
+        "./internal/dao/...",
+        "./internal/service/dataset/...",
+        "./internal/service/document/...",
+        "./cmd",
+        "-count=1"
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 51.767,
+      "capturedAt": "2026-10-18T07:54:07.246Z"
+    },
+    {
+      "label": "verified-focused",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21030",
+      "head": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+      "dirty": " M docs/guides/agent/ingestion_pipeline/configure_parser_component.md\n M internal/entity/models/paddleocr.go\n M internal/entity/models/paddleocr_test.go\n M internal/ingestion/component/media_dispatch.go\n M internal/ingestion/component/parser.go\n M web/src/locales/en.ts\n M web/src/locales/zh.ts\n M web/src/pages/agent/form/parser-form/image-form-fields.test.tsx\n M web/src/pages/agent/form/parser-form/image-form-fields.tsx\n M web/src/pages/agent/form/parser-form/schema.test.ts\n M web/src/pages/agent/form/parser-form/schema.ts\n M web/src/pages/agent/utils.test.ts\n M web/src/pages/agent/utils.ts\n?? internal/ingestion/component/image_ocr.go\n?? internal/ingestion/component/image_ocr_test.go\n?? internal/ingestion/pipeline/image_ocr_test.go\n",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21030/tmp/verified-focused-native-link-overlay.json",
+        "./internal/ingestion/component",
+        "./internal/ingestion/pipeline",
+        "./internal/entity/models",
+        "-run",
+        "TestImageOCR|TestPaddleOCRUploadFilename",
+        "-race",
+        "-count=1",
+        "-v"
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 23.393,
+      "capturedAt": "2026-10-18T07:56:09.563Z"
+    },
+    {
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21030",
+      "label": "final-related-web",
+      "command": [
+        "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21030/web/node_modules/.bin/jest",
+        "src/pages/agent/form/parser-form",
+        "src/pages/agent/utils.test.ts",
+        "src/utils/__tests__/pipeline-operator.test.ts",
+        "src/hooks/parser-config-utils.test.ts",
+        "src/hooks/__tests__/parser-config-utils.test.ts",
+        "src/components/pipeline-operator-tabs/parser-config-validation.test.ts",
+        "--runInBand",
+        "--no-cache",
+        "--coverage=false"
+      ],
+      "exit": 0,
+      "signal": null,
+      "seconds": 7.154,
+      "at": "2026-10-18T07:33:41.033Z"
+    },
+    {
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21030",
+      "label": "build",
+      "command": [
+        "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21030/web/node_modules/.bin/vite",
+        "build",
+        "--mode",
+        "production"
+      ],
+      "exit": 0,
+      "signal": null,
+      "seconds": 89.235,
+      "at": "2026-10-18T07:24:39.332Z"
+    },
+    {
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21030",
+      "label": "final-lint",
+      "command": [
+        "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21030/web/node_modules/.bin/oxlint",
+        "src"
+      ],
+      "exit": 0,
+      "signal": null,
+      "seconds": 0.292,
+      "at": "2026-10-18T07:51:53.344Z"
+    },
+    {
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21030",
+      "label": "final-format-check",
+      "command": [
+        "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21030/web/node_modules/.bin/oxfmt",
+        "--check",
+        "src/pages/agent/form/parser-form/image-form-fields.tsx",
+        "src/pages/agent/form/parser-form/image-form-fields.test.tsx",
+        "src/pages/agent/form/parser-form/schema.ts",
+        "src/pages/agent/form/parser-form/schema.test.ts",
+        "src/pages/agent/utils.ts",
+        "src/pages/agent/utils.test.ts",
+        "src/locales/en.ts",
+        "src/locales/zh.ts"
+      ],
+      "exit": 0,
+      "signal": null,
+      "seconds": 0.089,
+      "at": "2026-10-18T07:51:53.007Z"
+    }
+  ],
+  "relatedPackagePasses": [
+    "ragflow/internal/ingestion/chunkcache",
+    "ragflow/internal/ingestion/compilation/extractor",
+    "ragflow/internal/ingestion/component",
+    "ragflow/internal/ingestion/component/chunker",
+    "ragflow/internal/ingestion/component/globals",
+    "ragflow/internal/ingestion/component/knowledge_compiler",
+    "ragflow/internal/ingestion/component/knowledge_compiler/common",
+    "ragflow/internal/ingestion/component/knowledge_compiler/golden",
+    "ragflow/internal/ingestion/component/knowledge_compiler/mindmap",
+    "ragflow/internal/ingestion/component/knowledge_compiler/structure",
+    "ragflow/internal/ingestion/component/knowledge_compiler/tree",
+    "ragflow/internal/ingestion/component/knowledge_compiler/wiki",
+    "ragflow/internal/ingestion/component/progress",
+    "ragflow/internal/ingestion/component/schema",
+    "ragflow/internal/ingestion/knowledge_compile",
+    "ragflow/internal/ingestion/pipeline",
+    "ragflow/internal/ingestion/registry",
+    "ragflow/internal/ingestion/service",
+    "ragflow/internal/ingestion/task",
+    "ragflow/internal/ingestion/task/indexdoc",
+    "ragflow/internal/ingestion/task/tool",
+    "ragflow/internal/entity/models",
+    "ragflow/internal/parser/chunk",
+    "ragflow/internal/parser/parser",
+    "ragflow/internal/parser/tableutil",
+    "ragflow/internal/dao",
+    "ragflow/internal/dao/transaction",
+    "ragflow/internal/service/dataset",
+    "ragflow/internal/service/document",
+    "ragflow/cmd",
+    "ragflow/internal/deepdoc/native",
+    "ragflow/internal/deepdoc/native/croptest"
+  ],
+  "relevantFrontendTests": 105,
+  "raceFocusedTopLevelTests": 13,
+  "frontendBaseline": {
+    "typeDiagnosticsEach": 206,
+    "newDiagnostics": 0,
+    "failedSuitesBoth": [
+      "src/pages/agent/utils/pipeline-connection.test.ts",
+      "src/pages/dataset/components/metedata/hooks/__tests__/use-manage-values-modal.test.ts",
+      "src/pages/user-setting/setting-model/instance-card/models-section/hooks.test.tsx",
+      "src/utils/__tests__/chat.test.ts",
+      "src/utils/__tests__/file-util.test.ts",
+      "src/utils/__tests__/llm-util.test.ts"
+    ],
+    "terminationBoth": "Request is not defined",
+    "fullFrontendSuitePassed": false
+  },
+  "browser": {
+    "passed": true,
+    "checks": [
+      "before source save/reload and real runtime panel",
+      "after source save/reload and real runtime panel",
+      "cloud model selected, saved and reloaded",
+      "clear selection saved and reloaded as local default",
+      "independent VLM and OCR switches preserve selection",
+      "390px narrow layout has no horizontal overflow"
+    ],
+    "viewport": [
+      1440,
+      1040
+    ],
+    "narrow": [
+      390,
+      844
+    ]
+  },
+  "media": {
+    "capturedAt": "2026-10-18T07:56:57.205Z",
+    "video": {
+      "duration": 10.467,
+      "width": 1440,
+      "height": 1040,
+      "samples": [
+        2.61675,
+        9.467
+      ],
+      "decodedAndSeeked": true
+    },
+    "media": [
+      {
+        "name": "before.png",
+        "bytes": 92284,
+        "sha256": "5f60217e706857cefdd73b54dc19c83b8fb43b6306e17e9e6df654fba1a5452d",
+        "width": 1440,
+        "height": 1040
+      },
+      {
+        "name": "after.png",
+        "bytes": 99805,
+        "sha256": "06b6e7e8edf84797a8fe227d2171fbcc28b0894cab8fec6932d1c0340d6712ab",
+        "width": 1440,
+        "height": 1040
+      },
+      {
+        "name": "model-options.png",
+        "bytes": 114155,
+        "sha256": "0c8a0c8028471d8637afc66f2a4fa0ef4fddda7d19e2228afb8a90df2d3ef790",
+        "width": 1440,
+        "height": 1040
+      },
+      {
+        "name": "after-narrow.png",
+        "bytes": 49261,
+        "sha256": "2d03a1665ba28bbac5733d08dbb2d8f7f2d47b5beeb7b199e666d6a53ab23191",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "name": "image-ocr-verified.webm",
+        "bytes": 745124,
+        "sha256": "2eed43f5441a1088fcda56e5a524cb4c4d0ba22caac1088558b6fedd73fd033f"
+      }
+    ],
+    "scope": "Actual source UI in a labeled local integration fixture. Local inference fixtures; not a live production deployment or OCR accuracy comparison."
+  },
+  "environment": "Unchanged build.sh; PCRE2 path-only overlay; genuine ORT 1.29.0 and PDF 0.3.73 shared libraries plus real tokenizer archive. Original macOS static linking is unverified.",
+  "scope": "Local SQL/OCR/embedding/storage fixtures; no live PaddleOCR, deployed server or search-engine retrieval claim."
+}

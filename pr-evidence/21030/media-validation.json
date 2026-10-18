@@ -1,0 +1,49 @@
+{
+  "capturedAt": "2026-10-18T07:56:57.205Z",
+  "video": {
+    "duration": 10.467,
+    "width": 1440,
+    "height": 1040,
+    "samples": [
+      2.61675,
+      9.467
+    ],
+    "decodedAndSeeked": true
+  },
+  "media": [
+    {
+      "name": "before.png",
+      "bytes": 92284,
+      "sha256": "5f60217e706857cefdd73b54dc19c83b8fb43b6306e17e9e6df654fba1a5452d",
+      "width": 1440,
+      "height": 1040
+    },
+    {
+      "name": "after.png",
+      "bytes": 99805,
+      "sha256": "06b6e7e8edf84797a8fe227d2171fbcc28b0894cab8fec6932d1c0340d6712ab",
+      "width": 1440,
+      "height": 1040
+    },
+    {
+      "name": "model-options.png",
+      "bytes": 114155,
+      "sha256": "0c8a0c8028471d8637afc66f2a4fa0ef4fddda7d19e2228afb8a90df2d3ef790",
+      "width": 1440,
+      "height": 1040
+    },
+    {
+      "name": "after-narrow.png",
+      "bytes": 49261,
+      "sha256": "2d03a1665ba28bbac5733d08dbb2d8f7f2d47b5beeb7b199e666d6a53ab23191",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "name": "image-ocr-verified.webm",
+      "bytes": 745124,
+      "sha256": "2eed43f5441a1088fcda56e5a524cb4c4d0ba22caac1088558b6fedd73fd033f"
+    }
+  ],
+  "scope": "Actual source UI in a labeled local integration fixture. Local inference fixtures; not a live production deployment or OCR accuracy comparison."
+}

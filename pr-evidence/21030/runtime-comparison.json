@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "sourceBase": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+  "capturedAt": "2026-10-18T07:32:06.940Z",
+  "scope": "Routing and persistence evidence, not OCR accuracy. Same fixture inference results available to both source checkouts.",
+  "before": {
+    "localOCRCalls": 1,
+    "selectedPaddleRequests": 0
+  },
+  "after": {
+    "localOCRCalls": 0,
+    "selectedPaddleRequests": 1
+  },
+  "imagePreservedAndUploadedUnchanged": true
+}

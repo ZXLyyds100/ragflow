@@ -1,0 +1,58 @@
+Checkout: $WORKSPACE/work/repos/ragflow-21030-before
+HEAD: 543e16738b4883fcb7e70520e0b5849e7e18c9b7
+Worktree:
+
+=== RAGFlow Go Server Build Script ===
+
+>>> Checking go dependencies
+✓ Required tools are available
+
+>>> Checking ONNX Runtime version consistency
+✓ ONNX Runtime native version consistent: 1.29.0
+
+>>> Running Go tests
+check if the cl100k_base BPE table exists at $WORKSPACE/work/repos/ragflow-21030-before/ragflow_deps/cl100k_base.tiktoken
+  cl100k_base.tiktoken → $WORKSPACE/work/repos/ragflow-21030-before/ragflow_deps/cl100k_base.tiktoken (already present)
+
+>>> Checking office_oxide native library
+check if dep office_oxide exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide or /opt/ragflow-native-libs/office_oxide
+  office_oxide → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide (user cache)
+✓ office_oxide v0.1.12 native library found at $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide
+check if dep pdfium-static exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static or /opt/ragflow-native-libs/pdfium-static
+  pdfium-static → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static (user cache)
+  pdfium (static) → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static
+check if dep pdf_oxide exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide or /opt/ragflow-native-libs/pdf_oxide
+  pdf_oxide → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide (user cache)
+  pdf_oxide (static) → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide
+check if dep onnxruntime exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime or /opt/ragflow-native-libs/onnxruntime
+  onnxruntime → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime (user cache)
+  (no local onnxruntime-v1.29.0-osx-arm64.zip; skipping sha256 check — CI seed assumed authoritative)
+✓ onnxruntime v1.29.0 static lib verified under $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+  onnxruntime (static) → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+CGO_CFLAGS:   -I$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/include/office_oxide_c
+CGO_LDFLAGS:  $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide/lib/darwin_arm64/v0.3.73/libpdf_oxide.a -Wl,-export_dynamic -Wl,-force_load,$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib/v1.29.0-b1da7e98dc26fc49/libonnxruntime.a -lc++                 -framework CoreGraphics -framework CoreFoundation                 -framework Security -framework SystemConfiguration                 -liconv -lresolv -lc++
+# ragflow/.cache/image-ocr-evidence.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+=== RUN   TestCaptureImageOCR
+EVIDENCE_JSON:{"finalChunks":[{"chunk_order_int":0,"ck_type":"image","doc_type_kwd":"image","id":"765137eac4a903d8","img_id":"fixture-kb-765137eac4a903d8","q_2_vec":[0.2,0.8],"text":"LOCAL OCR fixture: selected model was ignored."}],"imagePreserved":true,"imageUploadedUnchanged":true,"localOCRCalls":1,"parserItems":[{"doc_type_kwd":"image","text":"LOCAL OCR fixture: selected model was ignored."}],"requests":[],"savedParams":{"enable_vision_enhancement":false,"image":{"ocr_enabled":true,"ocr_model_id":"fixture-model-B","output_format":"json"},"video":{"output_format":"text","preprocess":["main_content"],"suffix":["3gp","3gpp","avi","flv","mkv","mov","mp4","mpeg","mpg","webm","wmv"]},"vlm":{"llm_id":""}},"scope":"Same PNG, saved model ID B, tenant and switch settings. Real Parser/DAO/driver/OneChunker/Tokenizer. Inference, embedding and image storage are local fixtures, not live models.","warnings":null}
+--- PASS: TestCaptureImageOCR (0.04s)
+PASS
+ok  	ragflow/.cache/image-ocr-evidence	1.158s
+
+>>> Running native unit tests
+# ragflow/internal/deepdoc/native/croptest.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/deepdoc/native.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/deepdoc/native	0.411s
+ok  	ragflow/internal/deepdoc/native/croptest	0.793s

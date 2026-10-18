@@ -1,0 +1,72 @@
+Checkout: $WORKSPACE/work/repos/ragflow-21030
+HEAD: 543e16738b4883fcb7e70520e0b5849e7e18c9b7
+Worktree:
+?? internal/ingestion/component/image_ocr_test.go
+
+=== RAGFlow Go Server Build Script ===
+
+>>> Checking go dependencies
+✓ Required tools are available
+
+>>> Checking ONNX Runtime version consistency
+✓ ONNX Runtime native version consistent: 1.29.0
+
+>>> Running Go tests
+check if the cl100k_base BPE table exists at $WORKSPACE/work/repos/ragflow-21030/ragflow_deps/cl100k_base.tiktoken
+  cl100k_base.tiktoken → $WORKSPACE/work/repos/ragflow-21030/ragflow_deps/cl100k_base.tiktoken (already present)
+
+>>> Checking office_oxide native library
+check if dep office_oxide exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide or /opt/ragflow-native-libs/office_oxide
+  office_oxide → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide (user cache)
+✓ office_oxide v0.1.12 native library found at $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide
+check if dep pdfium-static exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static or /opt/ragflow-native-libs/pdfium-static
+  pdfium-static → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static (user cache)
+  pdfium (static) → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static
+check if dep pdf_oxide exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide or /opt/ragflow-native-libs/pdf_oxide
+  pdf_oxide → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide (user cache)
+  pdf_oxide (static) → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide
+check if dep onnxruntime exists in $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime or /opt/ragflow-native-libs/onnxruntime
+  onnxruntime → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime (user cache)
+  (no local onnxruntime-v1.29.0-osx-arm64.zip; skipping sha256 check — CI seed assumed authoritative)
+✓ onnxruntime v1.29.0 static lib verified under $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+  onnxruntime (static) → $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+CGO_CFLAGS:   -I$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/include/office_oxide_c
+CGO_LDFLAGS:  $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a $WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide/lib/darwin_arm64/v0.3.73/libpdf_oxide.a -Wl,-export_dynamic -Wl,-force_load,$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib/v1.29.0-b1da7e98dc26fc49/libonnxruntime.a -lc++                 -framework CoreGraphics -framework CoreFoundation                 -framework Security -framework SystemConfiguration                 -liconv -lresolv -lc++
+# ragflow/internal/ingestion/component.test
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '$WORKSPACE/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '$WORKSPACE/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+--- FAIL: TestImageOCRSelectedTenantModel (0.01s)
+    --- FAIL: TestImageOCRSelectedTenantModel/PaddleOCR.local (0.00s)
+        image_ocr_test.go:150: text="" warnings=[image OCR unavailable: deepdoc: no in-process DeepDoc backend available: build with -tags cgo and provide ORT + models]
+    --- FAIL: TestImageOCRSelectedTenantModel/PaddleOCR (0.00s)
+        image_ocr_test.go:150: text="" warnings=[image OCR unavailable: deepdoc: no in-process DeepDoc backend available: build with -tags cgo and provide ORT + models]
+--- FAIL: TestImageOCRFailureRetainsAttachment (0.00s)
+    --- FAIL: TestImageOCRFailureRetainsAttachment/PaddleOCR.local (0.00s)
+        image_ocr_test.go:188: OCR failure was not reported: requests=[] warnings=[image OCR unavailable: deepdoc: no in-process DeepDoc backend available: build with -tags cgo and provide ORT + models]
+    --- FAIL: TestImageOCRFailureRetainsAttachment/PaddleOCR (0.00s)
+        image_ocr_test.go:188: OCR failure was not reported: requests=[] warnings=[image OCR unavailable: deepdoc: no in-process DeepDoc backend available: build with -tags cgo and provide ORT + models]
+--- FAIL: TestImageOCRInvalidSelectionNeverFallsBack (0.01s)
+    --- FAIL: TestImageOCRInvalidSelectionNeverFallsBack/missing_tenant (0.00s)
+        image_ocr_test.go:232: selection was not rejected: requests=[] warnings=[image OCR unavailable: deepdoc: no in-process DeepDoc backend available: build with -tags cgo and provide ORT + models]
+    --- FAIL: TestImageOCRInvalidSelectionNeverFallsBack/foreign_tenant (0.00s)
+        image_ocr_test.go:232: selection was not rejected: requests=[] warnings=[image OCR unavailable: deepdoc: no in-process DeepDoc backend available: build with -tags cgo and provide ORT + models]
+    --- FAIL: TestImageOCRInvalidSelectionNeverFallsBack/missing_model (0.00s)
+        image_ocr_test.go:232: selection was not rejected: requests=[] warnings=[image OCR unavailable: deepdoc: no in-process DeepDoc backend available: build with -tags cgo and provide ORT + models]
+    --- FAIL: TestImageOCRInvalidSelectionNeverFallsBack/disabled_model (0.00s)
+        image_ocr_test.go:232: selection was not rejected: requests=[] warnings=[image OCR unavailable: deepdoc: no in-process DeepDoc backend available: build with -tags cgo and provide ORT + models]
+    --- FAIL: TestImageOCRInvalidSelectionNeverFallsBack/disabled_instance (0.00s)
+        image_ocr_test.go:232: selection was not rejected: requests=[] warnings=[image OCR unavailable: deepdoc: no in-process DeepDoc backend available: build with -tags cgo and provide ORT + models]
+    --- FAIL: TestImageOCRInvalidSelectionNeverFallsBack/mismatched_instance_provider (0.00s)
+        image_ocr_test.go:232: selection was not rejected: requests=[] warnings=[image OCR unavailable: deepdoc: no in-process DeepDoc backend available: build with -tags cgo and provide ORT + models]
+--- FAIL: TestImageOCRModelConfigValidation (0.00s)
+    image_ocr_test.go:269: non-string model id must be rejected, got <nil>
+FAIL
+FAIL	ragflow/internal/ingestion/component	1.205s
+FAIL

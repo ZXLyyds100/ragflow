@@ -1,0 +1,75 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
+const root = import.meta.dirname;
+const output = path.resolve(root, '../../outputs/RAGFlow-21030');
+const code = `async (page) => {
+  const initial = { image: { ocr_enabled: true, ocr_model_id: 'fixture-model-B', output_format: 'json' },
+    enable_vision_enhancement: false, vlm: { llm_id: '', system_prompt: '' } };
+  const ensure = (condition, message) => { if (!condition) throw Error(message); };
+  const saveAndReload = async () => {
+    await page.getByRole('button', {name:'Save configuration',exact:true}).click();
+    await page.getByRole('status').filter({hasText:'Saved —'}).waitFor();
+    await page.getByRole('button', {name:'Reload saved',exact:true}).click();
+    await page.getByRole('status').filter({hasText:'Loaded saved image configuration'}).waitFor();
+  };
+  const saved = async () => JSON.parse(await page.getByLabel('Saved image configuration').textContent());
+  const checks = [];
+  await page.setViewportSize({width:1440,height:1040});
+  for (const variant of ['before','after']) {
+    const url = variant === 'before' ? 'http://127.0.0.1:51851' : 'http://127.0.0.1:51852';
+    await page.request.put(url+'/fixture/config', {data:initial});
+    await page.goto(url);
+    await page.getByRole('status').filter({hasText:'Loaded saved image configuration'}).waitFor();
+    await page.getByLabel('Runtime capture').filter({hasText:'imageBytesPreserved'}).waitFor();
+    await saveAndReload();
+    const config = await saved();
+    ensure(variant === 'before' ? config.image.ocr_model_id === undefined : config.image.ocr_model_id === 'fixture-model-B', 'Unexpected save result '+variant);
+    ensure(await page.getByTestId('image-ocr-model').count() === (variant === 'before' ? 0 : 1), 'Model entry mismatch');
+    await page.screenshot({path:${JSON.stringify(output)}+'/'+variant+'.png'});
+    checks.push(variant+' source save/reload and real runtime panel');
+    await page.waitForTimeout(900);
+  }
+  const select = page.getByTestId('image-ocr-model');
+  await select.click();
+  const dialog = page.getByRole('dialog');
+  await dialog.getByText('PaddleOCR-VL-1.5',{exact:true}).waitFor();
+  ensure(await dialog.getByText('Not supported for image selection',{exact:true}).count() === 0, 'Unsupported OCR shown');
+  await page.screenshot({path:${JSON.stringify(output)}+'/model-options.png'});
+  await page.waitForTimeout(900);
+  await dialog.getByText('PaddleOCR-VL-1.5',{exact:true}).click();
+  await saveAndReload();
+  ensure((await saved()).image.ocr_model_id === 'fixture-cloud', 'Cloud model not persisted');
+  checks.push('cloud model selected, saved and reloaded');
+  await select.locator('svg.lucide-x').click();
+  await saveAndReload();
+  ensure((await saved()).image.ocr_model_id === '', 'Cleared model not saved');
+  ensure((await select.textContent()).includes('Local OCR (default)'), 'Local default not visible');
+  checks.push('clear selection saved and reloaded as local default');
+  await select.click();
+  await page.getByRole('dialog').getByText('PP-OCRv6',{exact:true}).click();
+  const switches = page.getByRole('switch');
+  await switches.nth(1).click();
+  await switches.nth(0).click();
+  ensure(await page.getByTestId('image-ocr-model').count() === 0, 'OCR-off still offers engine');
+  await switches.nth(0).click();
+  await switches.nth(1).click();
+  ensure((await select.textContent()).includes('PP-OCRv6'), 'OCR switch discarded selected model');
+  await saveAndReload();
+  checks.push('independent VLM and OCR switches preserve selection');
+  await page.screenshot({path:${JSON.stringify(output)}+'/after.png'});
+  await page.setViewportSize({width:390,height:844});
+  ensure(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth), 'Narrow layout overflows');
+  await page.screenshot({path:${JSON.stringify(output)}+'/after-narrow.png',fullPage:true});
+  checks.push('390px narrow layout has no horizontal overflow');
+  await page.setViewportSize({width:1440,height:1040});
+  await page.waitForTimeout(1000);
+  return {passed:true,checks,viewport:[1440,1040],narrow:[390,844]};
+}`;
+const result = spawnSync('bash', ['/Users/anastasio/.codex/skills/playwright/scripts/playwright_cli.sh',
+  '--session', 'ragflow-image-21030', 'run-code', code], { cwd: root, encoding: 'utf8', timeout: 60000, maxBuffer: 4 * 1024 * 1024 });
+fs.writeFileSync(path.join(root, 'logs/browser-validation.log'), result.stdout + result.stderr);
+assert.equal(result.status, 0, result.stdout + result.stderr);
+assert(!/^### Error/m.test(result.stdout), result.stdout);
+console.log(result.stdout);

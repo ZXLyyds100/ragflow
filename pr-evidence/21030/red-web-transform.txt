@@ -1,0 +1,91 @@
+FAIL src/pages/agent/utils.test.ts
+  transformParserParams vision settings
+    ✕ saves the explicit image OCR selection "model-b" (2 ms)
+    ✕ saves the explicit image OCR selection ""
+    ✓ saves the normalized global settings when the node form was not opened (1 ms)
+    ✓ preserves model B with enhancement true
+    ✓ preserves model B with enhancement false (1 ms)
+    ✓ writes the image OCR switch without retired vision fields
+  transformTokenChunkerParams
+    ✓ keeps overlapped_percent and delimiters when delimiter_mode is one
+    ✓ converts form values to api format in delimiter mode
+    ✓ emits an explicit empty delimiters list when the user removed all rows
+    ✓ migrates a legacy node on save even when the form was never opened (1 ms)
+    ✓ keeps legacy children delimiters instead of wiping them
+  transformGeneralChunkerParams
+    ✓ never re-seeds the general chunker delimiter list on save
+  normalizeTokenChunkerFormValues
+    ✓ normalizes a legacy token_size node and re-seeds the delimiter row
+    ✓ keeps a deliberate empty list saved by the current form
+    ✓ derives enable_children from a non-empty children list
+    ✓ respects an explicit enable_children flag over derivation
+    ✓ is idempotent
+    ✓ skips the legacy re-seed when seedLegacyDelimiter is false
+  shouldSeedDefaultDelimiter
+    ✓ seeds only for legacy nodes with an empty list (1 ms)
+    ✓ never seeds when the current form saved the node
+    ✓ never seeds a non-empty list
+  receiveMessageError
+    ✓ accepts successful SSE events without an application code
+    ✓ rejects application errors returned with HTTP 200
+  Message component content validation
+    isEmptyMessageContent
+      ✓ treats missing, non-array and blank-only content as empty
+      ✓ accepts content with at least one non-blank string entry
+  generateNodeNamesWithIncreasingIndex
+    ✓ uses the bare name for the first operator of a type
+    ✓ appends an index only from the second operator on (1 ms)
+    ✓ fills the gap between existing indexes
+    ✓ does not backfill index 0 when only suffixed names exist
+    ✓ treats a legacy _0 name as the first operator
+    ✓ ignores nodes of other types and non-indexed names
+
+  ● transformParserParams vision settings › saves the explicit image OCR selection "model-b"
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 1
+    + Received  + 0
+
+      Object {
+        "ocr_enabled": true,
+    -   "ocr_model_id": "model-b",
+      }
+
+      19 |       setups: [{ fileFormat: FileType.Image, ocr_enabled: true, ocr_model_id: modelId }],
+      20 |     } as any);
+    > 21 |     expect(result.image).toMatchObject({ ocr_enabled: true, ocr_model_id: modelId });
+         |                          ^
+      22 |     expect(result.vlm.llm_id).toBe('');
+      23 |   });
+      24 |   it('saves the normalized global settings when the node form was not opened', () => {
+
+      at src/pages/agent/utils.test.ts:21:26
+
+  ● transformParserParams vision settings › saves the explicit image OCR selection ""
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 1
+    + Received  + 0
+
+      Object {
+        "ocr_enabled": true,
+    -   "ocr_model_id": "",
+      }
+
+      19 |       setups: [{ fileFormat: FileType.Image, ocr_enabled: true, ocr_model_id: modelId }],
+      20 |     } as any);
+    > 21 |     expect(result.image).toMatchObject({ ocr_enabled: true, ocr_model_id: modelId });
+         |                          ^
+      22 |     expect(result.vlm.llm_id).toBe('');
+      23 |   });
+      24 |   it('saves the normalized global settings when the node form was not opened', () => {
+
+      at src/pages/agent/utils.test.ts:21:26
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 29 passed, 31 total
+Snapshots:   0 total
+Time:        0.628 s, estimated 1 s
+Ran all test suites matching /src\/pages\/agent\/utils.test.ts/i.

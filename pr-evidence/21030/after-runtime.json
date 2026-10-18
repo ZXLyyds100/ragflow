@@ -1,0 +1,67 @@
+{
+  "finalChunks": [
+    {
+      "chunk_order_int": 0,
+      "ck_type": "image",
+      "doc_type_kwd": "image",
+      "id": "3efaca82ae0343bd",
+      "img_id": "fixture-kb-3efaca82ae0343bd",
+      "q_2_vec": [
+        0.2,
+        0.8
+      ],
+      "text": "PADDLE OCR fixture: invoice INV-21030 total 42."
+    }
+  ],
+  "imagePreserved": true,
+  "imageUploadedUnchanged": true,
+  "localOCRCalls": 0,
+  "parserItems": [
+    {
+      "doc_type_kwd": "image",
+      "text": "PADDLE OCR fixture: invoice INV-21030 total 42."
+    }
+  ],
+  "requests": [
+    {
+      "algorithm": "PP-OCRv6",
+      "credentialMatched": true,
+      "fileType": 1,
+      "imageBytesMatched": true,
+      "path": "/layout-parsing",
+      "selectedInstance": "B"
+    }
+  ],
+  "savedParams": {
+    "enable_vision_enhancement": false,
+    "image": {
+      "ocr_enabled": true,
+      "ocr_model_id": "fixture-model-B",
+      "output_format": "json"
+    },
+    "video": {
+      "output_format": "text",
+      "preprocess": [
+        "main_content"
+      ],
+      "suffix": [
+        "3gp",
+        "3gpp",
+        "avi",
+        "flv",
+        "mkv",
+        "mov",
+        "mp4",
+        "mpeg",
+        "mpg",
+        "webm",
+        "wmv"
+      ]
+    },
+    "vlm": {
+      "llm_id": ""
+    }
+  },
+  "scope": "Same PNG, saved model ID B, tenant and switch settings. Real Parser/DAO/driver/OneChunker/Tokenizer. Inference, embedding and image storage are local fixtures, not live models.",
+  "warnings": null
+}

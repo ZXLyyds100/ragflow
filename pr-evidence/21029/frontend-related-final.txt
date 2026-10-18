@@ -1,0 +1,12 @@
+PASS src/pages/agent/form/title-chunker-form/media-context.test.ts
+PASS src/pages/agent/utils/__tests__/canvas-checklist.test.ts
+PASS src/pages/agent/utils/__tests__/dsl-bridge.test.ts
+PASS src/utils/__tests__/pipeline-operator.test.ts
+PASS src/pages/agent/hooks/use-add-node.test.tsx
+PASS src/pages/agent/utils.test.ts
+
+Test Suites: 6 passed, 6 total
+Tests:       140 passed, 140 total
+Snapshots:   0 total
+Time:        2.39 s, estimated 5 s
+Ran all test suites matching /src\/pages\/agent\/form\/title-chunker-form|src\/pages\/agent\/utils.test.ts|src\/utils\/__tests__\/pipeline-operator.test.ts|src\/pages\/agent\/hooks\/use-add-node.test.tsx|src\/pages\/agent\/utils\/__tests__\/dsl-bridge.test.ts|src\/pages\/agent\/utils\/__tests__\/canvas-checklist.test.ts/i.

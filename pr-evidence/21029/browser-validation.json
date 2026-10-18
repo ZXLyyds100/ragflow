@@ -1,0 +1,12 @@
+{
+  "source": "Actual checked-out TitleChunkerForm, schema, operator transforms and Go components",
+  "fixture": "Local parser payload and storage API; no production services or inference",
+  "checks": [
+    "book save/reload",
+    "table off/image on persistence and Go behavior",
+    "manual save/reload",
+    "paper save/reload"
+  ],
+  "passed": true,
+  "capturedAt": "2026-10-18T02:49:35.919Z"
+}

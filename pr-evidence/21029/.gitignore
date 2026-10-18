@@ -1,0 +1,4 @@
+harness/node_modules
+harness/.vite/
+tmp/
+logs/

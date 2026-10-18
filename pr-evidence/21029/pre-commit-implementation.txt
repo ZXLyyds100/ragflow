@@ -1,0 +1,41 @@
+[fix/title-media-context b34dc87] feat(chunker): support title and manual media context windows
+ 16 files changed, 744 insertions(+), 7 deletions(-)
+ create mode 100644 internal/ingestion/component/chunker/title_media_context.go
+ create mode 100644 internal/ingestion/component/chunker/title_media_context_test.go
+ create mode 100644 internal/ingestion/component/schema/title_context_test.go
+ create mode 100644 internal/ingestion/pipeline/title_media_context_test.go
+ create mode 100644 web/src/pages/agent/form/title-chunker-form/media-context.test.ts
+╭──────────────────────────────────────╮
+│ lefthook  v2.2.2   hook:  pre-commit │
+╰──────────────────────────────────────╯
+│  ruff (skip) no files for inspection
+│  ruff-format (skip) no files for inspection
+┃  gofmt ❯
+
+┃  check-symlinks ❯
+
+┃  check-yaml ❯
+
+┃  mixed-line-ending ❯
+
+┃  trailing-whitespace ❯
+
+┃  check-json ❯
+
+┃  check-case-conflict ❯
+
+┃  check-merge-conflict ❯
+
+┃  end-of-file-fixer ❯
+
+  ────────────────────────────────────
+summary: (done in 1.94 seconds)
+✓ gofmt (0.03 seconds)
+✓ check-symlinks (1.87 seconds)
+✓ check-yaml (1.87 seconds)
+✓ mixed-line-ending (1.87 seconds)
+✓ trailing-whitespace (1.87 seconds)
+✓ check-json (1.89 seconds)
+✓ check-case-conflict (1.89 seconds)
+✓ check-merge-conflict (1.93 seconds)
+✓ end-of-file-fixer (1.93 seconds)

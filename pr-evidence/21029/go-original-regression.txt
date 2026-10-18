@@ -1,0 +1,152 @@
+Checkout: /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029
+HEAD: 543e16738b4883fcb7e70520e0b5849e7e18c9b7
+Worktree:
+?? internal/binding/cpp/cmake-build-release
+?? internal/ingestion/component/chunker/title_media_context_test.go
+
+=== RAGFlow Go Server Build Script ===
+
+>>> Checking go dependencies
+✓ Required tools are available
+
+>>> Checking ONNX Runtime version consistency
+✓ ONNX Runtime native version consistent: 1.29.0
+
+>>> Running Go tests
+check if the cl100k_base BPE table exists at /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029/ragflow_deps/cl100k_base.tiktoken
+  cl100k_base.tiktoken → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029/ragflow_deps/cl100k_base.tiktoken (already present)
+
+>>> Checking office_oxide native library
+check if dep office_oxide exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide or /opt/ragflow-native-libs/office_oxide
+  office_oxide → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide (user cache)
+✓ office_oxide v0.1.12 native library found at /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide
+check if dep pdfium-static exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static or /opt/ragflow-native-libs/pdfium-static
+  pdfium-static → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static (user cache)
+  pdfium (static) → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static
+check if dep pdf_oxide exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide or /opt/ragflow-native-libs/pdf_oxide
+  pdf_oxide → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide (user cache)
+  pdf_oxide (static) → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide
+check if dep onnxruntime exists in /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime or /opt/ragflow-native-libs/onnxruntime
+  onnxruntime → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime (user cache)
+  (no local onnxruntime-v1.29.0-osx-arm64.zip; skipping sha256 check — CI seed assumed authoritative)
+✓ onnxruntime v1.29.0 static lib verified under /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+  onnxruntime (static) → /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib
+CGO_CFLAGS:   -I/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/include/office_oxide_c
+CGO_LDFLAGS:  /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a /Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdf_oxide/lib/darwin_arm64/v0.3.73/libpdf_oxide.a -Wl,-export_dynamic -Wl,-force_load,/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/onnxruntime/static_lib/v1.29.0-b1da7e98dc26fc49/libonnxruntime.a -lc++                 -framework CoreGraphics -framework CoreFoundation                 -framework Security -framework SystemConfiguration                 -liconv -lresolv -lc++
+# ragflow/internal/ingestion/component/chunker.test
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: duplicate -rpath '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+=== RUN   TestTitleMediaContext
+=== RUN   TestTitleMediaContext/title-group/
+    title_media_context_test.go:93: chunk 1 text="<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n", want "Alpha explains the table.\n<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n\nBeta explains both media."
+    title_media_context_test.go:93: chunk 3 text="", want "Beta explains both media.\n\nGamma follows the image."
+=== RUN   TestTitleMediaContext/title-hierarchy/
+    title_media_context_test.go:93: chunk 1 text="<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n", want "Alpha explains the table.\n<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n\nBeta explains both media."
+    title_media_context_test.go:93: chunk 3 text="", want "Beta explains both media.\n\nGamma follows the image."
+=== RUN   TestTitleMediaContext/group/
+    title_media_context_test.go:93: chunk 1 text="<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n", want "Alpha explains the table.\n<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n\nBeta explains both media."
+    title_media_context_test.go:93: chunk 3 text="", want "Beta explains both media.\n\nGamma follows the image."
+=== RUN   TestTitleMediaContext/hierarchy/
+    title_media_context_test.go:93: chunk 1 text="<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n", want "Alpha explains the table.\n<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n\nBeta explains both media."
+    title_media_context_test.go:93: chunk 3 text="", want "Beta explains both media.\n\nGamma follows the image."
+=== RUN   TestTitleMediaContext/manual/
+    title_media_context_test.go:93: chunk 1 text="<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n", want "Alpha explains the table.\n<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n\nBeta explains both media."
+    title_media_context_test.go:93: chunk 3 text="", want "Beta explains both media.\n\nGamma follows the image."
+=== RUN   TestTitleMediaContext/title-group/#01
+    title_media_context_test.go:93: chunk 1 text="<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n", want "Alpha explains the table.\n<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n\nBeta explains both media."
+=== RUN   TestTitleMediaContext/title-hierarchy/#01
+    title_media_context_test.go:93: chunk 1 text="<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n", want "Alpha explains the table.\n<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n\nBeta explains both media."
+=== RUN   TestTitleMediaContext/group/#01
+    title_media_context_test.go:93: chunk 1 text="<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n", want "Alpha explains the table.\n<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n\nBeta explains both media."
+=== RUN   TestTitleMediaContext/hierarchy/#01
+    title_media_context_test.go:93: chunk 1 text="<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n", want "Alpha explains the table.\n<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n\nBeta explains both media."
+=== RUN   TestTitleMediaContext/manual/#01
+    title_media_context_test.go:93: chunk 1 text="<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n", want "Alpha explains the table.\n<table>\n<tr><th>name</th><th>age</th></tr>\n<tr><td>Alice</td><td>30</td></tr>\n</table>\n\nBeta explains both media."
+=== RUN   TestTitleMediaContext/title-group/#02
+    title_media_context_test.go:93: chunk 3 text="", want "Beta explains both media.\n\nGamma follows the image."
+=== RUN   TestTitleMediaContext/title-hierarchy/#02
+    title_media_context_test.go:93: chunk 3 text="", want "Beta explains both media.\n\nGamma follows the image."
+=== RUN   TestTitleMediaContext/group/#02
+    title_media_context_test.go:93: chunk 3 text="", want "Beta explains both media.\n\nGamma follows the image."
+=== RUN   TestTitleMediaContext/hierarchy/#02
+    title_media_context_test.go:93: chunk 3 text="", want "Beta explains both media.\n\nGamma follows the image."
+=== RUN   TestTitleMediaContext/manual/#02
+    title_media_context_test.go:93: chunk 3 text="", want "Beta explains both media.\n\nGamma follows the image."
+--- FAIL: TestTitleMediaContext (0.04s)
+    --- FAIL: TestTitleMediaContext/title-group/ (0.04s)
+    --- FAIL: TestTitleMediaContext/title-hierarchy/ (0.00s)
+    --- FAIL: TestTitleMediaContext/group/ (0.00s)
+    --- FAIL: TestTitleMediaContext/hierarchy/ (0.00s)
+    --- FAIL: TestTitleMediaContext/manual/ (0.00s)
+    --- FAIL: TestTitleMediaContext/title-group/#01 (0.00s)
+    --- FAIL: TestTitleMediaContext/title-hierarchy/#01 (0.00s)
+    --- FAIL: TestTitleMediaContext/group/#01 (0.00s)
+    --- FAIL: TestTitleMediaContext/hierarchy/#01 (0.00s)
+    --- FAIL: TestTitleMediaContext/manual/#01 (0.00s)
+    --- FAIL: TestTitleMediaContext/title-group/#02 (0.00s)
+    --- FAIL: TestTitleMediaContext/title-hierarchy/#02 (0.00s)
+    --- FAIL: TestTitleMediaContext/group/#02 (0.00s)
+    --- FAIL: TestTitleMediaContext/hierarchy/#02 (0.00s)
+    --- FAIL: TestTitleMediaContext/manual/#02 (0.00s)
+=== RUN   TestTitleMediaContextZero
+=== RUN   TestTitleMediaContextZero/title-group
+=== RUN   TestTitleMediaContextZero/title-hierarchy
+=== RUN   TestTitleMediaContextZero/group
+=== RUN   TestTitleMediaContextZero/hierarchy
+=== RUN   TestTitleMediaContextZero/manual
+--- PASS: TestTitleMediaContextZero (0.00s)
+    --- PASS: TestTitleMediaContextZero/title-group (0.00s)
+    --- PASS: TestTitleMediaContextZero/title-hierarchy (0.00s)
+    --- PASS: TestTitleMediaContextZero/group (0.00s)
+    --- PASS: TestTitleMediaContextZero/hierarchy (0.00s)
+    --- PASS: TestTitleMediaContextZero/manual (0.00s)
+=== RUN   TestTitleMediaContextInvocationBoundary
+=== RUN   TestTitleMediaContextInvocationBoundary/title-group
+    title_media_context_test.go:141: wrong source context: []map[string]interface {}{map[string]interface {}{"doc_type_kwd":"image", "img_id":"second-document", "text":""}, map[string]interface {}{"doc_type_kwd":"text", "text":"Only second document.\n"}}
+=== RUN   TestTitleMediaContextInvocationBoundary/title-hierarchy
+    title_media_context_test.go:141: wrong source context: []map[string]interface {}{map[string]interface {}{"doc_type_kwd":"image", "img_id":"second-document", "text":""}, map[string]interface {}{"doc_type_kwd":"text", "text":"Only second document.\n"}}
+=== RUN   TestTitleMediaContextInvocationBoundary/group
+    title_media_context_test.go:141: wrong source context: []map[string]interface {}{map[string]interface {}{"doc_type_kwd":"image", "img_id":"second-document", "text":""}, map[string]interface {}{"doc_type_kwd":"text", "text":"Only second document.\n"}}
+=== RUN   TestTitleMediaContextInvocationBoundary/hierarchy
+    title_media_context_test.go:141: wrong source context: []map[string]interface {}{map[string]interface {}{"doc_type_kwd":"image", "img_id":"second-document", "text":""}, map[string]interface {}{"doc_type_kwd":"text", "text":"Only second document.\n"}}
+=== RUN   TestTitleMediaContextInvocationBoundary/manual
+    title_media_context_test.go:141: wrong source context: []map[string]interface {}{map[string]interface {}{"doc_type_kwd":"image", "img_id":"second-document", "text":""}, map[string]interface {}{"doc_type_kwd":"text", "text":"Only second document.\n"}}
+--- FAIL: TestTitleMediaContextInvocationBoundary (0.00s)
+    --- FAIL: TestTitleMediaContextInvocationBoundary/title-group (0.00s)
+    --- FAIL: TestTitleMediaContextInvocationBoundary/title-hierarchy (0.00s)
+    --- FAIL: TestTitleMediaContextInvocationBoundary/group (0.00s)
+    --- FAIL: TestTitleMediaContextInvocationBoundary/hierarchy (0.00s)
+    --- FAIL: TestTitleMediaContextInvocationBoundary/manual (0.00s)
+=== RUN   TestTitleMediaContextManualOrder
+    title_media_context_test.go:159: context did not follow physical order: []map[string]interface {}{map[string]interface {}{"_pdf_positions":[][]float64{[]float64{1, 10, 100, 10, 15}}, "doc_type_kwd":"text", "text":"Above.\n"}, map[string]interface {}{"_pdf_positions":[][]float64{[]float64{1, 10, 100, 20, 25}}, "doc_type_kwd":"image", "img_id":"figure", "text":""}, map[string]interface {}{"_pdf_positions":[][]float64{[]float64{1, 10, 100, 30, 40}}, "doc_type_kwd":"text", "text":"Below.\n"}}
+--- FAIL: TestTitleMediaContextManualOrder (0.00s)
+=== RUN   TestTitleMediaContextSentences
+=== RUN   TestTitleMediaContextSentences/title-group
+    title_media_context_test.go:173: text="Caption.", want whole boundary sentences "Nearest complete sentence.\nCaption.\nClosest below. "
+=== RUN   TestTitleMediaContextSentences/title-hierarchy
+    title_media_context_test.go:173: text="Caption.", want whole boundary sentences "Nearest complete sentence.\nCaption.\nClosest below. "
+=== RUN   TestTitleMediaContextSentences/group
+    title_media_context_test.go:173: text="Caption.", want whole boundary sentences "Nearest complete sentence.\nCaption.\nClosest below. "
+=== RUN   TestTitleMediaContextSentences/hierarchy
+    title_media_context_test.go:173: text="Caption.", want whole boundary sentences "Nearest complete sentence.\nCaption.\nClosest below. "
+=== RUN   TestTitleMediaContextSentences/manual
+    title_media_context_test.go:173: text="Caption.", want whole boundary sentences "Nearest complete sentence.\nCaption.\nClosest below. "
+--- FAIL: TestTitleMediaContextSentences (0.00s)
+    --- FAIL: TestTitleMediaContextSentences/title-group (0.00s)
+    --- FAIL: TestTitleMediaContextSentences/title-hierarchy (0.00s)
+    --- FAIL: TestTitleMediaContextSentences/group (0.00s)
+    --- FAIL: TestTitleMediaContextSentences/hierarchy (0.00s)
+    --- FAIL: TestTitleMediaContextSentences/manual (0.00s)
+=== RUN   TestTitleMediaContextDecoratorID
+    title_media_context_test.go:204: context/id/upload mismatch: map[string]interface {}{"doc_type_kwd":"image", "id":"c823335341a92ce2", "img_id":"kb-1-c823335341a92ce2", "text":"Caption."}, uploaded=c823335341a92ce2
+--- FAIL: TestTitleMediaContextDecoratorID (0.00s)
+FAIL
+FAIL	ragflow/internal/ingestion/component/chunker	1.078s
+FAIL

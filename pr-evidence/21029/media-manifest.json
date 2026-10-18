@@ -1,0 +1,56 @@
+{
+  "sourceHead": "77d5b74e9dd5e293d07fe30e73333fc270ce6e1f",
+  "sourceFileCount": 17,
+  "media": [
+    {
+      "name": "before-save-drops-context.png",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "e610536bab9693e9985936ffffbdc5f6f7d536b640f49169defc30c8c0b90925"
+    },
+    {
+      "name": "after-book-save-reload.png",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "a6a5e810078dc43e04f161224e2597335c65cd9c18d4eea367347166794761ad"
+    },
+    {
+      "name": "after-independent-windows.png",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "b7fc553fe1506257bc117a925fb06ff223461408b7146ab676e790c3f1eca6fe"
+    },
+    {
+      "name": "after-manual-save-reload.png",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "26564a6553b3c8dffae23586175b2eadc5cc3fadff66ae4771aa9fe60b6cc223"
+    },
+    {
+      "name": "after-paper-save-reload.png",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "1dee017f850d5444cd577b875dc8edd372310eb06209e453c5479fa90e162f31"
+    },
+    {
+      "name": "after-paper-narrow.png",
+      "width": 390,
+      "height": 2171,
+      "sha256": "303bf8730b36fa04573a45b0e985cec0885fb3bae29b26d62815aa7aef087acc"
+    },
+    {
+      "name": "context-windows-verified.webm",
+      "width": 1440,
+      "height": 1100,
+      "durationSeconds": 68.5,
+      "fps": 12,
+      "frameSamplesVisuallyCheckedAtSeconds": [
+        12,
+        66
+      ],
+      "sha256": "a606d29447f4b5ed1c1d90010e9e2e75c50f461113c683334072a2762c9fde1e"
+    }
+  ],
+  "scope": "Real source components and Go code with labeled local parser/storage fixtures",
+  "capturedAt": "2026-10-18T02:54:50.065Z"
+}

@@ -1,0 +1,21 @@
+html, body, #root { height: auto; min-height: 100%; overflow: visible; }
+main { max-width: 1360px; margin: 28px auto; padding: 0 24px; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+h1 { font-size: 26px; font-weight: 650; line-height: 1.4; margin-bottom: 6px; }
+h2 { font-size: 17px; font-weight: 600; margin-bottom: 14px; }
+select { display: block; margin-top: 6px; border: 1px solid var(--border-button); padding: 8px; border-radius: 6px; background: var(--bg-card); }
+.notice { margin: 18px 0 22px; max-width: 1180px; font-size: 13px; line-height: 1.7; }
+.columns { display: grid; grid-template-columns: 600px 1fr; gap: 24px; align-items: start; }
+.panel { border: 1px solid; border-radius: 12px; padding: 20px; margin-bottom: 18px; }
+.form-scroll { max-height: 620px; overflow-y: auto; }
+.form-scroll form { padding: 0 10px 0 0; }
+.actions { display: flex; gap: 12px; padding-top: 18px; border-top: 1px solid var(--border-button); margin-top: 18px; }
+pre { font-size: 14px; line-height: 1.7; white-space: pre-wrap; }
+[role=status] { font-size: 12px; line-height: 1.6; padding-top: 12px; }
+.output-note { font-size: 12px; line-height: 1.6; margin-bottom: 14px; }
+article { border: 1px solid var(--border-button); border-radius: 8px; padding: 14px; margin-top: 12px; }
+.media-title { font-size: 12px; margin-bottom: 10px; }
+.media-body { white-space: pre-wrap; font-size: 14px; line-height: 1.8; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0; }
+th, td { text-align: left; padding: 6px 9px; border: 1px solid var(--border-button); }
+@media(max-width: 900px) { .columns { grid-template-columns: 1fr; } header { align-items: start; flex-direction: column; } .form-scroll { max-height: 520px; } }

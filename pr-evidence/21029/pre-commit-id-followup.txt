@@ -1,0 +1,36 @@
+[fix/title-media-context 77d5b74] fix(chunker): keep contextual captionless images distinct
+ 5 files changed, 94 insertions(+), 3 deletions(-)
+╭──────────────────────────────────────╮
+│ lefthook  v2.2.2   hook:  pre-commit │
+╰──────────────────────────────────────╯
+│  ruff-format (skip) no files for inspection
+│  ruff (skip) no files for inspection
+┃  gofmt ❯
+
+┃  end-of-file-fixer ❯
+
+┃  check-json ❯
+
+┃  check-merge-conflict ❯
+
+┃  check-yaml ❯
+
+┃  check-symlinks ❯
+
+┃  trailing-whitespace ❯
+
+┃  mixed-line-ending ❯
+
+┃  check-case-conflict ❯
+
+  ────────────────────────────────────
+summary: (done in 0.14 seconds)
+✓ gofmt (0.03 seconds)
+✓ end-of-file-fixer (0.12 seconds)
+✓ check-json (0.12 seconds)
+✓ check-merge-conflict (0.12 seconds)
+✓ check-yaml (0.12 seconds)
+✓ check-symlinks (0.12 seconds)
+✓ trailing-whitespace (0.12 seconds)
+✓ mixed-line-ending (0.12 seconds)
+✓ check-case-conflict (0.13 seconds)

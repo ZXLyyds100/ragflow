@@ -1,0 +1,171 @@
+{
+  "capturedAt": "2026-10-18T02:44:29.106Z",
+  "issue": "https://github.com/infiniflow/ragflow/issues/21029",
+  "baseSha": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+  "originalRegression": "Actual original-source runtime regressions failed before implementation",
+  "passRuns": [
+    {
+      "label": "go-id-review",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+      "head": "b34dc87c525364c213c034f5fed7a8963aeeafd7",
+      "dirty": " M docs/guides/agent/ingestion_pipeline/configure_chunker_component.md\n M internal/ingestion/component/chunker/common.go\n M internal/ingestion/component/chunker/group.go\n M internal/ingestion/component/chunker/hierarchy.go\n M internal/ingestion/component/chunker/title_media_context_test.go\n",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21029/tmp/go-id-review-native-link-overlay.json",
+        "-timeout=10m",
+        "-run",
+        "^Test(TitleMediaContext|BuiltinTitleMediaContext|TitleContextParameters)",
+        "-v",
+        "./internal/ingestion/component/chunker",
+        "./internal/ingestion/pipeline",
+        "./internal/ingestion/component/schema"
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 12.037,
+      "capturedAt": "2026-10-18T02:40:38.130Z"
+    },
+    {
+      "label": "go-id-race",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+      "head": "b34dc87c525364c213c034f5fed7a8963aeeafd7",
+      "dirty": " M docs/guides/agent/ingestion_pipeline/configure_chunker_component.md\n M internal/ingestion/component/chunker/common.go\n M internal/ingestion/component/chunker/group.go\n M internal/ingestion/component/chunker/hierarchy.go\n M internal/ingestion/component/chunker/title_media_context_test.go\n",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21029/tmp/go-id-race-native-link-overlay.json",
+        "-race",
+        "-timeout=10m",
+        "-run",
+        "^Test(TitleMediaContext|BuiltinTitleMediaContext|TitleContextParameters)",
+        "./internal/ingestion/component/chunker",
+        "./internal/ingestion/component/schema",
+        "./internal/ingestion/pipeline"
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 15.275,
+      "capturedAt": "2026-10-18T02:41:23.449Z"
+    },
+    {
+      "label": "go-id-related",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+      "head": "b34dc87c525364c213c034f5fed7a8963aeeafd7",
+      "dirty": " M docs/guides/agent/ingestion_pipeline/configure_chunker_component.md\n M internal/ingestion/component/chunker/common.go\n M internal/ingestion/component/chunker/group.go\n M internal/ingestion/component/chunker/hierarchy.go\n M internal/ingestion/component/chunker/title_media_context_test.go\n",
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-overlay=/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/ragflow-21029/tmp/go-id-related-native-link-overlay.json",
+        "-timeout=10m",
+        "./internal/ingestion/...",
+        "./internal/parser/..."
+      ],
+      "exit": 0,
+      "signal": null,
+      "environmentAdaptation": "PCRE2 path-only overlay; genuine ORT 1.29.0/PDF 0.3.73 shared libraries; identical prebuilt tokenizer archive reused. Unmodified macOS static linking remains unverified.",
+      "seconds": 33.734,
+      "capturedAt": "2026-10-18T02:43:07.866Z"
+    },
+    {
+      "label": "web-related-final",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+      "command": [
+        "npx",
+        "--no-install",
+        "jest",
+        "--runInBand",
+        "src/pages/agent/form/title-chunker-form",
+        "src/pages/agent/utils.test.ts",
+        "src/utils/__tests__/pipeline-operator.test.ts",
+        "src/pages/agent/hooks/use-add-node.test.tsx",
+        "src/pages/agent/utils/__tests__/dsl-bridge.test.ts",
+        "src/pages/agent/utils/__tests__/canvas-checklist.test.ts"
+      ],
+      "exit": 0,
+      "signal": null,
+      "seconds": 4.048,
+      "capturedAt": "2026-10-18T02:06:23.497Z"
+    },
+    {
+      "label": "web-build",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit": 0,
+      "signal": null,
+      "seconds": 72.044,
+      "capturedAt": "2026-10-18T02:05:27.316Z"
+    },
+    {
+      "label": "web-format",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+      "command": [
+        "npx",
+        "--no-install",
+        "oxfmt",
+        "--check",
+        "src/pages/agent/constant/pipeline.tsx",
+        "src/pages/agent/form/title-chunker-form/index.tsx",
+        "src/pages/agent/form/title-chunker-form/hook.ts",
+        "src/pages/agent/form/title-chunker-form/media-context.test.ts",
+        "src/pages/agent/utils.ts"
+      ],
+      "exit": 0,
+      "signal": null,
+      "seconds": 0.505,
+      "capturedAt": "2026-10-18T02:09:58.558Z"
+    },
+    {
+      "label": "web-lint",
+      "repo": "/Users/anastasio/Documents/Codex/2026-10-16/github-agent-ai-star-pr-close/work/repos/ragflow-21029",
+      "command": [
+        "npx",
+        "--no-install",
+        "oxlint",
+        "src/pages/agent/constant/pipeline.tsx",
+        "src/pages/agent/form/title-chunker-form/index.tsx",
+        "src/pages/agent/form/title-chunker-form/hook.ts",
+        "src/pages/agent/form/title-chunker-form/media-context.test.ts",
+        "src/pages/agent/utils.ts"
+      ],
+      "exit": 0,
+      "signal": null,
+      "seconds": 0.519,
+      "capturedAt": "2026-10-18T02:09:58.572Z"
+    }
+  ],
+  "focusedFrontend": {
+    "suites": 6,
+    "tests": 140,
+    "passed": true
+  },
+  "typeCheck": {
+    "baselineDiagnostics": 206,
+    "fixedDiagnostics": 206,
+    "normalizedDiagnosticsIdentical": true,
+    "normalization": "Line/column shifts only; type codes, file names and messages compared"
+  },
+  "fullFrontend": {
+    "green": false,
+    "sameFailingSuites": [
+      "src/pages/agent/utils/pipeline-connection.test.ts",
+      "src/pages/dataset/components/metedata/hooks/__tests__/use-manage-values-modal.test.ts",
+      "src/pages/user-setting/setting-model/instance-card/models-section/hooks.test.tsx",
+      "src/utils/__tests__/chat.test.ts",
+      "src/utils/__tests__/file-util.test.ts",
+      "src/utils/__tests__/llm-util.test.ts"
+    ],
+    "bothAbortOnMissingRequest": true
+  },
+  "goEnvironment": "build.sh with PCRE2 path-only overlay and genuine same-version ORT/PDF shared libraries; unmodified static link and Linux CI not claimed",
+  "scope": "No live OCR, LLM, database, object store or production ingestion E2E run"
+}

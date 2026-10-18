@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "source": "Identical standalone test source compiled against original and fixed repository code",
+  "fixture": "Builtin templates with source parser payload fixture, no external production services",
+  "baseSha": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
+  "fixedSha": "77d5b74e9dd5e293d07fe30e73333fc270ce6e1f",
+  "rows": [
+    {
+      "template": "book",
+      "mode": "omitted",
+      "entireOriginalOutputEqual": true
+    },
+    {
+      "template": "book",
+      "mode": "zero",
+      "entireOriginalOutputEqual": true
+    },
+    {
+      "template": "book",
+      "mode": "positive",
+      "bothMediaGainContext": true,
+      "referencesAndPositionsPreserved": true
+    },
+    {
+      "template": "paper",
+      "mode": "omitted",
+      "entireOriginalOutputEqual": true
+    },
+    {
+      "template": "paper",
+      "mode": "zero",
+      "entireOriginalOutputEqual": true
+    },
+    {
+      "template": "paper",
+      "mode": "positive",
+      "bothMediaGainContext": true,
+      "referencesAndPositionsPreserved": true
+    },
+    {
+      "template": "manual",
+      "mode": "omitted",
+      "entireOriginalOutputEqual": true
+    },
+    {
+      "template": "manual",
+      "mode": "zero",
+      "entireOriginalOutputEqual": true
+    },
+    {
+      "template": "manual",
+      "mode": "positive",
+      "bothMediaGainContext": true,
+      "referencesAndPositionsPreserved": true
+    }
+  ],
+  "capturedAt": "2026-10-18T02:50:45.513Z"
+}

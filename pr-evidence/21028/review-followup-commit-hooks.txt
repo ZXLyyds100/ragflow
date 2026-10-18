@@ -1,0 +1,36 @@
+╭──────────────────────────────────────╮
+│ lefthook  v2.2.2   hook:  pre-commit │
+╰──────────────────────────────────────╯
+│  ruff (skip) no files for inspection
+│  ruff-format (skip) no files for inspection
+┃  gofmt ❯
+
+┃  check-yaml ❯
+
+┃  check-json ❯
+
+┃  end-of-file-fixer ❯
+
+┃  mixed-line-ending ❯
+
+┃  check-merge-conflict ❯
+
+┃  check-symlinks ❯
+
+┃  trailing-whitespace ❯
+
+┃  check-case-conflict ❯
+
+  ────────────────────────────────────
+summary: (done in 0.17 seconds)
+✓ gofmt (0.04 seconds)
+✓ check-yaml (0.14 seconds)
+✓ check-json (0.14 seconds)
+✓ end-of-file-fixer (0.14 seconds)
+✓ mixed-line-ending (0.14 seconds)
+✓ check-merge-conflict (0.15 seconds)
+✓ check-symlinks (0.15 seconds)
+✓ trailing-whitespace (0.15 seconds)
+✓ check-case-conflict (0.16 seconds)
+[fix/mineru-extraction-controls e22e09d] docs(parser): explain MinerU form and persistence boundaries
+ 7 files changed, 8 insertions(+)

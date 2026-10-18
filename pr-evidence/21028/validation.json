@@ -1,7 +1,7 @@
 {
-  "capturedAt": "2026-10-18T00:45:56.889Z",
+  "capturedAt": "2026-10-18T01:07:52.678Z",
   "baselineSha": "543e16738b4883fcb7e70520e0b5849e7e18c9b7",
-  "sourceSha": "bcfa94f6e227342a0fe8cd2af1cbe1ec564bc904",
+  "sourceSha": "e22e09d6a42d43c728e046c95ef3280e62771741",
   "go": {
     "relatedPackages": [
       "./internal/ingestion/...",
@@ -48,5 +48,5 @@
     "independentChoicesSaveReload": "passed",
     "liveOCRInference": "not run"
   },
-  "review": "two self-review passes; repository contribution instructions and merged PRs #20474/#20839 inspected"
+  "review": "two self-review passes; repository instructions and merged #20474/#20839 inspected; documentation-only follow-up to CodeRabbit coverage warning, followed by revalidation"
 }

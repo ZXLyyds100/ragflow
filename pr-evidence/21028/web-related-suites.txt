@@ -6,8 +6,8 @@ PASS src/pages/agent/utils.test.ts
 PASS src/utils/__tests__/pipeline-operator.test.ts
 PASS src/pages/agent/form/parser-form/utils.test.ts
 PASS src/pages/agent/form/parser-form/vision-form-fields.test.tsx
-PASS src/pages/agent/form/parser-form/spreadsheet-form-fields.test.tsx
 PASS src/components/layout-recognize-form-field.test.tsx
+PASS src/pages/agent/form/parser-form/spreadsheet-form-fields.test.tsx
 PASS src/pages/agent/form/parser-form/schema.test.ts
 PASS src/hooks/__tests__/parser-config-utils.test.ts
 PASS src/pages/agent/form/parser-form/image-form-fields.test.tsx
@@ -15,5 +15,5 @@ PASS src/pages/agent/form/parser-form/image-form-fields.test.tsx
 Test Suites: 9 passed, 9 total
 Tests:       108 passed, 108 total
 Snapshots:   0 total
-Time:        2.216 s
+Time:        5.139 s
 Ran all test suites matching /src\/pages\/agent\/form\/parser-form|src\/pages\/agent\/utils.test.ts|src\/utils\/__tests__\/pipeline-operator.test.ts|src\/hooks\/__tests__\/parser-config-utils.test.ts|src\/components\/layout-recognize-form-field.test.tsx/i.

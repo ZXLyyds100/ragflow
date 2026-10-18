@@ -4,8 +4,20 @@ Issue: infiniflow/ragflow#21028.
 
 - Baseline: `543e16738b4883fcb7e70520e0b5849e7e18c9b7`
 - Fixed source: `bcfa94f6e227342a0fe8cd2af1cbe1ec564bc904`
+- Documentation-only review follow-up: `e22e09d6a42d43c728e046c95ef3280e62771741`
+
+The final related suites, race checks, frontend build and type-diagnostic
+comparison were repeated after that follow-up. Browser captures show the
+unchanged functional implementation; `validation.json` identifies the final
+tested source.
 
 These files live on a fork-only evidence branch and are not part of the code PR.
+
+The CodeRabbit follow-up reports no actionable findings and all five
+pre-merge quality checks passed, including documentation coverage at 87.50%.
+This is not a maintainer approval or a substitute for CI. The `sep-tests`
+workflow requires the maintainer-controlled `ci` label; its five jobs were
+skipped on the reviewed head.
 
 ## Before and after
 
@@ -79,6 +91,8 @@ node pr-evidence/21028/start-harness.mjs
 Open `http://127.0.0.1:51829/`. Reset, save and reload; then enable only the
 formula switch, save and reload again. The right panel is the fixture's actual
 saved request body. The server binds only to loopback.
+The standalone evidence-directory entry point was replayed in a real browser;
+both disabled controls still survived save and reload.
 
 To compare another checkout without changing this branch:
 

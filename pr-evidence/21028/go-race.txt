@@ -111,11 +111,11 @@ ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread
 === RUN   TestMinerUExtractionSwitches/hybrid-http-client/disabled/omitted
 === RUN   TestMinerUExtractionSwitches/hybrid-http-client/disabled/enabled
 === RUN   TestMinerUExtractionSwitches/hybrid-http-client/disabled/disabled
---- PASS: TestMinerUExtractionSwitches (1.54s)
+--- PASS: TestMinerUExtractionSwitches (1.51s)
     --- PASS: TestMinerUExtractionSwitches/pipeline/omitted/omitted (0.13s)
     --- PASS: TestMinerUExtractionSwitches/pipeline/omitted/enabled (0.02s)
     --- PASS: TestMinerUExtractionSwitches/pipeline/omitted/disabled (0.02s)
-    --- PASS: TestMinerUExtractionSwitches/pipeline/enabled/omitted (0.02s)
+    --- PASS: TestMinerUExtractionSwitches/pipeline/enabled/omitted (0.03s)
     --- PASS: TestMinerUExtractionSwitches/pipeline/enabled/enabled (0.02s)
     --- PASS: TestMinerUExtractionSwitches/pipeline/enabled/disabled (0.02s)
     --- PASS: TestMinerUExtractionSwitches/pipeline/disabled/omitted (0.02s)
@@ -130,7 +130,7 @@ ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread
     --- PASS: TestMinerUExtractionSwitches/vlm-engine/disabled/omitted (0.02s)
     --- PASS: TestMinerUExtractionSwitches/vlm-engine/disabled/enabled (0.02s)
     --- PASS: TestMinerUExtractionSwitches/vlm-engine/disabled/disabled (0.02s)
-    --- PASS: TestMinerUExtractionSwitches/vlm-auto-engine/omitted/omitted (0.03s)
+    --- PASS: TestMinerUExtractionSwitches/vlm-auto-engine/omitted/omitted (0.02s)
     --- PASS: TestMinerUExtractionSwitches/vlm-auto-engine/omitted/enabled (0.02s)
     --- PASS: TestMinerUExtractionSwitches/vlm-auto-engine/omitted/disabled (0.02s)
     --- PASS: TestMinerUExtractionSwitches/vlm-auto-engine/enabled/omitted (0.02s)
@@ -203,7 +203,7 @@ ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread
 === RUN   TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:false_mineru_table_enable:false]
 === RUN   TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:false_mineru_table_enable:true]
 === RUN   TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:true_mineru_table_enable:false]
---- PASS: TestMinerUV1RejectsDisabledExtraction (0.10s)
+--- PASS: TestMinerUV1RejectsDisabledExtraction (0.11s)
     --- PASS: TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:false] (0.02s)
     --- PASS: TestMinerUV1RejectsDisabledExtraction/map[mineru_table_enable:false] (0.02s)
     --- PASS: TestMinerUV1RejectsDisabledExtraction/map[mineru_formula_enable:false_mineru_table_enable:false] (0.02s)
@@ -220,7 +220,7 @@ ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread
     --- PASS: TestMinerUV1EnabledExtractionPreservesJob/map[mineru_table_enable:true] (0.02s)
     --- PASS: TestMinerUV1EnabledExtractionPreservesJob/map[mineru_formula_enable:true_mineru_table_enable:true] (0.02s)
 PASS
-ok  	ragflow/internal/ingestion/component	3.997s
+ok  	ragflow/internal/ingestion/component	4.014s
 === RUN   TestBuildParserConfigPreservesMinerUExtractionSwitches
 === RUN   TestBuildParserConfigPreservesMinerUExtractionSwitches/nested=false/formula=<nil>/table=<nil>
 === RUN   TestBuildParserConfigPreservesMinerUExtractionSwitches/nested=false/formula=<nil>/table=true
@@ -260,14 +260,14 @@ ok  	ragflow/internal/ingestion/component	3.997s
     --- PASS: TestBuildParserConfigPreservesMinerUExtractionSwitches/nested=true/formula=false/table=true (0.00s)
     --- PASS: TestBuildParserConfigPreservesMinerUExtractionSwitches/nested=true/formula=false/table=false (0.00s)
 PASS
-ok  	ragflow/internal/ingestion/pipeline	3.218s
+ok  	ragflow/internal/ingestion/pipeline	3.272s
 
 >>> Running native unit tests
-# ragflow/internal/deepdoc/native/croptest.test
-ld: warning: duplicate -rpath '<workspace>/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
-ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '<workspace>/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '<workspace>/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
 # ragflow/internal/deepdoc/native.test
 ld: warning: duplicate -rpath '<workspace>/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
 ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '<workspace>/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '<workspace>/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
-ok  	ragflow/internal/deepdoc/native	0.805s
-ok  	ragflow/internal/deepdoc/native/croptest	0.403s
+# ragflow/internal/deepdoc/native/croptest.test
+ld: warning: duplicate -rpath '<workspace>/work/ragflow-21028/deps/onnxruntime-osx-arm64-1.29.0/lib' ignored
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '<workspace>/work/ragflow-21028/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '<workspace>/work/ragflow-21028/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/deepdoc/native	0.416s
+ok  	ragflow/internal/deepdoc/native/croptest	0.577s

@@ -1,0 +1,36 @@
+[38;2;56;56;56m╭──────────────────────────────────────╮[m
+[38;2;56;56;56m│[m lefthook  v2.2.2   hook:  [1mpre-commit[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰──────────────────────────────────────╯[m
+│  ruff-format (skip) no files for inspection
+│  ruff (skip) no files for inspection
+┃  gofmt ❯ 
+
+┃  check-yaml ❯ 
+
+┃  end-of-file-fixer ❯ 
+
+┃  check-symlinks ❯ 
+
+┃  check-merge-conflict ❯ 
+
+┃  check-json ❯ 
+
+┃  mixed-line-ending ❯ 
+
+┃  trailing-whitespace ❯ 
+
+┃  check-case-conflict ❯ 
+
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.18 seconds)
+✓ gofmt (0.03 seconds)
+✓ check-yaml (0.15 seconds)
+✓ end-of-file-fixer (0.15 seconds)
+✓ check-symlinks (0.16 seconds)
+✓ check-merge-conflict (0.16 seconds)
+✓ check-json (0.16 seconds)
+✓ mixed-line-ending (0.16 seconds)
+✓ trailing-whitespace (0.16 seconds)
+✓ check-case-conflict (0.17 seconds)
+[detached HEAD 72ec8472e] fix(parser): fail closed for missing selected PDF models
+ 2 files changed, 187 insertions(+), 3 deletions(-)

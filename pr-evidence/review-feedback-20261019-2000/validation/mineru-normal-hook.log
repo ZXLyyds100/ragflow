@@ -1,0 +1,35 @@
+[38;2;56;56;56m╭──────────────────────────────────────╮[m
+[38;2;56;56;56m│[m lefthook  v2.2.2   hook:  [1mpre-commit[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰──────────────────────────────────────╯[m
+│  ruff-format (skip) no files for inspection
+│  ruff (skip) no files for inspection
+┃  gofmt ❯ 
+
+┃  check-json ❯ 
+
+┃  check-symlinks ❯ 
+
+┃  check-merge-conflict ❯ 
+
+┃  end-of-file-fixer ❯ 
+
+┃  mixed-line-ending ❯ 
+
+┃  check-case-conflict ❯ 
+
+┃  check-yaml ❯ 
+
+┃  trailing-whitespace ❯ 
+
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.51 seconds)
+✓ gofmt (0.09 seconds)
+✓ check-json (0.38 seconds)
+✓ check-symlinks (0.38 seconds)
+✓ check-merge-conflict (0.39 seconds)
+✓ end-of-file-fixer (0.39 seconds)
+✓ mixed-line-ending (0.40 seconds)
+✓ check-case-conflict (0.41 seconds)
+✓ check-yaml (0.42 seconds)
+✓ trailing-whitespace (0.49 seconds)
+[fix/mineru-extraction-controls 9dc68a1b1] Merge upstream main and preserve non-PDF migration retirement

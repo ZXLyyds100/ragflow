@@ -1,0 +1,47 @@
+{
+  "number": 21112,
+  "mode": "red",
+  "started": "2026-10-19T12:14:54.892Z",
+  "finished": "2026-10-19T12:15:20.927Z",
+  "source_head": "b1b16e08d57f323162f9d9992fb87c395ae96ad0",
+  "source_diff_sha256": "32ff6665f2e776b167840f0bcb434fcc70d28a0ada82d1ae789938f92c06b593",
+  "source_stable": true,
+  "command": [
+    "bash",
+    "<CONTRIBUTION_WORKSPACE>/state/with-ragflow-migration-env.sh",
+    "--shared-test",
+    "bash",
+    "<CONTRIBUTION_WORKSPACE>/repos/ragflow-21112/build.sh",
+    "--test",
+    "-overlay=<CONTRIBUTION_WORKSPACE>/work/20261019-2000/tools/overlay.json",
+    "-json",
+    "-count=1",
+    "-run",
+    "^TestTenantPDFParserMissingModelID",
+    "./internal/ingestion/component"
+  ],
+  "log": "evidence/ragflow-21112-red-20261019-2000-retry.jsonl",
+  "exit_status": 1,
+  "signal": null,
+  "pass_events": 0,
+  "top_level_passes": 0,
+  "fail_events": [
+    "ragflow/internal/ingestion/component:TestTenantPDFParserMissingModelIDIsHandled/SoMark/parse_method",
+    "ragflow/internal/ingestion/component:TestTenantPDFParserMissingModelIDIsHandled/SoMark/layout_recognizer",
+    "ragflow/internal/ingestion/component:TestTenantPDFParserMissingModelIDIsHandled/OpenDataLoader/parse_method",
+    "ragflow/internal/ingestion/component:TestTenantPDFParserMissingModelIDIsHandled/OpenDataLoader/layout_recognizer",
+    "ragflow/internal/ingestion/component:TestTenantPDFParserMissingModelIDIsHandled",
+    "ragflow/internal/ingestion/component:TestTenantPDFParserMissingModelIDInvokeDoesNotFallback/parse_method/deepdoc",
+    "ragflow/internal/ingestion/component:TestTenantPDFParserMissingModelIDInvokeDoesNotFallback/layout_recognizer/deepdoc",
+    "ragflow/internal/ingestion/component:TestTenantPDFParserMissingModelIDInvokeDoesNotFallback/layout_recognizer/somark",
+    "ragflow/internal/ingestion/component:TestTenantPDFParserMissingModelIDInvokeDoesNotFallback/layout_recognizer/opendataloader",
+    "ragflow/internal/ingestion/component:TestTenantPDFParserMissingModelIDInvokeDoesNotFallback"
+  ],
+  "skips": [],
+  "packages": [],
+  "package_failures": [
+    "ragflow/internal/ingestion/component"
+  ],
+  "no_test_packages": [],
+  "boundary": "Unchanged build.sh with path-only PCRE overlay and transparent genuine same-version ORT1.29/PDF0.3.73 shared TEST adapter. Appended native packages without fetch_testdata do not run m.Run. No production static/server, model inference, external DB/service or deployed UI validation."
+}

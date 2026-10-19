@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-10-19T12:15:40.476Z",
+  "shared_inputs": [
+    {
+      "file": "build.sh",
+      "sha256": "ce422df95e92705f0829702599c9c240e5957da5b70b39ffc9353652b8a2efb5",
+      "byte_identical": true
+    },
+    {
+      "file": "go.mod",
+      "sha256": "be436e9f362848b611c4df0ff8866191bad27993d60f9011d6fce70df49629a5",
+      "byte_identical": true
+    },
+    {
+      "file": "go.sum",
+      "sha256": "daeb317bfcfba03000d416253f685db1716b4155776bc49e0d8a08b412fb982f",
+      "byte_identical": true
+    },
+    {
+      "file": "internal/binding/rag_analyzer.go",
+      "sha256": "8a3b79e2bdc3d4caa3e8107d384f26368087d00115db1ebd49d3b3560650b0d6",
+      "byte_identical": true
+    },
+    {
+      "file": "internal/binding/cpp/CMakeLists.txt",
+      "sha256": "3c93ddec6118aa95904dd995b233014be59786ff369591b39491ba024d5675ad",
+      "byte_identical": true
+    }
+  ],
+  "tokenizer_tree": "115d8a7e4025277c3371493563b5dfb019fbdbe1",
+  "pcre_path_only": {
+    "source_sha256": "8a3b79e2bdc3d4caa3e8107d384f26368087d00115db1ebd49d3b3560650b0d6",
+    "replacement_sha256": "ee5c73c5a50208a6d0fc172c992a12a090a88d925c57cbb16b6f9f8d52534357",
+    "overlay": "work/20261019-2000/tools/overlay.json"
+  },
+  "links": [
+    {
+      "local": "repos/ragflow-21112/internal/binding/cpp/cmake-build-release/librag_tokenizer_c_api.a",
+      "target": "repos/ragflow-21109/internal/binding/cpp/cmake-build-release/librag_tokenizer_c_api.a",
+      "sha256": "feba9d9fd8f8cb10cebb67fe3a26298dda3273a23001d2484d7ea3fec63c565d",
+      "bytes": 1657896,
+      "storage": "symlink"
+    },
+    {
+      "local": "repos/ragflow-21112/ragflow_deps/cl100k_base.tiktoken",
+      "target": "work/20261019-1807/downloads/cl100k_base.tiktoken",
+      "sha256": "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7",
+      "bytes": 1681126,
+      "storage": "build.sh-created identical public data file"
+    }
+  ]
+}

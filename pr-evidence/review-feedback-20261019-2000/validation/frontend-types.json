@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-10-19T12:19:05.069Z",
+  "baseline": "f9138d2c3916e6f44f8924e5fca668972faac803",
+  "current_diagnostic_count": 206,
+  "baseline_diagnostic_count": 206,
+  "new_diagnostics": [],
+  "removed_diagnostics": [],
+  "equal_diagnostic_multisets": true,
+  "virtual_upstream_source_files": [
+    "web/src/components/layout-recognize-form-field.test.tsx",
+    "web/src/components/layout-recognize-form-field.tsx",
+    "web/src/components/mineru-options-form-field.tsx",
+    "web/src/locales/en.ts",
+    "web/src/locales/zh.ts",
+    "web/src/pages/agent/form/parser-form/common-form-fields.tsx",
+    "web/src/pages/agent/form/parser-form/pdf-form-fields.tsx",
+    "web/src/pages/agent/form/parser-form/schema.test.ts",
+    "web/src/pages/agent/form/parser-form/schema.ts",
+    "web/src/pages/agent/utils.test.ts",
+    "web/src/pages/agent/utils.ts"
+  ],
+  "boundary": "Standard TypeScript compiler noEmit, same installed dependencies and current configuration. Baseline substitutes exact upstream blobs for only PR-modified source and omits PR-added files; diagnostic identity includes file/code/category/message/multiplicity, not shifted line offsets. The actual current tsc CLI result is recorded separately. Existing diagnostics are not claimed fixed or a full green typecheck."
+}

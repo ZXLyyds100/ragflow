@@ -1,0 +1,310 @@
+{
+  "source_head": "db01fba1f8bb2597b3c13ae7b46cd47bb2942030",
+  "baseline_head": "f66e8362850fd47764d45d8cebfdb3c21ea6fcd2",
+  "prepared_at": "2026-10-19T09:27:04.449Z",
+  "frontend": {
+    "relevant_tests": 111,
+    "relevant_suites": 10,
+    "production_build": "pass",
+    "full_source_oxlint": "pass with existing warnings",
+    "changed_file_oxfmt": "pass",
+    "full_jest": "same six failing suites and Request is not defined termination on original/fixed source",
+    "types": {
+      "original": 206,
+      "fixed": 206,
+      "identical_including_multiplicity": true
+    },
+    "normal_pre_commit_hook": "pass"
+  },
+  "backend": [
+    {
+      "phase": "adapter-old-head-smoke",
+      "exitCode": 0,
+      "test_events": 3,
+      "passed": 3,
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-json",
+        "-timeout",
+        "8m",
+        "-run",
+        "^TestImageOCRSelectedTenantModel$",
+        "./internal/ingestion/component"
+      ],
+      "failed": 0,
+      "skipped": 0,
+      "top_level_test_runs": 1,
+      "packagesPassed": [
+        "ragflow/internal/ingestion/component"
+      ],
+      "packagesFailed": [],
+      "skippedTests": [],
+      "actual_test_packages": [
+        "ragflow/internal/ingestion/component"
+      ],
+      "nativeTierPolicy": "No fetch_testdata tag is supplied: native TestMain exits zero before m.Run, regardless of whether Go hides its skip stdout. No native test/inference coverage is claimed."
+    },
+    {
+      "phase": "adapter-old-head-new-tests-red",
+      "exitCode": 1,
+      "test_events": 24,
+      "passed": 0,
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-json",
+        "-timeout",
+        "8m",
+        "-run",
+        "TestImageOCRSelectedModelLookupOnce|TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState|TestImageOCRCloudDefaultEndpointWarning|TestResolveModelConfigInaccessibleIDs",
+        "./internal/ingestion/component"
+      ],
+      "failed": 24,
+      "skipped": 0,
+      "top_level_test_runs": 4,
+      "packagesPassed": [],
+      "packagesFailed": [
+        "ragflow/internal/ingestion/component"
+      ],
+      "skippedTests": [],
+      "actual_test_packages": [
+        "ragflow/internal/ingestion/component"
+      ],
+      "nativeTierPolicy": "No fetch_testdata tag is supplied: native TestMain exits zero before m.Run, regardless of whether Go hides its skip stdout. No native test/inference coverage is claimed."
+    },
+    {
+      "phase": "adapter-current-focused-green",
+      "exitCode": 0,
+      "test_events": 85,
+      "passed": 85,
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-json",
+        "-timeout",
+        "8m",
+        "-run",
+        "ImageOCR|ResolveModelConfig",
+        "./internal/ingestion/component"
+      ],
+      "failed": 0,
+      "skipped": 0,
+      "top_level_test_runs": 25,
+      "packagesPassed": [
+        "ragflow/internal/ingestion/component"
+      ],
+      "packagesFailed": [],
+      "skippedTests": [],
+      "actual_test_packages": [
+        "ragflow/internal/ingestion/component"
+      ],
+      "nativeTierPolicy": "No fetch_testdata tag is supplied: native TestMain exits zero before m.Run, regardless of whether Go hides its skip stdout. No native test/inference coverage is claimed."
+    },
+    {
+      "phase": "adapter-current-full-related",
+      "exitCode": 0,
+      "test_events": 6878,
+      "passed": 6873,
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-json",
+        "-timeout",
+        "8m",
+        "./internal/ingestion/...",
+        "./internal/entity/models",
+        "./internal/parser/...",
+        "./internal/dao",
+        "./internal/service",
+        "./internal/service/dataset",
+        "./internal/service/document",
+        "./cmd/..."
+      ],
+      "failed": 0,
+      "skipped": 5,
+      "top_level_test_runs": 4584,
+      "packagesPassed": [
+        "ragflow/internal/ingestion/chunkcache",
+        "ragflow/internal/ingestion/compilation/extractor",
+        "ragflow/internal/ingestion/component/globals",
+        "ragflow/internal/ingestion/component/chunker",
+        "ragflow/internal/ingestion/component/knowledge_compiler",
+        "ragflow/internal/ingestion/component/knowledge_compiler/common",
+        "ragflow/internal/ingestion/component/knowledge_compiler/golden",
+        "ragflow/internal/ingestion/component/knowledge_compiler/mindmap",
+        "ragflow/internal/ingestion/component/knowledge_compiler/structure",
+        "ragflow/internal/ingestion/component/knowledge_compiler/wiki",
+        "ragflow/internal/ingestion/component/progress",
+        "ragflow/internal/ingestion/component/schema",
+        "ragflow/internal/ingestion/component",
+        "ragflow/internal/ingestion/component/knowledge_compiler/tree",
+        "ragflow/internal/ingestion/knowledge_compile",
+        "ragflow/internal/ingestion/pipeline",
+        "ragflow/internal/ingestion/registry",
+        "ragflow/internal/ingestion/task/indexdoc",
+        "ragflow/internal/ingestion/service",
+        "ragflow/internal/ingestion/task/tool",
+        "ragflow/internal/parser/chunk",
+        "ragflow/internal/ingestion/task",
+        "ragflow/internal/parser/parser",
+        "ragflow/internal/parser/tableutil",
+        "ragflow/internal/dao",
+        "ragflow/internal/entity/models",
+        "ragflow/internal/service/dataset",
+        "ragflow/internal/service",
+        "ragflow/internal/service/document",
+        "ragflow/cmd"
+      ],
+      "packagesFailed": [],
+      "packagesSkipped": [
+        "ragflow/internal/ingestion/testutil",
+        "ragflow/internal/ingestion/wire"
+      ],
+      "skippedTests": [
+        {
+          "Package": "ragflow/internal/ingestion/task",
+          "Test": "TestPipelineExecutor_Run_RealCanvasDSL_UsesGeneralPipeline"
+        },
+        {
+          "Package": "ragflow/internal/ingestion/task",
+          "Test": "TestPipelineExecutor_Run_RealPDF_ProducesIndexedChunks"
+        },
+        {
+          "Package": "ragflow/internal/ingestion/task",
+          "Test": "TestRunPipeline_RealPipelineOutput_ProducesIndexFields"
+        },
+        {
+          "Package": "ragflow/internal/entity/models",
+          "Test": "TestGiteeListModelsIntegration"
+        },
+        {
+          "Package": "ragflow/internal/service/dataset",
+          "Test": "TestCreateDataset_ParseTypePipelineIgnoresParserID"
+        }
+      ],
+      "listed_related_package_count": 32,
+      "actual_test_packages": [
+        "ragflow/internal/ingestion/chunkcache",
+        "ragflow/internal/ingestion/compilation/extractor",
+        "ragflow/internal/ingestion/component",
+        "ragflow/internal/ingestion/component/chunker",
+        "ragflow/internal/ingestion/component/globals",
+        "ragflow/internal/ingestion/component/knowledge_compiler",
+        "ragflow/internal/ingestion/component/knowledge_compiler/common",
+        "ragflow/internal/ingestion/component/knowledge_compiler/golden",
+        "ragflow/internal/ingestion/component/knowledge_compiler/mindmap",
+        "ragflow/internal/ingestion/component/knowledge_compiler/structure",
+        "ragflow/internal/ingestion/component/knowledge_compiler/tree",
+        "ragflow/internal/ingestion/component/knowledge_compiler/wiki",
+        "ragflow/internal/ingestion/component/progress",
+        "ragflow/internal/ingestion/component/schema",
+        "ragflow/internal/ingestion/knowledge_compile",
+        "ragflow/internal/ingestion/pipeline",
+        "ragflow/internal/ingestion/registry",
+        "ragflow/internal/ingestion/service",
+        "ragflow/internal/ingestion/task",
+        "ragflow/internal/ingestion/task/indexdoc",
+        "ragflow/internal/ingestion/task/tool",
+        "ragflow/internal/entity/models",
+        "ragflow/internal/parser/chunk",
+        "ragflow/internal/parser/parser",
+        "ragflow/internal/parser/tableutil",
+        "ragflow/internal/dao",
+        "ragflow/internal/service",
+        "ragflow/internal/service/dataset",
+        "ragflow/internal/service/document",
+        "ragflow/cmd"
+      ],
+      "nativeTierPolicy": "No fetch_testdata: native TestMain skips m.Run; no inference/native unit coverage is claimed even if appended go test prints ok."
+    },
+    {
+      "phase": "adapter-current-focused-race",
+      "exitCode": 0,
+      "test_events": 171,
+      "passed": 171,
+      "command": [
+        "bash",
+        "build.sh",
+        "--test",
+        "-json",
+        "-timeout",
+        "8m",
+        "-race",
+        "-count=1",
+        "-run",
+        "ImageOCR|ResolveModelConfig|Upload",
+        "./internal/agent/component",
+        "./internal/agent/tool",
+        "./internal/entity/models",
+        "./internal/handler",
+        "./internal/ingestion/component",
+        "./internal/ingestion/component/chunker",
+        "./internal/ingestion/pipeline",
+        "./internal/parser/parser",
+        "./internal/router",
+        "./internal/service",
+        "./internal/service/document",
+        "./internal/service/file",
+        "./internal/storage",
+        "./internal/utility"
+      ],
+      "failed": 0,
+      "skipped": 0,
+      "top_level_test_runs": 89,
+      "packagesPassed": [
+        "ragflow/internal/agent/component",
+        "ragflow/internal/agent/tool",
+        "ragflow/internal/entity/models",
+        "ragflow/internal/handler",
+        "ragflow/internal/ingestion/component",
+        "ragflow/internal/ingestion/component/chunker",
+        "ragflow/internal/ingestion/pipeline",
+        "ragflow/internal/parser/parser",
+        "ragflow/internal/router",
+        "ragflow/internal/service",
+        "ragflow/internal/service/document",
+        "ragflow/internal/service/file",
+        "ragflow/internal/storage",
+        "ragflow/internal/utility"
+      ],
+      "packagesFailed": [],
+      "packagesSkipped": [],
+      "skippedTests": [],
+      "actual_test_packages": [
+        "ragflow/internal/agent/component",
+        "ragflow/internal/agent/tool",
+        "ragflow/internal/entity/models",
+        "ragflow/internal/handler",
+        "ragflow/internal/ingestion/component",
+        "ragflow/internal/ingestion/component/chunker",
+        "ragflow/internal/ingestion/pipeline",
+        "ragflow/internal/parser/parser",
+        "ragflow/internal/router",
+        "ragflow/internal/service",
+        "ragflow/internal/service/document",
+        "ragflow/internal/service/file",
+        "ragflow/internal/storage",
+        "ragflow/internal/utility"
+      ],
+      "nativeTierPolicy": "No fetch_testdata: native TestMain skips m.Run; no inference/native unit coverage is claimed even if appended go test prints ok."
+    }
+  ],
+  "boundaries": [
+    "All UI owners, models, HTTP and saves are explicitly synthetic local fixtures, not full-app E2E.",
+    "Screenshots pair equal viewport/locale/data conditions against the exact baseline component.",
+    "The baseline already has a small clear X; the fix adds an explicit DeepDoc peer option.",
+    "Real model resolver, Parser, drivers and SQL execute against SQLite and local HTTP test fixtures.",
+    "Unchanged build.sh is used with an opt-in test-only compiler/link adapter: genuine same-version shared ORT 1.29.0 and PDF_oxide 0.3.73 replace incompatible macOS static inputs.",
+    "office_oxide, PDFium, tokenizer and PCRE2 remain genuine static libraries. No symbol stubs, unresolved-symbol or duplicate-symbol suppression.",
+    "Native packages whose TestMain exits without fetch_testdata are not runtime/native-inference coverage.",
+    "No real model inference, custom ORT initializer API, production static/server build, deployed save or external integration tier was validated.",
+    "The first full related run failed in six tests because sparse checkout omitted the exact tracked Doc1.pdf fixture. Restoring the existing Git blob (2654 bytes, no network or source/test logic changes) allowed the full rerun; both logs and the fixture hash are retained.",
+    "An earlier native-focused attempt found a missing AtomicLevel initialization in the newly added test observer. Its test-only setup was fixed before the final frozen red/green/full/race runs.",
+    "Absolute workspace paths in public logs/helpers are replaced with <WORKSPACE>; local original logs remain preserved."
+  ]
+}

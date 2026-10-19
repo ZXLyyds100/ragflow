@@ -1,0 +1,2 @@
+Hash-pinned genuine PDF_oxide 0.3.73 shared FFI: open, page-count, document-version and free OK.
+PDF document version is 1.4; library version is separately pinned by the author's exact v0.3.73 release asset SHA256, not by the PDF document-version getter. No library version getter/marker is available.

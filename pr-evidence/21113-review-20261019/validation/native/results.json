@@ -1,0 +1,1239 @@
+[
+  {
+    "phase": "adapter-old-head-smoke",
+    "started": "2026-10-19T09:10:54.231Z",
+    "finished": "2026-10-19T09:11:04.798Z",
+    "exitCode": 0,
+    "command": [
+      "bash",
+      "build.sh",
+      "--test",
+      "-json",
+      "-timeout",
+      "8m",
+      "-run",
+      "^TestImageOCRSelectedTenantModel$",
+      "./internal/ingestion/component"
+    ],
+    "environment": {
+      "CC": "<WORKSPACE>/work/20261019-1557/tools/ort-pdf-shared-test-cc.mjs",
+      "GOFLAGS": "-overlay=<WORKSPACE>/work/20261019-1557/tools/overlay-red.json",
+      "RAGFLOW_ORT_SHARED_TEST_ONLY": "1"
+    },
+    "log": "<WORKSPACE>/evidence/ragflow-21113-static-environment/pdf-shared-adapter/attempt2/adapter-old-head-smoke.log",
+    "testsRun": [
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedTenantModel"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedTenantModel/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedTenantModel/PaddleOCR"
+      }
+    ],
+    "testsPassed": [
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedTenantModel/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedTenantModel/PaddleOCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedTenantModel"
+      }
+    ],
+    "testsFailed": [],
+    "testsSkipped": [],
+    "packagesPassed": [
+      "ragflow/internal/ingestion/component"
+    ],
+    "packagesFailed": [],
+    "nativeSkipMarkerObserved": false,
+    "nativeTierPolicy": "No fetch_testdata tag is supplied: native TestMain exits zero before m.Run, regardless of whether Go hides its skip stdout. No native test/inference coverage is claimed.",
+    "assertionEvidence": []
+  },
+  {
+    "phase": "adapter-old-head-new-tests-red",
+    "started": "2026-10-19T09:11:04.800Z",
+    "finished": "2026-10-19T09:11:08.761Z",
+    "exitCode": 1,
+    "command": [
+      "bash",
+      "build.sh",
+      "--test",
+      "-json",
+      "-timeout",
+      "8m",
+      "-run",
+      "TestImageOCRSelectedModelLookupOnce|TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState|TestImageOCRCloudDefaultEndpointWarning|TestResolveModelConfigInaccessibleIDs",
+      "./internal/ingestion/component"
+    ],
+    "environment": {
+      "CC": "<WORKSPACE>/work/20261019-1557/tools/ort-pdf-shared-test-cc.mjs",
+      "GOFLAGS": "-overlay=<WORKSPACE>/work/20261019-1557/tools/overlay-red.json",
+      "RAGFLOW_ORT_SHARED_TEST_ONLY": "1"
+    },
+    "log": "<WORKSPACE>/evidence/ragflow-21113-static-environment/pdf-shared-adapter/attempt2/adapter-old-head-new-tests-red.log",
+    "testsRun": [
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/active_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/wrong_foreign_model_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/mismatched_foreign_instance_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/unknown_foreign_driver"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/active_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/wrong_foreign_model_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/mismatched_foreign_instance_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/unknown_foreign_driver"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=false"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=true"
+      }
+    ],
+    "testsPassed": [],
+    "testsFailed": [
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/active_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/wrong_foreign_model_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/mismatched_foreign_instance_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/unknown_foreign_driver"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/active_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/wrong_foreign_model_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/mismatched_foreign_instance_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/unknown_foreign_driver"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=false"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=true"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning"
+      }
+    ],
+    "testsSkipped": [],
+    "packagesPassed": [],
+    "packagesFailed": [
+      "ragflow/internal/ingestion/component"
+    ],
+    "nativeSkipMarkerObserved": false,
+    "nativeTierPolicy": "No fetch_testdata tag is supplied: native TestMain exits zero before m.Run, regardless of whether Go hides its skip stdout. No native test/inference coverage is claimed.",
+    "assertionEvidence": [
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/active_foreign_model",
+        "Output": "    dispatch_model_test.go:144: foreign ID is distinguishable: foreign=\"tenant tenant-2 has no access to provider owned by tenant tenant-1\" missing=\"provider name missing in model name: missing-model\"\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/active_foreign_model",
+        "Output": "    dispatch_model_test.go:147: owner tenant ID leaked: tenant tenant-2 has no access to provider owned by tenant tenant-1\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/active_foreign_model",
+        "Output": "    dispatch_model_test.go:153: instance was queried before authorizing its model provider: counts=map[tenant_model:3 tenant_model_instance:1 tenant_model_provider:1]\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/active_foreign_model",
+        "Output": "--- FAIL: TestResolveModelConfigInaccessibleIDs/active_foreign_model (0.00s)\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_model",
+        "Output": "    dispatch_model_test.go:144: foreign ID is distinguishable: foreign=\"model \\\"model-b\\\" is disabled\" missing=\"provider name missing in model name: missing-model\"\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_model",
+        "Output": "--- FAIL: TestResolveModelConfigInaccessibleIDs/disabled_foreign_model (0.00s)\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/wrong_foreign_model_type",
+        "Output": "    dispatch_model_test.go:144: foreign ID is distinguishable: foreign=\"model \\\"model-b\\\" cannot be used as ocr model\" missing=\"provider name missing in model name: missing-model\"\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/wrong_foreign_model_type",
+        "Output": "--- FAIL: TestResolveModelConfigInaccessibleIDs/wrong_foreign_model_type (0.00s)\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_instance",
+        "Output": "    dispatch_model_test.go:144: foreign ID is distinguishable: foreign=\"record not found\" missing=\"provider name missing in model name: missing-model\"\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_instance",
+        "Output": "    dispatch_model_test.go:153: instance was queried before authorizing its model provider: counts=map[tenant_model:3 tenant_model_instance:1]\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_instance",
+        "Output": "--- FAIL: TestResolveModelConfigInaccessibleIDs/missing_foreign_instance (0.00s)\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_instance",
+        "Output": "    dispatch_model_test.go:144: foreign ID is distinguishable: foreign=\"tenant tenant-2 has no access to provider owned by tenant tenant-1\" missing=\"provider name missing in model name: missing-model\"\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_instance",
+        "Output": "    dispatch_model_test.go:147: owner tenant ID leaked: tenant tenant-2 has no access to provider owned by tenant tenant-1\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_instance",
+        "Output": "    dispatch_model_test.go:153: instance was queried before authorizing its model provider: counts=map[tenant_model:3 tenant_model_instance:1 tenant_model_provider:1]\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_instance",
+        "Output": "--- FAIL: TestResolveModelConfigInaccessibleIDs/disabled_foreign_instance (0.00s)\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/mismatched_foreign_instance_provider",
+        "Output": "    dispatch_model_test.go:144: foreign ID is distinguishable: foreign=\"tenant tenant-2 has no access to provider owned by tenant tenant-1\" missing=\"provider name missing in model name: missing-model\"\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/mismatched_foreign_instance_provider",
+        "Output": "    dispatch_model_test.go:147: owner tenant ID leaked: tenant tenant-2 has no access to provider owned by tenant tenant-1\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/mismatched_foreign_instance_provider",
+        "Output": "    dispatch_model_test.go:153: instance was queried before authorizing its model provider: counts=map[tenant_model:3 tenant_model_instance:1 tenant_model_provider:1]\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/mismatched_foreign_instance_provider",
+        "Output": "--- FAIL: TestResolveModelConfigInaccessibleIDs/mismatched_foreign_instance_provider (0.00s)\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_provider",
+        "Output": "    dispatch_model_test.go:144: foreign ID is distinguishable: foreign=\"record not found\" missing=\"provider name missing in model name: missing-model\"\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_provider",
+        "Output": "    dispatch_model_test.go:153: instance was queried before authorizing its model provider: counts=map[tenant_model:3 tenant_model_instance:1 tenant_model_provider:1]\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_provider",
+        "Output": "--- FAIL: TestResolveModelConfigInaccessibleIDs/missing_foreign_provider (0.00s)\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/unknown_foreign_driver",
+        "Output": "    dispatch_model_test.go:144: foreign ID is distinguishable: foreign=\"tenant tenant-2 has no access to provider owned by tenant tenant-1\" missing=\"provider name missing in model name: missing-model\"\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/unknown_foreign_driver",
+        "Output": "    dispatch_model_test.go:147: owner tenant ID leaked: tenant tenant-2 has no access to provider owned by tenant tenant-1\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/unknown_foreign_driver",
+        "Output": "    dispatch_model_test.go:153: instance was queried before authorizing its model provider: counts=map[tenant_model:3 tenant_model_instance:1 tenant_model_provider:1]\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs/unknown_foreign_driver",
+        "Output": "--- FAIL: TestResolveModelConfigInaccessibleIDs/unknown_foreign_driver (0.00s)\n"
+      },
+      {
+        "Test": "TestResolveModelConfigInaccessibleIDs",
+        "Output": "--- FAIL: TestResolveModelConfigInaccessibleIDs (0.01s)\n"
+      },
+      {
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR.local",
+        "Output": "    image_ocr_resolution_test.go:126: tenant_model lookups=2, want exactly one; counts=map[tenant_model:2 tenant_model_instance:2 tenant_model_provider:1]\n"
+      },
+      {
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR.local",
+        "Output": "    image_ocr_resolution_test.go:126: tenant_model_instance lookups=2, want exactly one; counts=map[tenant_model:2 tenant_model_instance:2 tenant_model_provider:1]\n"
+      },
+      {
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR.local",
+        "Output": "--- FAIL: TestImageOCRSelectedModelLookupOnce/PaddleOCR.local (0.01s)\n"
+      },
+      {
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR",
+        "Output": "    image_ocr_resolution_test.go:126: tenant_model lookups=2, want exactly one; counts=map[tenant_model:2 tenant_model_instance:2 tenant_model_provider:1]\n"
+      },
+      {
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR",
+        "Output": "    image_ocr_resolution_test.go:126: tenant_model_instance lookups=2, want exactly one; counts=map[tenant_model:2 tenant_model_instance:2 tenant_model_provider:1]\n"
+      },
+      {
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR",
+        "Output": "--- FAIL: TestImageOCRSelectedModelLookupOnce/PaddleOCR (0.00s)\n"
+      },
+      {
+        "Test": "TestImageOCRSelectedModelLookupOnce",
+        "Output": "--- FAIL: TestImageOCRSelectedModelLookupOnce (0.01s)\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/active_foreign_model",
+        "Output": "    image_ocr_resolution_test.go:189: foreign model is distinguishable: got \"WARNING: image OCR unavailable: selected image OCR model: tenant tenant-2 has no access to provider owned by tenant tenant-1\", missing \"WARNING: image OCR unavailable: selected image OCR model: record not found\"\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/active_foreign_model",
+        "Output": "    image_ocr_resolution_test.go:192: owner tenant ID leaked in progress: \"WARNING: image OCR unavailable: selected image OCR model: tenant tenant-2 has no access to provider owned by tenant tenant-1\"\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/active_foreign_model",
+        "Output": "--- FAIL: TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/active_foreign_model (0.00s)\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_model",
+        "Output": "    image_ocr_resolution_test.go:189: foreign model is distinguishable: got \"WARNING: image OCR unavailable: selected image OCR model: model \\\"model-b\\\" is disabled\", missing \"WARNING: image OCR unavailable: selected image OCR model: record not found\"\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_model",
+        "Output": "--- FAIL: TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_model (0.00s)\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/wrong_foreign_model_type",
+        "Output": "    image_ocr_resolution_test.go:189: foreign model is distinguishable: got \"WARNING: image OCR unavailable: selected image OCR model: model \\\"model-b\\\" cannot be used as ocr model\", missing \"WARNING: image OCR unavailable: selected image OCR model: record not found\"\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/wrong_foreign_model_type",
+        "Output": "--- FAIL: TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/wrong_foreign_model_type (0.00s)\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_instance",
+        "Output": "    image_ocr_resolution_test.go:189: foreign model is distinguishable: got \"WARNING: image OCR unavailable: selected image OCR instance: record not found\", missing \"WARNING: image OCR unavailable: selected image OCR model: record not found\"\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_instance",
+        "Output": "--- FAIL: TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_instance (0.00s)\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_instance",
+        "Output": "    image_ocr_resolution_test.go:189: foreign model is distinguishable: got \"WARNING: image OCR unavailable: selected image OCR instance is disabled\", missing \"WARNING: image OCR unavailable: selected image OCR model: record not found\"\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_instance",
+        "Output": "--- FAIL: TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_instance (0.00s)\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/mismatched_foreign_instance_provider",
+        "Output": "    image_ocr_resolution_test.go:189: foreign model is distinguishable: got \"WARNING: image OCR unavailable: selected image OCR instance does not belong to the model provider\", missing \"WARNING: image OCR unavailable: selected image OCR model: record not found\"\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/mismatched_foreign_instance_provider",
+        "Output": "--- FAIL: TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/mismatched_foreign_instance_provider (0.00s)\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_provider",
+        "Output": "    image_ocr_resolution_test.go:189: foreign model is distinguishable: got \"WARNING: image OCR unavailable: selected image OCR instance does not belong to the model provider\", missing \"WARNING: image OCR unavailable: selected image OCR model: record not found\"\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_provider",
+        "Output": "--- FAIL: TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_provider (0.00s)\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/unknown_foreign_driver",
+        "Output": "    image_ocr_resolution_test.go:189: foreign model is distinguishable: got \"WARNING: image OCR unavailable: selected image OCR model: tenant tenant-2 has no access to provider owned by tenant tenant-1\", missing \"WARNING: image OCR unavailable: selected image OCR model: record not found\"\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/unknown_foreign_driver",
+        "Output": "    image_ocr_resolution_test.go:192: owner tenant ID leaked in progress: \"WARNING: image OCR unavailable: selected image OCR model: tenant tenant-2 has no access to provider owned by tenant tenant-1\"\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/unknown_foreign_driver",
+        "Output": "--- FAIL: TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/unknown_foreign_driver (0.00s)\n"
+      },
+      {
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState",
+        "Output": "--- FAIL: TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState (0.01s)\n"
+      },
+      {
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=false",
+        "Output": "    image_ocr_resolution_test.go:233: fallback warnings=0, want exactly one; logs=[]\n"
+      },
+      {
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=false",
+        "Output": "--- FAIL: TestImageOCRCloudDefaultEndpointWarning/remote_failure=false (0.00s)\n"
+      },
+      {
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=true",
+        "Output": "    image_ocr_resolution_test.go:233: fallback warnings=0, want exactly one; logs=[{{error 2026-10-19 17:11:08.69443 +0800 CST m=+0.075949209  paddleocr submit: non-200, status 503 undefined } [{driver 15 0 paddleocr <nil>} {url 15 0 http://127.0.0.1:52826/v2/ocr/jobs <nil>} {status 11 503  <nil>} {body 15 0 fixture OCR unavailable\n"
+      },
+      {
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=true",
+        "Output": "--- FAIL: TestImageOCRCloudDefaultEndpointWarning/remote_failure=true (0.00s)\n"
+      },
+      {
+        "Test": "TestImageOCRCloudDefaultEndpointWarning",
+        "Output": "--- FAIL: TestImageOCRCloudDefaultEndpointWarning (0.00s)\n"
+      }
+    ]
+  },
+  {
+    "phase": "adapter-current-focused-green",
+    "started": "2026-10-19T09:11:08.763Z",
+    "finished": "2026-10-19T09:11:14.254Z",
+    "exitCode": 0,
+    "command": [
+      "bash",
+      "build.sh",
+      "--test",
+      "-json",
+      "-timeout",
+      "8m",
+      "-run",
+      "ImageOCR|ResolveModelConfig",
+      "./internal/ingestion/component"
+    ],
+    "environment": {
+      "CC": "<WORKSPACE>/work/20261019-1557/tools/ort-pdf-shared-test-cc.mjs",
+      "GOFLAGS": "-overlay=<WORKSPACE>/work/20261019-1557/tools/overlay.json",
+      "RAGFLOW_ORT_SHARED_TEST_ONLY": "1"
+    },
+    "log": "<WORKSPACE>/evidence/ragflow-21113-static-environment/pdf-shared-adapter/attempt2/adapter-current-focused-green.log",
+    "testsRun": [
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigForStoredMistralOCRProvider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigForStoredMistralOCRProvider/tenant_model_id"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigForStoredMistralOCRProvider/enrolled_composite"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigForStoredMistralOCRProvider/catalog_composite"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/active_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/wrong_foreign_model_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/mismatched_foreign_instance_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/unknown_foreign_driver"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigAuthorizedModelValidation"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigAuthorizedModelValidation/active_OCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigAuthorizedModelValidation/disabled_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigAuthorizedModelValidation/wrong_model_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigLookupFailureIsNotMissing"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigByIDScopedQuerySQL"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigChainedDBStatementIsolationFixedOnly"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/active_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/wrong_foreign_model_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/mismatched_foreign_instance_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/unknown_foreign_driver"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=false"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=true"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn/PaddleOCR.local/extra"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn/PaddleOCR.local/api_key_json"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn/PaddleOCR.local/extra_over_api_key_json"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn/PaddleOCR/extra"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn/PaddleOCR/api_key_json"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn/PaddleOCR/extra_over_api_key_json"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRMissingEndpointDoesNotUseGlobalEndpoint"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRMissingEndpointDoesNotUseGlobalEndpoint/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRMissingEndpointDoesNotUseGlobalEndpoint/PaddleOCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedTenantModel"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedTenantModel/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedTenantModel/PaddleOCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRReleasesMediaAdmissionBeforeRequest"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRReleasesMediaAdmissionBeforeRequest/false"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRReleasesMediaAdmissionBeforeRequest/true"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRFailureRetainsAttachment"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRFailureRetainsAttachment/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRFailureRetainsAttachment/PaddleOCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/missing_tenant"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/foreign_tenant"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/missing_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/disabled_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/wrong_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/disabled_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/mismatched_instance_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectionRespectsSwitchAndSVG"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectionRespectsSwitchAndSVG/off"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectionRespectsSwitchAndSVG/svg"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRModelConfigValidation"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRDoesNotUseGlobalEndpoint"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRKeepsCloudSSRFGuard"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRRejectsOtherOCRDrivers"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRReadsInstanceJSONAndRotatedCredentials"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRAndVisionRemainIndependent"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRAndVisionRemainIndependent/true"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRAndVisionRemainIndependent/false"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRFailureReachesProgressMessages"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRIndependentOfVision"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRIndependentOfVision/ocr-only"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRIndependentOfVision/ocr-and-vision"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRIndependentOfVision/ocr-vision-unavailable"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRIndependentOfVision/ocr-off"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRIndependentOfVision/vision-only"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRSwitch"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRSwitch/ocr-on"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRSwitch/ocr-off-no-enhancement-keeps-empty"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRSwitch/ocr-off-vision-only"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRSwitch/switch-beats-stale-parse-method"
+      }
+    ],
+    "testsPassed": [
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigForStoredMistralOCRProvider/tenant_model_id"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigForStoredMistralOCRProvider/enrolled_composite"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigForStoredMistralOCRProvider/catalog_composite"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigForStoredMistralOCRProvider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/active_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/wrong_foreign_model_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/mismatched_foreign_instance_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/unknown_foreign_driver"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigAuthorizedModelValidation/active_OCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigAuthorizedModelValidation/disabled_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigAuthorizedModelValidation/wrong_model_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigAuthorizedModelValidation"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigLookupFailureIsNotMissing"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigByIDScopedQuerySQL"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigChainedDBStatementIsolationFixedOnly"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/active_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/wrong_foreign_model_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/mismatched_foreign_instance_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/unknown_foreign_driver"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=false"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=true"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn/PaddleOCR.local/extra"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn/PaddleOCR.local/api_key_json"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn/PaddleOCR.local/extra_over_api_key_json"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn/PaddleOCR/extra"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn/PaddleOCR/api_key_json"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn/PaddleOCR/extra_over_api_key_json"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRExplicitEndpointDoesNotWarn"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRMissingEndpointDoesNotUseGlobalEndpoint/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRMissingEndpointDoesNotUseGlobalEndpoint/PaddleOCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRMissingEndpointDoesNotUseGlobalEndpoint"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedTenantModel/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedTenantModel/PaddleOCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedTenantModel"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRReleasesMediaAdmissionBeforeRequest/false"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRReleasesMediaAdmissionBeforeRequest/true"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRReleasesMediaAdmissionBeforeRequest"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRFailureRetainsAttachment/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRFailureRetainsAttachment/PaddleOCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRFailureRetainsAttachment"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/missing_tenant"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/foreign_tenant"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/missing_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/disabled_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/wrong_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/disabled_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack/mismatched_instance_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInvalidSelectionNeverFallsBack"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectionRespectsSwitchAndSVG/off"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectionRespectsSwitchAndSVG/svg"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectionRespectsSwitchAndSVG"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRModelConfigValidation"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRDoesNotUseGlobalEndpoint"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRKeepsCloudSSRFGuard"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRRejectsOtherOCRDrivers"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRReadsInstanceJSONAndRotatedCredentials"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRAndVisionRemainIndependent/true"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRAndVisionRemainIndependent/false"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRAndVisionRemainIndependent"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRFailureReachesProgressMessages"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRIndependentOfVision/ocr-only"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRIndependentOfVision/ocr-and-vision"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRIndependentOfVision/ocr-vision-unavailable"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRIndependentOfVision/ocr-off"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRIndependentOfVision/vision-only"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRIndependentOfVision"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRSwitch/ocr-on"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRSwitch/ocr-off-no-enhancement-keeps-empty"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRSwitch/ocr-off-vision-only"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRSwitch/switch-beats-stale-parse-method"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestMaybeDispatchImageOCRSwitch"
+      }
+    ],
+    "testsFailed": [],
+    "testsSkipped": [],
+    "packagesPassed": [
+      "ragflow/internal/ingestion/component"
+    ],
+    "packagesFailed": [],
+    "nativeSkipMarkerObserved": false,
+    "nativeTierPolicy": "No fetch_testdata tag is supplied: native TestMain exits zero before m.Run, regardless of whether Go hides its skip stdout. No native test/inference coverage is claimed.",
+    "assertionEvidence": []
+  }
+]

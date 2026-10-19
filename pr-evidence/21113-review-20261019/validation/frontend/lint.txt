@@ -1,0 +1,178 @@
+
+> lint
+> oxlint src
+
+src/pages/memory/memory-setting/advanced-settings-form.tsx:61:21: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/memory/memory-setting/hook.ts:11:11: warning eslint(no-unused-vars): Variable 'res' is assigned a value but never used. help: Did you mean to use this variable?
+src/pages/agent/form/switch-form/use-watch-change.ts:14:16: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form' help: Either include it or remove the dependency array.
+src/pages/agent/form/switch-form/use-watch-change.ts:12:5: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/utils/__tests__/dsl-bridge.test.ts:58:3: warning eslint(no-use-before-define): 'compareInto' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/pages/agent/utils/__tests__/dsl-bridge.test.ts:74:5: warning eslint(no-use-before-define): 'record' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/pages/agent/utils/__tests__/dsl-bridge.test.ts:78:5: warning eslint(no-use-before-define): 'record' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/pages/agent/utils/__tests__/dsl-bridge.test.ts:103:7: warning eslint(no-use-before-define): 'record' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/pages/agent/utils/__tests__/dsl-bridge.test.ts:107:7: warning eslint(no-use-before-define): 'record' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/pages/agent/utils/__tests__/dsl-bridge.test.ts:113:7: warning eslint(no-use-before-define): 'record' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/pages/agent/utils/__tests__/dsl-bridge.test.ts:126:36: warning eslint(no-use-before-define): 'stableStr' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/pages/agent/utils/__tests__/dsl-bridge.test.ts:126:57: warning eslint(no-use-before-define): 'stableStr' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/pages/agents/hooks/use-export-agent-log.ts:84:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/form/components/prompt-editor/variable-picker-plugin.tsx:521:6: warning react-hooks(exhaustive-deps): React Hook useMemo has unnecessary dependency: filterStructuredOutput help: Either include it or remove the dependency array.
+src/pages/chunk/parsed-result/add-knowledge/components/knowledge-chunk/components/chunk-result-bar/checkbox-sets.tsx:33:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/utils/file-util.ts:229:41: warning eslint(no-use-before-define): 'sortKeysDeep' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/list-filter-bar/filter-popover.tsx:317:15: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx:26:10: warning eslint(no-unused-vars): Identifier 'LLMFactory' is imported but never used. help: Consider removing this import.
+src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx:39:8: warning eslint(no-unused-vars): Identifier 'VerifyButton' is imported but never used. help: Consider removing this import.
+src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx:57:3: warning eslint(no-unused-vars): Parameter 'handleVerify' is declared but never used. help: Consider removing this parameter.
+src/pages/user-setting/setting-model/instance-card/components/saved-mode-card.tsx:100:9: warning eslint(no-unused-vars): Variable 'startRename' is declared but never used. help: Consider removing this declaration.
+src/pages/user-setting/setting-model/instance-card/components/draft-mode-card.tsx:23:8: warning eslint(no-unused-vars): Identifier 'VerifyButton' is imported but never used. help: Consider removing this import.
+src/pages/user-setting/setting-model/instance-card/components/draft-mode-card.tsx:40:3: warning eslint(no-unused-vars): Parameter 'handleVerify' is declared but never used. help: Consider removing this parameter.
+src/pages/user-setting/data-source/constant/confluence-constant.tsx:63:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/use-agent-history-manager.ts:75:5: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/user-setting/data-source/constant/s3-constant.tsx:92:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/user-setting/data-source/constant/bitbucket-constant.tsx:87:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/form/begin-form/use-watch-change.ts:37:16: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form' help: Either include it or remove the dependency array.
+src/components/next-message-item/group-button.tsx:71:3: warning eslint(no-unused-vars): Parameter 'isShare' is declared but never used. help: Consider removing this parameter.
+src/pages/user-setting/setting-model/instance-card/models-section/hooks.ts:473:57: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'isDraftInstance' help: Either include it or remove the dependency array.
+src/components/next-message-item/index.tsx:165:26: warning react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'isUser' help: Either include it or remove the dependency array.
+src/components/json-edit/index.tsx:50:42: warning react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'onChange', 'defaultExpanded', 'options', 'i18n.language', and 'value' help: Either include it or remove the dependency array.
+src/components/avatar-upload.tsx:230:48: warning react-hooks(exhaustive-deps): React Hook useCallback has missing dependencies: 'handleMouseMove', and 'handleMouseUp' help: Either include it or remove the dependency array.
+src/components/ui/input.tsx:70:16: warning react-hooks(exhaustive-deps): React Hook useMemo has missing dependencies: 'ref', 'showPassword', 'suffix', 'prefix', and 'type' help: Either include it or remove the dependency array.
+src/components/ui/input.tsx:102:9: warning react-hooks(exhaustive-deps): React hook useMemo depends on `handleChange`, which changes every render help: Try memoizing this variable with `useRef` or `useCallback`.
+src/components/file-upload.tsx:519:13: warning react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'onFilesUpload' help: Either include it or remove the dependency array.
+src/components/file-upload.tsx:519:13: warning eslint(no-use-before-define): 'onFilesUpload' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/modal/modal-manage.tsx:29:3: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/skills/validation.ts:337:31: warning eslint(no-use-before-define): 'DEFAULT_IGNORE_PATTERNS' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/pages/agent/form/agent-form/use-watch-change.ts:13:16: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form' help: Either include it or remove the dependency array.
+src/pages/agent/form/agent-form/agent-tools.tsx:58:22: warning react(no-unescaped-entities): `'` can be escaped with &apos; or &lsquo; or &#39; or &rsquo;
+src/pages/user-setting/setting-model/langfuse/use-save-langfuse-configuration.tsx:32:25: warning react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'setLangfuseConfig' help: Either include it or remove the dependency array.
+src/hooks/use-dataset-generate.ts:188:24: warning eslint(no-unused-vars): Parameter '_' is declared but never used. help: Consider removing this parameter.
+src/hooks/use-dataset-generate.ts:198:24: warning eslint(no-unused-vars): Parameter '_' is declared but never used. help: Consider removing this parameter.
+src/pages/agent/form/message-form/use-watch-change.ts:13:16: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form' help: Either include it or remove the dependency array.
+src/hooks/common-hooks.tsx:130:15: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/dataflow-result/hooks.ts:2:8: warning eslint(no-unused-vars): Identifier 'message' is imported but never used. help: Consider removing this import.
+src/pages/dataflow-result/hooks.ts:7:8: warning eslint(no-unused-vars): Identifier 'kbService' is imported but never used. help: Consider removing this import.
+src/pages/dataflow-result/hooks.ts:10:10: warning eslint(no-unused-vars): Identifier 'useMutation' is imported but never used. help: Consider removing this import.
+src/pages/agent/form/categorize-form/use-watch-change.ts:12:16: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form' help: Either include it or remove the dependency array.
+src/pages/agent/form/tool-form/mcp-form/use-watch-change.ts:16:14: warning react-hooks(exhaustive-deps): React Hook useMemo has a missing dependency: 'form' help: Either include it or remove the dependency array.
+src/components/ui/audio-button.tsx:12:10: warning eslint(no-unused-vars): Identifier 'Popover' is imported but never used. help: Consider removing this import.
+src/components/ui/audio-button.tsx:12:19: warning eslint(no-unused-vars): Identifier 'PopoverContent' is imported but never used. help: Consider removing this import.
+src/components/ui/audio-button.tsx:12:35: warning eslint(no-unused-vars): Identifier 'PopoverTrigger' is imported but never used. help: Consider removing this import.
+src/components/ui/audio-button.tsx:170:7: warning eslint(no-unused-vars): Variable 'VoiceInputBox' is declared but never used. help: Consider removing this declaration.
+src/components/ui/audio-button.tsx:227:10: warning eslint(no-unused-vars): Variable 'recordingTime' is declared but never used. help: Consider removing this declaration.
+src/components/ui/audio-button.tsx:228:10: warning eslint(no-unused-vars): Variable 'transcript' is declared but never used. help: Consider removing this declaration.
+src/components/ui/audio-button.tsx:229:10: warning eslint(no-unused-vars): Variable 'popoverOpen' is declared but never used. help: Consider removing this declaration.
+src/pages/dataflow-result/components/rerun-button/index.tsx:18:5: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/dataflow-result/components/chunk-result-bar/checkbox-sets.tsx:18:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/components/originui/password-input.tsx:13:11: warning eslint(no-unused-vars): Variable 'toggleVisibility' is declared but never used. help: Consider removing this declaration.
+src/components/originui/timeline.tsx:254:3: warning eslint(no-unused-vars): Parameter 'lineColor' is declared but never used. help: Consider removing this parameter.
+src/components/originui/timeline.tsx:272:10: warning eslint(no-unused-vars): Variable 'r' is declared but never used. help: Consider removing this declaration.
+src/components/originui/timeline.tsx:272:13: warning eslint(no-unused-vars): Variable 'g' is declared but never used. help: Consider removing this declaration.
+src/components/originui/timeline.tsx:272:16: warning eslint(no-unused-vars): Variable 'b' is declared but never used. help: Consider removing this declaration.
+src/pages/dataflow-result/components/parse-editer/json-parser.tsx:169:21: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx:83:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx:99:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/hooks/__tests__/logic-hooks-use-scroll-to-bottom.test.tsx:105:5: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/form/tool-form/exesql-form/index.tsx:28:35: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/components/ui/tree-view.tsx:153:10: warning eslint(no-use-before-define): 'TreeItem' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:203:18: warning eslint(no-use-before-define): 'TreeNode' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:213:18: warning eslint(no-use-before-define): 'TreeLeaf' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:267:6: warning eslint(no-use-before-define): 'AccordionContent' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:277:7: warning eslint(no-use-before-define): 'AccordionContent' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:303:16: warning eslint(no-use-before-define): 'TreeIcon' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:310:16: warning eslint(no-use-before-define): 'TreeActions' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:310:68: warning eslint(no-use-before-define): 'TreeActions' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:326:10: warning eslint(no-use-before-define): 'AccordionTrigger' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:330:12: warning eslint(no-use-before-define): 'TreeIcon' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:337:12: warning eslint(no-use-before-define): 'TreeActions' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:337:64: warning eslint(no-use-before-define): 'TreeActions' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:338:11: warning eslint(no-use-before-define): 'AccordionTrigger' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:380:10: warning eslint(no-use-before-define): 'TreeIcon' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:386:10: warning eslint(no-use-before-define): 'TreeActions' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/ui/tree-view.tsx:388:11: warning eslint(no-use-before-define): 'TreeActions' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/pages/agent/form/iteration-form/use-watch-form-change.ts:20:16: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form' help: Either include it or remove the dependency array.
+src/pages/agent/form/iteration-form/use-watch-form-change.ts:21:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/dataflow-result/components/parse-editer/hook.ts:15:5: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/components/ui/time-picker.tsx:247:28: warning eslint(no-use-before-define): 'parseTimeInput' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/pages/dataflow-result/components/parse-editer/index.tsx:18:3: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/dataflow-result/parser.tsx:35:5: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/dataflow-result/parser.tsx:50:5: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/hooks/auth-hooks.ts:57:3: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agents/agent-dropdown.tsx:28:3: warning eslint(no-useless-rename): Do not rename import, export, or destructured assignments to the same name help: Use the variable's original name or rename it to a different name
+src/pages/next-search/retrieval-documents/index.tsx:113:5: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/dataset/compilation/dataset-structure-view.tsx:47:5: warning react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'queryClient' help: Either include it or remove the dependency array.
+src/pages/dataset/compilation/skills-left-panel.tsx:27:18: warning eslint(no-unused-vars): Parameter '_selectedSkill' is declared but never used. help: Consider removing this parameter.
+src/pages/memory/memory-message/message-table.tsx:267:23: warning react-hooks(exhaustive-deps): React Hook useMemo has missing dependencies: 'handleClickUpdateMessageState', and 'handleClickMessageContentDialog' help: Either include it or remove the dependency array.
+src/pages/next-chats/hooks/use-send-single-message.ts:96:9: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/memory/memory-message/index.tsx:16:5: warning eslint(no-unused-vars): Variable 'loading' is declared but never used. help: Consider removing this declaration.
+src/hooks/use-send-message.ts:221:15: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/hooks/use-send-message.ts:241:17: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/hooks/use-send-message.ts:245:15: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/hooks/use-send-message.ts:263:13: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/hooks/parser-config-utils.ts:67:5: warning eslint(no-unused-vars): Variable 'auto_keywords' is declared but never used. help: Consider removing this declaration.
+src/hooks/parser-config-utils.ts:68:5: warning eslint(no-unused-vars): Variable 'auto_questions' is declared but never used. help: Consider removing this declaration.
+src/hooks/parser-config-utils.ts:70:5: warning eslint(no-unused-vars): Variable 'delimiter' is declared but never used. help: Consider removing this declaration.
+src/hooks/parser-config-utils.ts:71:5: warning eslint(no-unused-vars): Variable 'html4excel' is declared but never used. help: Consider removing this declaration.
+src/hooks/parser-config-utils.ts:73:5: warning eslint(no-unused-vars): Variable 'tag_kb_ids' is declared but never used. help: Consider removing this declaration.
+src/hooks/parser-config-utils.ts:74:5: warning eslint(no-unused-vars): Variable 'topn_tags' is declared but never used. help: Consider removing this declaration.
+src/hooks/parser-config-utils.ts:75:5: warning eslint(no-unused-vars): Variable 'filename_embd_weight' is declared but never used. help: Consider removing this declaration.
+src/hooks/parser-config-utils.ts:76:5: warning eslint(no-unused-vars): Variable 'task_page_size' is declared but never used. help: Consider removing this declaration.
+src/hooks/parser-config-utils.ts:77:5: warning eslint(no-unused-vars): Variable 'pages' is declared but never used. help: Consider removing this declaration.
+src/components/jsonjoy-builder/lib/schema-inference.ts:220:15: warning eslint(no-unused-vars): Parameter '_' is declared but never used. help: Consider removing this parameter.
+src/components/jsonjoy-builder/lib/schema-inference.ts:221:17: warning eslint(no-unused-vars): Parameter '_' is declared but never used. help: Consider removing this parameter.
+src/pages/next-chats/hooks/use-send-shared-message.ts:48:5: warning eslint(no-useless-rename): Do not rename import, export, or destructured assignments to the same name help: Use the variable's original name or rename it to a different name
+src/pages/next-chats/hooks/use-send-shared-message.ts:113:60: warning react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'data' help: Either include it or remove the dependency array.
+src/components/jsonjoy-builder/lib/schema-editor.ts:48:27: warning eslint(no-unused-vars): Variable '_' is declared but never used. help: Consider removing this declaration.
+src/components/jsonjoy-builder/components/schema-editor/schema-visual-editor.tsx:71:23: warning eslint(no-unused-vars): Variable '_' is declared but never used. help: Consider removing this declaration.
+src/components/jsonjoy-builder/components/schema-editor/schema-visual-editor.tsx:103:21: warning eslint(no-unused-vars): Variable '_' is declared but never used. help: Consider removing this declaration.
+src/pages/admin/roles.tsx:343:41: warning typescript(no-extra-non-null-assertion): extra non-null assertion help: Remove the redundant non-null assertion operator (`!`).
+src/pages/admin/roles.tsx:420:59: warning typescript(no-extra-non-null-assertion): extra non-null assertion help: Remove the redundant non-null assertion operator (`!`).
+src/pages/dataset/setting/components/link-data-source-modal.tsx:36:5: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/admin/service-status.tsx:249:55: warning typescript(no-extra-non-null-assertion): extra non-null assertion help: Remove the redundant non-null assertion operator (`!`).
+src/pages/admin/service-status.tsx:253:58: warning typescript(no-extra-non-null-assertion): extra non-null assertion help: Remove the redundant non-null assertion operator (`!`).
+src/pages/dataset/setting/components/link-data-source.tsx:198:5: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/dataset/setting/components/link-data-source.tsx:203:5: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/dataset/setting/components/added-source-card.tsx:66:19: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/datasets/hooks.ts:28:11: warning eslint(no-useless-rename): Do not rename import, export, or destructured assignments to the same name help: Use the variable's original name or rename it to a different name
+src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx:52:19: warning eslint(no-unused-vars): Variable '_' is declared but never used. help: Consider removing this declaration.
+src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx:52:35: warning eslint(no-unused-vars): Variable '__' is declared but never used. help: Consider removing this declaration.
+src/components/jsonjoy-builder/components/schema-editor/types/string-editor.tsx:89:23: warning eslint(no-unused-vars): Variable '_' is declared but never used. help: Consider removing this declaration.
+src/pages/agent/canvas/node/note-node/use-watch-change.ts:12:16: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form' help: Either include it or remove the dependency array.
+src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx:102:24: warning eslint(no-unused-vars): Variable '_' is declared but never used. help: Consider removing this declaration.
+src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx:108:24: warning eslint(no-unused-vars): Variable '_' is declared but never used. help: Consider removing this declaration.
+src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx:114:33: warning eslint(no-unused-vars): Variable '_' is declared but never used. help: Consider removing this declaration.
+src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx:120:33: warning eslint(no-unused-vars): Variable '_' is declared but never used. help: Consider removing this declaration.
+src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx:126:27: warning eslint(no-unused-vars): Variable '_' is declared but never used. help: Consider removing this declaration.
+src/components/jsonjoy-builder/components/schema-editor/types/number-editor.tsx:132:21: warning eslint(no-unused-vars): Variable '_' is declared but never used. help: Consider removing this declaration.
+src/components/indented-tree/indented-tree.tsx:127:25: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/components/indented-tree/indented-tree.tsx:141:47: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/components/document-preview/ppt-preview.tsx:66:7: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'fetchDocument' help: Either include it or remove the dependency array.
+src/pages/dataset/compilation/hooks/use-create-directory.ts:41:9: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/components/jsonjoy-builder/components/schema-editor/json-schema-editor.tsx:52:44: warning eslint(no-use-before-define): 'handleMouseMove' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/jsonjoy-builder/components/schema-editor/json-schema-editor.tsx:53:42: warning eslint(no-use-before-define): 'handleMouseUp' was used before it was defined. help: Move the declaration before any references to it, or remove the reference if it is not needed.
+src/components/document-preview/image-preview.tsx:55:7: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'fetchImage' help: Either include it or remove the dependency array.
+src/components/document-preview/txt-preview.tsx:78:7: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'fetchTxt' help: Either include it or remove the dependency array.
+src/lib/editor/plugins/floating-selection-toolbar.tsx:97:9: warning eslint(no-unused-vars): Variable 'toggleLink' is declared but never used. help: Consider removing this declaration.
+src/pages/agent/form/searxng-form/index.tsx:35:11: warning eslint(no-unused-vars): Variable 't' is declared but never used. help: Consider removing this declaration.
+src/pages/dataset/dataset-overview/dataset-filter.tsx:30:8: warning eslint(no-unused-vars): Variable 'rest' is declared but never used. help: Consider removing this declaration.
+src/pages/login-next/card.tsx:14:5: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/login-next/index.tsx:355:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/chat/use-send-agent-message.ts:406:9: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/form/user-fill-up-form/use-watch-change.ts:22:16: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form' help: Either include it or remove the dependency array.
+src/pages/dataset/components/metedata/hooks/use-manage-modal.ts:378:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/hooks.tsx:86:9: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/admin/task-executor-detail.tsx:82:9: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/canvas/context-menu/index.tsx:79:13: warning eslint(no-unused-vars): Variable 'pane' is declared but never used. help: Consider removing this declaration.
+src/pages/dataset/dataset/reparse-dialog.tsx:68:19: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/form/string-transform-form/use-watch-form-change.ts:13:16: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form' help: Either include it or remove the dependency array.
+src/pages/admin/login.tsx:84:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/form/tavily-form/use-watch-change.ts:13:16: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'form' help: Either include it or remove the dependency array.
+src/pages/agent/hooks/use-watch-form-change.ts:30:16: warning react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'form', 'replaceNodeForm', and 'enableReplacement' help: Either include it or remove the dependency array.
+src/pages/dataset/dataset/index.tsx:80:5: warning react-hooks(exhaustive-deps): React Hook useEffect has a missing dependency: 'checkValue' help: Either include it or remove the dependency array.
+src/pages/agent/gobal-variable-sheet/index.tsx:14:10: warning eslint(no-unused-vars): Identifier 't' is imported but never used. help: Consider removing this import.
+src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx:92:20: warning react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'validateKeys' help: Either include it or remove the dependency array.
+src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx:101:11: warning react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'validateKeys' help: Either include it or remove the dependency array.
+src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx:112:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx:119:11: warning react-hooks(exhaustive-deps): React Hook useCallback has a missing dependency: 'validateKeys' help: Either include it or remove the dependency array.
+src/pages/agent/gobal-variable-sheet/hooks/use-object-fields.tsx:127:7: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/gobal-variable-sheet/component/add-variable-modal.tsx:54:9: warning react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'handleFieldUpdate', 'handleCustomValidate', 'handleRender', 'setDefaultValues', and 'handleCustomSchema' help: Either include it or remove the dependency array.
+src/pages/agent/gobal-variable-sheet/component/add-variable-modal.tsx:109:11: warning eslint(no-console): Unexpected console statement. help: Supported methods are: warn, error.
+src/pages/agent/debug-content/index.tsx:266:5: warning react-hooks(exhaustive-deps): React Hook useCallback has unnecessary dependency: formSchemaValues help: Either include it or remove the dependency array.

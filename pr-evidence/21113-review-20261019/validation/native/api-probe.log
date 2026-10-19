@@ -1,0 +1,2 @@
+Real ORT 1.29.0; GetApi(29), dlopen(NULL)/dlsym, CreateEnv/ReleaseEnv OK.
+Standard OrtApi prefix tested only; the three appended custom initializer slots are not supported or called (offset 3400).

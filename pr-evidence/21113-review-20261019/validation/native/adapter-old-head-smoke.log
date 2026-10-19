@@ -1,0 +1,54 @@
+[0;32m=== RAGFlow Go Server Build Script ===[0m
+
+[1;33m>>> Checking go dependencies[0m
+✓ Required tools are available
+
+[1;33m>>> Checking ONNX Runtime version consistency[0m
+[0;32m✓ ONNX Runtime native version consistent: 1.29.0[0m
+
+[1;33m>>> Running Go tests[0m
+check if the cl100k_base BPE table exists at <WORKSPACE>/repos/ragflow-21113/ragflow_deps/cl100k_base.tiktoken
+  cl100k_base.tiktoken → <WORKSPACE>/repos/ragflow-21113/ragflow_deps/cl100k_base.tiktoken (already present)
+
+[1;33m>>> Checking office_oxide native library[0m
+check if dep office_oxide exists in <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/office_oxide or /opt/ragflow-native-libs/office_oxide
+  office_oxide → <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/office_oxide (user cache)
+✓ office_oxide v0.1.12 native library found at <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/office_oxide
+check if dep pdfium-static exists in <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/pdfium-static or /opt/ragflow-native-libs/pdfium-static
+  pdfium-static → <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/pdfium-static (user cache)
+  pdfium (static) → <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/pdfium-static
+check if dep pdf_oxide exists in <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/pdf_oxide or /opt/ragflow-native-libs/pdf_oxide
+  pdf_oxide → <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/pdf_oxide (user cache)
+  pdf_oxide (static) → <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/pdf_oxide
+check if dep onnxruntime exists in <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/onnxruntime or /opt/ragflow-native-libs/onnxruntime
+  onnxruntime → <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/onnxruntime (user cache)
+  (no local onnxruntime-v1.29.0-osx-arm64.zip; skipping sha256 check — CI seed assumed authoritative)
+✓ onnxruntime v1.29.0 static lib verified under <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/onnxruntime/static_lib
+  onnxruntime (static) → <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/onnxruntime/static_lib
+CGO_CFLAGS:   -I<WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/office_oxide/include/office_oxide_c
+CGO_LDFLAGS:  <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a <WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/pdf_oxide/lib/darwin_arm64/v0.3.73/libpdf_oxide.a -Wl,-export_dynamic -Wl,-force_load,<WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/onnxruntime/static_lib/v1.29.0-b1da7e98dc26fc49/libonnxruntime.a -lc++                 -framework CoreGraphics -framework CoreFoundation                 -framework Security -framework SystemConfiguration                 -liconv -lresolv -lc++
+{"ImportPath":"ragflow/internal/ingestion/component.test","Action":"build-output","Output":"# ragflow/internal/ingestion/component.test\nld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lm', '-lpthread', '-lresolv', '<WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '<WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'\n"}
+{"Time":"2026-10-19T17:11:02.250617+08:00","Action":"start","Package":"ragflow/internal/ingestion/component"}
+{"Time":"2026-10-19T17:11:03.291543+08:00","Action":"run","Package":"ragflow/internal/ingestion/component","Test":"TestImageOCRSelectedTenantModel"}
+{"Time":"2026-10-19T17:11:03.292811+08:00","Action":"output","Package":"ragflow/internal/ingestion/component","Test":"TestImageOCRSelectedTenantModel","Output":"=== RUN   TestImageOCRSelectedTenantModel\n","OutputType":"frame"}
+{"Time":"2026-10-19T17:11:03.292852+08:00","Action":"run","Package":"ragflow/internal/ingestion/component","Test":"TestImageOCRSelectedTenantModel/PaddleOCR.local"}
+{"Time":"2026-10-19T17:11:03.292866+08:00","Action":"output","Package":"ragflow/internal/ingestion/component","Test":"TestImageOCRSelectedTenantModel/PaddleOCR.local","Output":"=== RUN   TestImageOCRSelectedTenantModel/PaddleOCR.local\n","OutputType":"frame"}
+{"Time":"2026-10-19T17:11:03.313885+08:00","Action":"output","Package":"ragflow/internal/ingestion/component","Test":"TestImageOCRSelectedTenantModel/PaddleOCR.local","Output":"--- PASS: TestImageOCRSelectedTenantModel/PaddleOCR.local (0.02s)\n","OutputType":"frame"}
+{"Time":"2026-10-19T17:11:03.313908+08:00","Action":"pass","Package":"ragflow/internal/ingestion/component","Test":"TestImageOCRSelectedTenantModel/PaddleOCR.local","Elapsed":0.02}
+{"Time":"2026-10-19T17:11:03.314086+08:00","Action":"run","Package":"ragflow/internal/ingestion/component","Test":"TestImageOCRSelectedTenantModel/PaddleOCR"}
+{"Time":"2026-10-19T17:11:03.314089+08:00","Action":"output","Package":"ragflow/internal/ingestion/component","Test":"TestImageOCRSelectedTenantModel/PaddleOCR","Output":"=== RUN   TestImageOCRSelectedTenantModel/PaddleOCR\n","OutputType":"frame"}
+{"Time":"2026-10-19T17:11:03.315843+08:00","Action":"output","Package":"ragflow/internal/ingestion/component","Test":"TestImageOCRSelectedTenantModel/PaddleOCR","Output":"--- PASS: TestImageOCRSelectedTenantModel/PaddleOCR (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-19T17:11:03.315847+08:00","Action":"pass","Package":"ragflow/internal/ingestion/component","Test":"TestImageOCRSelectedTenantModel/PaddleOCR","Elapsed":0}
+{"Time":"2026-10-19T17:11:03.315849+08:00","Action":"output","Package":"ragflow/internal/ingestion/component","Test":"TestImageOCRSelectedTenantModel","Output":"--- PASS: TestImageOCRSelectedTenantModel (0.02s)\n","OutputType":"frame"}
+{"Time":"2026-10-19T17:11:03.315859+08:00","Action":"pass","Package":"ragflow/internal/ingestion/component","Test":"TestImageOCRSelectedTenantModel","Elapsed":0.02}
+{"Time":"2026-10-19T17:11:03.315871+08:00","Action":"output","Package":"ragflow/internal/ingestion/component","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-10-19T17:11:03.316939+08:00","Action":"output","Package":"ragflow/internal/ingestion/component","Output":"ok  \tragflow/internal/ingestion/component\t1.066s\n"}
+{"Time":"2026-10-19T17:11:03.316945+08:00","Action":"pass","Package":"ragflow/internal/ingestion/component","Elapsed":1.066}
+
+[1;33m>>> Running native unit tests[0m
+# ragflow/internal/deepdoc/native/croptest.test
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '<WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '<WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+# ragflow/internal/deepdoc/native.test
+ld: warning: ignoring duplicate libraries: '-lc++', '-liconv', '-lresolv', '<WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a', '<WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a'
+ok  	ragflow/internal/deepdoc/native	0.880s
+ok  	ragflow/internal/deepdoc/native/croptest	0.417s

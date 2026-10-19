@@ -1,0 +1,484 @@
+{
+  "finalizedAt": "2026-10-19T09:21:28.498Z",
+  "mode": "TEST-only official shared ORT + PDF_oxide; office/PDFium/tokenizer/PCRE remain static",
+  "base": "f66e8362850fd47764d45d8cebfdb3c21ea6fcd2",
+  "paths": {
+    "evidence": "<WORKSPACE>/evidence/ragflow-21113-static-environment",
+    "attempt": "<WORKSPACE>/evidence/ragflow-21113-static-environment/pdf-shared-adapter/attempt2",
+    "firstAttempt": "<WORKSPACE>/evidence/ragflow-21113-static-environment/pdf-shared-adapter/attempt1"
+  },
+  "backendSourcesUnchanged": true,
+  "adapterUnchanged": {
+    "compiler": true,
+    "config": true,
+    "sharedLibraries": {
+      "ort": true,
+      "pdfOriginal": true,
+      "pdfRelocated": true
+    }
+  },
+  "fixture": {
+    "at": "2026-10-19T09:15:54.507Z",
+    "source": "f66e8362850fd47764d45d8cebfdb3c21ea6fcd2:test/benchmark/test_docs/Doc1.pdf",
+    "relative": "test/benchmark/test_docs/Doc1.pdf",
+    "trackedSparseExcludedBefore": "S test/benchmark/test_docs/Doc1.pdf",
+    "materializedOnly": true,
+    "baselineBlob": "2bc4232fb31c578a8e0c25cb18d32d3139b63577",
+    "calculatedBlob": "2bc4232fb31c578a8e0c25cb18d32d3139b63577",
+    "bytes": 2654,
+    "sha256": "e9642829132ab617b158271fd841abe83d2d4a948ee01d97f3a2fc14b836570f",
+    "network": false,
+    "noSourceOrTestLogicChanges": true,
+    "reason": "Six genuine full-suite tests failed solely because this tracked reference PDF was excluded by sparse checkout. Restore exactly the existing local Git object, not a generated or substituted fixture.",
+    "cleanup": "This is original tracked source fixture content; preserve as source. Do not delete under disposable dependency cleanup.",
+    "unchangedAtEnd": true
+  },
+  "sources": [
+    {
+      "path": "internal/ingestion/component/dispatch_model.go",
+      "expected": "0c2e60df5c479c127e17e66e95104945826fd1b404be5b20fffa732839359503",
+      "actual": "0c2e60df5c479c127e17e66e95104945826fd1b404be5b20fffa732839359503",
+      "unchanged": true
+    },
+    {
+      "path": "internal/ingestion/component/image_ocr.go",
+      "expected": "1582aec995cc43d25993f9bdcbcd924fccb579e985f99d446c05f060ebc181f5",
+      "actual": "1582aec995cc43d25993f9bdcbcd924fccb579e985f99d446c05f060ebc181f5",
+      "unchanged": true
+    },
+    {
+      "path": "internal/ingestion/component/pdf_vision_dispatch.go",
+      "expected": "862aaf17607a1cd6990184c750642e607e11f8519e006b4a1a0daa5476231b66",
+      "actual": "862aaf17607a1cd6990184c750642e607e11f8519e006b4a1a0daa5476231b66",
+      "unchanged": true
+    },
+    {
+      "path": "internal/ingestion/component/extractor.go",
+      "expected": "216657b992719310e9928b727a11e9df3b274ccaa8b67353324082c0fcf15e03",
+      "actual": "216657b992719310e9928b727a11e9df3b274ccaa8b67353324082c0fcf15e03",
+      "unchanged": true
+    },
+    {
+      "path": "internal/ingestion/component/dispatch_model_test.go",
+      "expected": "c1c40c40584b7ed6f5ceb78183658ee6b2cd81cc1a2eadfff2cef88ee87a9642",
+      "actual": "c1c40c40584b7ed6f5ceb78183658ee6b2cd81cc1a2eadfff2cef88ee87a9642",
+      "unchanged": true
+    },
+    {
+      "path": "internal/ingestion/component/image_ocr_test.go",
+      "expected": "afea7379ccb6dadb033dca6c9cb3ef9fa2c11099e0c55b880cfad30e093bbf24",
+      "actual": "afea7379ccb6dadb033dca6c9cb3ef9fa2c11099e0c55b880cfad30e093bbf24",
+      "unchanged": true
+    },
+    {
+      "path": "internal/ingestion/component/image_ocr_resolution_test.go",
+      "expected": "737ba35dce4bb96e4ec374c7f8dcd508ede642e9ea96f3e302e17b3fa28cf4f5",
+      "actual": "737ba35dce4bb96e4ec374c7f8dcd508ede642e9ea96f3e302e17b3fa28cf4f5",
+      "unchanged": true
+    },
+    {
+      "path": "build.sh",
+      "expected": "ce422df95e92705f0829702599c9c240e5957da5b70b39ffc9353652b8a2efb5",
+      "actual": "ce422df95e92705f0829702599c9c240e5957da5b70b39ffc9353652b8a2efb5",
+      "unchanged": true
+    },
+    {
+      "path": "internal/binding/cpp/CMakeLists.txt",
+      "expected": "3c93ddec6118aa95904dd995b233014be59786ff369591b39491ba024d5675ad",
+      "actual": "3c93ddec6118aa95904dd995b233014be59786ff369591b39491ba024d5675ad",
+      "unchanged": true
+    },
+    {
+      "path": "go.mod",
+      "expected": "be436e9f362848b611c4df0ff8866191bad27993d60f9011d6fce70df49629a5",
+      "actual": "be436e9f362848b611c4df0ff8866191bad27993d60f9011d6fce70df49629a5",
+      "unchanged": true
+    },
+    {
+      "path": "go.sum",
+      "expected": "daeb317bfcfba03000d416253f685db1716b4155776bc49e0d8a08b412fb982f",
+      "actual": "daeb317bfcfba03000d416253f685db1716b4155776bc49e0d8a08b412fb982f",
+      "unchanged": true
+    }
+  ],
+  "phases": [
+    {
+      "phase": "adapter-old-head-smoke",
+      "started": "2026-10-19T09:10:54.231Z",
+      "finished": "2026-10-19T09:11:04.798Z",
+      "exitCode": 0,
+      "testsRun": 3,
+      "topLevelTestsRun": 1,
+      "testsPassed": 3,
+      "testsFailed": 0,
+      "testsSkipped": 0,
+      "packagesPassed": [
+        "ragflow/internal/ingestion/component"
+      ],
+      "packagesSkipped": [],
+      "packagesFailed": [],
+      "raceReported": null,
+      "log": "<WORKSPACE>/evidence/ragflow-21113-static-environment/pdf-shared-adapter/attempt2/adapter-old-head-smoke.log"
+    },
+    {
+      "phase": "adapter-old-head-new-tests-red",
+      "started": "2026-10-19T09:11:04.800Z",
+      "finished": "2026-10-19T09:11:08.761Z",
+      "exitCode": 1,
+      "testsRun": 24,
+      "topLevelTestsRun": 4,
+      "testsPassed": 0,
+      "testsFailed": 24,
+      "testsSkipped": 0,
+      "packagesPassed": [],
+      "packagesSkipped": [],
+      "packagesFailed": [
+        "ragflow/internal/ingestion/component"
+      ],
+      "raceReported": null,
+      "log": "<WORKSPACE>/evidence/ragflow-21113-static-environment/pdf-shared-adapter/attempt2/adapter-old-head-new-tests-red.log"
+    },
+    {
+      "phase": "adapter-current-focused-green",
+      "started": "2026-10-19T09:11:08.763Z",
+      "finished": "2026-10-19T09:11:14.254Z",
+      "exitCode": 0,
+      "testsRun": 85,
+      "topLevelTestsRun": 25,
+      "testsPassed": 85,
+      "testsFailed": 0,
+      "testsSkipped": 0,
+      "packagesPassed": [
+        "ragflow/internal/ingestion/component"
+      ],
+      "packagesSkipped": [],
+      "packagesFailed": [],
+      "raceReported": null,
+      "log": "<WORKSPACE>/evidence/ragflow-21113-static-environment/pdf-shared-adapter/attempt2/adapter-current-focused-green.log"
+    },
+    {
+      "phase": "adapter-current-focused-race",
+      "started": "2026-10-19T09:15:15.266Z",
+      "finished": "2026-10-19T09:20:39.452Z",
+      "exitCode": 0,
+      "testsRun": 171,
+      "topLevelTestsRun": 89,
+      "testsPassed": 171,
+      "testsFailed": 0,
+      "testsSkipped": 0,
+      "packagesPassed": [
+        "ragflow/internal/agent/component",
+        "ragflow/internal/agent/tool",
+        "ragflow/internal/entity/models",
+        "ragflow/internal/handler",
+        "ragflow/internal/ingestion/component",
+        "ragflow/internal/ingestion/component/chunker",
+        "ragflow/internal/ingestion/pipeline",
+        "ragflow/internal/parser/parser",
+        "ragflow/internal/router",
+        "ragflow/internal/service",
+        "ragflow/internal/service/document",
+        "ragflow/internal/service/file",
+        "ragflow/internal/storage",
+        "ragflow/internal/utility"
+      ],
+      "packagesSkipped": [],
+      "packagesFailed": [],
+      "raceReported": false,
+      "log": "<WORKSPACE>/evidence/ragflow-21113-static-environment/pdf-shared-adapter/attempt2/adapter-current-focused-race.log"
+    },
+    {
+      "phase": "adapter-current-full-related",
+      "started": "2026-10-19T09:17:18.311Z",
+      "finished": "2026-10-19T09:19:17.474Z",
+      "exitCode": 0,
+      "testsRun": 6878,
+      "topLevelTestsRun": 4584,
+      "testsPassed": 6873,
+      "testsFailed": 0,
+      "testsSkipped": 5,
+      "packagesPassed": [
+        "ragflow/internal/ingestion/chunkcache",
+        "ragflow/internal/ingestion/compilation/extractor",
+        "ragflow/internal/ingestion/component/globals",
+        "ragflow/internal/ingestion/component/chunker",
+        "ragflow/internal/ingestion/component/knowledge_compiler",
+        "ragflow/internal/ingestion/component/knowledge_compiler/common",
+        "ragflow/internal/ingestion/component/knowledge_compiler/golden",
+        "ragflow/internal/ingestion/component/knowledge_compiler/mindmap",
+        "ragflow/internal/ingestion/component/knowledge_compiler/structure",
+        "ragflow/internal/ingestion/component/knowledge_compiler/wiki",
+        "ragflow/internal/ingestion/component/progress",
+        "ragflow/internal/ingestion/component/schema",
+        "ragflow/internal/ingestion/component",
+        "ragflow/internal/ingestion/component/knowledge_compiler/tree",
+        "ragflow/internal/ingestion/knowledge_compile",
+        "ragflow/internal/ingestion/pipeline",
+        "ragflow/internal/ingestion/registry",
+        "ragflow/internal/ingestion/task/indexdoc",
+        "ragflow/internal/ingestion/service",
+        "ragflow/internal/ingestion/task/tool",
+        "ragflow/internal/parser/chunk",
+        "ragflow/internal/ingestion/task",
+        "ragflow/internal/parser/parser",
+        "ragflow/internal/parser/tableutil",
+        "ragflow/internal/dao",
+        "ragflow/internal/entity/models",
+        "ragflow/internal/service/dataset",
+        "ragflow/internal/service",
+        "ragflow/internal/service/document",
+        "ragflow/cmd"
+      ],
+      "packagesSkipped": [
+        "ragflow/internal/ingestion/testutil",
+        "ragflow/internal/ingestion/wire"
+      ],
+      "packagesFailed": [],
+      "raceReported": false,
+      "log": "<WORKSPACE>/evidence/ragflow-21113-static-environment/pdf-shared-adapter/attempt2/adapter-current-full-related-after-fixture.log"
+    }
+  ],
+  "behaviorRed": {
+    "assertionFailures": [
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/active_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/wrong_foreign_model_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/disabled_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/mismatched_foreign_instance_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/missing_foreign_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs/unknown_foreign_driver"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestResolveModelConfigInaccessibleIDs"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR.local"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce/PaddleOCR"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRSelectedModelLookupOnce"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/active_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_model"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/wrong_foreign_model_type"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/disabled_foreign_instance"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/mismatched_foreign_instance_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/missing_foreign_provider"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState/unknown_foreign_driver"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=false"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning/remote_failure=true"
+      },
+      {
+        "Package": "ragflow/internal/ingestion/component",
+        "Test": "TestImageOCRCloudDefaultEndpointWarning"
+      }
+    ],
+    "compileLinkFailure": false,
+    "fourTopLevelRegressionsFail": true
+  },
+  "fullCoverage": {
+    "requestedPackages": [
+      "ragflow/internal/ingestion/chunkcache",
+      "ragflow/internal/ingestion/compilation/extractor",
+      "ragflow/internal/ingestion/component",
+      "ragflow/internal/ingestion/component/chunker",
+      "ragflow/internal/ingestion/component/globals",
+      "ragflow/internal/ingestion/component/knowledge_compiler",
+      "ragflow/internal/ingestion/component/knowledge_compiler/common",
+      "ragflow/internal/ingestion/component/knowledge_compiler/golden",
+      "ragflow/internal/ingestion/component/knowledge_compiler/mindmap",
+      "ragflow/internal/ingestion/component/knowledge_compiler/structure",
+      "ragflow/internal/ingestion/component/knowledge_compiler/tree",
+      "ragflow/internal/ingestion/component/knowledge_compiler/wiki",
+      "ragflow/internal/ingestion/component/progress",
+      "ragflow/internal/ingestion/component/schema",
+      "ragflow/internal/ingestion/knowledge_compile",
+      "ragflow/internal/ingestion/pipeline",
+      "ragflow/internal/ingestion/registry",
+      "ragflow/internal/ingestion/service",
+      "ragflow/internal/ingestion/task",
+      "ragflow/internal/ingestion/task/indexdoc",
+      "ragflow/internal/ingestion/task/tool",
+      "ragflow/internal/ingestion/testutil",
+      "ragflow/internal/ingestion/wire",
+      "ragflow/internal/entity/models",
+      "ragflow/internal/parser/chunk",
+      "ragflow/internal/parser/parser",
+      "ragflow/internal/parser/tableutil",
+      "ragflow/internal/dao",
+      "ragflow/internal/service",
+      "ragflow/internal/service/dataset",
+      "ragflow/internal/service/document",
+      "ragflow/cmd"
+    ],
+    "requestedPackageCount": 32,
+    "passed": [
+      "ragflow/internal/ingestion/chunkcache",
+      "ragflow/internal/ingestion/compilation/extractor",
+      "ragflow/internal/ingestion/component/globals",
+      "ragflow/internal/ingestion/component/chunker",
+      "ragflow/internal/ingestion/component/knowledge_compiler",
+      "ragflow/internal/ingestion/component/knowledge_compiler/common",
+      "ragflow/internal/ingestion/component/knowledge_compiler/golden",
+      "ragflow/internal/ingestion/component/knowledge_compiler/mindmap",
+      "ragflow/internal/ingestion/component/knowledge_compiler/structure",
+      "ragflow/internal/ingestion/component/knowledge_compiler/wiki",
+      "ragflow/internal/ingestion/component/progress",
+      "ragflow/internal/ingestion/component/schema",
+      "ragflow/internal/ingestion/component",
+      "ragflow/internal/ingestion/component/knowledge_compiler/tree",
+      "ragflow/internal/ingestion/knowledge_compile",
+      "ragflow/internal/ingestion/pipeline",
+      "ragflow/internal/ingestion/registry",
+      "ragflow/internal/ingestion/task/indexdoc",
+      "ragflow/internal/ingestion/service",
+      "ragflow/internal/ingestion/task/tool",
+      "ragflow/internal/parser/chunk",
+      "ragflow/internal/ingestion/task",
+      "ragflow/internal/parser/parser",
+      "ragflow/internal/parser/tableutil",
+      "ragflow/internal/dao",
+      "ragflow/internal/entity/models",
+      "ragflow/internal/service/dataset",
+      "ragflow/internal/service",
+      "ragflow/internal/service/document",
+      "ragflow/cmd"
+    ],
+    "skippedNoTests": [
+      "ragflow/internal/ingestion/testutil",
+      "ragflow/internal/ingestion/wire"
+    ],
+    "failed": [],
+    "observed": [
+      "ragflow/internal/ingestion/chunkcache",
+      "ragflow/internal/ingestion/compilation/extractor",
+      "ragflow/internal/ingestion/component/globals",
+      "ragflow/internal/ingestion/component/chunker",
+      "ragflow/internal/ingestion/component/knowledge_compiler",
+      "ragflow/internal/ingestion/component/knowledge_compiler/common",
+      "ragflow/internal/ingestion/component/knowledge_compiler/golden",
+      "ragflow/internal/ingestion/component/knowledge_compiler/mindmap",
+      "ragflow/internal/ingestion/component/knowledge_compiler/structure",
+      "ragflow/internal/ingestion/component/knowledge_compiler/wiki",
+      "ragflow/internal/ingestion/component/progress",
+      "ragflow/internal/ingestion/component/schema",
+      "ragflow/internal/ingestion/component",
+      "ragflow/internal/ingestion/component/knowledge_compiler/tree",
+      "ragflow/internal/ingestion/knowledge_compile",
+      "ragflow/internal/ingestion/pipeline",
+      "ragflow/internal/ingestion/registry",
+      "ragflow/internal/ingestion/task/indexdoc",
+      "ragflow/internal/ingestion/service",
+      "ragflow/internal/ingestion/task/tool",
+      "ragflow/internal/parser/chunk",
+      "ragflow/internal/ingestion/task",
+      "ragflow/internal/parser/parser",
+      "ragflow/internal/parser/tableutil",
+      "ragflow/internal/dao",
+      "ragflow/internal/entity/models",
+      "ragflow/internal/service/dataset",
+      "ragflow/internal/service",
+      "ragflow/internal/service/document",
+      "ragflow/cmd",
+      "ragflow/internal/ingestion/testutil",
+      "ragflow/internal/ingestion/wire"
+    ],
+    "allRequestedPackagesObserved": true
+  },
+  "requiredRaceTests": [
+    {
+      "Test": "TestResolveModelConfigChainedDBStatementIsolationFixedOnly",
+      "ran": true,
+      "passed": true
+    },
+    {
+      "Test": "TestResolveModelConfigInaccessibleIDs",
+      "ran": true,
+      "passed": true
+    },
+    {
+      "Test": "TestPaddleOCRUploadFilename",
+      "ran": true,
+      "passed": true
+    },
+    {
+      "Test": "TestImageOCRCloudDefaultEndpointWarning",
+      "ran": true,
+      "passed": true
+    }
+  ],
+  "boundaries": [
+    "Unmodified build.sh --test with a transparent TEST-only real ORT 1.29.0/PDF_oxide 0.3.73 shared-library compiler/link adapter.",
+    "office_oxide 0.1.12/PDFium/tokenizer/PCRE2 remain real static archives. No fake archives/stubs, duplicate-symbol suppression or undefined-symbol lookup.",
+    "The PDF shared asset is hash-pinned to the author's exact release. An isolated copy's author-CI install-name was changed and ad-hoc re-signed; original and relocated hashes are preserved.",
+    "Original static baseline and ORT-only adapter link failures executed zero tests. Their complete evidence and the first true green-attempt logger panic remain preserved.",
+    "No fetch_testdata: appended native TestMain returns without m.Run. No native runtime/model inference, custom ORT initializer slots, integration/e2e/manual tier or production/static/server build success is claimed.",
+    "Counts are test and subtest events; top-level counts are provided separately. No-test packages are not mislabeled as executed tests.",
+    "No repository source/test edit, commit, push, GitHub write, model download or global install/configuration was performed by this validation."
+  ],
+  "requestedValidationPassed": true
+}

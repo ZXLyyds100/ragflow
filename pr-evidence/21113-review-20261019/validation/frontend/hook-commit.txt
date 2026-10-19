@@ -1,0 +1,59 @@
+Normal pre-commit on all scoped staged files:
+
+[38;2;56;56;56m╭──────────────────────────────────────╮[m
+[38;2;56;56;56m│[m lefthook  v2.2.2   hook:  [1mpre-commit[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰──────────────────────────────────────╯[m
+│  ruff (skip) no files for inspection
+│  ruff-format (skip) no files for inspection
+┃  gofmt ❯ 
+
+┃  check-yaml ❯ 
+
+┃  mixed-line-ending ❯ 
+
+┃  check-merge-conflict ❯ 
+
+┃  end-of-file-fixer ❯ 
+
+┃  trailing-whitespace ❯ 
+
+┃  check-json ❯ 
+
+┃  check-symlinks ❯ 
+
+┃  check-case-conflict ❯ 
+
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.24 seconds)
+✓ gofmt (0.05 seconds)
+✓ check-yaml (0.20 seconds)
+✓ mixed-line-ending (0.21 seconds)
+✓ check-merge-conflict (0.21 seconds)
+✓ end-of-file-fixer (0.21 seconds)
+✓ trailing-whitespace (0.22 seconds)
+✓ check-json (0.22 seconds)
+✓ check-symlinks (0.22 seconds)
+✓ check-case-conflict (0.23 seconds)
+
+
+Then an unpublished metadata-only amend set the verified GitHub account's public no-reply identity, avoiding the isolated HOME's machine-derived identity. Source tree unchanged: 2ca2ed25ada7f81880f46d553474a7ab9a0f1a75.
+
+[38;2;56;56;56m╭──────────────────────────────────────╮[m
+[38;2;56;56;56m│[m lefthook  v2.2.2   hook:  [1mpre-commit[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰──────────────────────────────────────╯[m
+│  check-symlinks (skip) no matching staged files
+│  ruff (skip) no files for inspection
+│  ruff-format (skip) no files for inspection
+│  mixed-line-ending (skip) no matching staged files
+│  gofmt (skip) no files for inspection
+│  trailing-whitespace (skip) no matching staged files
+│  end-of-file-fixer (skip) no matching staged files
+│  check-case-conflict (skip) no matching staged files
+│  check-merge-conflict (skip) no matching staged files
+│  check-json (skip) no matching staged files
+│  check-yaml (skip) no matching staged files
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.00 seconds)
+[feat/image-paddleocr-selection db01fba] fix(parser): address image OCR model selection review
+ 12 files changed, 837 insertions(+), 74 deletions(-)
+ create mode 100644 internal/ingestion/component/image_ocr_resolution_test.go

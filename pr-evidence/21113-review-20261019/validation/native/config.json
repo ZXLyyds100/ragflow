@@ -1,0 +1,153 @@
+{
+  "testOnly": true,
+  "metadataURL": "https://pypi.org/pypi/onnxruntime/1.29.0/json",
+  "filename": "onnxruntime-1.29.0-cp312-cp312-macosx_14_0_arm64.whl",
+  "officialAsset": {
+    "comment_text": null,
+    "core-metadata": {
+      "sha256": "513d45ca74cf6318c91ab9944e3d43d39188e409f0c65e8e15c121e3f08db1e2"
+    },
+    "digests": {
+      "blake2b_256": "d480381c1e9efed9cc32d00aa7cab0547dc84116cec906c3ffe3613686d6963a",
+      "md5": "72f060731a622f7a8ea207dc09cac7a7",
+      "sha256": "3a3814c041251d6a77fdf513fb282056538ee826d2f1178a0df3c549d3fff6ba"
+    },
+    "downloads": -1,
+    "filename": "onnxruntime-1.29.0-cp312-cp312-macosx_14_0_arm64.whl",
+    "has_sig": false,
+    "md5_digest": "72f060731a622f7a8ea207dc09cac7a7",
+    "packagetype": "bdist_wheel",
+    "python_version": "py3",
+    "requires_python": ">=3.11",
+    "size": 21430049,
+    "upload_time": "2026-08-17T22:53:48",
+    "upload_time_iso_8601": "2026-08-17T22:53:48.286725Z",
+    "url": "https://files.pythonhosted.org/packages/d4/80/381c1e9efed9cc32d00aa7cab0547dc84116cec906c3ffe3613686d6963a/onnxruntime-1.29.0-cp312-cp312-macosx_14_0_arm64.whl",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "wheel": {
+    "path": "<WORKSPACE>/work/20261019-1557/downloads/onnxruntime-1.29.0-cp312-cp312-macosx_14_0_arm64.whl",
+    "sha256": "3a3814c041251d6a77fdf513fb282056538ee826d2f1178a0df3c549d3fff6ba",
+    "size": 21430049
+  },
+  "dylib": {
+    "path": "<WORKSPACE>/work/20261019-1557/tools/ort-shared-test-1.29.0-3a3814c041251d6a/libonnxruntime.1.29.0.dylib",
+    "sha256": "8ab8982e8fc0a3d5121bf95404dba7a15d70b7df49a8bab1ba481ff961d93dc8",
+    "size": 33332888,
+    "wheelEntry": "onnxruntime/capi/libonnxruntime.1.29.0.dylib",
+    "recordVerified": true
+  },
+  "runtimeAlias": {
+    "path": "<WORKSPACE>/work/20261019-1557/tools/ort-shared-test-1.29.0-3a3814c041251d6a/libonnxruntime.1.dylib",
+    "target": "libonnxruntime.1.29.0.dylib",
+    "reason": "Unmodified dylib's own @rpath install name; symlink to the real extracted dylib"
+  },
+  "removedArchive": "<WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/onnxruntime/static_lib/v1.29.0-b1da7e98dc26fc49/libonnxruntime.a",
+  "compiler": "/usr/bin/clang",
+  "flagsAdded": [
+    "-Wl,-needed_library,<WORKSPACE>/work/20261019-1557/tools/ort-shared-test-1.29.0-3a3814c041251d6a/libonnxruntime.1.29.0.dylib",
+    "-Wl,-rpath,<WORKSPACE>/work/20261019-1557/tools/ort-shared-test-1.29.0-3a3814c041251d6a"
+  ],
+  "flagsNotAdded": [
+    "-framework Foundation"
+  ],
+  "inspection": {
+    "architecture": "Non-fat file: <WORKSPACE>/work/20261019-1557/tools/ort-shared-test-1.29.0-3a3814c041251d6a/libonnxruntime.1.29.0.dylib is architecture: arm64",
+    "dependencies": "<WORKSPACE>/work/20261019-1557/tools/ort-shared-test-1.29.0-3a3814c041251d6a/libonnxruntime.1.29.0.dylib:\n\t@rpath/libonnxruntime.1.dylib (compatibility version 1.0.0, current version 1.29.0)\n\t/System/Library/Frameworks/CoreML.framework/Versions/A/CoreML (compatibility version 1.0.0, current version 1.0.0)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 4201.0.0)\n\t/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork (compatibility version 1.0.0, current version 3860.255.31)\n\t/System/Library/Frameworks/Network.framework/Versions/A/Network (compatibility version 1.0.0, current version 5569.60.39)\n\t/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration (compatibility version 1.0.0, current version 1385.60.3)\n\t/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)\n\t/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 4201.0.0)\n\t/usr/lib/libiconv.2.dylib (compatibility version 7.0.0, current version 7.0.0)\n\t/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2000.67.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n\t/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)",
+    "identity": "<WORKSPACE>/work/20261019-1557/tools/ort-shared-test-1.29.0-3a3814c041251d6a/libonnxruntime.1.29.0.dylib:\n@rpath/libonnxruntime.1.dylib",
+    "symbols": [
+      "00000000000bed84 T _OrtGetApiBase",
+      "0000000000372aa0 T _OrtSessionOptionsAppendExecutionProvider_CPU",
+      "000000000012f08c T _OrtSessionOptionsAppendExecutionProvider_CoreML"
+    ]
+  },
+  "restrictions": [
+    "TEST-only compiler/link adapter for unchanged build.sh --test; never production/server/static success.",
+    "Only exact ORT force_load and pdf_oxide bare archive arguments are replaced with real same-version shared libraries.",
+    "office_oxide 0.1.12, PDFium, tokenizer and PCRE2 remain genuine static archives; their flags are unchanged.",
+    "TEST-only compiler/link adapter for unchanged build.sh --test; never use for a server/production build.",
+    "Official ORT supports API 29 but does not supply the fork's three appended SessionGetInitializer* custom slots.",
+    "No model inference, initializer extraction, production/static completeness, or unsupported custom slots are validated.",
+    "No Python runtime is installed or imported; only the real dylib was extracted from a hash-verified wheel.",
+    "No multiply_defined suppression, undefined dynamic_lookup, fake .a/functions, Python extension loading, or model inference."
+  ],
+  "pdf": {
+    "version": "0.3.73",
+    "officialAsset": {
+      "id": 467632387,
+      "name": "pdf_oxide-go-ffi-shared-darwin-arm64.tar.gz",
+      "size": 9779184,
+      "digest": "sha256:422f6048272247f9c8e417e1f0a16bb047e6e3d13e037442b8d62d324facf095",
+      "url": "https://github.com/yfedoseev/pdf_oxide/releases/download/v0.3.73/pdf_oxide-go-ffi-shared-darwin-arm64.tar.gz"
+    },
+    "archive": {
+      "path": "<WORKSPACE>/work/20261019-1557/downloads/pdf_oxide-go-ffi-shared-darwin-arm64.tar.gz",
+      "sha256": "422f6048272247f9c8e417e1f0a16bb047e6e3d13e037442b8d62d324facf095",
+      "size": 9779184
+    },
+    "dylib": {
+      "path": "<WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-relocated-0.3.73-422f6048272247f9/libpdf_oxide.dylib",
+      "sha256": "1068f52ad70be1c528c6ebbda632ba28fc42e71aa6548cee9e762389ad28943e",
+      "size": 21851616
+    },
+    "inspection": {
+      "architecture": "Non-fat file: <WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-0.3.73-422f6048272247f9/lib/darwin_arm64/libpdf_oxide.dylib is architecture: arm64",
+      "dependencies": "<WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-relocated-0.3.73-422f6048272247f9/libpdf_oxide.dylib:\n\t@rpath/libpdf_oxide.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 5026.5.4)\n\t/usr/lib/libiconv.2.dylib (compatibility version 7.0.0, current version 7.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)",
+      "identity": "<WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-relocated-0.3.73-422f6048272247f9/libpdf_oxide.dylib:\n@rpath/libpdf_oxide.dylib",
+      "exports": [
+        "0000000000000a60 T _pdf_document_free",
+        "0000000000751864 T _pdf_document_get_page_count",
+        "00000000007447cc T _pdf_document_get_version",
+        "0000000000752f64 T _pdf_document_open_from_bytes"
+      ]
+    },
+    "originalInspection": {
+      "architecture": "Non-fat file: <WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-0.3.73-422f6048272247f9/lib/darwin_arm64/libpdf_oxide.dylib is architecture: arm64",
+      "dependencies": "<WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-0.3.73-422f6048272247f9/lib/darwin_arm64/libpdf_oxide.dylib:\n\t<UPSTREAM_CI_BUILD>/target/aarch64-apple-darwin/release/deps/libpdf_oxide.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 5026.5.4)\n\t/usr/lib/libiconv.2.dylib (compatibility version 7.0.0, current version 7.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)",
+      "identity": "<WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-0.3.73-422f6048272247f9/lib/darwin_arm64/libpdf_oxide.dylib:\n<UPSTREAM_CI_BUILD>/target/aarch64-apple-darwin/release/deps/libpdf_oxide.dylib",
+      "exports": [
+        "0000000000000a60 T _pdf_document_free",
+        "0000000000751864 T _pdf_document_get_page_count",
+        "00000000007447cc T _pdf_document_get_version",
+        "0000000000752f64 T _pdf_document_open_from_bytes"
+      ]
+    },
+    "relocation": {
+      "needed": true,
+      "originalIdentity": "<WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-0.3.73-422f6048272247f9/lib/darwin_arm64/libpdf_oxide.dylib:\n<UPSTREAM_CI_BUILD>/target/aarch64-apple-darwin/release/deps/libpdf_oxide.dylib",
+      "reason": "Official release's LC_ID_DYLIB embeds its author CI absolute path; change only an isolated copy's install-name and ad-hoc signature for local TEST-only loading.",
+      "commands": [
+        [
+          "/usr/bin/install_name_tool",
+          "-id",
+          "@rpath/libpdf_oxide.dylib",
+          "<WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-relocated-0.3.73-422f6048272247f9/libpdf_oxide.dylib"
+        ],
+        [
+          "/usr/bin/codesign",
+          "--force",
+          "--sign",
+          "-",
+          "<WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-relocated-0.3.73-422f6048272247f9/libpdf_oxide.dylib"
+        ]
+      ],
+      "originalDylib": {
+        "path": "<WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-0.3.73-422f6048272247f9/lib/darwin_arm64/libpdf_oxide.dylib",
+        "sha256": "7a0abc7049f8b2ceceff4813a3a4d31b2166ba0bf86b3c2438c0c035383c9ca1",
+        "unmodified": true
+      },
+      "relocatedDylib": {
+        "path": "<WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-relocated-0.3.73-422f6048272247f9/libpdf_oxide.dylib",
+        "sha256": "1068f52ad70be1c528c6ebbda632ba28fc42e71aa6548cee9e762389ad28943e"
+      }
+    },
+    "embeddedVersionMarkers": [],
+    "removedArchive": "<WORKSPACE>/work/20261019-1557/home/ragflow-native-libs/pdf_oxide/lib/darwin_arm64/v0.3.73/libpdf_oxide.a",
+    "flagsAdded": [
+      "-Wl,-needed_library,<WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-relocated-0.3.73-422f6048272247f9/libpdf_oxide.dylib",
+      "-Wl,-rpath,<WORKSPACE>/work/20261019-1557/tools/pdf-shared-test-relocated-0.3.73-422f6048272247f9"
+    ],
+    "libraryVersionFunction": "No library semantic-version getter or matching embedded version marker is available in this shared asset. Version is established by the official author's v0.3.73 release asset SHA256. PDF document Version() is not the library version."
+  }
+}

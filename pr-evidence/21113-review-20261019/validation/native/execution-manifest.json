@@ -1,0 +1,79 @@
+{
+  "at": "2026-10-19T09:10:52.424Z",
+  "mode": "TEST-only official shared ORT + PDF_oxide; office/PDFium/tokenizer/PCRE remain static",
+  "base": "f66e8362850fd47764d45d8cebfdb3c21ea6fcd2",
+  "compilerSHA256": "3b0578bc3e179f60cbace9c7435a4166323e4e8cc7b0bacffdf21942c6d6ce1f",
+  "configSHA256": "39d879cdc4fe8b7de1281e57e34db4a3fa927a61e83c6ef43b5b6bb2bc67453c",
+  "files": {
+    "internal/ingestion/component/dispatch_model.go": {
+      "sha256": "0c2e60df5c479c127e17e66e95104945826fd1b404be5b20fffa732839359503",
+      "redSHA256": "dadac0f0b9bb70a12cc8c703a3843a71c7398171935d0575f8a475b481fa6162"
+    },
+    "internal/ingestion/component/image_ocr.go": {
+      "sha256": "1582aec995cc43d25993f9bdcbcd924fccb579e985f99d446c05f060ebc181f5",
+      "redSHA256": "09ca8582fe678b6cbeb34cf696dc7886fa82185640bc663e3a90d3b64491a6f3"
+    },
+    "internal/ingestion/component/pdf_vision_dispatch.go": {
+      "sha256": "862aaf17607a1cd6990184c750642e607e11f8519e006b4a1a0daa5476231b66",
+      "redSHA256": "181aa1e66f6d5dc07b66669f4a332f56ddd7191dcce29be19676abdf59501d85"
+    },
+    "internal/ingestion/component/extractor.go": {
+      "sha256": "216657b992719310e9928b727a11e9df3b274ccaa8b67353324082c0fcf15e03",
+      "redSHA256": "ec08734519471f7946805ae50e7432b90eae14aa0c70fe56d71f5ab8d0f276d7"
+    },
+    "internal/ingestion/component/dispatch_model_test.go": {
+      "sha256": "c1c40c40584b7ed6f5ceb78183658ee6b2cd81cc1a2eadfff2cef88ee87a9642"
+    },
+    "internal/ingestion/component/image_ocr_test.go": {
+      "sha256": "afea7379ccb6dadb033dca6c9cb3ef9fa2c11099e0c55b880cfad30e093bbf24"
+    },
+    "internal/ingestion/component/image_ocr_resolution_test.go": {
+      "sha256": "737ba35dce4bb96e4ec374c7f8dcd508ede642e9ea96f3e302e17b3fa28cf4f5"
+    },
+    "build.sh": {
+      "sha256": "ce422df95e92705f0829702599c9c240e5957da5b70b39ffc9353652b8a2efb5",
+      "byteIdenticalToBase": true
+    },
+    "internal/binding/cpp/CMakeLists.txt": {
+      "sha256": "3c93ddec6118aa95904dd995b233014be59786ff369591b39491ba024d5675ad",
+      "byteIdenticalToBase": true
+    },
+    "go.mod": {
+      "sha256": "be436e9f362848b611c4df0ff8866191bad27993d60f9011d6fce70df49629a5",
+      "byteIdenticalToBase": true
+    },
+    "go.sum": {
+      "sha256": "daeb317bfcfba03000d416253f685db1716b4155776bc49e0d8a08b412fb982f",
+      "byteIdenticalToBase": true
+    },
+    "docs/guides/agent/ingestion_pipeline/configure_parser_component.md": {
+      "sha256": "431eadb7d065cd9185847c79991f9302d0e5a20507d553dbb2c98298690bcf09"
+    },
+    "web/src/locales/en.ts": {
+      "sha256": "747ec2f208f5d17e3e6461c3f77d23c110443cb8f327982994b5633981f9af92"
+    },
+    "web/src/locales/zh.ts": {
+      "sha256": "f315a8ae1fbcb2ab35136aa1c82c0b9fbc6de23da11424cc60187d9ac68a2ae4"
+    },
+    "web/src/pages/agent/form/parser-form/image-form-fields.test.tsx": {
+      "sha256": "fa8b7c5edc13cea90a512ddebb7f21e82022645971ba7d5ed62ae64a724e5c80"
+    },
+    "web/src/pages/agent/form/parser-form/image-form-fields.tsx": {
+      "sha256": "97abf6aaf3b93ac8d2616208eb10639f5d65273595361cca660cf34ba8f1ace4"
+    }
+  },
+  "restrictions": [
+    "TEST-only compiler/link adapter for unchanged build.sh --test; never production/server/static success.",
+    "Only exact ORT force_load and pdf_oxide bare archive arguments are replaced with real same-version shared libraries.",
+    "office_oxide 0.1.12, PDFium, tokenizer and PCRE2 remain genuine static archives; their flags are unchanged.",
+    "TEST-only compiler/link adapter for unchanged build.sh --test; never use for a server/production build.",
+    "Official ORT supports API 29 but does not supply the fork's three appended SessionGetInitializer* custom slots.",
+    "No model inference, initializer extraction, production/static completeness, or unsupported custom slots are validated.",
+    "No Python runtime is installed or imported; only the real dylib was extracted from a hash-verified wheel.",
+    "No multiply_defined suppression, undefined dynamic_lookup, fake .a/functions, Python extension loading, or model inference."
+  ],
+  "fixedImplementationOnlyTests": [
+    "TestResolveModelConfigChainedDBStatementIsolationFixedOnly is compiled in both snapshots but executed only against the current implementation in focused/full/race green runs."
+  ],
+  "status": "M docs/guides/agent/ingestion_pipeline/configure_parser_component.md\n M internal/ingestion/component/dispatch_model.go\n M internal/ingestion/component/dispatch_model_test.go\n M internal/ingestion/component/extractor.go\n M internal/ingestion/component/image_ocr.go\n M internal/ingestion/component/image_ocr_test.go\n M internal/ingestion/component/pdf_vision_dispatch.go\n M web/src/locales/en.ts\n M web/src/locales/zh.ts\n M web/src/pages/agent/form/parser-form/image-form-fields.test.tsx\n M web/src/pages/agent/form/parser-form/image-form-fields.tsx\n?? internal/ingestion/component/image_ocr_resolution_test.go"
+}

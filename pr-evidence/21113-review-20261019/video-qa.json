@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-19",
+  "status": "passed",
+  "originalVideo": {
+    "file": "media/final-ui-interaction.webm",
+    "sha256": "38b0d2d249709f6fd9fef9b724053b36917bf4a3f6983cf2f63ced1e6169a308",
+    "bytes": 657231,
+    "creationTimeUtc": "2026-10-19T09:06:14.599000Z",
+    "durationSeconds": 10.867,
+    "codec": "VP8",
+    "container": "WebM",
+    "width": 1440,
+    "height": 1040,
+    "framesPerSecond": 15,
+    "audio": false,
+    "edited": false,
+    "stillImageSequence": false
+  },
+  "capture": {
+    "method": "Playwright CLI video-start / run-code --filename src/record-flow.js / video-stop",
+    "cliVersion": "0.1.22",
+    "playwrightCoreVersion": "1.64.0-alpha-1790635538000",
+    "session": "ragflow21113-ui",
+    "data": "synthetic only; real components with owner/model-query/HTTP/save fixtures",
+    "sourceSha256": "97abf6aaf3b93ac8d2616208eb10639f5d65273595361cca660cf34ba8f1ace4",
+    "scenarios": [
+      "Select synthetic PaddleOCR PP-OCRv5, choose explicit DeepDoc peer, save empty OCR ID",
+      "Existing loading-error fixture with persisted missing ID, release HTTP 503, retain ID and save alongside final red alert"
+    ],
+    "assertionsPassed": [
+      "PaddleOCR raw ID equals synthetic-paddle-ocr",
+      "DeepDoc raw and saved OCR ID equal empty string",
+      "No sentinel in DeepDoc saved payload",
+      "DeepDoc has zero clear-X icons",
+      "Missing raw and saved OCR ID equal synthetic-deleted-model-id",
+      "Error alert uses text-state-error",
+      "No horizontal overflow"
+    ]
+  },
+  "isolatedFfmpegInstall": {
+    "officialRevision": "1011",
+    "binaryVersion": "n7.0.1-playwright-build-1011",
+    "binarySha256": "662398c99429f5493ff0ff40cdcd97ea25132addcbdedafd0741389964147825",
+    "binaryBytes": 2580312,
+    "installRoot": "registered PLAYWRIGHT_BROWSERS_PATH",
+    "installCommand": "PLAYWRIGHT_SKIP_BROWSER_GC=1 node <current CLI package>/playwright-core/cli.js install ffmpeg",
+    "downloadHost": "cdn.playwright.dev",
+    "downloadArtifact": "playwright/builds/ffmpeg/1011/ffmpeg-mac-arm64.zip",
+    "downloadedBrowserBundle": false,
+    "globalInstall": false,
+    "repoDependencyChanged": false
+  },
+  "fullDecode": {
+    "exitCode": 0,
+    "decodedFrames": 163,
+    "strictErrorFlags": ["-xerror", "-err_detect", "explode"],
+    "command": "<isolated ffmpeg> -hide_banner -xerror -err_detect explode -c:v libvpx -i media/final-ui-interaction.webm -an -c:v png -f image2 -update 1 media/video-qa-decoded-last.png",
+    "corruptFrameErrors": 0,
+    "nonFatalNotices": "No accelerated colorspace conversion; software conversion used",
+    "lastFrame": "media/video-qa-decoded-last.png",
+    "lastFrameVisuallyInspected": true
+  },
+  "inputSeek": {
+    "commandPattern": "<isolated ffmpeg> -hide_banner -loglevel error -xerror -ss <seconds> -c:v libvpx -i media/final-ui-interaction.webm -frames:v 1 <frame.png>",
+    "samples": [
+      { "seconds": 2, "file": "media/video-qa-seek-02s.png", "exitCode": 0, "visuallyInspected": true, "visibleState": "Expanded menu with DeepDoc and PaddleOCR peer options" },
+      { "seconds": 4, "file": "media/video-qa-seek-04s.png", "exitCode": 0, "visuallyInspected": true, "visibleState": "PaddleOCR selected, menu reopened for explicit DeepDoc" },
+      { "seconds": 6, "file": "media/video-qa-seek-06s.png", "exitCode": 0, "visuallyInspected": true, "visibleState": "DeepDoc selected; raw ID and saved OCR ID both empty" },
+      { "seconds": 9, "file": "media/video-qa-seek-09s.png", "exitCode": 0, "visuallyInspected": true, "visibleState": "Missing ID label, red error alert and retained ID in save" }
+    ]
+  },
+  "finalLivePage": {
+    "viewport": [1440, 1040],
+    "documentWidth": 1440,
+    "horizontalOverflow": false,
+    "consoleErrors": "Only two expected local HTTP 503 resource errors for OCR and untyped missing-label query",
+    "reactWarnings": 0,
+    "externalResourceOrigins": [],
+    "ownerQueryParameter": "synthetic-review-owner",
+    "rawModelId": "synthetic-deleted-model-id",
+    "savedModelId": "synthetic-deleted-model-id",
+    "alertClass": "text-state-error"
+  },
+  "boundary": "Not full-app/backend E2E. No business-error retest, real OCR execution or backend persistence claim.",
+  "retention": "Original video, 24 original screenshots, derived QA frames, browser session and local server preserved pending main-agent public-upload verification"
+}

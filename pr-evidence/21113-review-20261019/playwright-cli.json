@@ -1,0 +1,17 @@
+{
+  "browser": {
+    "browserName": "chromium",
+    "launchOptions": {
+      "channel": "chrome",
+      "headless": true
+    },
+    "contextOptions": {
+      "viewport": { "width": 1440, "height": 1040 },
+      "deviceScaleFactor": 1,
+      "locale": "en-US",
+      "colorScheme": "light",
+      "reducedMotion": "reduce"
+    }
+  },
+  "outputDir": "./media/cli"
+}

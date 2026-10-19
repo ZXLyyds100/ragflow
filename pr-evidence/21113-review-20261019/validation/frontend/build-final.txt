@@ -1,0 +1,767 @@
+
+> build
+> vite build --mode production
+
+vite v7.3.0 building client environment for production...
+transforming...
+
+ WARN 
+
+
+ WARN  warn - As of Tailwind CSS v3.3, the @tailwindcss/line-clamp plugin is now included by default.
+
+
+ WARN  warn - Remove it from the plugins array in your configuration to eliminate this warning.
+
+✓ 13652 modules transformed.
+
+ WARN  node_modules/pdfjs-dist/legacy/build/pdf.js (5974:23): Use of eval in "node_modules/pdfjs-dist/legacy/build/pdf.js" is strongly discouraged as it poses security risks and may cause issues with minification.
+
+rendering chunks...
+computing gzip size...
+dist/index.html                                                                  3.53 kB │ gzip:   0.94 kB
+dist/assets/svg/json-CEfccWsg.svg                                                4.29 kB │ gzip:   1.90 kB
+dist/assets/woff/KaTeX_Size3-Regular-CTq5MqoE.woff                               4.42 kB
+dist/assets/svg/skill-space-B0wz6aPF.svg                                         4.58 kB │ gzip:   1.69 kB
+dist/assets/svg/rss-3LDRhcKW.svg                                                 4.85 kB │ gzip:   2.10 kB
+dist/assets/woff2/KaTeX_Size4-Regular-Dl5lxZxV.woff2                             4.93 kB
+dist/assets/woff2/KaTeX_Size2-Regular-Dy4dx90m.woff2                             5.21 kB
+dist/assets/svg/synology_chat-B2xnSddX.svg                                       5.25 kB │ gzip:   2.44 kB
+dist/assets/woff2/KaTeX_Size1-Regular-mCD8mA8B.woff2                             5.47 kB
+dist/assets/svg/css-tyQiVqf7.svg                                                 5.53 kB │ gzip:   2.39 kB
+dist/assets/png/exa-o-Vw0GdF.png                                                 5.53 kB
+dist/assets/svg/pubmed-BV2NnVXC.svg                                              5.62 kB │ gzip:   2.07 kB
+dist/assets/svg/crawler-FwX8BUFP.svg                                             5.74 kB │ gzip:   2.73 kB
+dist/assets/woff/KaTeX_Size4-Regular-BF-4gkZK.woff                               5.98 kB
+dist/assets/png/search1api-tgilOc7C.png                                          6.14 kB
+dist/assets/woff/KaTeX_Size2-Regular-oD1tc_U0.woff                               6.19 kB
+dist/assets/svg/somark-T3TEfVsE.svg                                              6.25 kB │ gzip:   3.90 kB
+dist/assets/svg/bing-Bj-9Pm5w.svg                                                6.43 kB │ gzip:   2.96 kB
+dist/assets/woff/KaTeX_Size1-Regular-C195tn64.woff                               6.50 kB
+dist/assets/svg/no-search-data-bri-BhIT_j__.svg                                  6.62 kB │ gzip:   1.51 kB
+dist/assets/woff2/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2                       6.91 kB
+dist/assets/woff2/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2                          6.91 kB
+dist/assets/svg/no-search-data-dark-C9Kmu1pa.svg                                 7.54 kB │ gzip:   1.56 kB
+dist/assets/ttf/KaTeX_Size3-Regular-DgpXs0kz.ttf                                 7.59 kB
+dist/assets/woff/KaTeX_Caligraphic-Regular-CTRA-rTL.woff                         7.66 kB
+dist/assets/woff/KaTeX_Caligraphic-Bold-BEiXGLvX.woff                            7.72 kB
+dist/assets/png/linkup-CSkTpz7S.png                                              8.18 kB
+dist/assets/svg/duck-CgGwXW1Z.svg                                                8.69 kB │ gzip:   3.25 kB
+dist/assets/png/serply-EXJIYlyD.png                                              9.35 kB
+dist/assets/woff2/KaTeX_Script-Regular-D3wIWfF6.woff2                            9.64 kB
+dist/assets/svg/daoxe-D1T-TP0z.svg                                              10.25 kB │ gzip:   7.70 kB
+dist/assets/woff2/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2                        10.34 kB
+dist/assets/ttf/KaTeX_Size4-Regular-DWFBv043.ttf                                10.36 kB
+dist/assets/woff/KaTeX_Script-Regular-D5yQViql.woff                             10.59 kB
+dist/assets/svg/paddleocr-C__yFIfK.svg                                          10.63 kB │ gzip:   4.93 kB
+dist/assets/woff2/KaTeX_Fraktur-Regular-CTYiF6lA.woff2                          11.32 kB
+dist/assets/woff2/KaTeX_Fraktur-Bold-CL6g_b3V.woff2                             11.35 kB
+dist/assets/ttf/KaTeX_Size2-Regular-B7gKUWhC.ttf                                11.51 kB
+dist/assets/woff2/KaTeX_SansSerif-Italic-C3H0VqGB.woff2                         12.03 kB
+dist/assets/woff2/KaTeX_SansSerif-Bold-D1sUS0GD.woff2                           12.22 kB
+dist/assets/ttf/KaTeX_Size1-Regular-Dbsnue_I.ttf                                12.23 kB
+dist/assets/woff/KaTeX_SansSerif-Regular-CS6fqUqJ.woff                          12.32 kB
+dist/assets/ttf/KaTeX_Caligraphic-Regular-wX97UBjC.ttf                          12.34 kB
+dist/assets/ttf/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf                             12.37 kB
+dist/assets/svg/new-api-DdDo-OUB.svg                                            12.71 kB │ gzip:   9.37 kB
+dist/assets/woff/KaTeX_Fraktur-Regular-Dxdc4cR9.woff                            13.21 kB
+dist/assets/woff/KaTeX_Fraktur-Bold-BsDP51OF.woff                               13.30 kB
+dist/assets/woff2/KaTeX_Typewriter-Regular-CO6r4hn1.woff2                       13.57 kB
+dist/assets/woff/KaTeX_SansSerif-Italic-DN2j7dab.woff                           14.11 kB
+dist/assets/svg/langfuse-VsUws2FT.svg                                           14.24 kB │ gzip:   5.80 kB
+dist/assets/svg/apiroute-Diwez5VS.svg                                           14.37 kB │ gzip:  10.77 kB
+dist/assets/woff/KaTeX_SansSerif-Bold-DbIhKOiC.woff                             14.41 kB
+dist/assets/woff/KaTeX_Typewriter-Regular-C0xS9mPB.woff                         16.03 kB
+dist/assets/woff2/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2                          16.40 kB
+dist/assets/woff2/KaTeX_Math-Italic-t53AETM-.woff2                              16.44 kB
+dist/assets/ttf/KaTeX_Script-Regular-C5JkGWo-.ttf                               16.65 kB
+dist/assets/woff2/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2                          16.78 kB
+dist/assets/woff2/KaTeX_Main-Italic-NWA7e6Wa.woff2                              16.99 kB
+dist/assets/woff/KaTeX_Math-BoldItalic-iY-2wyZ7.woff                            18.67 kB
+dist/assets/woff/KaTeX_Math-Italic-DA0__PXp.woff                                18.75 kB
+dist/assets/svg/chunk-empty-DrYNULeh.svg                                        19.21 kB │ gzip:   6.75 kB
+dist/assets/woff/KaTeX_Main-BoldItalic-SpSLRI95.woff                            19.41 kB
+dist/assets/ttf/KaTeX_SansSerif-Regular-BNo7hRIc.ttf                            19.44 kB
+dist/assets/ttf/KaTeX_Fraktur-Regular-CB_wures.ttf                              19.57 kB
+dist/assets/ttf/KaTeX_Fraktur-Bold-BdnERNNW.ttf                                 19.58 kB
+dist/assets/woff/KaTeX_Main-Italic-BMLOBm91.woff                                19.68 kB
+dist/assets/svg/synthorai-CKszIoPI.svg                                          20.42 kB │ gzip:   1.98 kB
+dist/assets/ttf/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf                             22.36 kB
+dist/assets/ttf/KaTeX_SansSerif-Bold-CFMepnvq.ttf                               24.50 kB
+dist/assets/woff2/KaTeX_Main-Bold-Cx986IdX.woff2                                25.32 kB
+dist/assets/woff2/KaTeX_Main-Regular-B22Nviop.woff2                             26.27 kB
+dist/assets/ttf/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf                           27.56 kB
+dist/assets/woff2/KaTeX_AMS-Regular-BQhdFMY1.woff2                              28.08 kB
+dist/assets/woff/KaTeX_Main-Bold-Jm3AIy58.woff                                  29.91 kB
+dist/assets/svg/assistant-BcWJWN5S.svg                                          30.21 kB │ gzip:  22.10 kB
+dist/assets/woff/KaTeX_Main-Regular-Dr94JaBh.woff                               30.77 kB
+dist/assets/ttf/KaTeX_Math-BoldItalic-B3XSjfu4.ttf                              31.20 kB
+dist/assets/ttf/KaTeX_Math-Italic-flOr_0UB.ttf                                  31.31 kB
+dist/assets/svg/jsoneditor-icons-CIlYC0TY.svg                                   31.48 kB │ gzip:   5.10 kB
+dist/assets/svg/wencai-dsbJvNYr.svg                                             32.54 kB │ gzip:  24.27 kB
+dist/assets/ttf/KaTeX_Main-BoldItalic-DzxPMmG6.ttf                              32.97 kB
+dist/assets/woff/KaTeX_AMS-Regular-DMm9YOAa.woff                                33.52 kB
+dist/assets/ttf/KaTeX_Main-Italic-3WenGoN9.ttf                                  33.58 kB
+dist/assets/png/querit-CCUgSlHC.png                                             49.63 kB
+dist/assets/ttf/KaTeX_Main-Bold-waoOVXN0.ttf                                    51.34 kB
+dist/assets/ttf/KaTeX_Main-Regular-ypZvNtVU.ttf                                 53.58 kB
+dist/assets/ttf/KaTeX_AMS-Regular-DRggAlZN.ttf                                  63.63 kB
+dist/assets/svg/local-ai-DsEzuJPz.svg                                           74.48 kB │ gzip:  55.97 kB
+dist/assets/png/banner-BrLh8nXY.png                                             89.27 kB
+dist/assets/woff2/InterDisplay-Regular-C0mmbI_t.woff2                          105.57 kB
+dist/assets/woff2/InterDisplay-Thin-DMFvXDOM.woff2                             106.24 kB
+dist/assets/svg/google-C4L-eOGg.svg                                            106.28 kB │ gzip:  80.10 kB
+dist/assets/woff2/Inter-Thin-B4o5siQk.woff2                                    106.62 kB
+dist/assets/woff2/InterDisplay-Black-DM1fLmGj.woff2                            107.22 kB
+dist/assets/woff2/Inter-Regular-B0QUfDW0.woff2                                 108.49 kB
+dist/assets/woff2/Inter-Black-COIgjx2i.woff2                                   108.75 kB
+dist/assets/woff2/InterDisplay-ExtraLight-CkrcZ2OC.woff2                       109.66 kB
+dist/assets/woff2/InterDisplay-Light-DB1R7qf0.woff2                            109.86 kB
+dist/assets/woff2/Inter-Light-MWFfSqj5.woff2                                   109.99 kB
+dist/assets/woff2/InterDisplay-Medium-BRBaQVhl.woff2                           110.01 kB
+dist/assets/woff2/Inter-ExtraLight-DDkcCnmI.woff2                              110.18 kB
+dist/assets/woff2/InterDisplay-Bold-CXJyJlfA.woff2                             110.18 kB
+dist/assets/woff2/InterDisplay-SemiBold-J6ePsRbj.woff2                         110.23 kB
+dist/assets/woff2/InterDisplay-ExtraBold-DsWMgBJM.woff2                        110.30 kB
+dist/assets/woff2/Inter-Bold-CytjP_7U.woff2                                    111.04 kB
+dist/assets/woff2/Inter-ExtraBold-BN24N3BS.woff2                               111.36 kB
+dist/assets/woff2/Inter-Medium-B0NFony0.woff2                                  111.38 kB
+dist/assets/woff2/Inter-SemiBold-_JLwM7Yv.woff2                                111.59 kB
+dist/assets/woff2/InterDisplay-ThinItalic-DGH5DzcO.woff2                       113.24 kB
+dist/assets/woff2/InterDisplay-Italic-Ceakq4P4.woff2                           113.32 kB
+dist/assets/woff2/Inter-ThinItalic-vq4GfdE-.woff2                              113.38 kB
+dist/assets/woff2/InterDisplay-BlackItalic-By2MBdM0.woff2                      114.38 kB
+dist/assets/woff2/Inter-Italic-B_ozvy2G.woff2                                  114.58 kB
+dist/assets/woff2/Inter-BlackItalic-DXjXe-56.woff2                             115.36 kB
+dist/assets/woff2/Inter-ExtraLightItalic-Bmm15xK5.woff2                        116.30 kB
+dist/assets/woff2/Inter-LightItalic-B-7nr8NF.woff2                             116.52 kB
+dist/assets/woff2/InterDisplay-LightItalic-Dg222hFV.woff2                      116.85 kB
+dist/assets/woff2/InterDisplay-ExtraLightItalic-COzNG34r.woff2                 117.07 kB
+dist/assets/woff2/InterDisplay-SemiBoldItalic-Hwqo_RGe.woff2                   117.51 kB
+dist/assets/woff2/InterDisplay-BoldItalic-DPW1ZV9q.woff2                       117.54 kB
+dist/assets/woff2/InterDisplay-MediumItalic-Bn1fyIYu.woff2                     117.60 kB
+dist/assets/woff2/InterDisplay-ExtraBoldItalic-Duz3ksk9.woff2                  117.72 kB
+dist/assets/woff2/Inter-SemiBoldItalic-C4gNvuGw.woff2                          118.22 kB
+dist/assets/woff2/Inter-MediumItalic-DOveuiCA.woff2                            118.39 kB
+dist/assets/woff2/Inter-BoldItalic-B0T-BnK6.woff2                              118.39 kB
+dist/assets/woff2/Inter-ExtraBoldItalic-Elp9ETkg.woff2                         118.60 kB
+dist/assets/woff2/InterVariable-CWi-zmRD.woff2                                 345.59 kB
+dist/assets/woff2/InterVariable-Italic-d6KXgdvN.woff2                          380.90 kB
+dist/assets/css/index-C-ZzRepb.css                                               0.06 kB │ gzip:   0.08 kB
+dist/assets/css/index-KGSaUCSN.css                                               0.14 kB │ gzip:   0.13 kB
+dist/assets/css/index-BOa0EW1w.css                                               0.34 kB │ gzip:   0.16 kB
+dist/assets/css/prompt-dialog-pJD_A9j4.css                                       0.48 kB │ gzip:   0.27 kB
+dist/assets/css/index-m5L5sMku.css                                               0.77 kB │ gzip:   0.38 kB
+dist/assets/css/index-DuAZqMfM.css                                               0.78 kB │ gzip:   0.17 kB
+dist/assets/css/bg-BaoxuttC.css                                                  1.10 kB │ gzip:   0.45 kB
+dist/assets/css/index-WkknGea0.css                                               1.36 kB │ gzip:   0.47 kB
+dist/assets/css/index-BDGJ7vTG.css                                               1.39 kB │ gzip:   0.58 kB
+dist/assets/css/searching-CEoE415s.css                                           1.40 kB │ gzip:   0.38 kB
+dist/assets/css/index-CyRN6_Y9.css                                               1.88 kB │ gzip:   0.57 kB
+dist/assets/css/react-pdf-highlighter-BVB2ADFS.css                               2.23 kB │ gzip:   0.76 kB
+dist/assets/css/react18-json-view-DQBsvuMZ.css                                   2.58 kB │ gzip:   0.79 kB
+dist/assets/css/react-photo-view-BD8MpcyB.css                                    2.74 kB │ gzip:   0.82 kB
+dist/assets/css/index-DSYTN7po.css                                               4.85 kB │ gzip:   1.25 kB
+dist/assets/css/use-message-references-CxpnUUrr.css                              7.14 kB │ gzip:   1.32 kB
+dist/assets/css/index-BYeVcbaC.css                                               7.53 kB │ gzip:   2.04 kB
+dist/assets/css/index-VYn6pZxy.css                                               8.33 kB │ gzip:   1.50 kB
+dist/assets/css/markdown-editor-CnfOHosk.css                                    12.19 kB │ gzip:   2.86 kB
+dist/assets/css/@xyflow-BZV40eAE.css                                            15.85 kB │ gzip:   2.65 kB
+dist/assets/css/pdfjs-dist-Cp_79s8b.css                                         20.48 kB │ gzip:   6.33 kB
+dist/assets/css/@uiw-DbXCvUIJ.css                                               26.61 kB │ gzip:   4.70 kB
+dist/assets/css/katex-Cr93ddMi.css                                              29.53 kB │ gzip:   8.06 kB
+dist/assets/css/jsoneditor-DQg9ICo1.css                                         33.24 kB │ gzip:   6.07 kB
+dist/assets/css/index-CAeu8O2a.css                                             192.98 kB │ gzip:  30.53 kB
+dist/chunk/js/cookie-l0sNRNKZ.js                                                 0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/delaunator-l0sNRNKZ.js                                             0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/detect-node-es-l0sNRNKZ.js                                         0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/dom-helpers-l0sNRNKZ.js                                            0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/fecha-l0sNRNKZ.js                                                  0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/intersection-observer-l0sNRNKZ.js                                  0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/js-cookie-l0sNRNKZ.js                                              0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/micromark-extension-gfm-tagfilter-l0sNRNKZ.js                      0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/micromark-util-encode-l0sNRNKZ.js                                  0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/react-fast-compare-l0sNRNKZ.js                                     0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/robust-predicates-l0sNRNKZ.js                                      0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/screenfull-l0sNRNKZ.js                                             0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/set-cookie-parser-l0sNRNKZ.js                                      0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/svg-path-parser-l0sNRNKZ.js                                        0.00 kB │ gzip:   0.02 kB
+dist/chunk/js/bail-gCPcOVbC.js                                                   0.04 kB │ gzip:   0.06 kB
+dist/chunk/js/devlop-Cl3hj7Sz.js                                                 0.05 kB │ gzip:   0.06 kB
+dist/chunk/js/constants-CfA5lqgQ.js                                              0.06 kB │ gzip:   0.07 kB
+dist/chunk/js/react-transition-group-CK6RE19p.js                                 0.06 kB │ gzip:   0.07 kB
+dist/chunk/js/es-object-atoms-CyiuHMUS.js                                        0.06 kB │ gzip:   0.08 kB
+dist/chunk/js/tiny-invariant-BM5KeS_Z.js                                         0.07 kB │ gzip:   0.09 kB
+dist/chunk/js/isomorphic-fetch-CoSiLcnf.js                                       0.07 kB │ gzip:   0.09 kB
+dist/chunk/js/enterprise-feature-CA0cAaF0.js                                     0.08 kB │ gzip:   0.10 kB
+dist/chunk/js/is-decimal-kA_GYot8.js                                             0.10 kB │ gzip:   0.11 kB
+dist/chunk/js/get-nonce-BYiZHLe3.js                                              0.10 kB │ gzip:   0.10 kB
+dist/chunk/js/collapsible-BtdVC-3z.js                                            0.11 kB │ gzip:   0.11 kB
+dist/chunk/js/is-alphabetical-CIUbNb5O.js                                        0.11 kB │ gzip:   0.12 kB
+dist/chunk/js/remark-breaks-CCHQoWDw.js                                          0.11 kB │ gzip:   0.12 kB
+dist/chunk/js/rehype-sanitize-eE1kNuwr.js                                        0.11 kB │ gzip:   0.12 kB
+dist/chunk/js/micromark-util-normalize-identifier-CzKtq1sx.js                    0.12 kB │ gzip:   0.11 kB
+dist/chunk/js/is-hexadecimal-DuokPCr2.js                                         0.12 kB │ gzip:   0.13 kB
+dist/chunk/js/react-dev-utils-DeAx-IAg.js                                        0.12 kB │ gzip:   0.14 kB
+dist/chunk/js/accessor-fn-B-_oJ34M.js                                            0.13 kB │ gzip:   0.10 kB
+dist/chunk/js/is-alphanumerical-B6wng7mb.js                                      0.14 kB │ gzip:   0.13 kB
+dist/chunk/js/es-define-property-F0aoeP8o.js                                     0.14 kB │ gzip:   0.14 kB
+dist/chunk/js/space-separated-tokens-DO9R2H4G.js                                 0.14 kB │ gzip:   0.14 kB
+dist/chunk/js/mdast-util-newline-to-break-BwXbJfmu.js                            0.15 kB │ gzip:   0.15 kB
+dist/chunk/js/micromark-util-classify-character-kPHsAyyr.js                      0.15 kB │ gzip:   0.15 kB
+dist/chunk/js/micromark-util-resolve-all-U8fstr8o.js                             0.15 kB │ gzip:   0.14 kB
+dist/chunk/js/agent-BTZLtyAC.js                                                  0.15 kB │ gzip:   0.14 kB
+dist/chunk/js/hast-util-has-property-O5vA2YSL.js                                 0.15 kB │ gzip:   0.14 kB
+dist/chunk/js/hast-util-whitespace-DlJMGLAz.js                                   0.15 kB │ gzip:   0.14 kB
+dist/chunk/js/boolbase-Dozf3dg5.js                                               0.16 kB │ gzip:   0.15 kB
+dist/chunk/js/constant-b4g4-32L.js                                               0.16 kB │ gzip:   0.11 kB
+dist/chunk/js/hast-util-heading-rank-aoaNFAIO.js                                 0.17 kB │ gzip:   0.16 kB
+dist/chunk/js/source-locate-Du0yKJ8d.js                                          0.18 kB │ gzip:   0.17 kB
+dist/chunk/js/html-void-elements-Co0z0ClG.js                                     0.18 kB │ gzip:   0.14 kB
+dist/chunk/js/decode-named-character-reference-C-EXV6yX.js                       0.18 kB │ gzip:   0.17 kB
+dist/chunk/js/gopd-BudZp56J.js                                                   0.18 kB │ gzip:   0.16 kB
+dist/chunk/js/ccount-D181NsKZ.js                                                 0.19 kB │ gzip:   0.17 kB
+dist/chunk/js/hasown-DDRZFPNQ.js                                                 0.19 kB │ gzip:   0.16 kB
+dist/chunk/js/estree-util-is-identifier-name-0h9-8Xae.js                         0.19 kB │ gzip:   0.14 kB
+dist/chunk/js/list-deletion-Bahx9BHC.js                                          0.20 kB │ gzip:   0.14 kB
+dist/chunk/js/void-elements-DmWcTkZ2.js                                          0.21 kB │ gzip:   0.17 kB
+dist/chunk/js/hast-util-from-html-isomorphic--CV7WcQp.js                         0.21 kB │ gzip:   0.18 kB
+dist/chunk/js/micromark-util-decode-numeric-character-reference-DA7xEauU.js      0.21 kB │ gzip:   0.20 kB
+dist/chunk/js/use-set-graph-D-H14Cyc.js                                          0.21 kB │ gzip:   0.18 kB
+dist/chunk/js/longest-streak-2qYzcRvv.js                                         0.22 kB │ gzip:   0.19 kB
+dist/chunk/js/dom-util-vMDXzjVP.js                                               0.22 kB │ gzip:   0.21 kB
+dist/chunk/js/is-plain-obj-DeEdtHJQ.js                                           0.22 kB │ gzip:   0.17 kB
+dist/chunk/js/xtend-Bx3ujlEJ.js                                                  0.23 kB │ gzip:   0.18 kB
+dist/chunk/js/classcat-Dkggfwne.js                                               0.23 kB │ gzip:   0.18 kB
+dist/chunk/js/css-support-CxEI8QK4.js                                            0.23 kB │ gzip:   0.13 kB
+dist/chunk/js/hast-util-to-string-C8D5Qmjx.js                                    0.25 kB │ gzip:   0.17 kB
+dist/chunk/js/web-namespaces-bsVAaBS1.js                                         0.25 kB │ gzip:   0.14 kB
+dist/chunk/js/use-clear-selection-on-page-change-TQHaBIvN.js                     0.25 kB │ gzip:   0.18 kB
+dist/chunk/js/compilation-klH3zxz8.js                                            0.26 kB │ gzip:   0.19 kB
+dist/chunk/js/direction-Fgfps-4l.js                                              0.26 kB │ gzip:   0.25 kB
+dist/chunk/js/micromark-factory-space-BSx_QF7t.js                                0.27 kB │ gzip:   0.22 kB
+dist/chunk/js/list-filter-util-B0fXB70N.js                                       0.27 kB │ gzip:   0.22 kB
+dist/chunk/js/unist-util-visit-B8kpuXze.js                                       0.28 kB │ gzip:   0.22 kB
+dist/chunk/js/mdast-util-phrasing-Bu1DMNL2.js                                    0.28 kB │ gzip:   0.20 kB
+dist/chunk/js/character-reference-invalid-5l-oJQ6R.js                            0.29 kB │ gzip:   0.20 kB
+dist/chunk/js/zwitch-SYkMgdDi.js                                                 0.30 kB │ gzip:   0.21 kB
+dist/chunk/js/compilation-template-util-CYoxz2Gj.js                              0.30 kB │ gzip:   0.24 kB
+dist/chunk/js/page-header-eEp1UBLq.js                                            0.31 kB │ gzip:   0.23 kB
+dist/chunk/js/call-bound-CqqvjkCH.js                                             0.31 kB │ gzip:   0.24 kB
+dist/chunk/js/unist-util-stringify-position-CvSG9YTx.js                          0.32 kB │ gzip:   0.19 kB
+dist/chunk/js/html-url-attributes-BA_i5Yxb.js                                    0.32 kB │ gzip:   0.22 kB
+dist/chunk/js/context-DKeUyySF.js                                                0.32 kB │ gzip:   0.18 kB
+dist/chunk/js/micromark-util-chunked-3k3e5hER.js                                 0.33 kB │ gzip:   0.22 kB
+dist/chunk/js/micromark-factory-whitespace-Qe1teigh.js                           0.33 kB │ gzip:   0.23 kB
+dist/chunk/js/comma-separated-tokens-f0Pmd_FW.js                                 0.34 kB │ gzip:   0.26 kB
+dist/chunk/js/hast-util-parse-selector-j38Qpric.js                               0.37 kB │ gzip:   0.27 kB
+dist/chunk/js/unist-util-position-CVUg9P9R.js                                    0.37 kB │ gzip:   0.23 kB
+dist/chunk/js/clsx-BeLtu-UY.js                                                   0.37 kB │ gzip:   0.24 kB
+dist/chunk/js/remark-gfm-ByTeQ-YQ.js                                             0.38 kB │ gzip:   0.22 kB
+dist/chunk/js/remark-math-NbeSmila.js                                            0.38 kB │ gzip:   0.23 kB
+dist/chunk/js/es-errors-DTEWvbA_.js                                              0.39 kB │ gzip:   0.22 kB
+dist/chunk/js/fault-B9NM2TdK.js                                                  0.39 kB │ gzip:   0.25 kB
+dist/chunk/js/form-container-DAizt3Qs.js                                         0.39 kB │ gzip:   0.28 kB
+dist/chunk/js/rehype-slug-80yhI6cO.js                                            0.40 kB │ gzip:   0.27 kB
+dist/chunk/js/micromark-util-decode-string-DnyHiccs.js                           0.43 kB │ gzip:   0.31 kB
+dist/chunk/js/trim-lines-C03Dth7Y.js                                             0.43 kB │ gzip:   0.26 kB
+dist/chunk/js/rehype-ignore-CPoHhEk8.js                                          0.43 kB │ gzip:   0.29 kB
+dist/chunk/js/attr-accept-BayDdHqs.js                                            0.45 kB │ gzip:   0.31 kB
+dist/chunk/js/unist-util-find-after-DC3iJzYV.js                                  0.45 kB │ gzip:   0.30 kB
+dist/chunk/js/toggle-selection-CKa2ZqsB.js                                       0.45 kB │ gzip:   0.31 kB
+dist/chunk/js/mdast-util-gfm-CGN5mo4W.js                                         0.45 kB │ gzip:   0.26 kB
+dist/chunk/js/micromark-util-combine-extensions-DQ8C0oVl.js                      0.46 kB │ gzip:   0.32 kB
+dist/chunk/js/rehype-rewrite-C8IJY1Os.js                                         0.47 kB │ gzip:   0.32 kB
+dist/chunk/js/dunder-proto-B4fBtpmv.js                                           0.48 kB │ gzip:   0.33 kB
+dist/chunk/js/shared-badge-BRneTEC2.js                                           0.48 kB │ gzip:   0.34 kB
+dist/chunk/js/micromark-extension-gfm-XtnrIF9f.js                                0.48 kB │ gzip:   0.25 kB
+dist/chunk/js/mdast-util-to-string-Ck87fAyN.js                                   0.49 kB │ gzip:   0.29 kB
+dist/chunk/js/parse-numeric-range-Ttd3ch7H.js                                    0.49 kB │ gzip:   0.35 kB
+dist/chunk/js/use-fetch-data-CA2wvmCp.js                                         0.49 kB │ gzip:   0.32 kB
+dist/chunk/js/style-to-object-BQtMOu5m.js                                        0.50 kB │ gzip:   0.33 kB
+dist/chunk/js/date-BbKbSmxu.js                                                   0.50 kB │ gzip:   0.32 kB
+dist/chunk/js/math-intrinsics-pM-JTNwN.js                                        0.51 kB │ gzip:   0.28 kB
+dist/chunk/js/unist-util-filter-CTHpVWU-.js                                      0.52 kB │ gzip:   0.33 kB
+dist/chunk/js/get-proto-UZ2Dsh0U.js                                              0.52 kB │ gzip:   0.31 kB
+dist/chunk/js/micromark-util-character-pNPn7wjp.js                               0.52 kB │ gzip:   0.31 kB
+dist/chunk/js/top-n-item-MPyNOjPK.js                                             0.52 kB │ gzip:   0.36 kB
+dist/chunk/js/rehype-raw-DtJXYnRN.js                                             0.55 kB │ gzip:   0.33 kB
+dist/chunk/js/micromark-util-html-tag-name-DbKNfynz.js                           0.55 kB │ gzip:   0.30 kB
+dist/chunk/js/simple-swizzle-BBrJakSt.js                                         0.55 kB │ gzip:   0.34 kB
+dist/chunk/js/constants-D4Wt3c5p.js                                              0.55 kB │ gzip:   0.20 kB
+dist/chunk/js/knowledge-base-context-tUR8ALia.js                                 0.57 kB │ gzip:   0.35 kB
+dist/chunk/js/call-bind-apply-helpers-BLJ8ANo7.js                                0.57 kB │ gzip:   0.34 kB
+dist/chunk/js/micromark-util-sanitize-uri-BuPr_CK3.js                            0.57 kB │ gzip:   0.37 kB
+dist/chunk/js/form-Ba7NkCIn.js                                                   0.59 kB │ gzip:   0.38 kB
+dist/chunk/js/index-COEcGC3U.js                                                  0.62 kB │ gzip:   0.50 kB
+dist/chunk/js/card-container-swEIc1yR.js                                         0.63 kB │ gzip:   0.34 kB
+dist/chunk/js/embla-carousel-react-DarNXJHG.js                                   0.63 kB │ gzip:   0.35 kB
+dist/chunk/js/internmap-B8oPgqVZ.js                                              0.64 kB │ gzip:   0.31 kB
+dist/chunk/js/constant-rzOD3rOm.js                                               0.66 kB │ gzip:   0.34 kB
+dist/chunk/js/use-callback-ref-C_7-iPNH.js                                       0.67 kB │ gzip:   0.38 kB
+dist/chunk/js/classnames-B8tYMegz.js                                             0.67 kB │ gzip:   0.42 kB
+dist/chunk/js/side-channel-D6y6mEWA.js                                           0.68 kB │ gzip:   0.39 kB
+dist/chunk/js/remark-parse-B4EGmtx2.js                                           0.68 kB │ gzip:   0.40 kB
+dist/chunk/js/vfile-location-7nBZzz4A.js                                         0.69 kB │ gzip:   0.38 kB
+dist/chunk/js/embla-carousel-reactive-utils-P2_yCQ-B.js                          0.72 kB │ gzip:   0.39 kB
+dist/chunk/js/micromark-factory-label-BYB7_Fqd.js                                0.72 kB │ gzip:   0.39 kB
+dist/chunk/js/utils-B_1HWp7P.js                                                  0.73 kB │ gzip:   0.41 kB
+dist/chunk/js/micromark-factory-title-Q4xd3JU1.js                                0.73 kB │ gzip:   0.37 kB
+dist/chunk/js/bcp-47-match-CYG1hUv4.js                                           0.74 kB │ gzip:   0.42 kB
+dist/chunk/js/side-channel-map-BuoDyXy_.js                                       0.74 kB │ gzip:   0.42 kB
+dist/chunk/js/fast-deep-equal-BAFRue17.js                                        0.75 kB │ gzip:   0.36 kB
+dist/chunk/js/d-DWonF8Ri.js                                                      0.75 kB │ gzip:   0.40 kB
+dist/chunk/js/hast-util-is-element-Djts9Lmg.js                                   0.76 kB │ gzip:   0.37 kB
+dist/chunk/js/react-style-singleton-DfaMDdAo.js                                  0.76 kB │ gzip:   0.43 kB
+dist/chunk/js/unist-util-is-C5Jwnfs7.js                                          0.77 kB │ gzip:   0.38 kB
+dist/chunk/js/ts-dedent-CXZ4_2mJ.js                                              0.77 kB │ gzip:   0.46 kB
+dist/chunk/js/remark-rehype-oWJv6Jzo.js                                          0.78 kB │ gzip:   0.45 kB
+dist/chunk/js/trough-zzWXwSIo.js                                                 0.78 kB │ gzip:   0.43 kB
+dist/chunk/js/side-channel-list-DGt_qr4P.js                                      0.78 kB │ gzip:   0.42 kB
+dist/chunk/js/use-handle-filter-submit-BOUWeioH.js                               0.81 kB │ gzip:   0.48 kB
+dist/chunk/js/react-string-replace-DpPrRJxq.js                                   0.81 kB │ gzip:   0.51 kB
+dist/chunk/js/uuid-P-OY1HC2.js                                                   0.82 kB │ gzip:   0.43 kB
+dist/chunk/js/use-stale-dataset-validation-DRT4GXma.js                           0.82 kB │ gzip:   0.51 kB
+dist/chunk/js/parameter-dialog-DN2o-27f.js                                       0.82 kB │ gzip:   0.38 kB
+dist/chunk/js/victory-vendor-S0Mjyx3r.js                                         0.83 kB │ gzip:   0.45 kB
+dist/chunk/js/type-Cg0JHgJ0.js                                                   0.85 kB │ gzip:   0.38 kB
+dist/chunk/js/character-entities-legacy-BpoLgcEt.js                              0.85 kB │ gzip:   0.39 kB
+dist/chunk/js/spotlight--RKBzxRU.js                                              0.86 kB │ gzip:   0.50 kB
+dist/chunk/js/style-to-js-DstdBNf5.js                                            0.88 kB │ gzip:   0.53 kB
+dist/chunk/js/skeleton-card-Bk6OwHoX.js                                          0.90 kB │ gzip:   0.33 kB
+dist/chunk/js/prop-types--SxaH5GA.js                                             0.91 kB │ gzip:   0.55 kB
+dist/chunk/js/unist-util-visit-parents-BOqXQeqN.js                               0.91 kB │ gzip:   0.52 kB
+dist/chunk/js/index-NTnJ9vwO.js                                                  0.92 kB │ gzip:   0.46 kB
+dist/chunk/js/use-memory-setting-BTGuRmil.js                                     0.92 kB │ gzip:   0.54 kB
+dist/chunk/js/file-manager-service-2UBkTQG9.js                                   0.92 kB │ gzip:   0.42 kB
+dist/chunk/js/nth-check-B03Q_GZD.js                                              0.96 kB │ gzip:   0.54 kB
+dist/chunk/js/micromark-extension-gfm-task-list-item-DVsRkNya.js                 0.97 kB │ gzip:   0.44 kB
+dist/chunk/js/memory-service-DV29f645.js                                         1.01 kB │ gzip:   0.50 kB
+dist/chunk/js/function-bind-DrnB-baK.js                                          1.02 kB │ gzip:   0.49 kB
+dist/chunk/js/root-layout-BXdGvWty.js                                            1.02 kB │ gzip:   0.53 kB
+dist/chunk/js/top-select-CUQqpKwy.js                                             1.02 kB │ gzip:   0.53 kB
+dist/chunk/js/micromark-factory-destination-CoON6DSP.js                          1.03 kB │ gzip:   0.46 kB
+dist/chunk/js/mdast-util-gfm-strikethrough-Dr3Az_nC.js                           1.03 kB │ gzip:   0.56 kB
+dist/chunk/js/side-channel-weakmap-D4pgTJ5o.js                                   1.05 kB │ gzip:   0.50 kB
+dist/chunk/js/react-kapsule-BudNtEpw.js                                          1.05 kB │ gzip:   0.58 kB
+dist/chunk/js/index-CL935yv0.js                                                  1.06 kB │ gzip:   0.38 kB
+dist/chunk/js/constants-D2fVTHHj.js                                              1.08 kB │ gzip:   0.50 kB
+dist/chunk/js/has-symbols-CRskrF1U.js                                            1.09 kB │ gzip:   0.43 kB
+dist/chunk/js/separator-Dy2UzIYL.js                                              1.09 kB │ gzip:   0.60 kB
+dist/chunk/js/eventsource-parser-Cq35dZ0N.js                                     1.12 kB │ gzip:   0.68 kB
+dist/chunk/js/format-D1yhUpzL.js                                                 1.13 kB │ gzip:   0.59 kB
+dist/chunk/js/spin-CixiBZct.js                                                   1.18 kB │ gzip:   0.54 kB
+dist/chunk/js/table-skeleton-C3GKpnnv.js                                         1.19 kB │ gzip:   0.42 kB
+dist/chunk/js/extend-jhKcJ_O5.js                                                 1.24 kB │ gzip:   0.63 kB
+dist/chunk/js/use-sidecar-DIruQGIh.js                                            1.24 kB │ gzip:   0.61 kB
+dist/chunk/js/json-schema-traverse-BHxOLD4P.js                                   1.27 kB │ gzip:   0.59 kB
+dist/chunk/js/password-input-DDcK571o.js                                         1.28 kB │ gzip:   0.59 kB
+dist/chunk/js/use-show-embed-dialog-BXRbNiZz.js                                  1.30 kB │ gzip:   0.64 kB
+dist/chunk/js/class-variance-authority-UGtKN88q.js                               1.32 kB │ gzip:   0.66 kB
+dist/chunk/js/aria-hidden-B0YqPW3N.js                                            1.33 kB │ gzip:   0.67 kB
+dist/chunk/js/progress-BCVt45yo.js                                               1.33 kB │ gzip:   0.69 kB
+dist/chunk/js/markdown-rehype-plugins-7soW4XAr.js                                1.34 kB │ gzip:   0.74 kB
+dist/chunk/js/next-themes-CjB11ltL.js                                            1.41 kB │ gzip:   0.84 kB
+dist/chunk/js/switch-form-field-BFPMEvQj.js                                      1.41 kB │ gzip:   0.52 kB
+dist/chunk/js/more-button-BaJ_US5f.js                                            1.42 kB │ gzip:   0.73 kB
+dist/chunk/js/badge-CpE_c8Pr.js                                                  1.45 kB │ gzip:   0.73 kB
+dist/chunk/js/index-DQQCPFbs.js                                                  1.45 kB │ gzip:   0.74 kB
+dist/chunk/js/constants-CZ7O-8o4.js                                              1.45 kB │ gzip:   0.84 kB
+dist/chunk/js/mdast-util-find-and-replace-C3m2c7IZ.js                            1.46 kB │ gzip:   0.75 kB
+dist/chunk/js/skeleton-BYoxzGu_.js                                               1.51 kB │ gzip:   0.59 kB
+dist/chunk/js/file-status-badge-DppWMAYP.js                                      1.52 kB │ gzip:   0.59 kB
+dist/chunk/js/copy-to-clipboard-Bl8vDrTR.js                                      1.53 kB │ gzip:   0.79 kB
+dist/chunk/js/hover-card-BuccVQcs.js                                             1.57 kB │ gzip:   0.81 kB
+dist/chunk/js/index-B5-YHM68.js                                                  1.58 kB │ gzip:   0.64 kB
+dist/chunk/js/inline-style-parser-D8_Zmyug.js                                    1.59 kB │ gzip:   0.84 kB
+dist/chunk/js/divider-BJOlt00q.js                                                1.59 kB │ gzip:   0.50 kB
+dist/chunk/js/@hookform-wf0oFYVP.js                                              1.61 kB │ gzip:   0.80 kB
+dist/chunk/js/markdown-table-qiBROtQo.js                                         1.62 kB │ gzip:   0.75 kB
+dist/chunk/js/mdast-util-gfm-task-list-item-nhMGAuiQ.js                          1.64 kB │ gzip:   0.81 kB
+dist/chunk/js/use-cache-chat-log-DXAH1OqL.js                                     1.69 kB │ gzip:   0.78 kB
+dist/chunk/js/event-emitter-8lu30M7Y.js                                          1.69 kB │ gzip:   0.80 kB
+dist/chunk/js/rehype-katex-jKsHA9JW.js                                           1.70 kB │ gzip:   0.91 kB
+dist/chunk/js/es5-ext-BG6iCdsO.js                                                1.72 kB │ gzip:   0.80 kB
+dist/chunk/js/lodash.debounce-gNAP8TIq.js                                        1.74 kB │ gzip:   0.87 kB
+dist/chunk/js/vfile-message-C6hwY52p.js                                          1.75 kB │ gzip:   0.75 kB
+dist/chunk/js/micromark-extension-gfm-strikethrough-nxJWcXv1.js                  1.78 kB │ gzip:   0.77 kB
+dist/chunk/js/index-D1M53ItG.js                                                  1.79 kB │ gzip:   0.78 kB
+dist/chunk/js/use-sync-external-store-s1jzgOYG.js                                1.80 kB │ gzip:   0.80 kB
+dist/chunk/js/mdast-util-gfm-footnote-Cugz-_6P.js                                1.82 kB │ gzip:   0.75 kB
+dist/chunk/js/embedding-select-Bqnn7xOR.js                                       1.83 kB │ gzip:   0.85 kB
+dist/chunk/js/common-hooks-Bps3n41Y.js                                           1.83 kB │ gzip:   0.86 kB
+dist/chunk/js/hooks-pSHSExOt.js                                                  1.84 kB │ gzip:   0.80 kB
+dist/chunk/js/authorized-layout-CyLoqhAC.js                                      1.90 kB │ gzip:   0.92 kB
+dist/chunk/js/switch-DQ5ynXIR.js                                                 1.91 kB │ gzip:   0.89 kB
+dist/chunk/js/rehype-autolink-headings-B4Vfv9Ej.js                               1.97 kB │ gzip:   0.95 kB
+dist/chunk/js/popover-F4iDseNX.js                                                1.98 kB │ gzip:   0.91 kB
+dist/chunk/js/use-login-request-D_vonw_O.js                                      1.99 kB │ gzip:   0.89 kB
+dist/chunk/js/checkbox-Cr-yBwgb.js                                               2.00 kB │ gzip:   0.87 kB
+dist/chunk/js/jerrypick-CsvFwzuk.js                                              2.08 kB │ gzip:   0.95 kB
+dist/chunk/js/tabs-DXhYTu-C.js                                                   2.09 kB │ gzip:   0.81 kB
+dist/chunk/js/html-parse-stringify-CGF56bVl.js                                   2.10 kB │ gzip:   1.11 kB
+dist/chunk/js/use-send-shared-message-CQB1t-Gw.js                                2.16 kB │ gzip:   1.13 kB
+dist/chunk/js/file-util-C7d_-JmI.js                                              2.21 kB │ gzip:   1.11 kB
+dist/chunk/js/index-Dp8bcA3a.js                                                  2.21 kB │ gzip:   0.93 kB
+dist/chunk/js/cross-language-form-field-C1lfu91T.js                              2.24 kB │ gzip:   0.99 kB
+dist/chunk/js/radio-group-DBzdINR0.js                                            2.28 kB │ gzip:   0.96 kB
+dist/chunk/js/react-remove-scroll-bar-Bq920F1-.js                                2.31 kB │ gzip:   0.93 kB
+dist/chunk/js/hast-util-to-parse5-BfzBiKil.js                                    2.31 kB │ gzip:   1.05 kB
+dist/chunk/js/search-dropdown-BURmNlNg.js                                        2.31 kB │ gzip:   0.70 kB
+dist/chunk/js/404-BE6_yFRH.js                                                    2.33 kB │ gzip:   1.03 kB
+dist/chunk/js/mdast-util-gfm-autolink-literal-DxJ2MbZ6.js                        2.36 kB │ gzip:   1.06 kB
+dist/chunk/js/mdast-util-gfm-table-0m2iH9qB.js                                   2.37 kB │ gzip:   1.04 kB
+dist/chunk/js/rehype-attr-Cm35B7q8.js                                            2.49 kB │ gzip:   1.11 kB
+dist/chunk/js/scroll-area-uoD33xoD.js                                            2.52 kB │ gzip:   0.90 kB
+dist/chunk/js/card-CTK97Soe.js                                                   2.55 kB │ gzip:   0.75 kB
+dist/chunk/js/segmented-CBrDDQ8z.js                                              2.57 kB │ gzip:   0.91 kB
+dist/chunk/js/bulk-operate-bar-Bh6Owrtg.js                                       2.59 kB │ gzip:   0.85 kB
+dist/chunk/js/@ungap-DadG6O39.js                                                 2.63 kB │ gzip:   1.13 kB
+dist/chunk/js/@braintree-VMZhBD3v.js                                             2.64 kB │ gzip:   1.11 kB
+dist/chunk/js/ragflow-form-BC2gHgIm.js                                           2.68 kB │ gzip:   0.92 kB
+dist/chunk/js/canvas-color-tracker-CpGtooRb.js                                   2.76 kB │ gzip:   1.25 kB
+dist/chunk/js/knowledge-ivzrP9oI.js                                              2.77 kB │ gzip:   1.13 kB
+dist/chunk/js/hast-util-to-text-BqqhDKvp.js                                      2.78 kB │ gzip:   1.31 kB
+dist/chunk/js/ingestion-message-hooks-D6QEV0GW.js                                2.78 kB │ gzip:   1.24 kB
+dist/chunk/js/memories-form-field-D6tDNc2R.js                                    2.79 kB │ gzip:   1.25 kB
+dist/chunk/js/kapsule-siZ-uEG0.js                                                2.85 kB │ gzip:   1.36 kB
+dist/chunk/js/eventemitter3-2yktF7TT.js                                          2.86 kB │ gzip:   1.09 kB
+dist/chunk/js/use-parser-select-handler-Cl2obh2W.js                              2.86 kB │ gzip:   1.37 kB
+dist/chunk/js/textarea-J8HCquQ3.js                                               2.86 kB │ gzip:   1.35 kB
+dist/chunk/js/mdast-util-math-CbeIcHjs.js                                        2.88 kB │ gzip:   1.25 kB
+dist/chunk/js/dsl-bridge-Bn66qpcn.js                                             2.88 kB │ gzip:   1.25 kB
+dist/chunk/js/state-local-DHPJ_3N6.js                                            2.90 kB │ gzip:   1.13 kB
+dist/chunk/js/theme-switch-CqwaGZCp.js                                           2.90 kB │ gzip:   1.08 kB
+dist/chunk/js/index-D-zxtm1i.js                                                  2.91 kB │ gzip:   1.23 kB
+dist/chunk/js/parse-entities-DbEciG9D.js                                         2.94 kB │ gzip:   1.35 kB
+dist/chunk/js/common-item-DPzCrm09.js                                            2.95 kB │ gzip:   0.90 kB
+dist/chunk/js/use-rename-chat-CWGvZIvU.js                                        2.97 kB │ gzip:   1.04 kB
+dist/chunk/js/embed-container-iUFvp1_D.js                                        3.02 kB │ gzip:   0.81 kB
+dist/chunk/js/breadcrumb-BygR1cWk.js                                             3.02 kB │ gzip:   1.03 kB
+dist/chunk/js/use-send-message-B-jlFNsx.js                                       3.03 kB │ gzip:   1.48 kB
+dist/chunk/js/request-JeVurBmH.js                                                3.03 kB │ gzip:   1.29 kB
+dist/chunk/js/hook-BLaceeQh.js                                                   3.05 kB │ gzip:   1.31 kB
+dist/chunk/js/index-array-by-FoIiAiYs.js                                         3.22 kB │ gzip:   1.30 kB
+dist/chunk/js/radio-D-JCgY8t.js                                                  3.23 kB │ gzip:   1.31 kB
+dist/chunk/js/copy-to-clipboard-CP_LqU5P.js                                      3.27 kB │ gzip:   1.03 kB
+dist/chunk/js/micromark-extension-math-DsPQ30go.js                               3.29 kB │ gzip:   1.22 kB
+dist/chunk/js/remark-github-blockquote-alert-CpPfJzwD.js                         3.29 kB │ gzip:   1.57 kB
+dist/chunk/js/slider-input-form-field-DobyCrRa.js                                3.30 kB │ gzip:   1.22 kB
+dist/chunk/js/color-string-dmz1-vkl.js                                           3.40 kB │ gzip:   1.22 kB
+dist/chunk/js/index-CCMy8erR.js                                                  3.41 kB │ gzip:   1.15 kB
+dist/chunk/js/color-name-DwFW4v0Y.js                                             3.45 kB │ gzip:   1.45 kB
+dist/chunk/js/collapse-DhIrqB1-.js                                               3.52 kB │ gzip:   1.01 kB
+dist/chunk/js/index-C-coi-nd.js                                                  3.54 kB │ gzip:   1.45 kB
+dist/chunk/js/table-DSa_Sr9R.js                                                  3.61 kB │ gzip:   1.04 kB
+dist/chunk/js/react-markdown-Cjs5-lOh.js                                         3.64 kB │ gzip:   1.52 kB
+dist/chunk/js/log-columns-o6Pas1pX.js                                            3.64 kB │ gzip:   1.28 kB
+dist/chunk/js/delete-source-modal-BqnUofVl.js                                    3.67 kB │ gzip:   1.13 kB
+dist/chunk/js/index-5PSe4yXa.js                                                  3.68 kB │ gzip:   1.66 kB
+dist/chunk/js/ragflow-avatar-Cyygufxx.js                                         3.73 kB │ gzip:   1.50 kB
+dist/chunk/js/js-base64-DNebsYFX.js                                              3.78 kB │ gzip:   1.64 kB
+dist/chunk/js/micromark-extension-gfm-autolink-literal-B3srAAs6.js               3.78 kB │ gzip:   1.42 kB
+dist/chunk/js/scheduler-CNpwfz3n.js                                              3.78 kB │ gzip:   1.56 kB
+dist/chunk/js/form-Dc4QZNLv.js                                                   3.86 kB │ gzip:   1.31 kB
+dist/chunk/js/use-compilation-template-group-request-eXu__KSy.js                 3.90 kB │ gzip:   1.46 kB
+dist/chunk/js/stylis-BYRuOJrL.js                                                 3.93 kB │ gzip:   1.84 kB
+dist/chunk/js/micromark-util-subtokenize-DnrM7FhC.js                             3.98 kB │ gzip:   1.54 kB
+dist/chunk/js/hast-util-from-dom-7xrwq65K.js                                     3.99 kB │ gzip:   1.72 kB
+dist/chunk/js/react-copy-to-clipboard-Dic05QKJ.js                                4.02 kB │ gzip:   1.56 kB
+dist/chunk/js/react-force-graph-2d-BEEVWp6z.js                                   4.10 kB │ gzip:   1.23 kB
+dist/chunk/js/ahooks-CZF4UPgl.js                                                 4.14 kB │ gzip:   1.56 kB
+dist/chunk/js/tslib-DjkmwvqG.js                                                  4.16 kB │ gzip:   1.76 kB
+dist/chunk/js/path-webpack-7aeG943l.js                                           4.16 kB │ gzip:   1.70 kB
+dist/chunk/js/memory-dropdown-Cz7X4hJW.js                                        4.22 kB │ gzip:   1.21 kB
+dist/chunk/js/unified-DgHoWmRu.js                                                4.30 kB │ gzip:   1.70 kB
+dist/chunk/js/micromark-extension-gfm-footnote-CmPNW_xB.js                       4.30 kB │ gzip:   1.40 kB
+dist/chunk/js/index-DoJorOVq.js                                                  4.34 kB │ gzip:   1.37 kB
+dist/chunk/js/knowledge-base-item-w_ddggZQ.js                                    4.44 kB │ gzip:   1.73 kB
+dist/chunk/js/sheet-BBWk86p-.js                                                  4.44 kB │ gzip:   1.45 kB
+dist/chunk/js/use-rename-dataset-DPv-WduU.js                                     4.49 kB │ gzip:   1.51 kB
+dist/chunk/js/index-BrQ7--HZ.js                                                  4.53 kB │ gzip:   1.43 kB
+dist/chunk/js/use-mcp-request-BOYlx79e.js                                        4.58 kB │ gzip:   1.61 kB
+dist/chunk/js/hooks-G6472qub.js                                                  4.63 kB │ gzip:   1.91 kB
+dist/chunk/js/dialog-B2mxblfI.js                                                 4.76 kB │ gzip:   1.54 kB
+dist/chunk/js/operator-icon-D-H-V8_V.js                                          4.78 kB │ gzip:   1.55 kB
+dist/chunk/js/@iconify-i5_yTCBZ.js                                               4.79 kB │ gzip:   2.14 kB
+dist/chunk/js/@date-fns-CjeJQIF-.js                                              4.90 kB │ gzip:   1.67 kB
+dist/chunk/js/fast-png-6OtzZj5r.js                                               4.98 kB │ gzip:   2.10 kB
+dist/chunk/js/rc-util-CAwuUvuZ.js                                                5.04 kB │ gzip:   1.98 kB
+dist/chunk/js/mousetrap-HAy7rgwJ.js                                              5.07 kB │ gzip:   2.34 kB
+dist/chunk/js/zustand-Cz2z1_Eh.js                                                5.09 kB │ gzip:   2.11 kB
+dist/chunk/js/hooks-C8X4Gm57.js                                                  5.10 kB │ gzip:   1.95 kB
+dist/chunk/js/chunked-result-panel-B1JWKcwf.js                                   5.15 kB │ gzip:   1.41 kB
+dist/chunk/js/float-tooltip-pY9ML2ZX.js                                          5.16 kB │ gzip:   2.17 kB
+dist/chunk/js/vfile-BH-0XMDo.js                                                  5.18 kB │ gzip:   2.01 kB
+dist/chunk/js/tabbable-yKHHqiBc.js                                               5.31 kB │ gzip:   2.09 kB
+dist/chunk/js/hooks-4OnNCDBE.js                                                  5.33 kB │ gzip:   2.01 kB
+dist/chunk/js/hast-util-from-parse5-DfC4yEN7.js                                  5.36 kB │ gzip:   2.30 kB
+dist/chunk/js/input-DC95F4rB.js                                                  5.46 kB │ gzip:   1.91 kB
+dist/chunk/js/admin-service-DiaxAM5Z.js                                          5.46 kB │ gzip:   2.06 kB
+dist/chunk/js/document-header-DAerPTP-.js                                        5.46 kB │ gzip:   1.97 kB
+dist/chunk/js/hast-util-sanitize-zEvAEyhO.js                                     5.51 kB │ gzip:   2.29 kB
+dist/chunk/js/empty-CnsXR1kL.js                                                  5.63 kB │ gzip:   1.70 kB
+dist/chunk/js/button-xfadPj69.js                                                 5.70 kB │ gzip:   1.73 kB
+dist/chunk/js/micromark-extension-gfm-table-Cv_t__kW.js                          5.79 kB │ gzip:   1.98 kB
+dist/chunk/js/iobuffer-Mt7Vjgps.js                                               5.88 kB │ gzip:   1.48 kB
+dist/chunk/js/recharts-scale-ByeRJYM5.js                                         5.93 kB │ gzip:   2.13 kB
+dist/chunk/js/react-remove-scroll-Da8xLRzc.js                                    5.94 kB │ gzip:   2.40 kB
+dist/chunk/js/home-card-B27eEoPQ.js                                              5.96 kB │ gzip:   1.38 kB
+dist/chunk/js/fast-equals-DE-eAtGG.js                                            6.06 kB │ gzip:   2.01 kB
+dist/chunk/js/openai-speech-stream-player-XlxITneK.js                            6.19 kB │ gzip:   2.04 kB
+dist/chunk/js/fflate-CQG2iWDY.js                                                 6.27 kB │ gzip:   3.22 kB
+dist/chunk/js/cytoscape-cose-bilkent-BRJUPOAa.js                                 6.29 kB │ gzip:   2.40 kB
+dist/chunk/js/dual-range-slider-CuUP0CsK.js                                      6.30 kB │ gzip:   2.28 kB
+dist/chunk/js/hast-util-to-jsx-runtime-WL5ynwIo.js                               6.41 kB │ gzip:   2.47 kB
+dist/chunk/js/hast-util-raw-DRiWklB8.js                                          6.43 kB │ gzip:   2.39 kB
+dist/chunk/js/select-DRck_BQM.js                                                 6.67 kB │ gzip:   1.70 kB
+dist/chunk/js/dropdown-menu-B61-S3vV.js                                          6.69 kB │ gzip:   1.57 kB
+dist/chunk/js/parser-config-validation-BvrNa5P6.js                               6.89 kB │ gzip:   2.00 kB
+dist/chunk/js/index-BhqIUVFs.js                                                  6.95 kB │ gzip:   2.28 kB
+dist/chunk/js/large-model-form-field-C2DuLvw9.js                                 7.06 kB │ gzip:   1.74 kB
+dist/chunk/js/index-DJpuM2Qv.js                                                  7.06 kB │ gzip:   1.91 kB
+dist/chunk/js/i18next-browser-languagedetector-DrNbJIFn.js                       7.08 kB │ gzip:   2.42 kB
+dist/chunk/js/marks-pane-BogH88SZ.js                                             7.22 kB │ gzip:   2.44 kB
+dist/chunk/js/ragflow-pagination-6dYPMwkb.js                                     7.27 kB │ gzip:   1.92 kB
+dist/chunk/js/process-log-modal-uGu4y0KU.js                                      7.35 kB │ gzip:   1.79 kB
+dist/chunk/js/dommatrix-CtBfPIXF.js                                              7.51 kB │ gzip:   2.80 kB
+dist/chunk/js/navigation-layout-BeEP4JDH.js                                      7.52 kB │ gzip:   2.39 kB
+dist/chunk/js/hotkeys-js-C2-TXS9N.js                                             7.53 kB │ gzip:   3.19 kB
+dist/chunk/js/bg-Cq9uP2R4.js                                                     7.62 kB │ gzip:   1.99 kB
+dist/chunk/js/resize-observer-polyfill-C7U_o75s.js                               7.65 kB │ gzip:   2.44 kB
+dist/chunk/js/react-B-v8ejWP.js                                                  7.65 kB │ gzip:   2.99 kB
+dist/chunk/js/use-send-agent-message-D0DuMM1W.js                                 7.84 kB │ gzip:   3.34 kB
+dist/chunk/js/index-BrSpb83N.js                                                  8.06 kB │ gzip:   1.52 kB
+dist/chunk/js/human-id-B30rlwei.js                                               8.13 kB │ gzip:   3.28 kB
+dist/chunk/js/index-ClcQZVoq.js                                                  8.26 kB │ gzip:   2.55 kB
+dist/chunk/js/immer-DqD9HV6_.js                                                  8.42 kB │ gzip:   3.20 kB
+dist/chunk/js/index-DaUkU6rg.js                                                  8.52 kB │ gzip:   3.75 kB
+dist/chunk/js/github-slugger-C99hOO6H.js                                         8.58 kB │ gzip:   3.28 kB
+dist/chunk/js/logic-hooks-MrmOHHp4.js                                            8.68 kB │ gzip:   3.45 kB
+dist/chunk/js/use-rename-agent-CAFOsuxK.js                                       8.68 kB │ gzip:   2.41 kB
+dist/chunk/js/timeline-B0tPDlou.js                                               8.74 kB │ gzip:   2.40 kB
+dist/chunk/js/confirm-delete-dialog-BmreQyLZ.js                                  8.83 kB │ gzip:   2.24 kB
+dist/chunk/js/get-intrinsic-DxD-EjIY.js                                          8.97 kB │ gzip:   2.90 kB
+dist/chunk/js/index-BHTcYnts.js                                                  9.05 kB │ gzip:   3.22 kB
+dist/chunk/js/object-inspect-DrOi9JHQ.js                                         9.22 kB │ gzip:   3.34 kB
+dist/chunk/js/es-toolkit-Bx4ERj5o.js                                             9.46 kB │ gzip:   2.89 kB
+dist/chunk/js/avatar-upload-edgR3mxe.js                                          9.51 kB │ gzip:   2.96 kB
+dist/chunk/js/store-BwuOlqV_.js                                                  9.56 kB │ gzip:   3.20 kB
+dist/chunk/js/hast-util-select-4NQxv-dK.js                                       9.61 kB │ gzip:   3.28 kB
+dist/chunk/js/whatwg-fetch-CqgKm_v_.js                                           9.66 kB │ gzip:   3.35 kB
+dist/chunk/js/index-CUs4J3o-.js                                                  9.70 kB │ gzip:   3.49 kB
+dist/chunk/js/index-CJ9HLj_b.js                                                  9.98 kB │ gzip:   3.62 kB
+dist/chunk/js/input-select-_4hRGZlg.js                                           9.99 kB │ gzip:   2.98 kB
+dist/chunk/js/khroma-Ku77JD_L.js                                                10.01 kB │ gzip:   3.71 kB
+dist/chunk/js/micromark-L0_Efblx.js                                             10.24 kB │ gzip:   4.03 kB
+dist/chunk/js/index-CV-a4AuT.js                                                 10.35 kB │ gzip:   3.11 kB
+dist/chunk/js/lowlight-Df1Ro72W.js                                              10.39 kB │ gzip:   3.07 kB
+dist/chunk/js/use-get-begin-query-BM26DEs9.js                                   10.40 kB │ gzip:   3.67 kB
+dist/chunk/js/@babel-C5xZJwLL.js                                                10.56 kB │ gzip:   3.82 kB
+dist/chunk/js/mdast-util-from-markdown-Cy9XZUP0.js                              10.57 kB │ gzip:   3.14 kB
+dist/chunk/js/index-BwMFwe4Y.js                                                 10.58 kB │ gzip:   3.85 kB
+dist/chunk/js/preact-D_hL8e6n.js                                                10.65 kB │ gzip:   4.45 kB
+dist/chunk/js/use-send-shared-message-6KwEMGsD.js                               10.70 kB │ gzip:   3.49 kB
+dist/chunk/js/react-i18next-Bx6vIPNf.js                                         10.71 kB │ gzip:   4.20 kB
+dist/chunk/js/index-8s2Im_AR.js                                                 10.75 kB │ gzip:   2.81 kB
+dist/chunk/js/hastscript-DsAXXzZv.js                                            10.85 kB │ gzip:   4.35 kB
+dist/chunk/js/tree-view-CT2mMRAw.js                                             11.23 kB │ gzip:   2.60 kB
+dist/chunk/js/react-rnd-pSVxCffE.js                                             11.26 kB │ gzip:   3.34 kB
+dist/chunk/js/use-document-request-CBWqpK93.js                                  11.34 kB │ gzip:   4.17 kB
+dist/chunk/js/login-DrnabO-z.js                                                 11.44 kB │ gzip:   3.40 kB
+dist/chunk/js/@tweenjs-nKLJ8H8c.js                                              11.52 kB │ gzip:   3.16 kB
+dist/chunk/js/mdast-util-to-hast-C4YPV4CC.js                                    11.60 kB │ gzip:   3.48 kB
+dist/chunk/js/@monaco-editor-BO-hOEVl.js                                        11.94 kB │ gzip:   4.41 kB
+dist/chunk/js/index-CHcJs4it.js                                                 12.08 kB │ gzip:   4.67 kB
+dist/chunk/js/document-query-keys-B5q_ePw6.js                                   12.17 kB │ gzip:   4.30 kB
+dist/chunk/js/file-uploader-CtkBCObg.js                                         12.27 kB │ gzip:   3.27 kB
+dist/chunk/js/mdast-util-to-markdown-CrYHtkPN.js                                12.29 kB │ gzip:   3.67 kB
+dist/chunk/js/next-icon-0f2bEOMO.js                                             12.32 kB │ gzip:   3.43 kB
+dist/chunk/js/agent-templates-CTXS4mbI.js                                       12.35 kB │ gzip:   4.34 kB
+dist/chunk/js/util-C0tn9BR4.js                                                  12.48 kB │ gzip:   3.96 kB
+dist/chunk/js/navigate-hooks-DlLyEFpN.js                                        12.59 kB │ gzip:   4.80 kB
+dist/chunk/js/@uiw-BxtlQFv1.js                                                  12.66 kB │ gzip:   4.85 kB
+dist/chunk/js/next-DmG96slN.js                                                  12.67 kB │ gzip:   2.89 kB
+dist/chunk/js/dom-align-D2gPi8H8.js                                             12.67 kB │ gzip:   4.84 kB
+dist/chunk/js/decimal.js-light-DxGkYd4s.js                                      12.69 kB │ gzip:   5.52 kB
+dist/chunk/js/react-dev-inspector-VJ8XrkVS.js                                   12.87 kB │ gzip:   4.16 kB
+dist/chunk/js/select-with-search-BW4VpNSC.js                                    13.23 kB │ gzip:   3.42 kB
+dist/chunk/js/index-ivLIQSdC.js                                                 13.45 kB │ gzip:   5.16 kB
+dist/chunk/js/model-tree-select-CNKRuAlE.js                                     13.85 kB │ gzip:   3.74 kB
+dist/chunk/js/multi-select-6rUsYvIf.js                                          14.17 kB │ gzip:   3.54 kB
+dist/chunk/js/dynamic-form-DwHQDioX.js                                          14.22 kB │ gzip:   3.98 kB
+dist/chunk/js/react-dropzone-Dr41fzH0.js                                        14.79 kB │ gzip:   4.74 kB
+dist/chunk/js/create-agent-dialog-BOe-Pl9d.js                                   14.94 kB │ gzip:   4.32 kB
+dist/chunk/js/index-IJf4Lkfw.js                                                 14.98 kB │ gzip:   4.60 kB
+dist/chunk/js/tinycolor2-DJ_qK68I.js                                            15.16 kB │ gzip:   5.23 kB
+dist/chunk/js/object-editor-Danrg8IG.js                                         15.16 kB │ gzip:   5.88 kB
+dist/chunk/js/index-TePoWuDh.js                                                 15.31 kB │ gzip:   3.70 kB
+dist/chunk/js/boolean-editor-B43_mdSg.js                                        15.61 kB │ gzip:   5.66 kB
+dist/chunk/js/umi-request-CsYLarkI.js                                           15.78 kB │ gzip:   5.09 kB
+dist/chunk/js/index-VNuka_Sj.js                                                 15.78 kB │ gzip:   4.54 kB
+dist/chunk/js/index-0Jp-YQnb.js                                                 15.81 kB │ gzip:   5.94 kB
+dist/chunk/js/index-C7uErowD.js                                                 15.83 kB │ gzip:   4.43 kB
+dist/chunk/js/locale-config-DzY0KpRg.js                                         15.90 kB │ gzip:   6.55 kB
+dist/chunk/js/index-MiRUzkJg.js                                                 15.93 kB │ gzip:   5.84 kB
+dist/chunk/js/use-knowledge-request-BxYqOxY9.js                                 16.15 kB │ gzip:   4.97 kB
+dist/chunk/js/use-user-setting-request-BCTpbzn4.js                              16.26 kB │ gzip:   4.71 kB
+dist/chunk/js/user-detail-CSIUQIq0.js                                           16.31 kB │ gzip:   3.48 kB
+dist/chunk/js/use-chat-logic-T7cNx-dU.js                                        16.35 kB │ gzip:   3.49 kB
+dist/chunk/js/re-resizable-psPqT2h6.js                                          16.50 kB │ gzip:   4.91 kB
+dist/chunk/js/fast-uri-CwNPyztK.js                                              16.65 kB │ gzip:   5.62 kB
+dist/chunk/js/css-selector-parser-aIz4CpbP.js                                   17.04 kB │ gzip:   5.52 kB
+dist/chunk/js/llm-util-BA4JPSJM.js                                              17.28 kB │ gzip:   4.60 kB
+dist/chunk/js/qs-B0CfiJfO.js                                                    17.31 kB │ gzip:   5.64 kB
+dist/chunk/js/embla-carousel-B8ffWQHD.js                                        17.58 kB │ gzip:   7.02 kB
+dist/chunk/js/index-BMhd9yn_.js                                                 17.99 kB │ gzip:   4.75 kB
+dist/chunk/js/property-information-tlBUl7Ly.js                                  18.13 kB │ gzip:   5.99 kB
+dist/chunk/js/use-agent-request-BmG_VIRR.js                                     18.14 kB │ gzip:   5.10 kB
+dist/chunk/js/index-Djf1TDOE.js                                                 18.41 kB │ gzip:   5.09 kB
+dist/chunk/js/array-editor-DYBm1GnA.js                                          18.49 kB │ gzip:   6.37 kB
+dist/chunk/js/react-smooth-kuLn3C_o.js                                          18.83 kB │ gzip:   4.94 kB
+dist/chunk/js/react-photo-view-CQ3s5CFk.js                                      19.09 kB │ gzip:   7.74 kB
+dist/chunk/js/@ant-design-L6xSvp9Z.js                                           19.22 kB │ gzip:   7.24 kB
+dist/chunk/js/papaparse-CqhE4PeY.js                                             19.24 kB │ gzip:   6.92 kB
+dist/chunk/js/index-q6xaw9Md.js                                                 19.27 kB │ gzip:   4.88 kB
+dist/chunk/js/cose-base-CjX5o62z.js                                             19.44 kB │ gzip:   5.76 kB
+dist/chunk/js/rerank-BUZq6UBO.js                                                19.73 kB │ gzip:   4.13 kB
+dist/chunk/js/@upsetjs-B71KJE6i.js                                              19.79 kB │ gzip:   7.61 kB
+dist/chunk/js/react-pdf-highlighter-B0mRm4-B.js                                 20.02 kB │ gzip:   6.40 kB
+dist/chunk/js/index-C3boHIST.js                                                 20.45 kB │ gzip:   5.49 kB
+dist/chunk/js/react-draggable-Bl_7Rot_.js                                       20.47 kB │ gzip:   6.08 kB
+dist/chunk/js/tailwind-merge-DXFEMDxe.js                                        20.73 kB │ gzip:   6.71 kB
+dist/chunk/js/resizable-Cfs-hAm6.js                                             20.83 kB │ gzip:   6.19 kB
+dist/chunk/js/bezier-js-DTtxE2ey.js                                             20.98 kB │ gzip:   8.24 kB
+dist/chunk/js/index-Ds6mmuTO.js                                                 21.44 kB │ gzip:   5.56 kB
+dist/chunk/js/gl-matrix-KMkgfvTm.js                                             21.55 kB │ gzip:   6.88 kB
+dist/chunk/js/use-message-references-ByWoCfMu.js                                22.20 kB │ gzip:   5.80 kB
+dist/chunk/js/use-llm-request-DB4e6OOQ.js                                       22.38 kB │ gzip:   6.22 kB
+dist/chunk/js/index-CNGRHPS2.js                                                 22.53 kB │ gzip:   7.13 kB
+dist/chunk/js/bubblesets-js-Dg0vUdcS.js                                         22.53 kB │ gzip:   7.17 kB
+dist/chunk/js/index-DakcWZiz.js                                                 23.10 kB │ gzip:   4.78 kB
+dist/chunk/js/cmdk-8-ACAqam.js                                                  23.83 kB │ gzip:   8.42 kB
+dist/chunk/js/string-editor-BRZSmV3c.js                                         24.50 kB │ gzip:   7.09 kB
+dist/chunk/js/number-editor-BBa-D_Hr.js                                         25.30 kB │ gzip:   7.12 kB
+dist/chunk/js/prompt-dialog-BhLytEl9.js                                         25.31 kB │ gzip:   5.65 kB
+dist/chunk/js/index-BP_nK1iE.js                                                 26.15 kB │ gzip:   4.85 kB
+dist/chunk/js/root-layout-BfVBohiN.js                                           26.23 kB │ gzip:   5.85 kB
+dist/chunk/js/react-resizable-panels-DWRO0Q7_.js                                26.94 kB │ gzip:   9.22 kB
+dist/chunk/js/react18-json-view-CbMwYjlD.js                                     27.16 kB │ gzip:   7.42 kB
+dist/chunk/js/roughjs-BvVnIbDU.js                                               27.52 kB │ gzip:   8.90 kB
+dist/chunk/js/force-graph-C6Oajlg_.js                                           27.69 kB │ gzip:   8.74 kB
+dist/chunk/js/index-Do0OkYtX.js                                                 27.93 kB │ gzip:   8.40 kB
+dist/chunk/js/index-CrOjsTje.js                                                 28.03 kB │ gzip:   5.49 kB
+dist/chunk/js/micromark-core-commonmark-BDDZKfJQ.js                             28.44 kB │ gzip:   6.79 kB
+dist/chunk/js/index-HVg9v9jg.js                                                 28.55 kB │ gzip:   8.97 kB
+dist/chunk/js/localforage-XSIFhYwk.js                                           28.60 kB │ gzip:   8.75 kB
+dist/chunk/js/dompurify-CWZO3uA6.js                                             28.93 kB │ gzip:  10.75 kB
+dist/chunk/js/react-audio-voice-recorder-CHlVteNn.js                            29.01 kB │ gzip:  10.84 kB
+dist/chunk/js/service-status-5R5ajGvy.js                                        29.46 kB │ gzip:   6.15 kB
+dist/chunk/js/@floating-ui-D0zlB4Ma.js                                          29.96 kB │ gzip:  11.05 kB
+dist/chunk/js/dagre-d3-es-twU1XAC5.js                                           30.85 kB │ gzip:  10.04 kB
+dist/chunk/js/react-hook-form-BoU7lIlI.js                                       31.78 kB │ gzip:  11.23 kB
+dist/chunk/js/index-Cp3tAq0s.js                                                 33.07 kB │ gzip:   7.74 kB
+dist/chunk/js/index-CU4lkRs-.js                                                 33.64 kB │ gzip:   8.47 kB
+dist/chunk/js/sandbox-settings-CEtwOtyc.js                                      33.65 kB │ gzip:   6.57 kB
+dist/chunk/js/sonner-DbxHDEjy.js                                                33.71 kB │ gzip:   9.53 kB
+dist/chunk/js/agent-log-page-B2NOgtQj.js                                        33.94 kB │ gzip:  10.13 kB
+dist/chunk/js/lodash-es-TlxPSeYf.js                                             34.59 kB │ gzip:  12.22 kB
+dist/chunk/js/next-DSMIqDzF.js                                                  36.68 kB │ gzip:   9.88 kB
+dist/chunk/js/utif-BfWZsARN.js                                                  37.57 kB │ gzip:  14.66 kB
+dist/chunk/js/users-DrFJ_MYN.js                                                 37.57 kB │ gzip:   6.82 kB
+dist/chunk/js/index-CB4mgQrg.js                                                 37.71 kB │ gzip:   8.04 kB
+dist/chunk/js/index-CBp-dUu_.js                                                 39.06 kB │ gzip:   9.27 kB
+dist/chunk/js/@chenglou-CpcWOZqt.js                                             41.17 kB │ gzip:  13.59 kB
+dist/chunk/js/locale-es-D2reT-nu.js                                             43.53 kB │ gzip:  14.16 kB
+dist/chunk/js/file-selector-BfGgLGFW.js                                         43.72 kB │ gzip:  11.30 kB
+dist/chunk/js/pako-SnXRF_kC.js                                                  44.16 kB │ gzip:  13.92 kB
+dist/chunk/js/react-day-picker-Byvje235.js                                      44.31 kB │ gzip:  13.01 kB
+dist/chunk/js/react-syntax-highlighter-dBm97Few.js                              44.53 kB │ gzip:   8.07 kB
+dist/chunk/js/index-nQhmBOlw.js                                                 45.06 kB │ gzip:  10.36 kB
+dist/chunk/js/index-CN3MbSQu.js                                                 46.57 kB │ gzip:  11.27 kB
+dist/chunk/js/index-CPb5ohSR.js                                                 47.03 kB │ gzip:  10.33 kB
+dist/chunk/js/index-DebwFjn3.js                                                 47.38 kB │ gzip:  10.85 kB
+dist/chunk/js/txt-preview-CtgWKIfv.js                                           47.93 kB │ gzip:  12.90 kB
+dist/chunk/js/markdown-editor-DjqxH7yn.js                                       48.97 kB │ gzip:  13.07 kB
+dist/chunk/js/i18next-DnPY2Eh-.js                                               49.04 kB │ gzip:  14.47 kB
+dist/chunk/js/layout-base-B0Egg8yA.js                                           50.87 kB │ gzip:  13.16 kB
+dist/chunk/js/index-Cy_jH7RX.js                                                 51.68 kB │ gzip:  11.12 kB
+dist/chunk/js/searching-dmXkMDvd.js                                             52.14 kB │ gzip:  11.88 kB
+dist/chunk/js/utils-1-h1KV4o.js                                                 52.18 kB │ gzip:  15.12 kB
+dist/chunk/js/locale-id-CZk3M8Ss.js                                             53.35 kB │ gzip:  17.51 kB
+dist/chunk/js/prismjs-C5V3BeYK.js                                               55.89 kB │ gzip:  16.76 kB
+dist/chunk/js/index-D0f5mk26.js                                                 56.31 kB │ gzip:  13.53 kB
+dist/chunk/js/lucide-react-CuLosT_7.js                                          56.56 kB │ gzip:  17.00 kB
+dist/chunk/js/locale-pt-br-CkspZBKx.js                                          57.48 kB │ gzip:  18.98 kB
+dist/chunk/js/jsencrypt-Cinhw5hj.js                                             57.52 kB │ gzip:  17.72 kB
+dist/chunk/js/xml-js-BATGEei7.js                                                59.21 kB │ gzip:  21.95 kB
+dist/chunk/js/zod-B6d7cSCq.js                                                   61.33 kB │ gzip:  14.54 kB
+dist/chunk/js/locale-zh-traditional-arJ25wIb.js                                 62.47 kB │ gzip:  24.92 kB
+dist/chunk/js/web-streams-polyfill-DR0-mWSf.js                                  68.81 kB │ gzip:  15.39 kB
+dist/chunk/js/index-De4SNPoK.js                                                 77.46 kB │ gzip:  15.76 kB
+dist/chunk/js/locale-vi-Bstf6OIj.js                                             77.58 kB │ gzip:  22.30 kB
+dist/entry/js/index-DuLTMkF3.js                                                 79.97 kB │ gzip:  20.01 kB
+dist/chunk/js/react-router-4eZfb2vR.js                                          88.39 kB │ gzip:  28.89 kB
+dist/chunk/js/index-WzMFYNBh.js                                                 91.66 kB │ gzip:  19.72 kB
+dist/chunk/js/index-UVY6XKBj.js                                                 96.76 kB │ gzip:  27.35 kB
+dist/chunk/js/index-Bp4Qb8D4.js                                                104.24 kB │ gzip:  23.86 kB
+dist/chunk/js/ajv-D7m__VHB.js                                                  114.18 kB │ gzip:  33.65 kB
+dist/chunk/js/index-DfSLvVVH.js                                                118.54 kB │ gzip:  17.30 kB
+dist/chunk/js/cytoscape-fcose-DjQnVmQp.js                                      121.48 kB │ gzip:  32.43 kB
+dist/chunk/js/locale-de-BpBV89Zg.js                                            121.58 kB │ gzip:  40.30 kB
+dist/chunk/js/@tanstack-CwtVMuaY.js                                            124.44 kB │ gzip:  33.10 kB
+dist/chunk/js/index-fZEa4x0Q.js                                                128.41 kB │ gzip:  27.01 kB
+dist/chunk/js/@xyflow-Ce2mYzG7.js                                              131.99 kB │ gzip:  41.51 kB
+dist/chunk/js/pptx-preview-BMRPRB4g.js                                         138.79 kB │ gzip:  28.26 kB
+dist/chunk/js/locale-it-BsNZdtID.js                                            139.12 kB │ gzip:  45.04 kB
+dist/chunk/js/epubjs-BEg1P9ln.js                                               139.18 kB │ gzip:  37.12 kB
+dist/chunk/js/index-JzzBV7Em.js                                                143.15 kB │ gzip:  28.01 kB
+dist/chunk/js/lexical-CKMvYswP.js                                              144.10 kB │ gzip:  45.56 kB
+dist/chunk/js/locale-ko-C1TD40iA.js                                            145.78 kB │ gzip:  46.29 kB
+dist/chunk/js/locale-fr-BSrMoQdC.js                                            148.79 kB │ gzip:  46.78 kB
+dist/chunk/js/index-Cf_x5HFG.js                                                149.05 kB │ gzip:  28.51 kB
+dist/chunk/js/locale-zh-DZWNsNlx.js                                            149.47 kB │ gzip:  54.63 kB
+dist/chunk/js/locale-ar-Ci6sKSXa.js                                            151.82 kB │ gzip:  43.73 kB
+dist/chunk/js/parse5-DCKhIlH5.js                                               157.06 kB │ gzip:  46.34 kB
+dist/chunk/js/locale-bg-BOnvkYSx.js                                            164.25 kB │ gzip:  43.44 kB
+dist/chunk/js/locale-en-BQABw5yd.js                                            176.33 kB │ gzip:  56.58 kB
+dist/chunk/js/html2canvas-DAjJFBj2.js                                          180.42 kB │ gzip:  39.74 kB
+dist/chunk/js/locale-ru-B3umtjxF.js                                            180.73 kB │ gzip:  48.56 kB
+dist/chunk/js/locale-tr-C23InIqT.js                                            183.60 kB │ gzip:  57.93 kB
+dist/chunk/js/locale-ja-SqD728yo.js                                            184.31 kB │ gzip:  53.87 kB
+dist/chunk/js/locale-uz-BAw4HGnX.js                                            191.79 kB │ gzip:  58.30 kB
+dist/chunk/js/jszip-BXhkGOwl.js                                                194.13 kB │ gzip:  56.55 kB
+dist/chunk/js/d3-FozAWe5W.js                                                   194.43 kB │ gzip:  57.76 kB
+dist/chunk/js/react-dom-DMD8VCRj.js                                            198.16 kB │ gzip:  63.26 kB
+dist/chunk/js/@lexical-CHm2mvcz.js                                             202.28 kB │ gzip:  64.62 kB
+dist/chunk/js/locale-az-DLOXhp1m.js                                            207.73 kB │ gzip:  61.82 kB
+dist/chunk/js/zrender-CT8WMwWL.js                                              211.53 kB │ gzip:  70.61 kB
+dist/chunk/js/utils-1XOg_2dg.js                                                226.00 kB │ gzip:  78.27 kB
+dist/chunk/js/recharts-DW7hOZqx.js                                             231.45 kB │ gzip:  52.48 kB
+dist/chunk/js/@radix-ui-CFvDCgJ2.js                                            231.58 kB │ gzip:  59.28 kB
+dist/chunk/js/katex-Bi5V8rN8.js                                                262.70 kB │ gzip:  76.88 kB
+dist/chunk/js/index-C5lqdMAu.js                                                279.30 kB │ gzip:  51.64 kB
+dist/chunk/js/svg-icon-DhD5OkvM.js                                             355.61 kB │ gzip:  89.65 kB
+dist/chunk/js/xlsx-DgL3v4p1.js                                                 412.43 kB │ gzip: 136.09 kB
+dist/chunk/js/cytoscape-FIpCp7lJ.js                                            429.37 kB │ gzip: 133.93 kB
+dist/chunk/js/pdfjs-dist-MgCFSeAQ.js                                           465.53 kB │ gzip: 128.79 kB
+dist/chunk/js/refractor-BFgBEUIz.js                                            599.43 kB │ gzip: 215.14 kB
+dist/chunk/js/rehype-prism-plus-CLuxaVIT.js                                    619.96 kB │ gzip: 219.57 kB
+dist/chunk/js/index-BZHOUUCm.js                                                635.40 kB │ gzip: 107.14 kB
+dist/chunk/js/@extend-ai-BqpS_oqE.js                                           678.19 kB │ gzip: 183.16 kB
+dist/chunk/js/@mermaid-js-CXU0uUVg.js                                          682.52 kB │ gzip: 149.26 kB
+dist/chunk/js/echarts-BIsv_8Yd.js                                              813.79 kB │ gzip: 262.20 kB
+dist/chunk/js/highlight.js-C_8E0oZX.js                                         881.10 kB │ gzip: 281.93 kB
+dist/chunk/js/jsoneditor-T8CCUugI.js                                         1,052.62 kB │ gzip: 287.45 kB
+dist/chunk/js/mermaid-DMcbEOcv.js                                            1,571.54 kB │ gzip: 398.70 kB
+dist/chunk/js/antv-zyQeyguj.js                                               1,634.71 kB │ gzip: 462.04 kB
+dist/chunk/js/@js-preview-CVTdhFIQ.js                                        1,665.20 kB │ gzip: 477.82 kB
+
+ WARN 
+(!) Some chunks are larger than 1000 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+[vite-plugin-static-copy] Copied 4 items.
+✓ built in 47.75s

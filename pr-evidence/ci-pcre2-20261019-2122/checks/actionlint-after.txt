@@ -1,0 +1,44 @@
+.github/workflows/sep-tests.yml:50:31: label "ragflow-test" is unknown. available labels are "windows-latest", "windows-latest-8-cores", "windows-2025", "windows-2025-vs2026", "windows-2022", "windows-11-arm", "ubuntu-slim", "ubuntu-latest", "ubuntu-latest-4-cores", "ubuntu-latest-8-cores", "ubuntu-latest-16-cores", "ubuntu-24.04", "ubuntu-24.04-arm", "ubuntu-22.04", "ubuntu-22.04-arm", "macos-latest", "macos-latest-xlarge", "macos-latest-large", "macos-26-intel", "macos-26-xlarge", "macos-26-large", "macos-26", "macos-15-intel", "macos-15-xlarge", "macos-15-large", "macos-15", "macos-14-xlarge", "macos-14-large", "macos-14", "self-hosted", "x64", "arm", "arm64", "linux", "macos", "windows". if it is a custom label for self-hosted runner, set list of labels in actionlint.yaml config file [runner-label]
+   |
+50 |     runs-on: [ "self-hosted", "ragflow-test" ]
+   |                               ^~~~~~~~~~~~~~
+.github/workflows/sep-tests.yml:68:11: input "allow-unsafe-pr-checkout" is not defined in action "actions/checkout@v6". available inputs are "clean", "fetch-depth", "fetch-tags", "filter", "github-server-url", "lfs", "path", "persist-credentials", "ref", "repository", "set-safe-directory", "show-progress", "sparse-checkout", "sparse-checkout-cone-mode", "ssh-key", "ssh-known-hosts", "ssh-strict", "ssh-user", "submodules", "token" [action]
+   |
+68 |           allow-unsafe-pr-checkout: true
+   |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+.github/workflows/sep-tests.yml:211:31: label "ragflow-test" is unknown. available labels are "windows-latest", "windows-latest-8-cores", "windows-2025", "windows-2025-vs2026", "windows-2022", "windows-11-arm", "ubuntu-slim", "ubuntu-latest", "ubuntu-latest-4-cores", "ubuntu-latest-8-cores", "ubuntu-latest-16-cores", "ubuntu-24.04", "ubuntu-24.04-arm", "ubuntu-22.04", "ubuntu-22.04-arm", "macos-latest", "macos-latest-xlarge", "macos-latest-large", "macos-26-intel", "macos-26-xlarge", "macos-26-large", "macos-26", "macos-15-intel", "macos-15-xlarge", "macos-15-large", "macos-15", "macos-14-xlarge", "macos-14-large", "macos-14", "self-hosted", "x64", "arm", "arm64", "linux", "macos", "windows". if it is a custom label for self-hosted runner, set list of labels in actionlint.yaml config file [runner-label]
+    |
+211 |     runs-on: [ "self-hosted", "ragflow-test" ]
+    |                               ^~~~~~~~~~~~~~
+.github/workflows/sep-tests.yml:231:11: input "allow-unsafe-pr-checkout" is not defined in action "actions/checkout@v6". available inputs are "clean", "fetch-depth", "fetch-tags", "filter", "github-server-url", "lfs", "path", "persist-credentials", "ref", "repository", "set-safe-directory", "show-progress", "sparse-checkout", "sparse-checkout-cone-mode", "ssh-key", "ssh-known-hosts", "ssh-strict", "ssh-user", "submodules", "token" [action]
+    |
+231 |           allow-unsafe-pr-checkout: true
+    |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+.github/workflows/sep-tests.yml:757:31: label "ragflow-test" is unknown. available labels are "windows-latest", "windows-latest-8-cores", "windows-2025", "windows-2025-vs2026", "windows-2022", "windows-11-arm", "ubuntu-slim", "ubuntu-latest", "ubuntu-latest-4-cores", "ubuntu-latest-8-cores", "ubuntu-latest-16-cores", "ubuntu-24.04", "ubuntu-24.04-arm", "ubuntu-22.04", "ubuntu-22.04-arm", "macos-latest", "macos-latest-xlarge", "macos-latest-large", "macos-26-intel", "macos-26-xlarge", "macos-26-large", "macos-26", "macos-15-intel", "macos-15-xlarge", "macos-15-large", "macos-15", "macos-14-xlarge", "macos-14-large", "macos-14", "self-hosted", "x64", "arm", "arm64", "linux", "macos", "windows". if it is a custom label for self-hosted runner, set list of labels in actionlint.yaml config file [runner-label]
+    |
+757 |     runs-on: [ "self-hosted", "ragflow-test" ]
+    |                               ^~~~~~~~~~~~~~
+.github/workflows/sep-tests.yml:777:11: input "allow-unsafe-pr-checkout" is not defined in action "actions/checkout@v6". available inputs are "clean", "fetch-depth", "fetch-tags", "filter", "github-server-url", "lfs", "path", "persist-credentials", "ref", "repository", "set-safe-directory", "show-progress", "sparse-checkout", "sparse-checkout-cone-mode", "ssh-key", "ssh-known-hosts", "ssh-strict", "ssh-user", "submodules", "token" [action]
+    |
+777 |           allow-unsafe-pr-checkout: true
+    |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+.github/workflows/sep-tests.yml:1313:278: property "ragflow_preflight" is not defined in object type {ragflow_tests_elasticsearch: {outputs: {}; result: string}; ragflow_tests_infinity: {outputs: {}; result: string}} [expression]
+     |
+1313 |     if: ${{ (github.event_name != 'pull_request' && github.event_name != 'pull_request_target' || (github.event.pull_request.draft == false && contains(github.event.pull_request.labels.*.name, 'ci') && (github.event.action != 'labeled' || github.event.label.name == 'ci'))) && needs.ragflow_preflight.outputs.has_native_deepdoc_changes == 'true' }}
+     |                                                                                                                                                                                                                                                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.github/workflows/sep-tests.yml:1314:31: label "ragflow-test" is unknown. available labels are "windows-latest", "windows-latest-8-cores", "windows-2025", "windows-2025-vs2026", "windows-2022", "windows-11-arm", "ubuntu-slim", "ubuntu-latest", "ubuntu-latest-4-cores", "ubuntu-latest-8-cores", "ubuntu-latest-16-cores", "ubuntu-24.04", "ubuntu-24.04-arm", "ubuntu-22.04", "ubuntu-22.04-arm", "macos-latest", "macos-latest-xlarge", "macos-latest-large", "macos-26-intel", "macos-26-xlarge", "macos-26-large", "macos-26", "macos-15-intel", "macos-15-xlarge", "macos-15-large", "macos-15", "macos-14-xlarge", "macos-14-large", "macos-14", "self-hosted", "x64", "arm", "arm64", "linux", "macos", "windows". if it is a custom label for self-hosted runner, set list of labels in actionlint.yaml config file [runner-label]
+     |
+1314 |     runs-on: [ "self-hosted", "ragflow-test" ]
+     |                               ^~~~~~~~~~~~~~
+.github/workflows/sep-tests.yml:1331:11: input "allow-unsafe-pr-checkout" is not defined in action "actions/checkout@v6". available inputs are "clean", "fetch-depth", "fetch-tags", "filter", "github-server-url", "lfs", "path", "persist-credentials", "ref", "repository", "set-safe-directory", "show-progress", "sparse-checkout", "sparse-checkout-cone-mode", "ssh-key", "ssh-known-hosts", "ssh-strict", "ssh-user", "submodules", "token" [action]
+     |
+1331 |           allow-unsafe-pr-checkout: true
+     |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+.github/workflows/sep-tests.yml:1416:31: label "ragflow-test" is unknown. available labels are "windows-latest", "windows-latest-8-cores", "windows-2025", "windows-2025-vs2026", "windows-2022", "windows-11-arm", "ubuntu-slim", "ubuntu-latest", "ubuntu-latest-4-cores", "ubuntu-latest-8-cores", "ubuntu-latest-16-cores", "ubuntu-24.04", "ubuntu-24.04-arm", "ubuntu-22.04", "ubuntu-22.04-arm", "macos-latest", "macos-latest-xlarge", "macos-latest-large", "macos-26-intel", "macos-26-xlarge", "macos-26-large", "macos-26", "macos-15-intel", "macos-15-xlarge", "macos-15-large", "macos-15", "macos-14-xlarge", "macos-14-large", "macos-14", "self-hosted", "x64", "arm", "arm64", "linux", "macos", "windows". if it is a custom label for self-hosted runner, set list of labels in actionlint.yaml config file [runner-label]
+     |
+1416 |     runs-on: [ "self-hosted", "ragflow-test" ]
+     |                               ^~~~~~~~~~~~~~
+.github/workflows/sep-tests.yml:1431:11: input "allow-unsafe-pr-checkout" is not defined in action "actions/checkout@v6". available inputs are "clean", "fetch-depth", "fetch-tags", "filter", "github-server-url", "lfs", "path", "persist-credentials", "ref", "repository", "set-safe-directory", "show-progress", "sparse-checkout", "sparse-checkout-cone-mode", "ssh-key", "ssh-known-hosts", "ssh-strict", "ssh-user", "submodules", "token" [action]
+     |
+1431 |           allow-unsafe-pr-checkout: true
+     |           ^~~~~~~~~~~~~~~~~~~~~~~~~

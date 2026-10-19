@@ -1,0 +1,12 @@
+test_bash_syntax (__main__.RunnerPCRE2) ... ok
+test_install_failure_is_not_ignored (__main__.RunnerPCRE2) ... ok
+test_no_existing_job_permissions_gates_or_test_commands_change (__main__.RunnerPCRE2) ... ok
+test_provisioning_is_unconditional_and_does_not_suppress_failures (__main__.RunnerPCRE2) ... ok
+test_runner_dependency_is_installed_before_native_build_and_tests (__main__.RunnerPCRE2) ... ok
+test_success_runs_update_then_installs_only_the_required_library (__main__.RunnerPCRE2) ... ok
+test_update_failure_prevents_install_and_fails_the_step (__main__.RunnerPCRE2) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.015s
+
+OK

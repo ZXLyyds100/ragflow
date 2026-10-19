@@ -1,0 +1,88 @@
+test_bash_syntax (__main__.RunnerPCRE2) ... FAIL
+test_install_failure_is_not_ignored (__main__.RunnerPCRE2) ... FAIL
+test_no_existing_job_permissions_gates_or_test_commands_change (__main__.RunnerPCRE2) ... FAIL
+test_provisioning_is_unconditional_and_does_not_suppress_failures (__main__.RunnerPCRE2) ... FAIL
+test_runner_dependency_is_installed_before_native_build_and_tests (__main__.RunnerPCRE2) ... FAIL
+test_success_runs_update_then_installs_only_the_required_library (__main__.RunnerPCRE2) ... FAIL
+test_update_failure_prevents_install_and_fails_the_step (__main__.RunnerPCRE2) ... FAIL
+
+======================================================================
+FAIL: test_bash_syntax (__main__.RunnerPCRE2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 92, in test_bash_syntax
+    ["/bin/bash", "-n"], input=self.step()["run"],
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 39, in step
+    self.assertIsNotNone(
+AssertionError: unexpectedly None : Go integration must install the runner's PCRE2 linker dependency
+
+======================================================================
+FAIL: test_install_failure_is_not_ignored (__main__.RunnerPCRE2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 114, in test_install_failure_is_not_ignored
+    result = self.simulate(install_status=32)
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 60, in simulate
+    ["/bin/bash", "-c", prelude + "\n" + self.step()["run"]],
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 39, in step
+    self.assertIsNotNone(
+AssertionError: unexpectedly None : Go integration must install the runner's PCRE2 linker dependency
+
+======================================================================
+FAIL: test_no_existing_job_permissions_gates_or_test_commands_change (__main__.RunnerPCRE2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 75, in test_no_existing_job_permissions_gates_or_test_commands_change
+    amended["jobs"]["ragflow_go_integration"]["steps"].remove(self.step())
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 39, in step
+    self.assertIsNotNone(
+AssertionError: unexpectedly None : Go integration must install the runner's PCRE2 linker dependency
+
+======================================================================
+FAIL: test_provisioning_is_unconditional_and_does_not_suppress_failures (__main__.RunnerPCRE2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 79, in test_provisioning_is_unconditional_and_does_not_suppress_failures
+    step = self.step()
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 39, in step
+    self.assertIsNotNone(
+AssertionError: unexpectedly None : Go integration must install the runner's PCRE2 linker dependency
+
+======================================================================
+FAIL: test_runner_dependency_is_installed_before_native_build_and_tests (__main__.RunnerPCRE2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 67, in test_runner_dependency_is_installed_before_native_build_and_tests
+    index = steps.index(self.step())
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 39, in step
+    self.assertIsNotNone(
+AssertionError: unexpectedly None : Go integration must install the runner's PCRE2 linker dependency
+
+======================================================================
+FAIL: test_success_runs_update_then_installs_only_the_required_library (__main__.RunnerPCRE2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 98, in test_success_runs_update_then_installs_only_the_required_library
+    result = self.simulate()
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 60, in simulate
+    ["/bin/bash", "-c", prelude + "\n" + self.step()["run"]],
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 39, in step
+    self.assertIsNotNone(
+AssertionError: unexpectedly None : Go integration must install the runner's PCRE2 linker dependency
+
+======================================================================
+FAIL: test_update_failure_prevents_install_and_fails_the_step (__main__.RunnerPCRE2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 109, in test_update_failure_prevents_install_and_fails_the_step
+    result = self.simulate(update_status=31)
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 60, in simulate
+    ["/bin/bash", "-c", prelude + "\n" + self.step()["run"]],
+  File "<CONTRIBUTION_WORKSPACE>/state/test-ragflow-ci-pcre2-2122.py", line 39, in step
+    self.assertIsNotNone(
+AssertionError: unexpectedly None : Go integration must install the runner's PCRE2 linker dependency
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+FAILED (failures=7)

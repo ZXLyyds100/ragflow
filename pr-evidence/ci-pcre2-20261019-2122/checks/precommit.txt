@@ -1,0 +1,32 @@
+╭──────────────────────────────────────╮
+│ lefthook  v2.2.2   hook:  pre-commit │
+╰──────────────────────────────────────╯
+│  gofmt (skip) no files for inspection
+│  ruff-format (skip) no files for inspection
+│  ruff (skip) no files for inspection
+┃  check-symlinks ❯ 
+
+┃  trailing-whitespace ❯ 
+
+┃  check-merge-conflict ❯ 
+
+┃  mixed-line-ending ❯ 
+
+┃  check-json ❯ 
+
+┃  end-of-file-fixer ❯ 
+
+┃  check-case-conflict ❯ 
+
+┃  check-yaml ❯ 
+
+  ────────────────────────────────────
+summary: (done in 0.16 seconds)
+✓ check-symlinks (0.10 seconds)
+✓ trailing-whitespace (0.10 seconds)
+✓ check-merge-conflict (0.10 seconds)
+✓ mixed-line-ending (0.10 seconds)
+✓ check-json (0.11 seconds)
+✓ end-of-file-fixer (0.11 seconds)
+✓ check-case-conflict (0.12 seconds)
+✓ check-yaml (0.14 seconds)

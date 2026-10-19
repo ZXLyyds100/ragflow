@@ -1,0 +1,526 @@
+{
+  "captured_at": "2026-10-19T10:58:41.060Z",
+  "source_heads": {
+    "21109": "6627310a8f747af99ec9c6d19d74d58fa76085bf",
+    "21113": "1a231b670f07fb001b19933c02b0fb283e49d773"
+  },
+  "validation": [
+    {
+      "name": "mineru-full-related",
+      "repository": "ragflow-21109",
+      "command": [
+        "bash",
+        "<CONTRIBUTION_WORKSPACE>/state/with-ragflow-migration-env.sh",
+        "--shared-test",
+        "bash",
+        "<CONTRIBUTION_WORKSPACE>/repos/ragflow-21109/build.sh",
+        "--test",
+        "-json",
+        "-count=1",
+        "./internal/dao/...",
+        "./internal/ingestion/...",
+        "./internal/entity/models/...",
+        "./internal/parser/...",
+        "./internal/service/dataset/...",
+        "./internal/service/document/...",
+        "./cmd"
+      ],
+      "started": "2026-10-19T10:49:35.915Z",
+      "finished": "2026-10-19T10:50:19.917Z",
+      "exit_status": 0,
+      "signal": null,
+      "source_diff_sha256": "8e0c4ce117f8d9db7ce0b189c75a6cf15248cf5ec8d6c91d027c9a4b0242b2be",
+      "source_stable": true,
+      "test_pass_events": 5620,
+      "top_level_test_passes": 3657,
+      "test_skip_events": [
+        "ragflow/internal/ingestion/task:TestPipelineExecutor_Run_RealCanvasDSL_UsesGeneralPipeline",
+        "ragflow/internal/ingestion/task:TestPipelineExecutor_Run_RealPDF_ProducesIndexedChunks",
+        "ragflow/internal/ingestion/task:TestRunPipeline_RealPipelineOutput_ProducesIndexFields",
+        "ragflow/internal/entity/models:TestGiteeListModelsIntegration",
+        "ragflow/internal/service/dataset:TestCreateDataset_ParseTypePipelineIgnoresParserID"
+      ],
+      "test_fail_events": [],
+      "packages": [
+        {
+          "name": "ragflow/internal/dao/transaction",
+          "elapsed": 0.838
+        },
+        {
+          "name": "ragflow/internal/dao",
+          "elapsed": 1.237
+        },
+        {
+          "name": "ragflow/internal/ingestion/chunkcache",
+          "elapsed": 1.12
+        },
+        {
+          "name": "ragflow/internal/ingestion/compilation/extractor",
+          "elapsed": 0.751
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/globals",
+          "elapsed": 1.603
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/chunker",
+          "elapsed": 2.181
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler",
+          "elapsed": 2.199
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler/common",
+          "elapsed": 0.925
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler/golden",
+          "elapsed": 0.809
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler/mindmap",
+          "elapsed": 0.798
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler/structure",
+          "elapsed": 1.037
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler/wiki",
+          "elapsed": 0.494
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/progress",
+          "elapsed": 0.301
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/schema",
+          "elapsed": 0.455
+        },
+        {
+          "name": "ragflow/internal/ingestion/knowledge_compile",
+          "elapsed": 0.722
+        },
+        {
+          "name": "ragflow/internal/ingestion/pipeline",
+          "elapsed": 0.872
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler/tree",
+          "elapsed": 7.5440000000000005
+        },
+        {
+          "name": "ragflow/internal/ingestion/registry",
+          "elapsed": 0.796
+        },
+        {
+          "name": "ragflow/internal/ingestion/component",
+          "elapsed": 17.198
+        },
+        {
+          "name": "ragflow/internal/ingestion/task/indexdoc",
+          "elapsed": 0.677
+        },
+        {
+          "name": "ragflow/internal/ingestion/task/tool",
+          "elapsed": 1.034
+        },
+        {
+          "name": "ragflow/internal/parser/chunk",
+          "elapsed": 0.548
+        },
+        {
+          "name": "ragflow/internal/ingestion/service",
+          "elapsed": 4.998
+        },
+        {
+          "name": "ragflow/internal/parser/tableutil",
+          "elapsed": 0.252
+        },
+        {
+          "name": "ragflow/internal/ingestion/task",
+          "elapsed": 6.348
+        },
+        {
+          "name": "ragflow/internal/parser/parser",
+          "elapsed": 3.8
+        },
+        {
+          "name": "ragflow/internal/service/dataset",
+          "elapsed": 2.648
+        },
+        {
+          "name": "ragflow/internal/entity/models",
+          "elapsed": 10.466
+        },
+        {
+          "name": "ragflow/internal/service/document",
+          "elapsed": 2.8
+        },
+        {
+          "name": "ragflow/cmd",
+          "elapsed": 1.373
+        }
+      ],
+      "package_failures": [],
+      "no_test_packages": [
+        "ragflow/internal/ingestion/testutil",
+        "ragflow/internal/ingestion/wire"
+      ],
+      "native_boundary": "build.sh appends native packages without fetch_testdata: their TestMain exits without m.Run; raw ok is not native runtime/inference coverage.",
+      "environment_boundary": "Unchanged build.sh with registered PCRE path-only overlay and transparent genuine same-version ORT/PDF shared test-only adapter; no production/static or external-service validation.",
+      "log": "evidence/mineru-full-related-20261019-1807-final.jsonl"
+    },
+    {
+      "name": "mineru-migration-race",
+      "repository": "ragflow-21109",
+      "command": [
+        "bash",
+        "<CONTRIBUTION_WORKSPACE>/state/with-ragflow-migration-env.sh",
+        "--shared-test",
+        "bash",
+        "<CONTRIBUTION_WORKSPACE>/repos/ragflow-21109/build.sh",
+        "--test",
+        "-json",
+        "-count=1",
+        "-race",
+        "-run",
+        "^Test(MigrateParserChunkerTokenizerConfig|MigrateIngestionParserConfigs|IngestionMigrationMatchesBuiltinTemplates|MigratedMinerUControlsReachRequest|MinerU|BuildParserConfigPreservesMinerUExtractionSwitches)",
+        "./internal/dao",
+        "./internal/ingestion/component",
+        "./internal/ingestion/pipeline"
+      ],
+      "started": "2026-10-19T10:50:19.973Z",
+      "finished": "2026-10-19T10:52:42.762Z",
+      "exit_status": 0,
+      "signal": null,
+      "source_diff_sha256": "8e0c4ce117f8d9db7ce0b189c75a6cf15248cf5ec8d6c91d027c9a4b0242b2be",
+      "source_stable": true,
+      "test_pass_events": 319,
+      "top_level_test_passes": 16,
+      "test_skip_events": [],
+      "test_fail_events": [],
+      "packages": [
+        {
+          "name": "ragflow/internal/dao",
+          "elapsed": 7.645
+        },
+        {
+          "name": "ragflow/internal/ingestion/component",
+          "elapsed": 5.464
+        },
+        {
+          "name": "ragflow/internal/ingestion/pipeline",
+          "elapsed": 2.828
+        }
+      ],
+      "package_failures": [],
+      "no_test_packages": [],
+      "native_boundary": "build.sh appends native packages without fetch_testdata: their TestMain exits without m.Run; raw ok is not native runtime/inference coverage.",
+      "environment_boundary": "Unchanged build.sh with registered PCRE path-only overlay and transparent genuine same-version ORT/PDF shared test-only adapter; no production/static or external-service validation.",
+      "log": "evidence/mineru-migration-race-20261019-1807-final.jsonl"
+    },
+    {
+      "name": "image-ocr-doc-focused-final",
+      "repository": "ragflow-21113",
+      "command": [
+        "bash",
+        "<CONTRIBUTION_WORKSPACE>/state/with-ragflow-migration-env.sh",
+        "--shared-test",
+        "bash",
+        "<CONTRIBUTION_WORKSPACE>/repos/ragflow-21113/build.sh",
+        "--test",
+        "-json",
+        "-count=1",
+        "-run",
+        "TestImageOCR|TestResolveModelConfig|TestPaddleOCRUploadFilename",
+        "./internal/ingestion/component",
+        "./internal/ingestion/pipeline",
+        "./internal/entity/models"
+      ],
+      "started": "2026-10-19T10:52:42.845Z",
+      "finished": "2026-10-19T10:52:57.266Z",
+      "exit_status": 0,
+      "signal": null,
+      "source_diff_sha256": "c822b7b5b67bfcded4efaa0bf0d445722f09c51a7fc291a4c7ec0a3daf08b70b",
+      "source_stable": true,
+      "test_pass_events": 85,
+      "top_level_test_passes": 25,
+      "test_skip_events": [],
+      "test_fail_events": [],
+      "packages": [
+        {
+          "name": "ragflow/internal/ingestion/component",
+          "elapsed": 1.466
+        },
+        {
+          "name": "ragflow/internal/entity/models",
+          "elapsed": 1.399
+        },
+        {
+          "name": "ragflow/internal/ingestion/pipeline",
+          "elapsed": 3.06
+        }
+      ],
+      "package_failures": [],
+      "no_test_packages": [],
+      "native_boundary": "build.sh appends native packages without fetch_testdata: their TestMain exits without m.Run; raw ok is not native runtime/inference coverage.",
+      "environment_boundary": "Unchanged build.sh with registered PCRE path-only overlay and transparent genuine same-version ORT/PDF shared test-only adapter; no production/static or external-service validation.",
+      "log": "evidence/image-ocr-doc-focused-final-20261019-1807-final.jsonl"
+    },
+    {
+      "name": "image-ocr-doc-full-related",
+      "repository": "ragflow-21113",
+      "command": [
+        "bash",
+        "<CONTRIBUTION_WORKSPACE>/state/with-ragflow-migration-env.sh",
+        "--shared-test",
+        "bash",
+        "<CONTRIBUTION_WORKSPACE>/repos/ragflow-21113/build.sh",
+        "--test",
+        "-json",
+        "-count=1",
+        "./internal/dao/...",
+        "./internal/ingestion/...",
+        "./internal/entity/models/...",
+        "./internal/parser/...",
+        "./internal/service/dataset/...",
+        "./internal/service/document/...",
+        "./cmd"
+      ],
+      "started": "2026-10-19T10:54:22.285Z",
+      "finished": "2026-10-19T10:55:32.849Z",
+      "exit_status": 0,
+      "signal": null,
+      "source_diff_sha256": "c822b7b5b67bfcded4efaa0bf0d445722f09c51a7fc291a4c7ec0a3daf08b70b",
+      "source_stable": true,
+      "test_pass_events": 5550,
+      "top_level_test_passes": 3675,
+      "test_skip_events": [
+        "ragflow/internal/ingestion/task:TestPipelineExecutor_Run_RealCanvasDSL_UsesGeneralPipeline",
+        "ragflow/internal/ingestion/task:TestPipelineExecutor_Run_RealPDF_ProducesIndexedChunks",
+        "ragflow/internal/ingestion/task:TestRunPipeline_RealPipelineOutput_ProducesIndexFields",
+        "ragflow/internal/service/dataset:TestCreateDataset_ParseTypePipelineIgnoresParserID",
+        "ragflow/internal/entity/models:TestGiteeListModelsIntegration"
+      ],
+      "test_fail_events": [],
+      "packages": [
+        {
+          "name": "ragflow/internal/dao",
+          "elapsed": 2.073
+        },
+        {
+          "name": "ragflow/internal/dao/transaction",
+          "elapsed": 2.035
+        },
+        {
+          "name": "ragflow/internal/ingestion/chunkcache",
+          "elapsed": 2.416
+        },
+        {
+          "name": "ragflow/internal/ingestion/compilation/extractor",
+          "elapsed": 2.38
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/globals",
+          "elapsed": 2.3890000000000002
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/chunker",
+          "elapsed": 3.346
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler",
+          "elapsed": 3.038
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler/common",
+          "elapsed": 1.458
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler/golden",
+          "elapsed": 1.829
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler/mindmap",
+          "elapsed": 1.5779999999999998
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler/structure",
+          "elapsed": 1.8279999999999998
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler/wiki",
+          "elapsed": 1.7109999999999999
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/progress",
+          "elapsed": 1.3719999999999999
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/schema",
+          "elapsed": 1.166
+        },
+        {
+          "name": "ragflow/internal/ingestion/knowledge_compile",
+          "elapsed": 0.917
+        },
+        {
+          "name": "ragflow/internal/ingestion/component/knowledge_compiler/tree",
+          "elapsed": 9.073
+        },
+        {
+          "name": "ragflow/internal/ingestion/pipeline",
+          "elapsed": 1.315
+        },
+        {
+          "name": "ragflow/internal/ingestion/component",
+          "elapsed": 17.743
+        },
+        {
+          "name": "ragflow/internal/ingestion/registry",
+          "elapsed": 1.409
+        },
+        {
+          "name": "ragflow/internal/ingestion/task/indexdoc",
+          "elapsed": 2.814
+        },
+        {
+          "name": "ragflow/internal/ingestion/task/tool",
+          "elapsed": 2.25
+        },
+        {
+          "name": "ragflow/internal/parser/chunk",
+          "elapsed": 0.746
+        },
+        {
+          "name": "ragflow/internal/ingestion/service",
+          "elapsed": 6.349
+        },
+        {
+          "name": "ragflow/internal/parser/tableutil",
+          "elapsed": 0.451
+        },
+        {
+          "name": "ragflow/internal/ingestion/task",
+          "elapsed": 6.832
+        },
+        {
+          "name": "ragflow/internal/service/dataset",
+          "elapsed": 3.992
+        },
+        {
+          "name": "ragflow/internal/parser/parser",
+          "elapsed": 6.914
+        },
+        {
+          "name": "ragflow/internal/entity/models",
+          "elapsed": 12.158
+        },
+        {
+          "name": "ragflow/internal/service/document",
+          "elapsed": 4.822
+        },
+        {
+          "name": "ragflow/cmd",
+          "elapsed": 1.947
+        }
+      ],
+      "package_failures": [],
+      "no_test_packages": [
+        "ragflow/internal/ingestion/testutil",
+        "ragflow/internal/ingestion/wire"
+      ],
+      "native_boundary": "build.sh appends native packages without fetch_testdata: their TestMain exits without m.Run; raw ok is not native runtime/inference coverage.",
+      "environment_boundary": "Unchanged build.sh with registered PCRE path-only overlay and transparent genuine same-version ORT/PDF shared test-only adapter; no production/static or external-service validation.",
+      "log": "evidence/image-ocr-doc-full-related-20261019-1807-doc-full.jsonl"
+    }
+  ],
+  "comment_only": {
+    "baseline": "db01fba1f8bb2597b3c13ae7b46cd47bb2942030",
+    "boundary": "Standard Go parser/scanner equivalence, not a CodeRabbit coverage result or fresh runtime test",
+    "comment_only_verified": true,
+    "files": [
+      {
+        "named_functions_with_doc": [
+          "configuredAudioModelID",
+          "defaultResolveTenantModelByType",
+          "defaultResolveTenantOCRModelByProvider",
+          "ocrProviderAliases",
+          "defaultResolveModelConfig",
+          "resolveModelConfigByID"
+        ],
+        "named_functions_without_doc": [
+          "tenantModelIDByType",
+          "stringValue",
+          "resolveModelConfigFromProviderInstance",
+          "parseCompositeModelName",
+          "newModelDriverForBaseURLLocal",
+          "errorsIsRecordNotFound"
+        ],
+        "non_comment_tokens_equal": true,
+        "path": "internal/ingestion/component/dispatch_model.go",
+        "syntax_valid": true
+      },
+      {
+        "named_functions_with_doc": [
+          "TestResolveModelConfigForStoredMistralOCRProvider",
+          "TestResolveModelConfigInaccessibleIDs",
+          "TestResolveModelConfigAuthorizedModelValidation",
+          "TestResolveModelConfigLookupFailureIsNotMissing",
+          "TestResolveModelConfigByIDScopedQuerySQL",
+          "TestResolveModelConfigChainedDBStatementIsolationFixedOnly"
+        ],
+        "named_functions_without_doc": [
+          "TestConfiguredAudioModelID"
+        ],
+        "non_comment_tokens_equal": true,
+        "path": "internal/ingestion/component/dispatch_model_test.go",
+        "syntax_valid": true
+      },
+      {
+        "named_functions_with_doc": [
+          "imageOCRModelLookupCounts",
+          "imageOCRInstanceBaseURL",
+          "setImageOCRCloudDefault",
+          "observeImageOCRWarnings",
+          "TestImageOCRSelectedModelLookupOnce",
+          "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState",
+          "TestImageOCRCloudDefaultEndpointWarning",
+          "TestImageOCRExplicitEndpointDoesNotWarn",
+          "TestImageOCRMissingEndpointDoesNotUseGlobalEndpoint"
+        ],
+        "named_functions_without_doc": null,
+        "non_comment_tokens_equal": true,
+        "path": "internal/ingestion/component/image_ocr_resolution_test.go",
+        "syntax_valid": true
+      },
+      {
+        "named_functions_with_doc": [
+          "append",
+          "list",
+          "imageOCRFixture",
+          "TestImageOCRSelectedTenantModel",
+          "TestImageOCRReleasesMediaAdmissionBeforeRequest",
+          "TestImageOCRFailureRetainsAttachment",
+          "TestImageOCRInvalidSelectionNeverFallsBack",
+          "TestImageOCRSelectionRespectsSwitchAndSVG",
+          "TestImageOCRModelConfigValidation",
+          "TestImageOCRDoesNotUseGlobalEndpoint",
+          "TestImageOCRKeepsCloudSSRFGuard",
+          "TestImageOCRRejectsOtherOCRDrivers",
+          "TestImageOCRReadsInstanceJSONAndRotatedCredentials",
+          "TestImageOCRAndVisionRemainIndependent",
+          "TestImageOCRFailureReachesProgressMessages"
+        ],
+        "named_functions_without_doc": null,
+        "non_comment_tokens_equal": true,
+        "path": "internal/ingestion/component/image_ocr_test.go",
+        "syntax_valid": true
+      }
+    ]
+  },
+  "migration_version_bumped": false,
+  "boundary": "Real in-memory SQLite migration and real Parser/HTTP request construction with synthetic tenant/model/credentials and a local MinerU response fixture. Not real OCR inference, production data or deployed UI. Original static macOS link does not work; genuine same-version shared native TEST adapter is disclosed."
+}

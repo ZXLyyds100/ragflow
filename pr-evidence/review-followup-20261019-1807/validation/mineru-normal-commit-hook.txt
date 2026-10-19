@@ -1,0 +1,36 @@
+[38;2;56;56;56m╭──────────────────────────────────────╮[m
+[38;2;56;56;56m│[m lefthook  v2.2.2   hook:  [1mpre-commit[m [38;2;56;56;56m│[m
+[38;2;56;56;56m╰──────────────────────────────────────╯[m
+│  ruff (skip) no files for inspection
+│  ruff-format (skip) no files for inspection
+┃  gofmt ❯ 
+
+┃  end-of-file-fixer ❯ 
+
+┃  trailing-whitespace ❯ 
+
+┃  check-merge-conflict ❯ 
+
+┃  check-symlinks ❯ 
+
+┃  mixed-line-ending ❯ 
+
+┃  check-json ❯ 
+
+┃  check-yaml ❯ 
+
+┃  check-case-conflict ❯ 
+
+[38;2;56;56;56m  ────────────────────────────────────[m
+summary: (done in 0.40 seconds)
+✓ gofmt (0.04 seconds)
+✓ end-of-file-fixer (0.37 seconds)
+✓ trailing-whitespace (0.37 seconds)
+✓ check-merge-conflict (0.37 seconds)
+✓ check-symlinks (0.37 seconds)
+✓ mixed-line-ending (0.37 seconds)
+✓ check-json (0.37 seconds)
+✓ check-yaml (0.37 seconds)
+✓ check-case-conflict (0.39 seconds)
+[fix/mineru-extraction-controls 6627310a8] fix(parser): migrate saved MinerU extraction controls
+ 3 files changed, 216 insertions(+), 18 deletions(-)

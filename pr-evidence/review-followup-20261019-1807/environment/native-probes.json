@@ -1,0 +1,67 @@
+{
+  "at": "2026-10-19T10:40:33.581Z",
+  "mode": "Real same-version shared FFI probes only; not production static or model inference",
+  "results": [
+    {
+      "command": "/usr/bin/clang",
+      "args": [
+        "-I",
+        "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/go/pkg/mod/github.com/infiniflow/onnxruntime_go@v1.29.0",
+        "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/ort-shared-api-probe.c",
+        "-Wl,-needed_library,<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/ort-shared-test-1.29.0-3a3814c041251d6a/libonnxruntime.1.29.0.dylib",
+        "-Wl,-rpath,<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/ort-shared-test-1.29.0-3a3814c041251d6a",
+        "-o",
+        "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/ort-shared-api-probe"
+      ],
+      "stdout": "",
+      "exitCode": 0
+    },
+    {
+      "command": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/ort-shared-api-probe",
+      "args": [],
+      "stdout": "Real ORT 1.29.0; GetApi(29), dlopen(NULL)/dlsym, CreateEnv/ReleaseEnv OK.\nStandard OrtApi prefix tested only; the three appended custom initializer slots are not supported or called (offset 3400).\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/usr/bin/clang",
+      "args": [
+        "-I",
+        "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/home/ragflow-native-libs/pdf_oxide/include",
+        "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/pdf-shared-api-probe.c",
+        "-Wl,-needed_library,<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/pdf-shared-test-relocated-0.3.73-422f6048272247f9/libpdf_oxide.dylib",
+        "-Wl,-rpath,<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/pdf-shared-test-relocated-0.3.73-422f6048272247f9",
+        "-o",
+        "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/pdf-shared-api-probe"
+      ],
+      "stdout": "",
+      "exitCode": 0
+    },
+    {
+      "command": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/pdf-shared-api-probe",
+      "args": [
+        "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/repro/native-probe.pdf"
+      ],
+      "stdout": "Hash-pinned genuine PDF_oxide 0.3.73 shared FFI: open, page-count, document-version and free OK.\nPDF document version is 1.4; library version is separately pinned by the author's exact v0.3.73 release asset SHA256, not by the PDF document-version getter. No library version getter/marker is available.\n",
+      "exitCode": 0
+    }
+  ],
+  "sample": {
+    "path": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/repro/native-probe.pdf",
+    "sha256": "7c9f4bb7b4bcc8ba71d621582e3f69c6b129c897afe22b4a4bea7f1576f03e4f"
+  },
+  "libraries": {
+    "ort": {
+      "path": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/ort-shared-test-1.29.0-3a3814c041251d6a/libonnxruntime.1.29.0.dylib",
+      "sha256": "8ab8982e8fc0a3d5121bf95404dba7a15d70b7df49a8bab1ba481ff961d93dc8",
+      "size": 33332888,
+      "wheelEntry": "onnxruntime/capi/libonnxruntime.1.29.0.dylib",
+      "recordVerified": true
+    },
+    "pdf": {
+      "path": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/pdf-shared-test-relocated-0.3.73-422f6048272247f9/libpdf_oxide.dylib",
+      "sha256": "1068f52ad70be1c528c6ebbda632ba28fc42e71aa6548cee9e762389ad28943e",
+      "size": 21851616
+    }
+  },
+  "configSHA256": "ca77d4d5e521474e47908f6ccee1455d303baa0f6697c56062cad845d5cc2698"
+}

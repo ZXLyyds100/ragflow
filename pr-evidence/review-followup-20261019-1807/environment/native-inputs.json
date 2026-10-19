@@ -1,0 +1,228 @@
+{
+  "at": "2026-10-19T10:45:06.903Z",
+  "run": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807",
+  "status": "ready-smoke-passed",
+  "smoke": [
+    {
+      "phase": "standard-static-smoke",
+      "exitCode": 1,
+      "testsRun": 0,
+      "passedEvents": 0,
+      "failedEvents": 0,
+      "sourceStable": true,
+      "logfile": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/standard-static-smoke.log"
+    },
+    {
+      "phase": "adapter-smoke",
+      "exitCode": 0,
+      "testsRun": 8,
+      "passedEvents": 8,
+      "failedEvents": 0,
+      "sourceStable": true,
+      "logfile": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/adapter-smoke.log"
+    }
+  ],
+  "scope": "Existing smoke only; no new migration regression, full DAO, race or #21113 focused tests were executed by this environment helper. The main agent owns those runs.",
+  "sourceManifest": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/smoke-source-manifest.json",
+  "sourceFileCount": 2620,
+  "absentSparsePaths": [
+    "test/api/agent_api_test.go",
+    "test/api/chat_api_test.go",
+    "test/api/chunk_api_test.go",
+    "test/api/config.go",
+    "test/api/dataset_api_test.go",
+    "test/api/dataset_features_test.go",
+    "test/api/dataset_list_delete_test.go",
+    "test/api/dataset_validation_test.go",
+    "test/api/document_api_test.go",
+    "test/api/document_raw_routes_test.go",
+    "test/api/langfuse_routes_api_test.go",
+    "test/api/main_test.go",
+    "test/api/memory_messages_api_test.go",
+    "test/api/openai_compatible_api_test.go",
+    "test/api/plugin_tools_api_test.go",
+    "test/api/rest_helpers_test.go",
+    "test/api/rest_request_test.go",
+    "test/api/retrieval_api_test.go",
+    "test/api/router_contracts_api_test.go",
+    "test/api/session_api_test.go",
+    "test/api/system_api_test.go",
+    "test/api/task_routes_api_test.go",
+    "test/api/user_api_test.go"
+  ],
+  "trackedInputs": {
+    "ragflow-21109": {
+      "build.sh": {
+        "sha256": "ce422df95e92705f0829702599c9c240e5957da5b70b39ffc9353652b8a2efb5",
+        "byteIdenticalToBase": true
+      },
+      "internal/binding/cpp/CMakeLists.txt": {
+        "sha256": "3c93ddec6118aa95904dd995b233014be59786ff369591b39491ba024d5675ad",
+        "byteIdenticalToBase": true
+      }
+    },
+    "ragflow-21113": {
+      "build.sh": {
+        "sha256": "ce422df95e92705f0829702599c9c240e5957da5b70b39ffc9353652b8a2efb5",
+        "byteIdenticalToBase": true
+      },
+      "internal/binding/cpp/CMakeLists.txt": {
+        "sha256": "3c93ddec6118aa95904dd995b233014be59786ff369591b39491ba024d5675ad",
+        "byteIdenticalToBase": true
+      }
+    }
+  },
+  "artifacts": {
+    "office": {
+      "path": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/home/ragflow-native-libs/office_oxide/lib/liboffice_oxide.a",
+      "size": 37146328,
+      "sha256": "1d59357bd17bcf0d5bd4adec4b14c8878e1f57659433c72bbab510ae463a9c93"
+    },
+    "pdfium": {
+      "path": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/home/ragflow-native-libs/pdfium-static/lib/libpdfium.a",
+      "size": 271361024,
+      "sha256": "ff1c6b2acb962689c4791516888afb64daac28efc494e4e18158baa428c38c96"
+    },
+    "pdfStatic": {
+      "path": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/home/ragflow-native-libs/pdf_oxide/lib/darwin_arm64/libpdf_oxide.a",
+      "size": 55590296,
+      "sha256": "bd2239be9629cce16293ed0d1f7de9ee0b312b604fefa72b4a18618e394ae093"
+    },
+    "ortStatic": {
+      "path": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/home/ragflow-native-libs/onnxruntime/static_lib/onnxruntime-osx-arm64-static_lib-1.29.0/lib/libonnxruntime.a",
+      "size": 34379152,
+      "sha256": "b1da7e98dc26fc499327b8c29c765c7b3d96fa37f400c42577516d047d006598"
+    },
+    "pcre": {
+      "path": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/pcre2/lib/libpcre2-8.a",
+      "size": 413016,
+      "sha256": "68234d039c7d7c3ccacefcfbe9be1effa436365660875a9ed60172ad9a77decb"
+    },
+    "tokenizer": {
+      "path": "<CONTRIBUTION_WORKSPACE>/repos/ragflow-21109/internal/binding/cpp/cmake-build-release/librag_tokenizer_c_api.a",
+      "size": 1657896,
+      "sha256": "feba9d9fd8f8cb10cebb67fe3a26298dda3273a23001d2484d7ea3fec63c565d"
+    },
+    "ortShared": {
+      "path": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/ort-shared-test-1.29.0-3a3814c041251d6a/libonnxruntime.1.29.0.dylib",
+      "size": 33332888,
+      "sha256": "8ab8982e8fc0a3d5121bf95404dba7a15d70b7df49a8bab1ba481ff961d93dc8"
+    },
+    "pdfShared": {
+      "path": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/pdf-shared-test-relocated-0.3.73-422f6048272247f9/libpdf_oxide.dylib",
+      "size": 21851616,
+      "sha256": "1068f52ad70be1c528c6ebbda632ba28fc42e71aa6548cee9e762389ad28943e"
+    },
+    "lefthook": {
+      "path": "<CONTRIBUTION_WORKSPACE>/work/20261019-1807/tools/bin/lefthook",
+      "size": 14060002,
+      "sha256": "049c648578c056a180519c4d8c31d5436dbb9df74369b2e29611aae99d7e9b36"
+    }
+  },
+  "protectedHelpers": [
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/assets.json",
+      "sha256": "e07d2c65e2b6ae4c695c76745975aaf3da15ecfde87d51da290250c13b5a2161"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/tool-assets.json",
+      "sha256": "6500a1011d9f71ab956125d9d1c526665588d5626fa462a1a4fa927206958ebd"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/download-assets.mjs",
+      "sha256": "a76b30d0e7fb31b075baeb14039075220c96acdf2d88e5ff825eb4f33fcf8248"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/finish-pdfium-ranges.mjs",
+      "sha256": "b0f0566e09f4f8834fb01c77f8e5bccf455b38dd487c703a1abfac260969144d"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/prepare-environment.mjs",
+      "sha256": "e0ae6d15e7d4913fb962e472db6cdace73eb69c190453fa83c4648f6b3b19eca"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/prepare-path-overlay.mjs",
+      "sha256": "bdab3fd1be77680650e38a032f38c1c2b25466c965baad52db0dc3bad988020e"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/build-pcre.sh",
+      "sha256": "738e7a640793d0f0c19b07c26d17885d07b0e10ffaff9944b14cc43a7c85b00a"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/prepare-migration-red-overlay.mjs",
+      "sha256": "fa1b83b12d964d15e5534c74d3a91e36d33563936dad0b7ab4515df821888bc2"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/probe-native.mjs",
+      "sha256": "e8e0db1a8a9cfcef6946030d3e8aa26c44510e0a422374932aaf22d33d9bf838"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/smoke-validation.mjs",
+      "sha256": "1d6cab1196fe495cd4dc1e4035f3f41a18011e3a61edffb6e22a73ef107d0bd2"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/preserve-environment-evidence.mjs",
+      "sha256": "5a360746418878c099c1d89df9f6237fe129db61b31218bfb53d7f2f5ac4a39d"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/ort-pdf-shared-test-cc.mjs",
+      "sha256": "ea8409fe7b442e4f54c02e13937995142e155c1270023c4f469b699db77af50b"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/ort-shared-test-config.json",
+      "sha256": "06df9fd5304902555e62a737aa102242700b0dc925f545aa347e30b9d1abfc0d"
+    },
+    {
+      "path": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/helpers/ort-pdf-shared-test-config.json",
+      "sha256": "ca77d4d5e521474e47908f6ccee1455d303baa0f6697c56062cad845d5cc2698"
+    }
+  ],
+  "ranges": [
+    {
+      "evidence": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/http/pdfium-final-range-0.headers",
+      "sha256": "bca3b56a6709ba17be806f8d17dd66fd8d678a6dd5386bf50920710d68f62766",
+      "etag": "\"0x8DEA17BB4238A1D\"",
+      "contentRange": "bytes 39460795-52797862/66134930",
+      "contentLength": "13337068"
+    },
+    {
+      "evidence": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/http/pdfium-final-range-1.headers",
+      "sha256": "150906cee64b3101cced2eb88b444467bd5f8e181c189a9949afea6688fa8540",
+      "etag": "\"0x8DEA17BB4238A1D\"",
+      "contentRange": "bytes 52797863-66134929/66134930",
+      "contentLength": "13337067"
+    }
+  ],
+  "adapter": {
+    "testOnly": true,
+    "sameVersions": {
+      "ort": "1.29.0",
+      "pdf": "0.3.73"
+    },
+    "compilerProvenance": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/smoke-compiler-invocations.jsonl",
+    "ongoingMainAgentCompilerLog": "<CONTRIBUTION_WORKSPACE>/evidence/ragflow-21109-migration-environment/compiler-invocations.jsonl",
+    "invocationCount": 228,
+    "ortRemovalCalls": 31,
+    "pdfRemovalCalls": 23,
+    "noForbiddenLinkerSuppressions": true,
+    "limitations": [
+      "TEST-only compiler/link adapter for unchanged build.sh --test; never production/server/static success.",
+      "Only exact ORT force_load and pdf_oxide bare archive arguments are replaced with real same-version shared libraries.",
+      "office_oxide 0.1.12, PDFium, tokenizer and PCRE2 remain genuine static archives; their flags are unchanged.",
+      "TEST-only compiler/link adapter for unchanged build.sh --test; never use for a server/production build.",
+      "Official ORT supports API 29 but does not supply the fork's three appended SessionGetInitializer* custom slots.",
+      "No model inference, initializer extraction, production/static completeness, or unsupported custom slots are validated.",
+      "No Python runtime is installed or imported; only the real dylib was extracted from a hash-verified wheel.",
+      "No multiply_defined suppression, undefined dynamic_lookup, fake .a/functions, Python extension loading, or model inference."
+    ]
+  },
+  "nativePolicy": "Without fetch_testdata, main native package TestMain exits before m.Run; appended ok is not proof of native unit or inference coverage. No models/testdata were downloaded.",
+  "reproducibility": "The audited helper sources and current helper sources, expected archive URLs/hashes, range headers, signed Go sumdb receipt, original/static failure, FFI probes, smoke results and source manifest are protected here. Dependency bytes and all caches remain disposable under the registered run and generated checkout paths.",
+  "bootstrapObservations": [
+    "Initial native preparation stopped while copying its helper to an absent evidence/helpers directory; no Go tests executed. The directory was created and the same audited helper completed; attempt1 log retained.",
+    "Initial API probe attempts stopped before execution because config/header module was not ready; logs retained as attempts 1 and 2. After targeted module download the genuine ORT and PDF API probes both passed.",
+    "Initial smoke manifest collection encountered tracked Go paths absent in the sparse checkout before starting Go tests. The manifest now records absent paths explicitly and hashes all present tracked/untracked Go sources; no sparse files were fetched or rewritten."
+  ],
+  "activeEnvironmentGoProcessesOwnedByHelper": 0,
+  "concurrencyPolicy": "The main agent now exclusively schedules all tests. Never run build.sh concurrently against this shared native HOME: its versioned ln setup races. The main agent retained an actual #21113 setup-only failure (zero executed tests) and is retrying sequentially. This helper does not rerun builds or clean resources."
+}

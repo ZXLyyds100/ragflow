@@ -1,0 +1,84 @@
+{
+  "baseline": "db01fba1f8bb2597b3c13ae7b46cd47bb2942030",
+  "boundary": "Standard Go parser/scanner equivalence, not a CodeRabbit coverage result or fresh runtime test",
+  "comment_only_verified": true,
+  "files": [
+    {
+      "named_functions_with_doc": [
+        "configuredAudioModelID",
+        "defaultResolveTenantModelByType",
+        "defaultResolveTenantOCRModelByProvider",
+        "ocrProviderAliases",
+        "defaultResolveModelConfig",
+        "resolveModelConfigByID"
+      ],
+      "named_functions_without_doc": [
+        "tenantModelIDByType",
+        "stringValue",
+        "resolveModelConfigFromProviderInstance",
+        "parseCompositeModelName",
+        "newModelDriverForBaseURLLocal",
+        "errorsIsRecordNotFound"
+      ],
+      "non_comment_tokens_equal": true,
+      "path": "internal/ingestion/component/dispatch_model.go",
+      "syntax_valid": true
+    },
+    {
+      "named_functions_with_doc": [
+        "TestResolveModelConfigForStoredMistralOCRProvider",
+        "TestResolveModelConfigInaccessibleIDs",
+        "TestResolveModelConfigAuthorizedModelValidation",
+        "TestResolveModelConfigLookupFailureIsNotMissing",
+        "TestResolveModelConfigByIDScopedQuerySQL",
+        "TestResolveModelConfigChainedDBStatementIsolationFixedOnly"
+      ],
+      "named_functions_without_doc": [
+        "TestConfiguredAudioModelID"
+      ],
+      "non_comment_tokens_equal": true,
+      "path": "internal/ingestion/component/dispatch_model_test.go",
+      "syntax_valid": true
+    },
+    {
+      "named_functions_with_doc": [
+        "imageOCRModelLookupCounts",
+        "imageOCRInstanceBaseURL",
+        "setImageOCRCloudDefault",
+        "observeImageOCRWarnings",
+        "TestImageOCRSelectedModelLookupOnce",
+        "TestImageOCRInaccessibleSelectionProgressDoesNotRevealModelState",
+        "TestImageOCRCloudDefaultEndpointWarning",
+        "TestImageOCRExplicitEndpointDoesNotWarn",
+        "TestImageOCRMissingEndpointDoesNotUseGlobalEndpoint"
+      ],
+      "named_functions_without_doc": null,
+      "non_comment_tokens_equal": true,
+      "path": "internal/ingestion/component/image_ocr_resolution_test.go",
+      "syntax_valid": true
+    },
+    {
+      "named_functions_with_doc": [
+        "append",
+        "list",
+        "imageOCRFixture",
+        "TestImageOCRSelectedTenantModel",
+        "TestImageOCRReleasesMediaAdmissionBeforeRequest",
+        "TestImageOCRFailureRetainsAttachment",
+        "TestImageOCRInvalidSelectionNeverFallsBack",
+        "TestImageOCRSelectionRespectsSwitchAndSVG",
+        "TestImageOCRModelConfigValidation",
+        "TestImageOCRDoesNotUseGlobalEndpoint",
+        "TestImageOCRKeepsCloudSSRFGuard",
+        "TestImageOCRRejectsOtherOCRDrivers",
+        "TestImageOCRReadsInstanceJSONAndRotatedCredentials",
+        "TestImageOCRAndVisionRemainIndependent",
+        "TestImageOCRFailureReachesProgressMessages"
+      ],
+      "named_functions_without_doc": null,
+      "non_comment_tokens_equal": true,
+      "path": "internal/ingestion/component/image_ocr_test.go",
+      "syntax_valid": true
+    }
+  ]
+}

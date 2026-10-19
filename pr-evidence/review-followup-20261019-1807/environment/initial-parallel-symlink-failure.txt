@@ -1,0 +1,17 @@
+[0;32m=== RAGFlow Go Server Build Script ===[0m
+
+[1;33m>>> Checking go dependencies[0m
+✓ Required tools are available
+
+[1;33m>>> Checking ONNX Runtime version consistency[0m
+[0;32m✓ ONNX Runtime native version consistent: 1.29.0[0m
+
+[1;33m>>> Running Go tests[0m
+check if the cl100k_base BPE table exists at <CONTRIBUTION_WORKSPACE>/repos/ragflow-21113/ragflow_deps/cl100k_base.tiktoken
+  cl100k_base.tiktoken → <CONTRIBUTION_WORKSPACE>/repos/ragflow-21113/ragflow_deps/cl100k_base.tiktoken (already present)
+
+[1;33m>>> Checking office_oxide native library[0m
+check if dep office_oxide exists in <CONTRIBUTION_WORKSPACE>/work/20261019-1807/home/ragflow-native-libs/office_oxide or /opt/ragflow-native-libs/office_oxide
+  office_oxide → <CONTRIBUTION_WORKSPACE>/work/20261019-1807/home/ragflow-native-libs/office_oxide (user cache)
+✓ office_oxide v0.1.12 native library found at <CONTRIBUTION_WORKSPACE>/work/20261019-1807/home/ragflow-native-libs/office_oxide
+ln: <CONTRIBUTION_WORKSPACE>/work/20261019-1807/home/ragflow-native-libs/office_oxide/lib/v0.1.12/liboffice_oxide.a: File exists
